@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中华王朝 · 千年脉络</title>
+<style>
+  :root{
+    --brand:#D4351C; --brand-d:#B82E18; --brand-100:#FBEAE6; --brand-50:#FDF4F1;
+    --ink-900:#0A2540; --ink-700:#1A3A5C; --ink-500:#425466; --ink-400:#697386;
+    --ink-300:#8792A2; --ink-200:#C1C9D2; --ink-100:#E3E8EE; --ink-50:#F6F9FC;
+    --success:#10B981; --success-l:#D1FAE5;
+    --warning:#F59E0B; --warning-l:#FEF3C7;
+    --danger:#EF4444;  --danger-l:#FEE2E2;
+    --info:#3B82F6;    --info-l:#DBEAFE;
+    --gold:#C79A3A;
+    --r1:8px; --r2:12px; --r3:16px; --r4:24px;
+    --s-soft:0 1px 2px rgba(10,37,64,.04),0 2px 8px rgba(10,37,64,.04);
+    --s-card:0 1px 3px rgba(10,37,64,.06),0 8px 24px rgba(10,37,64,.06);
+    --s-lift:0 2px 4px rgba(10,37,64,.06),0 16px 40px rgba(10,37,64,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;
+    background:var(--ink-50);color:var(--ink-500);line-height:1.6;
+    -webkit-font-smoothing:antialiased;padding-bottom:72px}
+  .wrap{display:flex;flex-direction:column;gap:28px;max-width:1120px;margin:0 auto;padding:0 20px}
+  /* hero */
+  .hero{display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;
+    padding:56px 24px 40px;border-radius:var(--r4);
+    background:linear-gradient(160deg,#0A2540 0%,#1A3A5C 55%,#3A1F1A 100%);
+    color:#fff;box-shadow:var(--s-lift);position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+    border-radius:50%;background:radial-gradient(circle,rgba(212,53,28,.35),transparent 70%)}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:1px;color:#fff}
+  .hero p{color:rgba(255,255,255,.78);font-size:15px;max-width:620px}
+  .kpis{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+  .kpi{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.16);border-radius:var(--r3);padding:16px 22px;min-width:180px}
+  .kpi .badge{display:flex;align-items:center;justify-content:center;width:44px;height:44px;
+    border-radius:var(--r2);background:var(--brand);color:#fff;font-size:20px;flex-shrink:0}
+  .kpi .v{font-size:26px;font-weight:800;color:#fff;line-height:1.1}
+  .kpi .l{font-size:12px;color:rgba(255,255,255,.7)}
+  /* tabs */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  .tab{border:1px solid var(--ink-200);background:#fff;color:var(--ink-400);
+    padding:8px 18px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:.18s}
+  .tab:hover{border-color:var(--brand);color:var(--brand)}
+  .tab.active{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:var(--s-soft)}
+  /* timeline */
+  .timeline{display:flex;flex-direction:column;gap:18px;position:relative;padding-left:24px}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:3px;
+    background:linear-gradient(var(--gold),var(--brand),var(--info));border-radius:3px}
+  .node{position:relative}
+  html.has-motion .node{opacity:0;transform:translateY(14px)}
+  .node::before{content:"";position:absolute;left:-16.5px;transform:translateX(-50%);width:13px;height:13px;border-radius:50%;
+    background:#fff;border:3px solid var(--brand);margin-top:26px;box-sizing:border-box}
+  .card{background:#fff;border:1px solid var(--ink-100);border-radius:var(--r3);
+    box-shadow:var(--s-card);overflow:hidden;transition:.2s;position:relative}
+  .card:hover{box-shadow:var(--s-lift);transform:translateX(2px)}
+  .card>.accent{position:absolute;left:0;top:0;bottom:0;width:5px}
+  .chead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:18px 22px;cursor:pointer}
+  .chead .name{font-size:20px;font-weight:800;color:var(--ink-900)}
+  .chead .years{color:var(--brand);font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+  .chead .meta{color:var(--ink-400);font-size:12.5px;margin-left:auto;text-align:right}
+  .chead .toggle{color:var(--ink-300);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+  .chead .toggle .chev{display:inline-block;transition:transform .42s cubic-bezier(.4,0,.2,1)}
+  .card.collapsed .toggle .chev{transform:rotate(-90deg)}
+  .feature{color:var(--ink-500);font-size:14px;padding:0 22px 16px}
+  .panel{display:grid;grid-template-rows:1fr;transition:grid-template-rows .42s cubic-bezier(.4,0,.2,1)}
+  .card.collapsed .panel{grid-template-rows:0fr}
+  .panel-i{overflow:hidden;min-height:0}
+  .body{display:flex;flex-direction:column;gap:18px;padding:0 22px 22px}
+  .sec{display:flex;flex-direction:column;gap:10px}
+  .sec-h{display:flex;align-items:center;gap:9px}
+  .sec-h .ic{display:flex;align-items:center;justify-content:center;width:28px;height:28px;
+    border-radius:var(--r2);font-size:14px;color:#fff}
+  .sec-h .t{font-size:14px;font-weight:700;color:var(--ink-900)}
+  .sec-h .c{margin-left:auto;font-size:12px;color:var(--ink-300)}
+  /* emperors grid */
+  .emps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+  .emp{display:flex;flex-direction:column;gap:3px;background:var(--brand-50);
+    border:1px solid var(--brand-100);border-radius:var(--r2);padding:10px 13px}
+  .emp .emp-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .emp .en{font-size:14px;font-weight:700;color:var(--brand-d)}
+  .emp .et{font-size:11.5px;color:var(--ink-400)}
+  .emp .emp-meta{display:flex;flex-wrap:wrap;gap:4px 8px;margin-top:1px}
+  .emp .er{font-size:12px;font-weight:600;color:var(--ink-700)}
+  .emp .etag{font-size:11px;color:var(--ink-600);background:#fff;border:1px solid var(--ink-100);border-radius:999px;padding:1px 8px;line-height:1.5}
+  .emp .enote{font-size:12.5px;color:var(--ink-500);margin-top:1px}
+  /* talents */
+  .tgroup{display:flex;flex-direction:column;gap:7px}
+  .tgroup .gt{font-size:12px;font-weight:700;color:var(--ink-700);display:flex;align-items:center;gap:6px}
+  .tgroup .gt .dot{width:8px;height:8px;border-radius:50%}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:var(--ink-50);border:1px solid var(--ink-100);border-radius:var(--r1);
+    padding:6px 11px;font-size:13px;color:var(--ink-700);transition:.15s;cursor:default}
+  .chip:hover{border-color:var(--ink-300);box-shadow:var(--s-soft)}
+  .chip b{color:var(--ink-900);font-weight:700}
+  .chip .note{color:var(--ink-400);font-size:11.5px;margin-left:6px}
+  /* policies */
+  .pills{display:flex;flex-wrap:wrap;gap:8px}
+  .pill{background:var(--ink-100);color:var(--ink-700);border-radius:999px;
+    padding:5px 13px;font-size:12.5px;font-weight:600}
+  .summary{font-size:12.5px;font-style:italic;color:var(--ink-400);
+    border-left:3px solid var(--gold);padding:8px 0 8px 12px;background:var(--ink-50);border-radius:0 var(--r1) var(--r1) 0}
+  .foot{text-align:center;color:var(--ink-300);font-size:12px}
+  @media(max-width:560px){.hero h1{font-size:26px}.chead .meta{margin-left:0;text-align:left;width:100%}}
+  @media(prefers-reduced-motion:reduce){.panel{transition:none}.node{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <h1>中华王朝 · 千年脉络</h1>
+    <p>从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。</p>
+    <div class="kpis">
+      <div class="kpi"><div class="badge">👑</div><div class="flex" style="display:flex;flex-direction:column"><span class="v">16</span><span class="l">主要朝代</span></div></div>
+      <div class="kpi"><div class="badge">📜</div><div class="flex" style="display:flex;flex-direction:column"><span class="v">约4000</span><span class="l">年王朝（夏→清）</span></div></div>
+      <div class="kpi"><div class="badge">⚔️</div><div class="flex" style="display:flex;flex-direction:column"><span class="v">120+</span><span class="l">帝王与人才</span></div></div>
+    </div>
+  </section>
+
+  <nav class="tabs" id="tabs"></nav>
+  <main class="timeline" id="timeline"></main>
+
+  <p class="foot">点击朝代卡片可折叠 / 展开 · 数据为科普概览，细节以权威史料为准 · 用 WorkBuddy + ui-studio 生成<br>（注：可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说）</p>
+</div>
+
+<script>
+const ERA_COLORS={"先秦":"'#C79A3A'","秦汉":"'#D4351C'","三国两晋南北朝":"'#7C3AED'","隋唐":"'#0EA5E9'","宋元":"'#059669'","明清":"'#EA580C'"};
+const ROLE_COLORS={"文臣":"'#3B82F6'","武将":'#EF4444',"思想·文人":'#10B981',"其他":'#F59E0B'};
+const DATA=[
+{name:"夏",years:"约前2070–前1600",era:"先秦",capital:"阳城(传说)",approx:true,
+ feature:"传说中首个世袭王朝，「家天下」由此开端；以下据古本竹书纪年约数列主要君主，合计约470年。",
+ emperors:[{n:"禹(大禹)",t:"开国",rg:"约前2070–前2025",ry:45,note:"治水定九州，建立夏朝"},
+   {n:"启",t:"二世",rg:"约前2025–前1996",ry:29,note:"确立世袭制，家天下始"},
+   {n:"太康",t:"",rg:"约前1996–前1978",ry:18,note:"太康失国，政权旁落"},
+   {n:"仲康",t:"",rg:"约前1978–前1965",ry:13,note:"傀儡，实权在后羿"},
+   {n:"相",t:"",rg:"约前1965–前1937",ry:28,note:"为寒浞所杀"},
+   {n:"少康",t:"",rg:"约前1937–前1915",ry:22,note:"少康中兴，复国"},
+   {n:"杼",t:"",rg:"约前1915–前1898",ry:17,note:"征伐东夷，夏势复振"},
+   {n:"槐",t:"",rg:"约前1898–前1872",ry:26,note:"九夷来朝"},
+   {n:"芒",t:"",rg:"约前1872–前1854",ry:18,note:"沉祭黄河"},
+   {n:"泄",t:"",rg:"约前1854–前1838",ry:16,note:"诸侯臣服"},
+   {n:"不降",t:"",rg:"约前1838–前1779",ry:59,note:"在位最久，夏室强盛"},
+   {n:"扃",t:"",rg:"约前1779–前1758",ry:21,note:"守成"},
+   {n:"廑",t:"",rg:"约前1758–前1737",ry:21,note:"夏渐衰"},
+   {n:"孔甲",t:"",rg:"约前1737–前1706",ry:31,note:"好鬼神，诸侯叛"},
+   {n:"皋",t:"",rg:"约前1706–前1695",ry:11,note:"衰世"},
+   {n:"发",t:"",rg:"约前1695–前1676",ry:19,note:"衰世"},
+   {n:"桀(履癸)",t:"末代",rg:"约前1676–前1600",ry:76,sh:"桀",note:"暴虐无道，夏亡"}],
+ talents:{ "其他":[{n:"后羿",note:"东夷首领，篡夏"},{n:"寒浞",note:"杀后羿自立"}] },
+ policies:["世袭制取代禅让","疏导法治水","家天下观念确立"],
+ summary:"信史待考，多与二里头考古互证，标志中原早期国家雏形。"},
+
+{name:"商",years:"前1600–前1046",era:"先秦",capital:"殷(今安阳)",approx:true,
+ feature:"甲骨文与青铜文明高峰，神权与王权合一；以下据传统王系约数列主要君主，合计约554年。",
+ emperors:[{n:"汤(天乙)",t:"开国",rg:"约前1600–前1588",ry:12,mt:"太祖",note:"灭夏建商"},
+   {n:"外丙",t:"",rg:"约前1588–前1586",ry:2,note:"伊尹摄政"},
+   {n:"仲壬",t:"",rg:"约前1586–前1582",ry:4,note:"伊尹摄政"},
+   {n:"太甲",t:"",rg:"约前1582–前1570",ry:12,mt:"太宗",note:"伊尹放太甲，悔过中兴"},
+   {n:"沃丁",t:"",rg:"约前1570–前1541",ry:29,note:"伊尹卒"},
+   {n:"太庚",t:"",rg:"约前1541–前1516",ry:25,note:"诸侯宾服"},
+   {n:"小甲",t:"",rg:"约前1516–前1499",ry:17,note:"守成"},
+   {n:"雍己",t:"",rg:"约前1499–前1487",ry:12,note:"诸侯叛"},
+   {n:"太戊",t:"",rg:"约前1487–前1412",ry:75,mt:"中宗",note:"太戊中兴，商势复盛"},
+   {n:"仲丁",t:"",rg:"约前1412–前1401",ry:11,note:"迁隞"},
+   {n:"外壬",t:"",rg:"约前1401–前1386",ry:15,note:"九世之乱起"},
+   {n:"河亶甲",t:"",rg:"约前1386–前1377",ry:9,note:"迁相"},
+   {n:"祖乙",t:"",rg:"约前1377–前1358",ry:19,mt:"中宗",note:"迁邢，殷复兴"},
+   {n:"祖辛",t:"",rg:"约前1358–前1342",ry:16,note:"守成"},
+   {n:"沃甲",t:"",rg:"约前1342–前1317",ry:25,note:"守成"},
+   {n:"祖丁",t:"",rg:"约前1317–前1285",ry:32,note:"守成"},
+   {n:"南庚",t:"",rg:"约前1285–前1260",ry:25,note:"迁奄"},
+   {n:"阳甲",t:"",rg:"约前1260–前1253",ry:7,note:"诸侯弱"},
+   {n:"盘庚",t:"",rg:"约前1253–前1225",ry:28,note:"迁殷稳定政局"},
+   {n:"小辛",t:"",rg:"约前1225–前1204",ry:21,note:"殷复衰"},
+   {n:"小乙",t:"",rg:"约前1204–前1176",ry:28,note:"守成"},
+   {n:"武丁",t:"",rg:"约前1176–前1117",ry:59,mt:"高宗",note:"武丁中兴，国力鼎盛"},
+   {n:"祖庚",t:"",rg:"约前1117–前1106",ry:11,note:"守成"},
+   {n:"祖甲",t:"",rg:"约前1106–前1073",ry:33,note:"革新礼制"},
+   {n:"廪辛",t:"",rg:"约前1073–前1067",ry:6,note:"征伐"},
+   {n:"帝辛(纣王)",t:"末代",rg:"约前1067–前1046",ry:21,sh:"纣",note:"暴虐，牧野之战亡"}],
+ talents:{ "文臣":[{n:"伊尹",note:"开国名相，放太甲"},{n:"傅说",note:"武丁贤相"}],
+   "其他":[{n:"妇好",note:"女将，多次征伐"},{n:"比干",note:"忠臣，剖腹"}] },
+ policies:["甲骨文占卜记事","青铜礼器制度","内外服制"],
+ summary:"甲骨文证实商王世系，是中国有同期文字记载的最早王朝。"},
+
+{name:"周",years:"西周前1046–前771 / 东周前770–前256",era:"先秦",capital:"镐京→洛邑",approx:true,
+ feature:"分封宗法礼乐奠基；东周百家争鸣，思想爆炸。列主要王（谥号），合计约790年。",
+ emperors:[{n:"周武王(姬发)",t:"开国",rg:"前1046–前1043",ry:3,sh:"武",note:"伐纣灭商，大封诸侯"},
+   {n:"周成王",t:"",rg:"前1042–前1021",ry:22,sh:"成",note:"周公辅政，成康之治"},
+   {n:"周康王",t:"",rg:"前1020–前996",ry:25,sh:"康",note:"成康之治，刑措不用"},
+   {n:"周昭王",t:"",rg:"前995–前977",ry:19,sh:"昭",note:"南征不复"},
+   {n:"周穆王",t:"",rg:"前976–前922",ry:55,sh:"穆",note:"西巡会西王母，周势极盛"},
+   {n:"周共王",t:"",rg:"前922–前900",ry:23,sh:"共",note:"驰骋游猎"},
+   {n:"周懿王",t:"",rg:"前899–前892",ry:8,sh:"懿",note:"王室渐衰"},
+   {n:"周孝王",t:"",rg:"前891–前886",ry:6,sh:"孝",note:"非嫡继位"},
+   {n:"周夷王",t:"",rg:"前885–前878",ry:8,sh:"夷",note:"诸侯来朝"},
+   {n:"周厉王",t:"",rg:"前877–前841",ry:37,sh:"厉",note:"专利暴政，国人暴动"},
+   {n:"共和(摄政)",t:"",rg:"前841–前828",ry:14,note:"周公召公共和行政，共和纪年始"},
+   {n:"周宣王",t:"",rg:"前827–前782",ry:46,sh:"宣",note:"宣王中兴"},
+   {n:"周幽王",t:"西周末",rg:"前781–前771",ry:11,sh:"幽",note:"烽火戏诸侯，西周亡"},
+   {n:"周平王",t:"东周始",rg:"前770–前720",ry:51,sh:"平",note:"东迁洛邑，东周始"},
+   {n:"周桓王",t:"",rg:"前719–前697",ry:23,sh:"桓",note:"繻葛之战败于郑"},
+   {n:"周庄王",t:"",rg:"前696–前682",ry:15,sh:"庄",note:"齐桓公始霸"},
+   {n:"周惠王",t:"",rg:"前676–前652",ry:25,sh:"惠",note:"诸侯争霸"},
+   {n:"周釐王",t:"",rg:"前679–前677",ry:3,sh:"釐",note:"齐桓公称霸"},
+   {n:"周顷王",t:"",rg:"前618–前613",ry:6,sh:"顷",note:"王室困顿，求赙"},
+   {n:"周匡王",t:"",rg:"前612–前607",ry:6,sh:"匡",note:"守成"},
+   {n:"周简王",t:"",rg:"前585–前572",ry:14,sh:"简",note:"诸侯会盟"},
+   {n:"周悼王",t:"",rg:"前520",ry:1,sh:"悼",note:"在位岁余"},
+   {n:"周襄王",t:"",rg:"前651–前619",ry:33,sh:"襄",note:"晋文公尊王"},
+   {n:"周定王",t:"",rg:"前606–前586",ry:21,sh:"定",note:"楚庄王问鼎"},
+   {n:"周灵王",t:"",rg:"前571–前545",ry:27,sh:"灵",note:"孔子生"},
+   {n:"周景王",t:"",rg:"前544–前520",ry:25,sh:"景",note:"铸大钱大钟"},
+   {n:"周敬王",t:"",rg:"前519–前476",ry:44,sh:"敬",note:"春秋末，王子朝乱"},
+   {n:"周元王",t:"",rg:"前475–前469",ry:7,sh:"元",note:"战国始"},
+   {n:"周贞定王",t:"",rg:"前468–前441",ry:28,sh:"贞定",note:"三家灭智伯"},
+   {n:"周考王",t:"",rg:"前440–前426",ry:15,sh:"考",note:"封弟于河南"},
+   {n:"周威烈王",t:"",rg:"前425–前402",ry:24,sh:"威烈",note:"命魏赵韩为诸侯"},
+   {n:"周安王",t:"",rg:"前401–前376",ry:26,sh:"安",note:"田氏代齐"},
+   {n:"周显王",t:"",rg:"前368–前321",ry:48,sh:"显",note:"商鞅变法，秦强"},
+   {n:"周慎靓王",t:"",rg:"前320–前315",ry:6,sh:"慎靓",note:"五国相王"},
+   {n:"周烈王",t:"",rg:"前375–前369",ry:6,sh:"烈",note:"魏齐称王"},
+   {n:"周赧王",t:"东周末",rg:"前314–前256",ry:59,sh:"赧",note:"东周亡，秦势起"}],
+ talents:{ "文臣":[{n:"周公旦",note:"制礼作乐，奠定周制"},{n:"管仲",note:"齐相，尊王攘夷"},{n:"百里奚",note:"秦穆公贤臣"}],
+   "武将":[{n:"姜子牙(太公)",note:"兵家鼻祖，辅武王"}],
+   "思想·文人":[{n:"孔子",note:"儒家创始人"},{n:"老子",note:"道家创始人"},{n:"孙武",note:"兵圣，《孙子兵法》"},
+     {n:"孟子",note:"儒家亚圣"},{n:"庄子",note:"道家代表"},{n:"墨子",note:"墨家"},{n:"韩非",note:"法家集大成"}] },
+ policies:["分封制","宗法制","礼乐制度","井田制","春秋争霸","战国变法(商鞅)"],
+ summary:"礼乐文明奠基期，百家争鸣直接塑造此后两千年文化基因。"},
+
+{name:"秦",years:"前221–前207",era:"秦汉",capital:"咸阳",
+ feature:"中国首个大一统中央集权帝国，制度影响两千年。",
+ emperors:[{n:"秦始皇(嬴政)",t:"始皇帝",rg:"前221–前210",ry:11,sh:"始皇帝",note:"灭六国，称皇帝"},
+   {n:"秦二世(胡亥)",t:"二世",rg:"前210–前207",ry:3,note:"暴政速亡"},
+   {n:"子婴",t:"末代",rg:"前207",ry:1,note:"在位46日，降刘邦"}],
+ talents:{ "文臣":[{n:"李斯",note:"丞相，郡县制/书同文"},{n:"赵高",note:"乱政，指鹿为马"}],
+   "武将":[{n:"王翦",note:"灭楚名将"},{n:"蒙恬",note:"北击匈奴，修长城"}] },
+ policies:["郡县制","书同文车同轨","统一度量衡货币","修长城驰道","焚书坑儒","以法为教"],
+ summary:"虽短祚却确立帝制框架，中央集权范式沿用两千年。"},
+
+{name:"汉",years:"西汉前202–公元8 / 东汉25–220",era:"秦汉",capital:"长安→洛阳",approx:true,
+ feature:"大一统定型，丝路开通，儒术独尊，国号成族称。列主要帝，合计约420年。",
+ emperors:[{n:"汉高祖(刘邦)",t:"开国",rg:"前202–前195",ry:8,mt:"太祖",sh:"高",note:"布衣起兵，开基"},
+   {n:"汉惠帝(刘盈)",t:"",rg:"前195–前188",ry:7,sh:"惠",note:"吕后临朝"},
+   {n:"吕后(称制)",t:"临朝",rg:"前188–前180",ry:8,note:"实际执政，文景母"},
+   {n:"汉文帝(刘恒)",t:"文景",rg:"前180–前157",ry:23,mt:"太宗",sh:"文",note:"文景之治，休养生息"},
+   {n:"汉景帝(刘启)",t:"文景",rg:"前157–前141",ry:16,sh:"景",note:"削藩平定七国"},
+   {n:"汉武帝(刘彻)",t:"盛世",rg:"前141–前87",ry:54,mt:"世宗",gh:"建元",sh:"武",note:"拓西域，强汉"},
+   {n:"汉昭帝(刘弗陵)",t:"",rg:"前87–前74",ry:13,gh:"始元",sh:"昭",note:"霍光辅政"},
+   {n:"汉宣帝(刘询)",t:"",rg:"前74–前49",ry:25,mt:"中宗",gh:"本始",sh:"宣",note:"孝宣之治"},
+   {n:"汉元帝(刘奭)",t:"",rg:"前49–前33",ry:16,mt:"高宗",sh:"元",note:"儒术独尊"},
+   {n:"汉成帝(刘骜)",t:"",rg:"前33–前7",ry:26,sh:"成",note:"外戚王氏起"},
+   {n:"汉哀帝(刘欣)",t:"",rg:"前7–前1",ry:6,sh:"哀",note:"托孤王莽"},
+   {n:"汉平帝(刘衎)",t:"",rg:"前1–公元5",ry:6,sh:"平",note:"王莽摄政"},
+   {n:"孺子婴(刘婴)",t:"居摄",rg:"6–8",ry:2,note:"王莽摄政，汉祚将终"},
+   {n:"王莽(新)",t:"代汉",rg:"9–23",ry:15,sh:"新",note:"建新朝，托古改制"},
+   {n:"更始帝(刘玄)",t:"复汉",rg:"23–25",ry:2,note:"绿林军立，后为赤眉所杀"},
+   {n:"汉光武帝(刘秀)",t:"东汉开",rg:"25–57",ry:33,mt:"世祖",sh:"光武",note:"光武中兴"},
+   {n:"汉明帝(刘庄)",t:"",rg:"57–75",ry:18,sh:"明",note:"佛教传入中原"},
+   {n:"汉章帝(刘炟)",t:"",rg:"75–88",ry:13,sh:"章",note:"明章之治"},
+   {n:"汉和帝(刘肇)",t:"",rg:"88–105",ry:17,sh:"和",note:"窦宪破匈奴"},
+   {n:"汉安帝(刘祜)",t:"",rg:"106–125",ry:19,sh:"安",note:"外戚宦官争"},
+   {n:"汉顺帝(刘保)",t:"",rg:"125–144",ry:19,sh:"顺",note:"宦官得势"},
+   {n:"汉桓帝(刘志)",t:"",rg:"147–167",ry:21,sh:"桓",note:"党锢之祸"},
+   {n:"汉灵帝(刘宏)",t:"",rg:"168–189",ry:22,sh:"灵",note:"黄巾之乱"},
+   {n:"汉献帝(刘协)",t:"末代",rg:"189–220",ry:31,sh:"献",note:"傀儡，汉亡"}],
+ talents:{ "文臣":[{n:"萧何",note:"汉初相国"},{n:"张良",note:"谋臣"},{n:"董仲舒",note:"独尊儒术"},{n:"霍光",note:"辅政大臣"}],
+   "武将":[{n:"韩信",note:"兵仙"},{n:"卫青",note:"击匈奴"},{n:"霍去病",note:"封狼居胥"},{n:"班超",note:"投笔从戎，通西域"}],
+   "思想·文人":[{n:"司马迁",note:"《史记》"},{n:"蔡伦",note:"改进造纸术"}] },
+ policies:["郡国并行→推恩令","罢黜百家独尊儒术","察举制","丝绸之路","盐铁官营","均输平准"],
+ summary:"奠定中华主体民族认同与集权范式，「汉」成为族称。"},
+
+{name:"三国",years:"220–280",era:"三国两晋南北朝",capital:"魏蜀吴",keepDur:"60年",
+ feature:"魏蜀吴鼎立，群雄与智谋的演义舞台。三政权同时并存，以下年数不相加（存续以时期计）。",
+ emperors:[{n:"魏文帝(曹丕)",t:"魏",rg:"220–226",ry:6,gh:"黄初",sh:"文",note:"代汉称帝"},
+   {n:"魏明帝(曹叡)",t:"魏",rg:"226–239",ry:13,gh:"太和",sh:"明",note:"大兴土木"},
+   {n:"魏元帝(曹奂)",t:"魏末",rg:"260–265",ry:5,note:"禅于晋"},
+   {n:"蜀汉昭烈帝(刘备)",t:"蜀",rg:"221–223",ry:2,gh:"章武",sh:"昭烈",note:"兴复汉室"},
+   {n:"蜀汉后主(刘禅)",t:"蜀",rg:"223–263",ry:40,sh:"怀",note:"乐不思蜀"},
+   {n:"吴大帝(孙权)",t:"吴",rg:"222–252",ry:30,gh:"黄武",sh:"大",note:"据江东"},
+   {n:"吴末帝(孙皓)",t:"吴末",rg:"264–280",ry:16,note:"暴虐，吴亡"}],
+ talents:{ "文臣":[{n:"曹操",note:"魏武，雄才"},{n:"诸葛亮",note:"蜀相，鞠躬尽瘁"},{n:"司马懿",note:"魏权臣"},{n:"陆逊",note:"吴大将"}],
+   "武将":[{n:"关羽",note:"武圣"},{n:"张飞",note:"猛将"},{n:"赵云",note:"常山赵子龙"},{n:"周瑜",note:"东吴都督"}] },
+ policies:["屯田制","九品中正制(魏)"],
+ summary:"乱世英豪辈出，《三国演义》使其深入民心。"},
+
+{name:"晋",years:"西晋265–316 / 东晋317–420",era:"三国两晋南北朝",capital:"洛阳→建康",approx:true,
+ feature:"短暂统一后长期分裂，门阀士族兴盛。列主要帝，合计约155年。",
+ emperors:[{n:"晋武帝(司马炎)",t:"开国",rg:"265–290",ry:25,mt:"世祖",gh:"泰始",sh:"武",note:"灭吴统一"},
+   {n:"晋惠帝(司马衷)",t:"",rg:"290–306",ry:16,sh:"惠",note:"八王之乱，何不食肉糜"},
+   {n:"晋怀帝(司马炽)",t:"",rg:"306–311",ry:5,sh:"怀",note:"永嘉之乱被俘"},
+   {n:"晋愍帝(司马邺)",t:"西晋末",rg:"313–316",ry:4,sh:"愍",note:"西晋亡"},
+   {n:"晋元帝(司马睿)",t:"东晋",rg:"317–322",ry:6,mt:"中宗",gh:"建武",sh:"元",note:"衣冠南渡"},
+   {n:"晋明帝(司马绍)",t:"",rg:"322–325",ry:4,sh:"明",note:"平王敦"},
+   {n:"晋成帝(司马衍)",t:"",rg:"325–342",ry:18,sh:"成",note:"苏峻之乱"},
+   {n:"晋穆帝(司马聃)",t:"",rg:"344–361",ry:18,sh:"穆",note:"桓温北征"},
+   {n:"晋哀帝(司马丕)",t:"",rg:"361–364",ry:3,sh:"哀",note:"桓温专政"},
+   {n:"晋废帝(司马奕)",t:"海西公",rg:"364–369",ry:5,sh:"废",note:"被桓温废黜"},
+   {n:"晋孝武帝(司马曜)",t:"",rg:"372–396",ry:25,sh:"孝武",note:"淝水之战"},
+   {n:"晋安帝(司马德宗)",t:"",rg:"396–418",ry:23,sh:"安",note:"桓玄篡，刘裕兴"},
+   {n:"晋恭帝(司马德文)",t:"末代",rg:"418–420",ry:3,sh:"恭",note:"禅于刘裕"}],
+ talents:{ "文臣":[{n:"王导",note:"东晋宰辅"},{n:"谢安",note:"淝水之战总揽"}],
+   "思想·文人":[{n:"王羲之",note:"书圣"},{n:"陶渊明",note:"隐逸诗人"},{n:"嵇康",note:"竹林七贤"}] },
+ policies:["占田制","门阀士族","分封宗王(八王之乱)","九品中正制僵化"],
+ summary:"统一旋即崩解，开启南北长期对峙的过渡期。"},
+
+{name:"南北朝",years:"420–589",era:"三国两晋南北朝",capital:"南北对峙",keepDur:"170年",
+ feature:"南北政权并立，民族大融合，佛教兴盛。南北同时在位，以下年数不相加（存续以时期计）。",
+ emperors:[{n:"宋武帝(刘裕)",t:"南朝宋",rg:"420–422",ry:2,gh:"永初",sh:"武",note:"寒门代晋"},
+   {n:"宋文帝(刘义隆)",t:"南朝宋",rg:"424–453",ry:30,gh:"元嘉",sh:"文",note:"元嘉之治"},
+   {n:"齐高帝(萧道成)",t:"南朝齐",rg:"479–482",ry:3,sh:"高",note:"建齐"},
+   {n:"梁武帝(萧衍)",t:"南朝梁",rg:"502–549",ry:47,gh:"天监",sh:"武",note:"崇佛佞佛，侯景乱"},
+   {n:"陈后主(陈叔宝)",t:"南朝陈末",rg:"582–589",ry:7,sh:"炀",note:"陈亡于隋"},
+   {n:"北魏道武帝(拓跋珪)",t:"北朝",rg:"386–409",ry:23,sh:"道武",note:"建北魏"},
+   {n:"北魏太武帝(拓跋焘)",t:"北朝",rg:"424–452",ry:28,sh:"太武",note:"统一北方"},
+   {n:"北魏孝文帝(拓跋宏)",t:"北朝",rg:"471–499",ry:28,gh:"太和",sh:"孝文",note:"汉化改革"},
+   {n:"北周武帝(宇文邕)",t:"北朝",rg:"560–578",ry:18,sh:"武",note:"灭北齐，集权"},
+   {n:"北周静帝(宇文阐)",t:"北周末",rg:"579–581",ry:2,note:"禅于隋"}],
+ talents:{ "思想·文人":[{n:"祖冲之",note:"精算圆周率"},{n:"贾思勰",note:"《齐民要术》"},{n:"郦道元",note:"《水经注》"}],
+   "其他":[{n:"花木兰",note:"传说，代父从军"}] },
+ policies:["北魏孝文帝改革(易服改姓迁都)","均田制雏形","三长制"],
+ summary:"民族融合关键期，为隋唐盛世积蓄多元养分。"},
+
+{name:"隋",years:"581–618",era:"隋唐",capital:"大兴(长安)",
+ feature:"重归一统，开创科举与大运河。",
+ emperors:[{n:"隋文帝(杨坚)",t:"开国",rg:"581–604",ry:23,mt:"高祖",gh:"开皇",sh:"文",note:"开皇之治，结束分裂"},
+   {n:"隋炀帝(杨广)",t:"二世",rg:"604–618",ry:14,gh:"大业",sh:"炀",note:"开运河征高句丽，亡"}],
+ talents:{ "文臣":[{n:"高颎",note:"开国良相"}],"武将":[{n:"杨素",note:"平陈名将"}],"其他":[{n:"宇文恺",note:"营造东都"}] },
+ policies:["开创科举(分科考试)","三省六部制","开凿大运河","均田租庸调","营建东都"],
+ summary:"制度创制(科举、运河)深远，短祚而承前启后。"},
+
+{name:"唐",years:"618–907",era:"隋唐",capital:"长安",
+ feature:"盛世开放，文化璀璨，万国来朝。列主要帝系（含武周），合计约290年。",
+ emperors:[{n:"唐高祖(李渊)",t:"开国",rg:"618–626",ry:8,mt:"高祖",gh:"武德",note:"晋阳起兵"},
+   {n:"唐太宗(李世民)",t:"贞观",rg:"626–649",ry:23,mt:"太宗",gh:"贞观",sh:"文",note:"贞观之治"},
+   {n:"唐高宗(李治)",t:"",rg:"649–683",ry:34,mt:"高宗",gh:"永徽",note:"永徽之治"},
+   {n:"唐中宗(李显)",t:"",rg:"684",ry:1,gh:"嗣圣",note:"首次在位被废"},
+   {n:"唐睿宗(李旦)",t:"",rg:"684–690",ry:6,gh:"文明",note:"首次在位，武后临朝"},
+   {n:"武则天",t:"女皇",rg:"690–705",ry:15,gh:"天授",sh:"则天",note:"中国唯一女皇帝"},
+   {n:"唐中宗(李显)",t:"复",rg:"705–710",ry:5,gh:"神龙",sh:"孝和",note:"神龙复辟"},
+   {n:"唐睿宗(李旦)",t:"复",rg:"710–712",ry:2,gh:"景云",sh:"玄真",note:"禅于玄宗"},
+   {n:"唐玄宗(李隆基)",t:"开元→天宝",rg:"712–756",ry:44,mt:"玄宗",gh:"开元",sh:"明",note:"开元盛世→安史之乱"},
+   {n:"唐肃宗(李亨)",t:"",rg:"756–762",ry:6,mt:"肃宗",gh:"至德",note:"收复两京"},
+   {n:"唐代宗(李豫)",t:"",rg:"762–779",ry:17,mt:"代宗",gh:"宝应",note:"安史平"},
+   {n:"唐德宗(李适)",t:"",rg:"779–805",ry:26,mt:"德宗",gh:"建中",note:"削藩失败"},
+   {n:"唐顺宗(李诵)",t:"",rg:"805",ry:1,mt:"顺宗",gh:"永贞",note:"永贞革新，一月退位"},
+   {n:"唐宪宗(李纯)",t:"",rg:"805–820",ry:15,mt:"宪宗",gh:"元和",note:"元和中兴"},
+   {n:"唐穆宗(李恒)",t:"",rg:"820–824",ry:4,mt:"穆宗",gh:"长庆",note:"怠政"},
+   {n:"唐敬宗(李湛)",t:"",rg:"824–826",ry:2,mt:"敬宗",gh:"宝历",note:"被弑"},
+   {n:"唐文宗(李昂)",t:"",rg:"826–840",ry:14,mt:"文宗",gh:"大和",note:"甘露之变"},
+   {n:"唐武宗(李炎)",t:"",rg:"840–846",ry:6,mt:"武宗",gh:"会昌",note:"会昌灭佛"},
+   {n:"唐宣宗(李忱)",t:"",rg:"846–859",ry:13,mt:"宣宗",gh:"大中",note:"大中之治"},
+   {n:"唐懿宗(李漼)",t:"",rg:"859–873",ry:14,mt:"懿宗",gh:"咸通",note:"唐衰"},
+   {n:"唐僖宗(李儇)",t:"",rg:"873–888",ry:15,mt:"僖宗",gh:"乾符",note:"黄巢乱"},
+   {n:"唐昭宗(李晔)",t:"",rg:"888–904",ry:16,mt:"昭宗",gh:"龙纪",note:"藩镇挟制"},
+   {n:"唐哀帝(李柷)",t:"末代",rg:"904–907",ry:3,mt:"哀帝",gh:"天祐",note:"唐亡"}],
+ talents:{ "文臣":[{n:"魏征",note:"谏臣"},{n:"房玄龄",note:"房谋"},{n:"杜如晦",note:"杜断"},{n:"狄仁杰",note:"断案名相"},{n:"长孙无忌",note:"凌烟阁首"}],
+   "武将":[{n:"郭子仪",note:"平安史之乱"}],
+   "思想·文人":[{n:"李白",note:"诗仙"},{n:"杜甫",note:"诗圣"},{n:"玄奘",note:"西行取经"}] },
+ policies:["完善科举(进士科)","三省六部","均田制租庸调制","律令格式","开天盛世","节度使(藩镇)"],
+ summary:"中国古代最强盛开放的时代之一，文化辐射整个东亚。"},
+
+{name:"五代十国",years:"907–960",era:"隋唐",capital:"中原轮换",
+ feature:"唐亡后中原五代更替、周边十国并立。列中原五代主要君主（十国并立不计入），合计53年。",
+ emperors:[{n:"后梁太祖(朱温)",t:"后梁",rg:"907–912",ry:5,gh:"开平",sh:"太祖",note:"代唐"},
+   {n:"后梁末帝(朱友贞)",t:"后梁",rg:"913–923",ry:11,note:"梁亡于唐"},
+   {n:"后唐庄宗(李存勖)",t:"后唐",rg:"923–926",ry:3,gh:"同光",sh:"庄宗",note:"骁勇，宠伶人"},
+   {n:"后唐明宗(李嗣源)",t:"后唐",rg:"926–933",ry:7,gh:"天成",sh:"明宗",note:"小康之世"},
+   {n:"后唐末帝(李从珂)",t:"后唐",rg:"934–936",ry:3,note:"亡于晋"},
+   {n:"后晋高祖(石敬瑭)",t:"后晋",rg:"936–942",ry:6,gh:"天福",sh:"高祖",note:"割燕云十六州"},
+   {n:"后晋出帝(石重贵)",t:"后晋",rg:"942–947",ry:5,note:"亡于契丹"},
+   {n:"后汉高祖(刘知远)",t:"后汉",rg:"947–948",ry:1,gh:"乾祐",sh:"高祖",note:"建汉"},
+   {n:"后汉隐帝(刘承祐)",t:"后汉",rg:"948–951",ry:3,note:"亡于周"},
+   {n:"后周太祖(郭威)",t:"后周",rg:"951–954",ry:3,gh:"广顺",sh:"太祖",note:"革弊政"},
+   {n:"后周世宗(柴荣)",t:"后周",rg:"954–959",ry:5,sh:"世宗",note:"励精图治"},
+   {n:"后周恭帝(柴宗训)",t:"末代",rg:"959–960",ry:1,note:"禅于宋"}],
+ talents:{ "文臣":[{n:"冯道",note:"历仕多朝，政坛不倒"}],"其他":[{n:"李煜",note:"南唐后主，词帝"}] },
+ policies:["藩镇割据延续","燕云十六州割让契丹"],
+ summary:"大分裂尾声，武人乱政，终由宋重新统一。"},
+
+{name:"宋",years:"北宋960–1127 / 南宋1127–1279",era:"宋元",capital:"汴京→临安",
+ feature:"重文轻武，经济文化科技鼎盛，词风尤盛。列主要帝，合计约319年。",
+ emperors:[{n:"宋太祖(赵匡胤)",t:"开国",rg:"960–976",ry:16,mt:"太祖",gh:"建隆",note:"陈桥兵变，杯酒释兵权"},
+   {n:"宋太宗(赵炅)",t:"",rg:"976–997",ry:21,mt:"太宗",gh:"太平兴国",note:"完成统一"},
+   {n:"宋真宗(赵恒)",t:"",rg:"997–1022",ry:25,mt:"真宗",gh:"咸平",note:"澶渊之盟"},
+   {n:"宋仁宗(赵祯)",t:"仁宗盛治",rg:"1022–1063",ry:41,mt:"仁宗",gh:"天圣",note:"名臣辈出"},
+   {n:"宋英宗(赵曙)",t:"",rg:"1063–1067",ry:4,mt:"英宗",gh:"治平",note:"濮议"},
+   {n:"宋神宗(赵顼)",t:"",rg:"1067–1085",ry:18,mt:"神宗",gh:"熙宁",note:"支持王安石变法"},
+   {n:"宋哲宗(赵煦)",t:"",rg:"1085–1100",ry:15,mt:"哲宗",gh:"元祐",note:"绍圣绍述"},
+   {n:"宋徽宗(赵佶)",t:"",rg:"1100–1125",ry:25,mt:"徽宗",gh:"建中靖国",note:"艺术家亡国"},
+   {n:"宋钦宗(赵桓)",t:"北宋末",rg:"1125–1127",ry:2,mt:"钦宗",gh:"靖康",note:"靖康之变"},
+   {n:"宋高宗(赵构)",t:"南宋",rg:"1127–1162",ry:35,mt:"高宗",gh:"建炎",note:"偏安江南"},
+   {n:"宋孝宗(赵昚)",t:"",rg:"1162–1189",ry:27,mt:"孝宗",gh:"隆兴",note:"北伐未竟"},
+   {n:"宋光宗(赵惇)",t:"",rg:"1189–1194",ry:5,mt:"光宗",gh:"绍熙",note:"李后干政"},
+   {n:"宋宁宗(赵扩)",t:"",rg:"1194–1224",ry:30,mt:"宁宗",gh:"庆元",note:"庆元党禁"},
+   {n:"宋理宗(赵昀)",t:"",rg:"1224–1264",ry:40,mt:"理宗",gh:"宝庆",note:"联蒙灭金"},
+   {n:"宋度宗(赵禥)",t:"",rg:"1264–1274",ry:10,mt:"度宗",sh:"端",note:"贾似道专权"},
+   {n:"宋恭帝(赵㬎)",t:"",rg:"1274–1276",ry:2,note:"降元"},
+   {n:"宋端宗(赵昰)",t:"",rg:"1276–1278",ry:2,note:"流亡"},
+   {n:"宋末帝(赵昺)",t:"末代",rg:"1278–1279",ry:1,note:"崖山亡宋"}],
+ talents:{ "文臣":[{n:"赵普",note:"杯酒释兵权谋主"},{n:"寇准",note:"澶渊主战"},{n:"范仲淹",note:"庆历新政"},{n:"王安石",note:"熙宁变法"},{n:"司马光",note:"《资治通鉴》"}],
+   "武将":[{n:"岳飞",note:"精忠报国"},{n:"韩世忠",note:"抗金名将"}],
+   "思想·文人":[{n:"苏轼",note:"文豪"},{n:"沈括",note:"《梦溪笔谈》"},{n:"李清照",note:"婉约词宗"},{n:"文天祥",note:"浩然正气"}] },
+ policies:["杯酒释兵权","重文轻武","科举扩招(糊名)","庆历新政","王安石变法(青苗市易)","澶渊之盟","偏安江南"],
+ summary:"文治巅峰而军事积弱，经济与市民文化空前繁荣。"},
+
+{name:"元",years:"1271–1368",era:"宋元",capital:"大都(北京)",approx:true,
+ feature:"蒙古建立的大一统王朝，疆域空前。列主要帝，合计约97年。",
+ emperors:[{n:"元世祖(忽必烈)",t:"开国",rg:"1271–1294",ry:24,mt:"世祖",gh:"至元",note:"定国号元，灭宋统一"},
+   {n:"元成宗(铁穆耳)",t:"",rg:"1294–1307",ry:13,mt:"成宗",gh:"元贞",note:"守成"},
+   {n:"元武宗(海山)",t:"",rg:"1307–1311",ry:4,mt:"武宗",gh:"至大",note:"滥赏"},
+   {n:"元仁宗(爱育黎拔力八达)",t:"",rg:"1311–1320",ry:9,mt:"仁宗",gh:"皇庆",note:"复科举"},
+   {n:"元英宗(硕德八剌)",t:"",rg:"1320–1323",ry:3,mt:"英宗",gh:"至治",note:"南坡之变"},
+   {n:"元泰定帝(也孙铁木儿)",t:"",rg:"1323–1328",ry:5,gh:"泰定",note:"守成"},
+   {n:"元文宗(图帖睦尔)",t:"",rg:"1328–1332",ry:4,mt:"文宗",gh:"天历",note:"文治"},
+   {n:"元顺帝(妥懽帖睦尔)",t:"末代",rg:"1333–1368",ry:35,mt:"惠宗",gh:"至顺",note:"亡国"}],
+ talents:{ "文臣":[{n:"耶律楚材",note:"治国名相"},{n:"赵孟頫",note:"书画大家"}],
+   "其他":[{n:"郭守敬",note:"天文水利"},{n:"马可·波罗",note:"客卿游历"},{n:"关汉卿",note:"元曲大家"}] },
+ policies:["行省制(中书省)","四等人制","纸币(交钞)","驿站贯通","路府州县制"],
+ summary:"首次由少数民族完成大一统，驿站连通欧亚。"},
+
+{name:"明",years:"1368–1644",era:"明清",capital:"南京→北京",
+ feature:"汉族重建大一统，海禁与郑和下西洋并存。列主要帝，合计276年。",
+ emperors:[{n:"明太祖(朱元璋)",t:"洪武帝",rg:"1368–1398",ry:30,mt:"太祖",gh:"洪武",sh:"高",note:"驱元建明"},
+   {n:"明惠帝(朱允炆)",t:"建文",rg:"1398–1402",ry:4,gh:"建文",sh:"惠",note:"削藩失败"},
+   {n:"明成祖(朱棣)",t:"永乐",rg:"1402–1424",ry:22,mt:"成祖",gh:"永乐",sh:"文",note:"迁都北京，下西洋"},
+   {n:"明仁宗(朱高炽)",t:"",rg:"1424–1425",ry:1,mt:"仁宗",gh:"洪熙",sh:"昭",note:"仁宣先声"},
+   {n:"明宣宗(朱瞻基)",t:"",rg:"1425–1435",ry:10,mt:"宣宗",gh:"宣德",sh:"章",note:"仁宣之治"},
+   {n:"明英宗(朱祁镇)",t:"",rg:"1435–1464",ry:21,mt:"英宗",gh:"正统",sh:"睿",note:"两度在位，土木堡之变"},
+   {n:"明代宗(朱祁钰)",t:"景泰",rg:"1449–1457",ry:8,gh:"景泰",sh:"景",note:"北京保卫战"},
+   {n:"明宪宗(朱见深)",t:"",rg:"1464–1487",ry:23,mt:"宪宗",gh:"成化",sh:"纯",note:"宠万贵妃"},
+   {n:"明孝宗(朱祐樘)",t:"",rg:"1487–1505",ry:18,mt:"孝宗",gh:"弘治",sh:"敬",note:"弘治中兴"},
+   {n:"明武宗(朱厚照)",t:"",rg:"1505–1521",ry:16,mt:"武宗",gh:"正德",sh:"毅",note:"荒嬉"},
+   {n:"明世宗(朱厚熜)",t:"嘉靖",rg:"1521–1567",ry:45,mt:"世宗",gh:"嘉靖",sh:"肃",note:"崇道怠政"},
+   {n:"明穆宗(朱载坖)",t:"",rg:"1567–1572",ry:5,mt:"穆宗",gh:"隆庆",sh:"庄",note:"隆庆开关"},
+   {n:"明神宗(朱翊钧)",t:"万历",rg:"1572–1620",ry:48,mt:"神宗",gh:"万历",sh:"显",note:"怠政多年"},
+   {n:"明光宗(朱常洛)",t:"",rg:"1620",ry:1,mt:"光宗",gh:"泰昌",sh:"贞",note:"一月天子"},
+   {n:"明熹宗(朱由校)",t:"",rg:"1620–1627",ry:7,mt:"熹宗",gh:"天启",sh:"悊",note:"魏忠贤乱政"},
+   {n:"明思宗(朱由检)",t:"末代",rg:"1627–1644",ry:17,mt:"思宗",gh:"崇祯",sh:"烈",note:"煤山自缢"}],
+ talents:{ "文臣":[{n:"刘伯温",note:"开国谋臣"},{n:"于谦",note:"北京保卫战"},{n:"张居正",note:"改革首辅"},{n:"海瑞",note:"清官"}],
+   "武将":[{n:"戚继光",note:"抗倭"},{n:"郑成功",note:"收复台湾"}],
+   "思想·文人":[{n:"王守仁(阳明)",note:"心学集大成"},{n:"徐霞客",note:"地理学家"},{n:"宋应星",note:"《天工开物》"}] },
+ policies:["废丞相设内阁","厂卫(锦衣卫/东厂)","永乐迁都北京","郑和下西洋","一条鞭法","海禁","八股取士"],
+ summary:"专制强化而商品经济活跃，海陆两端各有大动作。"},
+
+{name:"清",years:"1636–1912",era:"明清",capital:"北京",
+ feature:"中国最后王朝，前期疆域极盛，后期遭遇近代变局（努尔哈赤建后金1616为清前身）。列主要帝，合计约276年。",
+ emperors:[{n:"清太宗(皇太极)",t:"改国号清",rg:"1636–1643",ry:7,mt:"太宗",gh:"崇德",sh:"文",note:"改国号清，入关前夜"},
+   {n:"清世祖(福临)",t:"顺治",rg:"1643–1661",ry:18,mt:"世祖",gh:"顺治",sh:"章",note:"入主中原"},
+   {n:"清圣祖(玄烨)",t:"康熙",rg:"1661–1722",ry:61,mt:"圣祖",gh:"康熙",sh:"仁",note:"守成开拓"},
+   {n:"清世宗(胤禛)",t:"雍正",rg:"1722–1735",ry:13,mt:"世宗",gh:"雍正",sh:"宪",note:"勤政革新"},
+   {n:"清高宗(弘历)",t:"乾隆",rg:"1735–1796",ry:61,mt:"高宗",gh:"乾隆",sh:"纯",note:"十全武功"},
+   {n:"清仁宗(颙琰)",t:"嘉庆",rg:"1796–1820",ry:24,mt:"仁宗",gh:"嘉庆",sh:"睿",note:"由盛转衰"},
+   {n:"清宣宗(旻宁)",t:"道光",rg:"1820–1850",ry:30,mt:"宣宗",gh:"道光",sh:"成",note:"鸦片战争"},
+   {n:"清文宗(奕詝)",t:"咸丰",rg:"1850–1861",ry:11,mt:"文宗",gh:"咸丰",sh:"显",note:"英法联军"},
+   {n:"清穆宗(载淳)",t:"同治",rg:"1861–1874",ry:13,mt:"穆宗",gh:"同治",sh:"毅",note:"同光中兴"},
+   {n:"清德宗(载湉)",t:"光绪",rg:"1875–1908",ry:34,mt:"德宗",gh:"光绪",sh:"景",note:"戊戌维新"},
+   {n:"清宣统(溥仪)",t:"末代",rg:"1908–1912",ry:4,gh:"宣统",note:"清亡，帝制终结"}],
+ talents:{ "文臣":[{n:"多尔衮",note:"摄政王"},{n:"曾国藩",note:"平定太平天国"},{n:"李鸿章",note:"洋务运动"},{n:"左宗棠",note:"收复新疆"},{n:"张之洞",note:"洋务巨擘"},{n:"纪晓岚",note:"《四库》总纂"}],
+   "其他":[{n:"林则徐",note:"禁烟抗英"},{n:"康有为",note:"维新领袖"},{n:"梁启超",note:"维新思想家"}] },
+ policies:["满汉分治","奏折制","摊丁入亩(雍正)","火耗归公","闭关锁国","洋务运动","戊戌变法","清末新政"],
+ summary:"古代帝制终结篇，由盛转衰卷入世界体系。"}
+];
+
+const tl=document.getElementById('timeline'),tabs=document.getElementById('tabs');
+const ERAS=["全部","先秦","秦汉","三国两晋南北朝","隋唐","宋元","明清"];
+let active="全部";
+ERAS.forEach(e=>{const b=document.createElement('div');b.className='tab'+(e===active?' active':'');
+  b.textContent=e;b.onclick=()=>{active=e;[...tabs.children].forEach(c=>c.classList.toggle('active',c.textContent===e));render();};
+  tabs.appendChild(b);});
+
+function roleTag(role,colorVar){return `<span class="dot" style="background:${colorVar}"></span>${role}`;}
+function render(){
+  tl.innerHTML='';
+  DATA.filter(d=>active==="全部"||d.era===active).forEach((d,i)=>{
+    const ec=ERA_COLORS[d.era]||"'#697386'";
+    const emperors=d.emperors.map(e=>`<div class="emp"><div class="emp-top"><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`).join('');
+    let talents='';
+    for(const role in d.talents){
+      const col=ROLE_COLORS[role]||"'#F59E0B'";
+      const chips=d.talents[role].map(p=>`<span class="chip"><b>${p.n}</b><span class="note">${p.note}</span></span>`).join('');
+      talents+=`<div class="tgroup"><div class="gt">${roleTag(role,col)}</div><div class="chips">${chips}</div></div>`;
+    }
+    const pills=d.policies.map(p=>`<span class="pill">${p}</span>`).join('');
+    const node=document.createElement('div');node.className='node';node.style.animationDelay=(i*45)+'ms';
+    node.innerHTML=`<article class="card collapsed">
+      <span class="accent" style="background:${ec}"></span>
+      <div class="chead" onclick="this.parentElement.classList.toggle('collapsed')">
+        <span class="name">${d.name}</span><span class="years">${d.years}</span>
+        <span class="meta">${d.capital} · 存${d.keepDur||((d.approx?'约':'')+d.emperors.reduce((s,e)=>s+(+e.ry||0),0)+'年')}</span>
+        <span class="toggle"><span class="chev">▾</span>展开/收起</span>
+      </div>
+      <div class="panel"><div class="panel-i">
+      <div class="feature">${d.feature}</div>
+      <div class="body">
+        <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--brand)">👑</span><span class="t">帝王世系</span><span class="c">${d.emperors.length}位</span></div>
+          <div class="emps">${emperors}</div></div>
+        <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--info)">⚔️</span><span class="t">核心人才</span></div>${talents}</div>
+        <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--warning)">📜</span><span class="t">政策与制度</span></div>
+          <div class="pills">${pills}</div></div>
+        <div class="summary">${d.summary}</div>
+      </div>
+      </div></div>
+    </article>`;
+    tl.appendChild(node);
+  });
+}
+render();
+</script>
+<script type="module">
+import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
+const reduceMM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduceMM) {
+  document.documentElement.classList.add("has-motion");
+  document.querySelectorAll(".node").forEach((node, i) => {
+    inView(node, () => {
+      if (node.dataset.shown) return;
+      node.dataset.shown = "1";
+      animate(node, { opacity: [0, 1], y: [14, 0] },
+        { duration: 0.55, type: "spring", bounce: 0.22, delay: Math.min(i, 6) * 0.05 });
+    }, { amount: 0.15 });
+  });
+}
+</script>
+</body>
+</html>
