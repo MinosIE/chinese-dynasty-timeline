@@ -87,6 +87,13 @@
   .emp .er{font-size:12px;font-weight:600;color:var(--ink-700)}
   .emp .etag{font-size:11px;color:var(--ink-600);background:#fff;border:1px solid var(--ink-100);border-radius:999px;padding:1px 8px;line-height:1.5}
   .emp .enote{font-size:12.5px;color:var(--ink-500);margin-top:1px}
+  /* famous emperor highlight */
+  .emp.star{background:linear-gradient(135deg,#FFF8E6 0%,#FCEFC7 100%);border-color:#E7C766;box-shadow:0 2px 6px rgba(199,154,58,.22)}
+  .emp.star .en{color:#9A6B12}
+  .emp .star-ic{display:none;color:var(--gold);font-size:13px;line-height:1}
+  .emp.star .star-ic{display:inline-block}
+  .emp .star-tag{display:none}
+  .emp.star .star-tag{display:inline-block;background:var(--gold);color:#fff;border-color:var(--gold);font-weight:700}
   /* talents */
   .tgroup{display:flex;flex-direction:column;gap:7px}
   .tgroup .gt{font-size:12px;font-weight:700;color:var(--ink-700);display:flex;align-items:center;gap:6px}
@@ -123,12 +130,13 @@
   <nav class="tabs" id="tabs"></nav>
   <main class="timeline" id="timeline"></main>
 
-  <p class="foot">点击朝代卡片可折叠 / 展开 · 数据为科普概览，细节以权威史料为准 · 用 WorkBuddy + ui-studio 生成<br>（注：可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说）</p>
+  <p class="foot"><span style="color:var(--gold);font-weight:700">★ 金色高亮卡片</span> = 该朝代最具代表性的名君（秦始皇、汉武帝、唐太宗、康熙等）　·　点击朝代卡片可折叠 / 展开<br>数据为科普概览，细节以权威史料为准 · 用 WorkBuddy + ui-studio 生成<br>（注：可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说）</p>
 </div>
 
 <script>
 const ERA_COLORS={"先秦":"'#C79A3A'","秦汉":"'#D4351C'","三国两晋南北朝":"'#7C3AED'","隋唐":"'#0EA5E9'","宋元":"'#059669'","明清":"'#EA580C'"};
 const ROLE_COLORS={"文臣":"'#3B82F6'","武将":'#EF4444',"思想·文人":'#10B981',"其他":'#F59E0B'};
+const STAR=new Set(["禹(大禹)","汤(天乙)","武丁","周武王(姬发)","秦始皇(嬴政)","汉高祖(刘邦)","汉武帝(刘彻)","王莽(新)","汉光武帝(刘秀)","蜀汉昭烈帝(刘备)","吴大帝(孙权)","晋武帝(司马炎)","北魏孝文帝(拓跋宏)","梁武帝(萧衍)","隋文帝(杨坚)","隋炀帝(杨广)","唐太宗(李世民)","武则天","唐玄宗(李隆基)","宋太祖(赵匡胤)","宋徽宗(赵佶)","元世祖(忽必烈)","明太祖(朱元璋)","明成祖(朱棣)","清圣祖(玄烨)","清世宗(胤禛)","清高宗(弘历)"]);
 const DATA=[
 {name:"夏",years:"约前2070–前1600",era:"先秦",capital:"阳城(传说)",approx:true,
  feature:"传说中首个世袭王朝，「家天下」由此开端；以下据古本竹书纪年约数列主要君主，合计约470年。",
@@ -477,7 +485,7 @@ function render(){
   tl.innerHTML='';
   DATA.filter(d=>active==="全部"||d.era===active).forEach((d,i)=>{
     const ec=ERA_COLORS[d.era]||"'#697386'";
-    const emperors=d.emperors.map(e=>`<div class="emp"><div class="emp-top"><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`).join('');
+    const emperors=d.emperors.map(e=>{const star=STAR.has(e.n);return `<div class="emp${star?' star':''}"><div class="emp-top"><span class="star-ic">★</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${star?'<span class="etag star-tag">名君</span>':''}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
     let talents='';
     for(const role in d.talents){
       const col=ROLE_COLORS[role]||"'#F59E0B'";
