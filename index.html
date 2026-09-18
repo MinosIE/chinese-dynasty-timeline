@@ -501,26 +501,36 @@ function drawEvTimeline(el){
   const w=el.clientWidth,h=el.clientHeight;
   if(!items.length||!w||!h)return;
   const base=el.getBoundingClientRect();
-  const R=items.map(it=>{const r=it.getBoundingClientRect();
-    return {l:r.left-base.left,t:r.top-base.top,w:r.width,h:r.height,r:r.right-base.left,b:r.bottom-base.top};});
+  const rel=r=>({l:r.left-base.left,t:r.top-base.top,w:r.width,h:r.height,r:r.right-base.left,b:r.bottom-base.top});
+  const N=items.map(it=>{
+    const c=rel(it.getBoundingClientRect());
+    const yEl=it.querySelector('.ev-year');
+    const q=rel((yEl||it).getBoundingClientRect());
+    return {x:q.l+q.w/2,y:q.t+q.h/2,cy:c.t,cardR:c.r};
+  });
+  const rows=[];
+  N.forEach(n=>{let row=rows.find(r=>Math.abs(r[0].cy-n.cy)<3);if(!row){row=[];rows.push(row);}row.push(n);});
+  rows.sort((a,b)=>a[0].cy-b[0].cy);rows.forEach(r=>r.sort((a,b)=>a.x-b.x));
   const brand=getComputedStyle(document.documentElement).getPropertyValue('--brand').trim()||'#D4351C';
   const svg=document.createElementNS(SVGNS,'svg');
   svg.setAttribute('class','ev-svg');svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
   let d='';
-  for(let i=0;i<R.length-1;i++){
-    const a=R[i],b=R[i+1];
-    if(Math.abs(a.t-b.t)<3){const y=Math.round(a.t+a.h/2);d+=`M ${a.r} ${y} L ${b.l} ${y} `;}
-    else{const ax=a.l+a.w/2,bx=b.l+b.w/2,my=(a.b+b.t)/2;d+=`M ${ax} ${a.b} L ${ax} ${my} L ${bx} ${my} L ${bx} ${b.t} `;}
-  }
+  rows.forEach((row,ri)=>{
+    for(let i=0;i<row.length-1;i++)d+=`M ${row[i].x} ${row[i].y} L ${row[i+1].x} ${row[i+1].y} `;
+    if(ri<rows.length-1){
+      const a=row[row.length-1],b=rows[ri+1][0],right=Math.max(...row.map(n=>n.cardR))+6;
+      d+=`M ${a.x} ${a.y} L ${right} ${a.y} L ${right} ${b.y} L ${b.x} ${b.y} `;
+    }
+  });
   if(d){
     const p=document.createElementNS(SVGNS,'path');
     p.setAttribute('d',d.trim());p.setAttribute('fill','none');p.setAttribute('stroke',brand);
     p.setAttribute('stroke-width','2');p.setAttribute('stroke-dasharray','6 5');p.setAttribute('stroke-linecap','round');
-    p.setAttribute('stroke-linejoin','round');p.setAttribute('opacity','.5');svg.appendChild(p);
+    p.setAttribute('stroke-linejoin','round');p.setAttribute('opacity','.45');svg.appendChild(p);
   }
-  const last=R[R.length-1],ay=Math.round(last.t+last.h/2),sx=last.r,ex=sx+13;
+  const lastRow=rows[rows.length-1],a=lastRow[lastRow.length-1],ex=Math.max(...lastRow.map(n=>n.cardR))+6,ay=a.y;
   const arrow=document.createElementNS(SVGNS,'path');
-  arrow.setAttribute('d',`M ${sx} ${ay} L ${ex} ${ay} M ${ex-7} ${ay-4} L ${ex} ${ay} L ${ex-7} ${ay+4}`);
+  arrow.setAttribute('d',`M ${a.x} ${ay} L ${ex} ${ay} M ${ex-7} ${ay-4} L ${ex} ${ay} L ${ex-7} ${ay+4}`);
   arrow.setAttribute('fill','none');arrow.setAttribute('stroke',brand);arrow.setAttribute('stroke-width','2');
   arrow.setAttribute('stroke-linecap','round');arrow.setAttribute('stroke-linejoin','round');arrow.setAttribute('opacity','.7');
   svg.appendChild(arrow);
