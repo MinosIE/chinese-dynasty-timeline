@@ -179,11 +179,14 @@
   .ev-group{background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-card);padding:16px 18px 14px}
   .ev-gh{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--brand);margin-bottom:12px}
   .ev-gh::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand)}
-  .ev-list{display:flex;flex-direction:column;border-left:2px solid var(--border);margin-left:5px}
-  .ev{display:flex;gap:14px;padding:9px 0 9px 20px;position:relative;cursor:pointer;align-items:baseline}
-  .ev::before{content:"";position:absolute;left:-8px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--brand)}
+  .ev-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .ev{display:flex;gap:12px;padding:11px 13px;border:1px solid var(--border);border-radius:10px;background:var(--surface-2);cursor:pointer;align-items:baseline;transition:border-color .15s,transform .15s,box-shadow .15s}
+  .ev::before{display:none}
+  .ev:hover{border-color:var(--brand);transform:translateY(-2px);box-shadow:var(--s-soft)}
   .ev:hover .ev-name{color:var(--brand)}
-  .ev:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:6px}
+  .ev:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:10px}
+  @media(max-width:720px){.ev-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:460px){.ev-list{grid-template-columns:1fr}}
   .ev-year{flex-shrink:0;width:76px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;font-size:13px;text-align:right}
   .ev-main{display:flex;flex-direction:column;gap:1px;min-width:0}
   .ev-name{font-size:14px;font-weight:700;color:var(--text-strong)}
