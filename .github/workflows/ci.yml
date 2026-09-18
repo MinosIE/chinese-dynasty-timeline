@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 1) 由源数据重新生成全部派生文件
+      - name: 生成派生文件
+        run: |
+          node scripts/build-search.mjs
+          node scripts/build-search-en.mjs
+          node scripts/build-records.mjs
+          node scripts/build-geo.mjs
+
+      # 2) 双语数据完整性（缺失即失败）
+      - name: 校验中英双语数据
+        run: node scripts/check-i18n.mjs
+
+      # 3) 帝王年份时序（信息性，不阻断）
+      - name: 帝王年份时序检查
+        run: node scripts/validate-data.mjs
+
+      # 4) 派生文件必须与提交内容一致（防止改了数据却忘记重新生成）
+      - name: 派生文件与提交一致
+        run: git diff --exit-code -- data llms.txt llms-en.txt robots.txt sitemap.xml

@@ -1,0 +1,28 @@
+# Chinese Dynasties · A Millennial Saga
+
+> A lightweight, static educational site on the dynasties of China, from Xia to Qing, with each dynasty’s overview, imperial lineage, key talents and pivotal institutions.
+
+## Data endpoints
+- [Dynasty overview](https://MinosIE.github.io/chinese-dynasty-timeline/data/overview.json): all dynasties (name / years / capital / feature / summary / counts). English text lives in the sibling `*En` fields.
+- [Dynasty details](https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/): per-dynasty JSON (emperors, talents, policies, aspects); English text in `*En` fields.
+- [Chinese index](https://MinosIE.github.io/chinese-dynasty-timeline/llms.txt): 中文索引
+
+## Dynasty quick view
+- **Xia** (c. 2070–1600 BC, Pre-Qin, capital Yangcheng (legendary)): Historicity still debated, cross-checked with Erlitou archaeology; marks the dawn of early statehood in the Central Plains.
+- **Shang** (1600–1046 BC, Pre-Qin, capital Yin (present-day Anyang)): Oracle bones confirm the Shang royal genealogy — the earliest dynasty with contemporaneous written records in China.
+- **Zhou** (Western Zhou 1046–771 BC / Eastern Zhou 770–256 BC, Pre-Qin, capital Haojing → Luoyi): The bedrock of ritual-music civilization; the Hundred Schools directly shaped two millennia of cultural DNA.
+- **Qin** (221–207 BC, Qin–Han, capital Xianyang): Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years.
+- **Han** (Western Han 202 BC–AD 8 / Eastern Han 25–220, Qin–Han, capital Chang'an → Luoyang): Forged the core Han identity and the centralized model; “Han” became the name of the people.
+- **Three Kingdoms** (220–280, Three Kingdoms & Divisions, capital Wei · Shu · Wu): An age of rising heroes, immortalized by Romance of the Three Kingdoms.
+- **Jin** (Western Jin 265–316 / Eastern Jin 317–420, Three Kingdoms & Divisions, capital Luoyang → Jiankang): Unity quickly collapsed, opening a long north–south standoff.
+- **Northern & Southern Dynasties** (420–589, Three Kingdoms & Divisions, capital North–South standoff): A key era of ethnic fusion, storing diverse nourishment for the Sui–Tang heyday.
+- **Sui** (581–618, Sui–Tang, capital Daxing (Chang'an)): Its institutions (exams, canal) had lasting impact; short-lived but bridging.
+- **Tang** (618–907, Sui–Tang, capital Chang'an): One of the strongest and most open eras of imperial China; its culture radiated across East Asia.
+- **Five Dynasties & Ten Kingdoms** (907–960, Sui–Tang, capital Rotating Central Plains): The tail of great fragmentation, warlord misrule, ended by Song's reunification.
+- **Liao** (916–1125, Song–Yuan, capital Shangjing (Linhuang)): A northern steppe polity that pioneered dual administration, with far-reaching influence.
+- **Song** (Northern Song 960–1127 / Southern Song 1127–1279, Song–Yuan, capital Bianjing → Lin'an): A zenith of civil governance yet militarily weak; economy and urban culture unprecedented.
+- **Western Xia** (1038–1227, Song–Yuan, capital Xingqing (Yinchuan)): A northwestern regime where Buddhism and Tangut–Han culture blended.
+- **Jin** (1115–1234, Song–Yuan, capital Huining → Zhongdu (Beijing)): The Jurchen rose in the Northeast, advanced Han institutions, ended by the Mongol–Song alliance.
+- **Yuan** (1271–1368, Song–Yuan, capital Dadu (Beijing)): First time a minority completed unification; relay stations linked Eurasia.
+- **Ming** (1368–1644, Ming–Qing, capital Nanjing → Beijing): Autocracy intensified yet a vibrant commodity economy; big moves by land and sea.
+- **Qing** (1636–1912, Ming–Qing, capital Beijing): The final chapter of imperial rule, turning from prosperity to decline as it entered the world system.

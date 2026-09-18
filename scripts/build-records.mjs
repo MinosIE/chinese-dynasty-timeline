@@ -3,6 +3,7 @@ import fs from 'fs';
 const dir = 'data/dynasties';
 const ov = JSON.parse(fs.readFileSync('data/overview.json'));
 const nameById = Object.fromEntries(ov.map(o => [o.id, o.name]));
+const nameEnById = Object.fromEntries(ov.map(o => [o.id, o.nameEn || o.name]));
 
 const emps = [];
 for (const f of fs.readdirSync(dir)) {
@@ -10,7 +11,10 @@ for (const f of fs.readdirSync(dir)) {
   const id = f.replace('.json', '');
   (d.emperors || []).forEach(e => {
     if (typeof e.ry === 'number' && e.ry > 0) {
-      emps.push({ name: e.n, ry: e.ry, rg: e.rg, id, dynasty: nameById[id] || d.name });
+      emps.push({
+        name: e.n, nameEn: e.nEn || e.n, ry: e.ry, rg: e.rg, rgEn: e.rgEn || e.rg,
+        id, dynasty: nameById[id] || d.name, dynastyEn: nameEnById[id] || d.nameEn || d.name
+      });
     }
   });
 }
@@ -20,7 +24,7 @@ const shortest = [...emps].sort((a, b) => a.ry - b.ry).slice(0, 6);
 const mostEmperors = [...ov]
   .sort((a, b) => b.counts.emperors - a.counts.emperors)
   .slice(0, 6)
-  .map(o => ({ dynasty: o.name, id: o.id, count: o.counts.emperors }));
+  .map(o => ({ dynasty: o.name, dynastyEn: o.nameEn || o.name, id: o.id, count: o.counts.emperors }));
 
 const records = { longest, shortest, mostEmperors };
 fs.writeFileSync('data/records.json', JSON.stringify(records, null, 2) + '\n');

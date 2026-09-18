@@ -1,6 +1,6 @@
 # 中华王朝时间轴 · 产品需求文档（PRD）
 
-> 版本：v1.7　|　日期：2026-09-18　|　状态：模块化布局（概览 + 分区切换）+ JSON 化 + 明暗主题 + 帝王分级 + 搜索 + 存续可视化 + 大事记 + GEO
+> 版本：v1.8　|　日期：2026-09-18　|　状态：模块化布局（概览 + 分区切换）+ JSON 化 + 明暗主题 + 帝王分级 + 搜索 + 存续可视化 + 大事记 + 中英双语 + 双语 GEO
 
 ---
 
@@ -50,25 +50,29 @@
 - **F15 历史大事记**：关键历史事件时间线，点击跳转到对应朝代。
 - **F16 同时期政权**：补充辽、西夏、金，共 18 个朝代。
 - **F17 帝王之最**：基于帝王世系统计在位最长 / 最短、帝王数量最多的朝代，可跳转。
-- **F17 模块化布局**：概览首页 + 吸顶模块导航，分区切换，避免页面超长、突出重点。
+- **F18 模块化布局**：概览首页 + 吸顶模块导航，分区切换，避免页面超长、突出重点。
+- **F19 中英双语**：右上角一键切换中 / 英；静态文案、数据（`*En` 字段）、搜索、SEO/GEO 全面双语，并支持 `?lang=en` 直达英文。
 
 ### 4.2 规划中（Roadmap / v2+）
 
-- **F18** 单朝代分享卡片 / 海报导出。
-- **F19** 多语言（繁体 / 英文）切换。
-- **F20** 朝代疆域缩略图 / 关系图谱。
+- **F20** 单朝代分享卡片 / 海报导出。
+- **F21** 繁体中文（zh-Hant）切换。
+- **F22** 朝代疆域缩略图 / 关系图谱。
+- **F23** 世界史横向对照（同期世界文明）。
+- **F24** 人物卡片（点击帝王 / 人才看简介）。
 
 ## 5. 信息架构
 
 ```
 Hero（标题 + KPI：王朝数 / 年数 / 帝王与人才）
   └─ 搜索（全局）
-  └─ 吸顶模块导航：概览 / 朝代时间轴 / 存续一览 / 四大发明 / 大事记
+  └─ 吸顶模块导航：概览 / 朝代时间轴 / 存续一览 / 四大发明 / 大事记 / 帝王之最
        ├─ 概览：入口卡片（进入各模块）
        ├─ 朝代时间轴：大时代筛选 + 时间轴卡片 ── 点击展开 ──→ 按需加载 data/dynasties/<id>.json
        ├─ 存续一览：按年代比例的时间跨度条
        ├─ 四大发明：卡片（朝代 / 人物 / 世界影响）
-       └─ 大事记：事件时间线
+       ├─ 大事记：按大时代分组的事件横向时间线（年份为节点，末端箭头）
+       └─ 帝王之最：在位最长 / 最短、帝王最多朝代
   └─ 页脚（图例 + 免责声明）
 ```
 
@@ -80,7 +84,8 @@ Hero（标题 + KPI：王朝数 / 年数 / 帝王与人才）
 - **概览字段**：`id,name,years,era,capital,approx,duration,feature,summary,counts{emperors,talents,policies}`。
 - **详情字段**：`id,name,years,era,capital,feature,summary,emperors[],talents{},policies[],aspects{政治,经济,文化}`。
 - **帝王字段**：`n(名号),t(代际),rg(在位),ry(年数),gh(年号),mt(庙号),sh(谥号),note(备注)`。
-- 修改数据后运行 `node scripts/build-geo.mjs` 重新生成 GEO 文件。
+- **双语字段**：所有展示型文案附同名 `*En`（如 `nameEn / yearsEn / capitalEn / summaryEn / noteEn`）；`policiesEn`（并行数组）、`aspectsEn`（并行对象，键同中文）。英文缺失时自动回退中文。
+- 修改数据后按序重新生成派生文件：`node scripts/build-search.mjs` → `node scripts/build-search-en.mjs` → `node scripts/build-records.mjs` → `node scripts/build-geo.mjs`；并用 `node scripts/check-i18n.mjs` 校验双语完整性。
 
 ## 7. 内容准确性规范（科普红线）
 
@@ -109,11 +114,14 @@ data/inventions.json       # 四大发明
 data/events.json           # 历史大事记
 data/records.json          # 帝王之最
 data/search.json           # 搜索索引
-llms.txt                   # 给 LLM 的站点索引
+llms.txt                   # 给 LLM 的站点索引（中文）
+llms-en.txt                # 给 LLM 的站点索引（英文）
 robots.txt                 # 爬虫规则
 sitemap.xml                # 站点地图
-scripts/build-geo.mjs      # 生成 GEO 文件
+scripts/build-geo.mjs      # 生成 GEO 文件（llms.txt / llms-en.txt / robots.txt / sitemap.xml）
 scripts/build-search.mjs   # 生成搜索索引
+scripts/build-search-en.mjs# 为搜索索引增量补充英文
+scripts/check-i18n.mjs     # 校验中英双语数据完整性
 scripts/build-records.mjs  # 生成帝王之最
 scripts/update-overview.mjs# 补充年代跨度并插入新朝代
 scripts/validate-data.mjs  # 校验帝王年份排序
@@ -123,21 +131,23 @@ assets/og-source.html      # 封面图源文件
 ## 9. GEO（生成式引擎优化）
 
 - **JSON-LD**：运行时由概览注入 schema.org `ItemList`，含每个王朝名称/年代/都城/概述。
-- **llms.txt**：站点说明 + 各王朝速览 + 数据入口，便于 LLM 直接引用。
+- **llms.txt / llms-en.txt**：中英双语站点说明 + 各王朝速览 + 数据入口，便于 LLM 直接引用。
 - **robots.txt / sitemap.xml**：放行抓取并声明页面与数据文件。
+- **hreflang 交替链接**：`zh-CN` / `en`（`?lang=en`）/ `x-default`；`og:locale` 与 `og:locale:alternate` 同步声明。
 - **元信息**：`description`、`keywords`、`canonical`、Open Graph、Twitter Card。
-- **结构化数据源**：概览/详情均为规范 JSON，机器可直接消费。
+- **结构化数据源**：概览/详情均为规范 JSON，含 `*En` 英文副本，机器可直接消费。
 
 ## 10. 验收标准
 
 - [x] 桌面 / 移动端布局正常，无横向滚动。
-- [x] 概览默认渲染 15 个王朝，计数与 KPI 正确。
+- [x] 概览默认渲染 18 个王朝，计数与 KPI 正确。
 - [x] 点击卡片才请求对应 `data/dynasties/<id>.json`（Network 可见），并有加载态。
 - [x] 名君高亮生效，普通帝王正常。
 - [x] 明暗主题切换正常且记忆偏好。
-- [x] JSON-LD 注入 `ItemList`（15 项），无控制台报错。
+- [x] 中英切换与 `?lang=en` 生效，双语数据无缺失（`node scripts/check-i18n.mjs` 通过）。
+- [x] JSON-LD 注入 `ItemList`（18 项），无控制台报错。
 - [x] `prefers-reduced-motion` 下无动画且内容可见。
-- [ ] 部署后公网可访问（Pages 待启用）。
+- [x] 部署后公网可访问（GitHub Pages）。
 
 ## 11. 部署（GitHub Pages）
 
@@ -152,6 +162,9 @@ assets/og-source.html      # 封面图源文件
 | --- | --- |
 | v1.0 | MVP 上线（单文件） |
 | v1.1 | 名君高亮区分 |
-| v1.2（当前） | 数据 JSON 化 + 按需加载 + 明暗主题 + GEO |
+| v1.2 | 数据 JSON 化 + 按需加载 + 明暗主题 + GEO |
 | v2.0 | 搜索 + 存续时长可视化 + 大事件标注 |
-| v3.0 | 多语言 + 社区共建数据 + 互动测验 |
+| v2.1 | 四大发明 + 帝王之最 + 同时期政权（18 朝） |
+| v2.2 | 模块化布局（概览 + 分区切换） |
+| v1.8（当前） | 中英双语（含 `?lang=en`）+ 双语 GEO（llms-en/hreflang）+ 自检脚本与 CI |
+| v3.0 | 分享卡片 + 繁体中文 + 疆域 / 关系图谱 + 社区共建 + 互动测验 |

@@ -19,7 +19,8 @@ https://MinosIE.github.io/chinese-dynasty-timeline/
 - **帝王之最**：在位最长 / 最短、帝王数量最多的朝代。
 - **搜索**：按朝代 / 帝王 / 人物 / 制度 / 发明检索并跳转。
 - **明暗主题**：右上角切换，记忆偏好，首访跟随系统。
-- **GEO / SEO**：JSON-LD、llms.txt、robots.txt、sitemap.xml、Open Graph 分享图。
+- **中英双语**：右上角一键切换中 / 英，文案与数据全量双语；`?lang=en` 可直达英文。
+- **GEO / SEO**：JSON-LD、llms.txt / llms-en.txt、hreflang、robots.txt、sitemap.xml、Open Graph 分享图。
 
 ## 目录结构
 
@@ -34,11 +35,14 @@ data/inventions.json     四大发明
 data/events.json         历史大事记
 data/records.json        帝王之最
 data/search.json         搜索索引
-llms.txt                 给 LLM 的站点索引
+llms.txt                 给 LLM 的站点索引（中文）
+llms-en.txt              给 LLM 的站点索引（英文）
 robots.txt               爬虫规则
 sitemap.xml              站点地图
-scripts/build-geo.mjs     生成 GEO 文件（llms.txt / sitemap.xml）
-scripts/build-search.mjs  生成搜索索引
+scripts/build-geo.mjs     生成 GEO 文件（llms.txt / llms-en.txt / sitemap.xml）
+scripts/build-search.mjs   生成搜索索引
+scripts/build-search-en.mjs 为搜索索引增量补充英文
+scripts/check-i18n.mjs     校验中英双语数据完整性
 scripts/build-records.mjs 生成帝王之最
 scripts/validate-data.mjs 校验帝王年份排序
 assets/og-source.html      封面图源文件
@@ -56,9 +60,11 @@ python3 -m http.server 8765
 数据变更后，重新生成派生文件：
 
 ```bash
-node scripts/build-search.mjs    # 改了王朝/帝王/人才/制度/发明后
-node scripts/build-records.mjs   # 改了帝王世系后
-node scripts/build-geo.mjs       # 改了概览/新增朝代后
+node scripts/build-search.mjs     # 改了王朝/帝王/人才/制度/发明后
+node scripts/build-search-en.mjs  # 接着为搜索索引补充英文
+node scripts/build-records.mjs    # 改了帝王世系后
+node scripts/build-geo.mjs        # 改了概览/新增朝代后
+node scripts/check-i18n.mjs       # 校验双语数据完整性（有缺失会报错退出）
 ```
 
 每个王朝详情在 `data/dynasties/<id>.json`，字段：
@@ -78,6 +84,8 @@ node scripts/build-geo.mjs       # 改了概览/新增朝代后
   "aspects": { "政治": ["…"], "经济": ["…"], "文化": ["…"] }
 }
 ```
+
+> 所有展示型文案均附同名 `*En` 英文字段（`nameEn` / `yearsEn` / `summaryEn` / `noteEn` …）；`policiesEn` 为并行数组、`aspectsEn` 为并行对象。英文缺失时英文页自动回退中文。
 
 ## 部署（GitHub Pages）
 

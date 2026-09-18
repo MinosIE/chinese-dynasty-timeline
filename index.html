@@ -9,6 +9,9 @@
 <meta name="author" content="中华王朝时间轴">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://MinosIE.github.io/chinese-dynasty-timeline/">
+<link rel="alternate" hreflang="zh-CN" href="https://MinosIE.github.io/chinese-dynasty-timeline/">
+<link rel="alternate" hreflang="en" href="https://MinosIE.github.io/chinese-dynasty-timeline/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://MinosIE.github.io/chinese-dynasty-timeline/">
 <link rel="sitemap" type="application/xml" href="sitemap.xml">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="styles.css">
@@ -21,6 +24,7 @@
 <meta property="og:description" content="从夏到清的中国历史朝代科普：概览、帝王世系、核心人才与关键制度。">
 <meta property="og:url" content="https://MinosIE.github.io/chinese-dynasty-timeline/">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="中华王朝时间轴">
 <meta property="og:image" content="https://MinosIE.github.io/chinese-dynasty-timeline/og-cover.png">
 <meta property="og:image:width" content="1200">
@@ -39,7 +43,7 @@
 (function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
 </script>
 <script>
-(function(){try{var l=localStorage.getItem('lang');if(!l){l=(navigator.language||'zh').toLowerCase().startsWith('en')?'en':'zh';}document.documentElement.lang=l==='en'?'en':'zh-CN';}catch(e){}})();
+(function(){try{var q=null;try{q=new URLSearchParams(location.search).get('lang');}catch(_){}var l=q||localStorage.getItem('lang');if(!l){l=(navigator.language||'zh').toLowerCase().startsWith('en')?'en':'zh';}if(q)localStorage.setItem('lang',l==='en'?'en':'zh');document.documentElement.lang=l==='en'?'en':'zh-CN';}catch(e){}})();
 </script>
 </head>
 <body>
@@ -190,7 +194,7 @@ const I18N={
     foot:'<span class="legend">👑 Deep-red card</span> = hailed as an “Eternal Emperor” (Qin Shi Huang, Han Wudi, Tang Taizong, Kangxi)　·　<span class="legend">★ Gold card</span> = the dynasty’s representative renowned ruler　·　Click a card to expand/collapse details (data loads on first expand)<br>Content is for general education; defer to authoritative sources for details　·　Recorded dynasty history spans ~4000 years; tracing back to prehistoric Liangzhu/Longshan (~5000 years) gives the saying “five thousand years of civilization.”'
   }
 };
-let lang=(function(){try{return localStorage.getItem('lang')||(navigator.language.toLowerCase().startsWith('en')?'en':'zh');}catch(e){return 'zh';}})();
+let lang=(function(){try{const q=new URLSearchParams(location.search).get('lang');return q||localStorage.getItem('lang')||(navigator.language.toLowerCase().startsWith('en')?'en':'zh');}catch(e){return 'zh';}})();
 document.documentElement.lang=I18N[lang].htmlLang||(lang==='en'?'en':'zh-CN');
 const ERA_LABELS=I18N[lang].era;
 function t(key,vars){
@@ -372,7 +376,7 @@ function buildDetail(d){
   for(const role in d.talents){
     const col=ROLE_COLORS[role]||"#F59E0B";
     const chips=d.talents[role].map(p=>`<span class="chip"><b>${L(p,'n')}</b><span class="note">${L(p,'note')}</span></span>`).join('');
-    talents+=`<div class="tgroup"><div class="gt"><span class="dot" style="background:${col}"></span>${ROLE_EN[role]||role}</div><div class="chips">${chips}</div></div>`;
+    talents+=`<div class="tgroup"><div class="gt"><span class="dot" style="background:${col}"></span>${lang==='en'?(ROLE_EN[role]||role):role}</div><div class="chips">${chips}</div></div>`;
   }
   const pills=(lang==='en'&&d.policiesEn?d.policiesEn:d.policies).map(p=>`<span class="pill">${p}</span>`).join('');
   let aspects='';
@@ -380,7 +384,7 @@ function buildDetail(d){
     const a=lang==='en'&&d.aspectsEn?d.aspectsEn:d.aspects;
     aspects=ASPECT_ORDER.filter(k=>a[k]).map(k=>{
       const items=a[k].map(x=>`<li>${x}</li>`).join('');
-      return `<div class="aspect"><div class="aspect-h"><span class="dot" style="background:${ASPECT_COLORS[k]}"></span>${ASPECT_EN[k]||k}</div><ul class="aspect-list">${items}</ul></div>`;
+      return `<div class="aspect"><div class="aspect-h"><span class="dot" style="background:${ASPECT_COLORS[k]}"></span>${lang==='en'?(ASPECT_EN[k]||k):k}</div><ul class="aspect-list">${items}</ul></div>`;
     }).join('');
   }
   return `<div class="body">
