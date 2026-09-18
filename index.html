@@ -34,9 +34,9 @@
 </script>
 </head>
 <body>
-<button class="theme-btn" id="themeBtn" title="切换明暗主题" aria-label="切换明暗主题">🌙 夜间</button>
 <div class="wrap">
   <section class="hero">
+    <button class="theme-btn" id="themeBtn" title="切换明暗主题" aria-label="切换明暗主题">🌙 夜间</button>
     <h1>中华王朝 · 千年脉络</h1>
     <p>从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。</p>
     <div class="kpis" id="kpis"></div>
@@ -46,7 +46,7 @@
   <main class="timeline" id="timeline"></main>
 
   <p class="foot">
-    <span class="legend">★ 金色高亮卡片</span> = 该朝代最具代表性的名君（秦始皇、汉武帝、唐太宗、康熙等）　·　点击朝代卡片可展开/收起详情（首次展开才加载该朝数据）<br>
+    <span class="legend">👑 深红卡片</span> = 后世誉为「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）　·　<span class="legend">★ 金色卡片</span> = 该朝代代表性名君　·　点击卡片可展开/收起详情（首次展开才加载该朝数据）<br>
     数据为科普概览，细节以权威史料为准　·　可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说
   </p>
 </div>
@@ -60,6 +60,7 @@ const ROLE_COLORS={"文臣":"#3B82F6","武将":"#EF4444","思想·文人":"#10B9
 const ASPECT_ORDER=["政治","经济","文化"];
 const ASPECT_COLORS={"政治":"#D4351C","经济":"#059669","文化":"#7C3AED"};
 const STAR=new Set(["禹(大禹)","汤(天乙)","武丁","周武王(姬发)","秦始皇(嬴政)","汉高祖(刘邦)","汉武帝(刘彻)","王莽(新)","汉光武帝(刘秀)","蜀汉昭烈帝(刘备)","吴大帝(孙权)","晋武帝(司马炎)","北魏孝文帝(拓跋宏)","梁武帝(萧衍)","隋文帝(杨坚)","隋炀帝(杨广)","唐太宗(李世民)","武则天","唐玄宗(李隆基)","宋太祖(赵匡胤)","宋徽宗(赵佶)","元世祖(忽必烈)","明太祖(朱元璋)","明成祖(朱棣)","清圣祖(玄烨)","清世宗(胤禛)","清高宗(弘历)"]);
+const LEGEND=new Set(["秦始皇(嬴政)","汉武帝(刘彻)","唐太宗(李世民)","清圣祖(玄烨)"]);
 const ERAS=["全部","先秦","秦汉","三国两晋南北朝","隋唐","宋元","明清"];
 
 const tl=document.getElementById('timeline');
@@ -145,7 +146,7 @@ async function loadDetail(id, container){
 }
 
 function buildDetail(d){
-  const emperors=d.emperors.map(e=>{const star=STAR.has(e.n);return `<div class="emp${star?' star':''}"><div class="emp-top"><span class="star-ic">★</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${star?'<span class="etag star-tag">名君</span>':''}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
+  const emperors=d.emperors.map(e=>{const legend=LEGEND.has(e.n);const star=!legend&&STAR.has(e.n);return `<div class="emp${legend?' legend':(star?' star':'')}"><div class="emp-top"><span class="star-ic">${legend?'👑':(star?'★':'')}</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${legend?'<span class="etag legend-tag">千古一帝</span>':(star?'<span class="etag star-tag">名君</span>':'')}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
   let talents='';
   for(const role in d.talents){
     const col=ROLE_COLORS[role]||"#F59E0B";

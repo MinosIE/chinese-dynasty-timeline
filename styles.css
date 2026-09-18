@@ -46,11 +46,11 @@
     background:var(--bg);color:var(--text);line-height:1.6;
     -webkit-font-smoothing:antialiased;padding-bottom:72px;transition:background .3s,color .3s}
   .wrap{display:flex;flex-direction:column;gap:28px;max-width:1440px;margin:0 auto;padding:0 20px}
-  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;height:40px;padding:0 15px;border-radius:999px;
-    border:1px solid var(--border);background:var(--surface);color:var(--text-strong);
-    font-size:13px;font-weight:600;cursor:pointer;box-shadow:var(--s-card);
+  .theme-btn{position:absolute;top:18px;right:18px;z-index:5;height:40px;padding:0 15px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.12);color:#fff;
+    font-size:13px;font-weight:600;cursor:pointer;backdrop-filter:blur(4px);
     display:inline-flex;align-items:center;gap:6px;font-family:inherit;transition:.2s}
-  .theme-btn:hover{transform:translateY(-1px);box-shadow:var(--s-lift)}
+  .theme-btn:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}
   /* hero */
   .hero{display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;
     padding:56px 24px 40px;border-radius:var(--r4);
@@ -122,7 +122,15 @@
   .emp.star{background:linear-gradient(135deg,#FFF8E6 0%,#FCEFC7 100%);border-color:#E7C766;box-shadow:0 2px 6px rgba(199,154,58,.22)}
   .emp.star .en{color:#9A6B12}
   .emp .star-ic{display:none;color:var(--gold);font-size:13px;line-height:1}
-  .emp.star .star-ic{display:inline-block}
+  .emp.star .star-ic,.emp.legend .star-ic{display:inline-block}
+  /* 千古一帝 */
+  .emp.legend{background:linear-gradient(135deg,#3A1F1A 0%,#7A2A18 100%);border-color:#C79A3A;box-shadow:0 3px 10px rgba(199,154,58,.35)}
+  .emp.legend .en{color:#F2C75C}
+  .emp.legend .er{color:#F2C75C}
+  .emp.legend .et,.emp.legend .enote{color:rgba(255,255,255,.85)}
+  .emp.legend .etag{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.9)}
+  .emp.legend .star-ic{color:#F2C75C}
+  .emp.legend .legend-tag{background:linear-gradient(135deg,#E8C05A,#C79A3A);color:#3A1F1A;border-color:#E8C05A;font-weight:800}
   .emp .star-tag{display:none}
   .emp.star .star-tag{display:inline-block;background:var(--gold);color:#fff;border-color:var(--gold);font-weight:700}
   .tgroup{display:flex;flex-direction:column;gap:7px}
