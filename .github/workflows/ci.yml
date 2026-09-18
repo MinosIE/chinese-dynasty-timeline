@@ -22,6 +22,7 @@ jobs:
           node scripts/build-search-en.mjs
           node scripts/build-records.mjs
           node scripts/build-geo.mjs
+          node scripts/build-llms-full.mjs
 
       # 2) 双语数据完整性（缺失即失败）
       - name: 校验中英双语数据
@@ -33,4 +34,4 @@ jobs:
 
       # 4) 派生文件必须与提交内容一致（防止改了数据却忘记重新生成）
       - name: 派生文件与提交一致
-        run: git diff --exit-code -- data llms.txt llms-en.txt robots.txt sitemap.xml
+        run: git diff --exit-code -- data llms.txt llms-en.txt llms-full.txt llms-full-en.txt robots.txt sitemap.xml

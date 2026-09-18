@@ -1,0 +1,761 @@
+# Chinese Dynasties · A Timeline of Three Millennia
+
+> A static, zero-dependency educational site on Chinese imperial history from the Xia to the Qing dynasty (18 dynasties). Full plain-text dump of all structured data for LLM ingestion.
+
+Source: https://MinosIE.github.io/chinese-dynasty-timeline/
+
+## 各王朝详情
+
+## Xia（c. 2070–1600 BC）
+- 大时代：Pre-Qin
+- 都城：Yangcheng (legendary)
+- 特征：The first hereditary dynasty in legend; the “family rule” began here. Major rulers per the Bamboo Annals, ~470 yrs.
+- 总结：Historicity still debated, cross-checked with Erlitou archaeology; marks the dawn of early statehood in the Central Plains.
+
+### 帝王
+- Yu (Da Yu)（Founding）：c. 2070–2025 BC，在位约 45 年。Tamed the floods and divided the land into nine provinces; founded the Xia
+- Qi（Second）：c. 2025–1996 BC，在位约 29 年。Established hereditary rule; the “family rule” began
+- Taikang：c. 1996–1978 BC，在位约 18 年。Lost the state; power slipped away
+- Zhongkang：c. 1978–1965 BC，在位约 13 年。A puppet; real power with Houyi
+- Xiang：c. 1965–1937 BC，在位约 28 年。Killed by Hanzhuo
+- Shaokang：c. 1937–1915 BC，在位约 22 年。The Shaokang Restoration; recovered the state
+- Zhu：c. 1915–1898 BC，在位约 17 年。Campaigns against the Eastern Yi; Xia resurged
+- Huai：c. 1898–1872 BC，在位约 26 年。The Nine Yi came to court
+- Mang：c. 1872–1854 BC，在位约 18 年。Offered river sacrifices to the Yellow River
+- Xie：c. 1854–1838 BC，在位约 16 年。Vassals submitted
+- Bu Jiang：c. 1838–1779 BC，在位约 59 年。Longest reign; the Xia house was strong
+- Jiong：c. 1779–1758 BC，在位约 21 年。Maintained the legacy
+- Jin：c. 1758–1737 BC，在位约 21 年。Xia in gradual decline
+- Kong Jia：c. 1737–1706 BC，在位约 31 年。Fond of spirits; vassals rebelled
+- Gao：c. 1706–1695 BC，在位约 11 年。An age of decline
+- Fa：c. 1695–1676 BC，在位约 19 年。An age of decline
+- Jie (Lügui)（Last ruler）：c. 1676–1600 BC，在位约 76 年，谥号 Jie。Tyrannical and unjust; Xia fell
+
+### 人才
+- Others：Houyi（Leader of the Eastern Yi; usurped Xia）；Hanzhuo（Killed Houyi and seized power）
+
+### 制度
+- Hereditary rule replaced abdication
+- Channeling waters to control floods
+- The “family rule” concept established
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Hereditary rule replaced abdication; the “family rule” was thereby established；Kingship took shape; the tribal league transitioned toward an early state
+- Economy：Farm-based; Yu's flood control is said to have aided irrigation；The Erlitou culture shows bronze casting and a division of handicraft labor
+- Culture：No mature writing yet; history intertwined with legend；Ritual order and calendar took root (the Xia Xiaozheng is said to be the Xia calendar)
+
+## Shang（1600–1046 BC）
+- 大时代：Pre-Qin
+- 都城：Yin (present-day Anyang)
+- 特征：Zenith of oracle-bone script and bronze civilization, with theocratic and royal power fused. Major rulers per the traditional line, ~554 yrs.
+- 总结：Oracle bones confirm the Shang royal genealogy — the earliest dynasty with contemporaneous written records in China.
+
+### 帝王
+- Tang (Tian Yi)（Founding）：c. 1600–1588 BC，在位约 12 年，庙号 Taizu。Destroyed Xia, founded Shang
+- Wai Bing：c. 1588–1586 BC，在位约 2 年。Yi Yin as regent
+- Zhong Ren：c. 1586–1582 BC，在位约 4 年。Yi Yin as regent
+- Tai Jia：c. 1582–1570 BC，在位约 12 年，庙号 Taizong。Yi Yin exiled Tai Jia; he repented and restored order
+- Wo Ding：c. 1570–1541 BC，在位约 29 年。Yi Yin died
+- Tai Geng：c. 1541–1516 BC，在位约 25 年。Vassals were submissive
+- Xiao Jia：c. 1516–1499 BC，在位约 17 年。Maintained the legacy
+- Yong Ji：c. 1499–1487 BC，在位约 12 年。Vassals rebelled
+- Tai Wu：c. 1487–1412 BC，在位约 75 年，庙号 Zhongzong。The Tai Wu Restoration; Shang resurged
+- Zhong Ding：c. 1412–1401 BC，在位约 11 年。Moved to Ao
+- Wai Ren：c. 1401–1386 BC，在位约 15 年。The Disorder of the Nine Generations began
+- He Dan Jia：c. 1386–1377 BC，在位约 9 年。Moved to Xiang
+- Zu Yi：c. 1377–1358 BC，在位约 19 年，庙号 Zhongzong。Moved to Xing; Yin revived
+- Zu Xin：c. 1358–1342 BC，在位约 16 年。Maintained the legacy
+- Wo Jia：c. 1342–1317 BC，在位约 25 年。Maintained the legacy
+- Zu Ding：c. 1317–1285 BC，在位约 32 年。Maintained the legacy
+- Nan Geng：c. 1285–1260 BC，在位约 25 年。Moved to Yan
+- Yang Jia：c. 1260–1253 BC，在位约 7 年。Vassals weakened
+- Pan Geng：c. 1253–1225 BC，在位约 28 年。Moved to Yin, stabilizing politics
+- Xiao Xin：c. 1225–1204 BC，在位约 21 年。Yin declined again
+- Xiao Yi：c. 1204–1176 BC，在位约 28 年。Maintained the legacy
+- Wu Ding：c. 1176–1117 BC，在位约 59 年，庙号 Gaozong。The Wu Ding Restoration; the state at its zenith
+- Zu Geng：c. 1117–1106 BC，在位约 11 年。Maintained the legacy
+- Zu Jia：c. 1106–1073 BC，在位约 33 年。Reformed the ritual system
+- Lin Xin：c. 1073–1067 BC，在位约 6 年。Waged campaigns
+- Di Xin (Zhou Wang)（Last ruler）：c. 1067–1046 BC，在位约 21 年，谥号 Zhou。Tyrannical; fell at the Battle of Muye
+
+### 人才
+- Civil Officials：Yi Yin（Founding chancellor; exiled Tai Jia）；Fu Yue（Wise chancellor of Wu Ding）
+- Others：Fu Hao（A woman general who led many campaigns）；Bigan（A loyal minister; disemboweled）
+
+### 制度
+- Oracle-bone divination and record-keeping
+- The bronze ritual-vessel system
+- The inner and outer service system
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Kingship and theocracy fused; all matters decided by divination；The inner-outer service system; the royal domain governed the four quarters
+- Economy：Highly developed bronze casting (e.g., the Simuwu ding)；Agriculture and herding side by side; cowries appeared as primitive money
+- Culture：Oracle-bone script is China's earliest mature writing system；Bronze ritual vessels and ancestor worship at their height
+
+## Zhou（Western Zhou 1046–771 BC / Eastern Zhou 770–256 BC）
+- 大时代：Pre-Qin
+- 都城：Haojing → Luoyi
+- 特征：Founded feudalism, kinship hierarchy and ritual music; the Eastern Zhou saw the Hundred Schools flourish. Major kings (posthumous names), ~790 yrs.
+- 总结：The bedrock of ritual-music civilization; the Hundred Schools directly shaped two millennia of cultural DNA.
+
+### 帝王
+- King Wu of Zhou (Ji Fa)（Founding）：1046–1043 BC，在位约 3 年，谥号 Wu。Defeated Zhou, destroyed Shang, enfeoffed the nobles
+- King Cheng：1042–1021 BC，在位约 22 年，谥号 Cheng。The Duke of Zhou as regent; the Cheng–Kang era of good rule
+- King Kang：1020–996 BC，在位约 25 年，谥号 Kang。The Cheng–Kang era; punishments unused
+- King Zhao：995–977 BC，在位约 19 年，谥号 Zhao。Lost on the southern campaign
+- King Mu：976–922 BC，在位约 55 年，谥号 Mu。Tour to the west, met the Queen Mother; Zhou at its peak
+- King Gong：922–900 BC，在位约 23 年，谥号 Gong。Given to hunting
+- King Yi：899–892 BC，在位约 8 年，谥号 Yi。The royal house declined
+- King Xiao：891–886 BC，在位约 6 年，谥号 Xiao。Succeeded though not the heir
+- King Yi：885–878 BC，在位约 8 年，谥号 Yi。Vassals came to court
+- King Li：877–841 BC，在位约 37 年，谥号 Li。Monopoly and tyranny; the commoner revolt
+- Gonghe (regency)：841–828 BC，在位约 14 年。The Dukes of Zhou and Shao jointly governed; the Gonghe regency begins the chronicle
+- King Xuan：827–782 BC，在位约 46 年，谥号 Xuan。The Xuan Restoration
+- King You（End of Western Zhou）：781–771 BC，在位约 11 年，谥号 You。Beacon fires to amuse the lords; Western Zhou fell
+- King Ping（Start of Eastern Zhou）：770–720 BC，在位约 51 年，谥号 Ping。Moved east to Luoyi; Eastern Zhou began
+- King Huan：719–697 BC，在位约 23 年，谥号 Huan。Defeated by Zheng at Xuge
+- King Zhuang：696–682 BC，在位约 15 年，谥号 Zhuang。Duke Huan of Qi began his hegemony
+- King Xi：679–677 BC，在位约 3 年，谥号 Xi。Duke Huan of Qi asserted hegemony
+- King Hui：676–652 BC，在位约 25 年，谥号 Hui。Contending hegemons
+- King Xiang：651–619 BC，在位约 33 年，谥号 Xiang。Duke Wen of Jin honored the king
+- King Qing：618–613 BC，在位约 6 年，谥号 Qing。Royal house in distress, sought funeral aid
+- King Kuang：612–607 BC，在位约 6 年，谥号 Kuang。Maintained the legacy
+- King Ding：606–586 BC，在位约 21 年，谥号 Ding。King Zhuang of Chu inquired about the cauldrons
+- King Jian：585–572 BC，在位约 14 年，谥号 Jian。Vassals convened alliances
+- King Ling：571–545 BC，在位约 27 年，谥号 Ling。Year of Confucius's birth
+- King Jing：544–520 BC，在位约 25 年，谥号 Jing。Cast large coins and bells
+- King Dao：520 BC，在位约 1 年，谥号 Dao。Reigned just over a year
+- King Jing：519–476 BC，在位约 44 年，谥号 Jing。End of Spring and Autumn; Prince Chao's revolt
+- King Yuan：475–469 BC，在位约 7 年，谥号 Yuan。The Warring States began
+- King Zhending：468–441 BC，在位约 28 年，谥号 Zhending。The three clans destroyed Zhibo
+- King Kao：440–426 BC，在位约 15 年，谥号 Kao。Enfeoffed his brother in Henan
+- King Weilie：425–402 BC，在位约 24 年，谥号 Weilie。Recognized Wei, Zhao and Han as vassals
+- King An：401–376 BC，在位约 26 年，谥号 An。The Tian clan replaced Qi
+- King Lie：375–369 BC，在位约 6 年，谥号 Lie。Wei and Qi took the royal title
+- King Xian：368–321 BC，在位约 48 年，谥号 Xian。Shang Yang's reform; Qin grew strong
+- King Shenjing：320–315 BC，在位约 6 年，谥号 Shenjing。Five states mutually granted kingship
+- King Nan（End of Eastern Zhou）：314–256 BC，在位约 59 年，谥号 Nan。Eastern Zhou fell; Qin rose
+
+### 人才
+- Civil Officials：Duke of Zhou（Established rites and music; founded the Zhou system）；Guan Zhong（Prime minister of Qi; “revere the king, repel the barbarians”）；Baili Xi（Worthy minister of Duke Mu of Qin）
+- Generals：Jiang Ziya (the Grand Duke)（Progenitor of the military art; aided King Wu）
+- Thinkers & Men of Letters：Confucius（Founder of Confucianism）；Laozi（Founder of Daoism）；Sun Wu（Sage of war; The Art of War）；Mencius（Second sage of Confucianism）；Zhuangzi（Daoist representative）；Mozi（Mohism）；Han Fei（Synthesizer of Legalism）
+
+### 制度
+- The enfeoffment system
+- The lineage (clan) system
+- The ritual and music system
+- The well-field system
+- Spring and Autumn hegemony
+- Warring States reforms (Shang Yang)
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Enfeoffment, lineage and ritual-music formed a trinity；Eastern Zhou kingship waned; Spring–Autumn hegemony and Warring-States reforms
+- Economy：The well-field system prevailed; later iron tools and ox-plough spread；Handicrafts and commerce rose; cities grew
+- Culture：The Hundred Schools contended, shaping two millennia of thought；Canons such as the Poetry, Documents and Changes took shape；The Warring States already had the pointing tool “Sinan” (forerunner of the compass)
+
+## Qin（221–207 BC）
+- 大时代：Qin–Han
+- 都城：Xianyang
+- 特征：China's first unified centralized empire; its institutions shaped two millennia.
+- 总结：Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years.
+
+### 帝王
+- Qin Shi Huang (Ying Zheng)（First Emperor）：221–210 BC，在位约 11 年，谥号 First Emperor。Conquered the six states and claimed the imperial title
+- Qin Ershi (Hu Hai)（Second Emperor）：210–207 BC，在位约 3 年。Tyranny led to a swift fall
+- Ziying（Last ruler）：207 BC，在位约 1 年。Reigned 46 days, surrendered to Liu Bang
+
+### 人才
+- Civil Officials：Li Si（Chancellor; commanderies-counties system and unified writing）；Zhao Gao（Usurped power; “pointing at a deer and calling it a horse”）
+- Generals：Wang Jian（Famed general who destroyed Chu）；Meng Tian（Struck the Xiongnu in the north, built the Great Wall）
+
+### 制度
+- Commanderies and counties
+- Unified writing, carts and tracks
+- Unified weights, measures and coinage
+- Built the Great Wall and highways
+- Burning of books and burying of scholars
+- Governing by law as the teaching
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Founded the imperial system, the Three Excellencies and Nine Ministers, and commanderies-counties；The centralized system was thereby established
+- Economy：Unified weights, measures, coinage and axle gauges；Built highways and the Lingqu Canal; emphasized agriculture, restrained commerce
+- Culture：Unified writing; standardized the script in small seal script；Burning books and burying scholars; thought and culture under tight control
+
+## Han（Western Han 202 BC–AD 8 / Eastern Han 25–220）
+- 大时代：Qin–Han
+- 都城：Chang'an → Luoyang
+- 特征：Unification settled, the Silk Road opened, Confucianism made orthodox, and the dynasty's name became the ethnonym. Major emperors, ~420 yrs.
+- 总结：Forged the core Han identity and the centralized model; “Han” became the name of the people.
+
+### 帝王
+- Han Gaozu (Liu Bang)（Founding）：202–195 BC，在位约 8 年，庙号 Taizu，谥号 Gao。Rose from commoner origins, founded the dynasty
+- Han Huidi (Liu Ying)：195–188 BC，在位约 7 年，谥号 Hui。Empress Lü in power
+- Empress Lü (regent)（Regent）：188–180 BC，在位约 8 年。De facto ruler; mother of the Wen and Jing emperors
+- Han Wendi (Liu Heng)（Wen–Jing era）：180–157 BC，在位约 23 年，庙号 Taizong，谥号 Wen。The Wen–Jing era of good rule; rest and recuperation
+- Han Jingdi (Liu Qi)（Wen–Jing era）：157–141 BC，在位约 16 年，谥号 Jing。Reined in the vassals, quelled the Seven Kingdoms revolt
+- Han Wudi (Liu Che)（Heyday）：141–87 BC，在位约 54 年，庙号 Shizong，谥号 Wu。Expanded into the Western Regions; a mighty Han
+- Han Zhaodi (Liu Fuling)：87–74 BC，在位约 13 年，谥号 Zhao。Huoguang as regent
+- Han Xuandi (Liu Xun)：74–49 BC，在位约 25 年，庙号 Zhongzong，谥号 Xuan。The Xiaoxuan era of good rule
+- Han Yuandi (Liu Shi)：49–33 BC，在位约 16 年，庙号 Gaozong，谥号 Yuan。Confucianism made sole orthodoxy
+- Han Chengdi (Liu Ao)：33–7 BC，在位约 26 年，谥号 Cheng。The Wang clan (empress's kin) rose
+- Han Aidi (Liu Xin)：7–1 BC，在位约 6 年，谥号 Ai。Entrusted the orphan to Wang Mang
+- Han Pingdi (Liu Kan)：1 BC–AD 5，在位约 6 年，谥号 Ping。Wang Mang as regent
+- Ruzi Ying (Liu Ying)（Regency）：6–8，在位约 2 年。Wang Mang as regent; the Han mandate near its end
+- Wang Mang (Xin)（Usurped Han）：9–23，在位约 15 年，谥号 Xin。Founded the Xin; revived antiquity in reform
+- Gengshi Emperor (Liu Xuan)（Restored Han）：23–25，在位约 2 年。Set up by the Green Forest army; later killed by the Red Eyebrows
+- Han Guangwudi (Liu Xiu)（Eastern Han founder）：25–57，在位约 33 年，庙号 Shizu，谥号 Guangwu。The Guangwu Restoration
+- Han Mingdi (Liu Zhuang)：57–75，在位约 18 年，谥号 Ming。Buddhism entered the Central Plains
+- Han Zhangdi (Liu Da)：75–88，在位约 13 年，谥号 Zhang。The Ming–Zhang era of good rule
+- Han Hedi (Liu Zhao)：88–105，在位约 17 年，谥号 He。Dou Xian crushed the Xiongnu
+- Han Shangdi (Liu Long)：105–106，在位约 1 年，谥号 Shang。Enthroned over a hundred days old; reigned eight months
+- Han Andi (Liu Hu)：106–125，在位约 19 年，谥号 An。Struggle between empress's kin and eunuchs
+- Han Shundi (Liu Bao)：125–144，在位约 19 年，谥号 Shun。Eunuchs gained the upper hand
+- Han Huandi (Liu Zhi)：147–167，在位约 21 年，谥号 Huan。The Partisan Proscriptions
+- Han Lingdi (Liu Hong)：168–189，在位约 22 年，谥号 Ling。The Yellow Turban Rebellion
+- Han Xiandi (Liu Xie)（Last ruler）：189–220，在位约 31 年，谥号 Xian。A puppet; the Han fell
+
+### 人才
+- Civil Officials：Xiao He（Chancellor at the dawn of Han）；Zhang Liang（Strategist）；Dong Zhongshu（Made Confucianism sole orthodoxy）；Huoguang（Regent minister）
+- Generals：Han Xin（The god of war）；Wei Qing（Struck the Xiongnu）；Huo Qubing（Sealed the Langjuxu summit）；Ban Chao（Cast aside the pen for the sword; opened the Western Regions）
+- Thinkers & Men of Letters：Sima Qian（Records of the Grand Historian）；Cai Lun（Improved papermaking）
+
+### 制度
+- Parallel princedoms → the Enfeoffment Reduction Edict
+- Dismissed the Hundred Schools, upheld Confucianism alone
+- The recommendation system
+- The Silk Road
+- State monopoly on salt and iron
+- Equal-transport and price-stabilization
+
+### 三维（政治 · 经济 · 文化）
+- Politics：After parallel princedoms, the Enfeoffment Reduction Edict reined in vassals and centralized power；The recommendation system selected officials; empress's kin and eunuchs took turns monopolizing power
+- Economy：Opened the Silk Road; state salt-iron monopoly, equal-transport and price-stabilization；Advances in agriculture, textiles and iron-smelting
+- Culture：Dismissed the Hundred Schools, upheld Confucianism alone；Records of the Grand Historian and Book of Han survived; Cai Lun improved papermaking; Buddhism arrived
+
+## Three Kingdoms（220–280）
+- 大时代：Three Kingdoms & Divisions
+- 都城：Wei, Shu and Wu
+- 特征：Wei, Shu and Wu stood in a tripartite balance; a stage of heroes and stratagems. The three coexisted; reign years are not summed (counted by period).
+- 总结：An age of heroes; Romance of the Three Kingdoms made it household lore.
+
+### 帝王
+- Cao Pi, Emperor Wen of Wei（Wei）：220–226，在位约 6 年，谥号 Wen。Usurped Han, declared himself emperor
+- Cao Rui, Emperor Ming of Wei（Wei）：226–239，在位约 13 年，谥号 Ming。Massive building works
+- Cao Huan, Emperor Yuan of Wei（Late Wei）：260–265，在位约 5 年。Abdicated to Jin
+- Liu Bei, Emperor Zhaolie of Shu Han（Shu）：221–223，在位约 2 年，谥号 Zhaolie。Sought to revive the Han
+- Liu Shan, Later Lord of Shu（Shu）：223–263，在位约 40 年，谥号 Huai。“Found new pleasures and forgot Shu”
+- Sun Quan, Great Emperor of Wu（Wu）：222–252，在位约 30 年，谥号 Da。Held the Jiangdong region
+- Sun Hao, Last Emperor of Wu（Late Wu）：264–280，在位约 16 年。Tyrannical; Wu fell
+
+### 人才
+- Civil Officials：Cao Cao（The martial Duke of Wei, a towering talent）；Zhuge Liang（Chancellor of Shu; devoted unto death）；Sima Yi（Powerful minister of Wei）；Lu Xun（Great general of Wu）
+- Generals：Guan Yu（The Martial Saint）；Zhang Fei（A fierce general）；Zhao Yun（Zhao Zilong of Changshan）；Zhou Yu（Commander of Eastern Wu）
+
+### 制度
+- The tuntian (military-agriculture) system
+- The nine-rank system (Wei)
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Wei, Shu and Wu stood tripartite; civil and military rule fused；Wei used the nine-rank system; the gentry's power rose
+- Economy：The tuntian system restored production; Jiangnan developed faster；Shu brocade, Wu shipbuilding and overseas trade flourished
+- Culture：Jian'an literature, solemn and stirring；Calligraphy (Zhong Yao) and strategy culture thrived
+
+## Jin（Western Jin 265–316 / Eastern Jin 317–420）
+- 大时代：Three Kingdoms & Divisions
+- 都城：Luoyang → Jiankang
+- 特征：Brief unity then long division; the gentry aristocracy flourished. Major emperors, ~155 yrs.
+- 总结：Unity broke apart at once, opening a long north–south standoff.
+
+### 帝王
+- Sima Yan, Emperor Wu of Jin（Founding）：265–290，在位约 25 年，庙号 Shizu，谥号 Wu。Destroyed Wu, unified
+- Sima Zhong, Emperor Hui of Jin：290–306，在位约 16 年，谥号 Hui。The War of the Eight Princes; “Why not eat meat?”
+- Sima Chi, Emperor Huai of Jin：306–311，在位约 5 年，谥号 Huai。Captured in the Yongjia turmoil
+- Sima Ye, Emperor Min of Jin（End of Western Jin）：313–316，在位约 4 年，谥号 Min。Western Jin fell
+- Sima Rui, Emperor Yuan of Jin（Eastern Jin）：317–322，在位约 6 年，庙号 Zhongzong，谥号 Yuan。The gentry crossed south
+- Sima Shao, Emperor Ming of Jin：322–325，在位约 4 年，谥号 Ming。Crushed Wang Dun
+- Sima Yan, Emperor Cheng of Jin：325–342，在位约 18 年，谥号 Cheng。The Su Jun revolt
+- Sima Yue, Emperor Kang of Jin：342–344，在位约 2 年，谥号 Kang。Died after two years
+- Sima Dan, Emperor Mu of Jin：344–361，在位约 18 年，谥号 Mu。Huan Wen's northern campaigns
+- Sima Pi, Emperor Ai of Jin：361–364，在位约 3 年，谥号 Ai。Huan Wen monopolized power
+- Sima Yi, Emperor Fei of Jin（Duke of Haixi）：364–369，在位约 5 年，谥号 Fei。Deposed by Huan Wen
+- Sima Yu, Emperor Jianwen of Jin：371–372，在位约 1 年，谥号 Jianwen。Entrenched by Huan Wen; reigned under a year
+- Sima Yao, Emperor Xiaowu of Jin：372–396，在位约 25 年，谥号 Xiaowu。The Battle of Fei River
+- Sima Dezong, Emperor An of Jin：396–418，在位约 23 年，谥号 An。Huan Xuan usurped; Liu Yu rose
+- Sima Dewen, Emperor Gong of Jin（Last ruler）：418–420，在位约 3 年，谥号 Gong。Abdicated to Liu Yu
+
+### 人才
+- Civil Officials：Wang Dao（Chief minister of Eastern Jin）；Xie An（Directed the Battle of Fei River）
+- Thinkers & Men of Letters：Wang Xizhi（Sage of calligraphy）；Tao Yuanming（Recluse poet）；Ji Kang（One of the Seven Sages of the Bamboo Grove）
+
+### 制度
+- The land-occupation system
+- The gentry aristocracy
+- Enfeoffed imperial clan (the War of the Eight Princes)
+- The ossified nine-rank system
+
+### 三维（政治 · 经济 · 文化）
+- Politics：The gentry monopolized court; the nine-rank system ossified；After the Eight Princes, the gentry crossed south, a precarious peace east of the river
+- Economy：The land-occupation system; manorial economy prevailed；Jiangnan economy kept developing
+- Culture：Dark Learning and pure conversation thrived, led by the Seven Sages；Wang Xizhi the “Sage of calligraphy”; Tao Yuanming's pastoral poetry
+
+## Southern and Northern Dynasties（420–589）
+- 大时代：Three Kingdoms & Divisions
+- 都城：North–south standoff
+- 特征：Northern and southern regimes coexisted; great ethnic fusion and Buddhism flourished. They reigned concurrently; years not summed.
+- 总结：A key era of ethnic fusion, storing diverse nourishment for the Sui–Tang heyday.
+
+### 帝王
+- Liu Yu, Emperor Wu of Song（Liu Song (South)）：420–422，在位约 2 年，谥号 Wu。A commoner replaced Jin
+- Liu Yilong, Emperor Wen of Song（Liu Song (South)）：424–453，在位约 30 年，谥号 Wen。The Yuanjia era of good rule
+- Xiao Daocheng, Emperor Gao of Qi（Southern Qi (South)）：479–482，在位约 3 年，谥号 Gao。Founded Qi
+- Xiao Yan, Emperor Wu of Liang（Liang (South)）：502–549，在位约 47 年，谥号 Wu。Obsessed with Buddhism; the Hou Jing revolt
+- Chen Shubao, Last Lord of Chen（Late Chen (South)）：582–589，在位约 7 年，谥号 Yang。Chen fell to Sui
+- Tuoba Gui, Emperor Daowu of Northern Wei（Northern Wei (North)）：386–409，在位约 23 年，谥号 Daowu。Founded Northern Wei
+- Tuoba Tao, Emperor Taiwu of Northern Wei（Northern Wei (North)）：424–452，在位约 28 年，谥号 Taiwu。Unified the north
+- Tuoba Hong, Emperor Xiaowen of Northern Wei（Northern Wei (North)）：471–499，在位约 28 年，谥号 Xiaowen。Sinicization reforms
+- Yuwen Yong, Emperor Wu of Northern Zhou（Northern Zhou (North)）：560–578，在位约 18 年，谥号 Wu。Destroyed Northern Qi, centralized
+- Yuwen Yan, Emperor Jing of Northern Zhou（Late Northern Zhou (North)）：579–581，在位约 2 年。Abdicated to Sui
+
+### 人才
+- Thinkers & Men of Letters：Zu Chongzhi（Computed pi precisely）；Jia Sixie（Qimin Yaoshu (Essential Techniques for the Welfare of the People)）；Li Daoyuan（Commentary on the Water Classic）
+- Others：Hua Mulan（Legend; took her father's place in the army）
+
+### 制度
+- Emperor Xiaowen's reforms (dress, surname, capital)
+- The embryonic equal-field system
+- The three-elder system
+
+### 三维（政治 · 经济 · 文化）
+- Politics：North and south stood long opposed; dynasties changed often；Xiaowen's sinicization drove ethnic fusion
+- Economy：The embryonic equal-field and three-elder systems implemented；Jiangnan economy grew fast
+- Culture：Buddhism thrived; Yungang and Longmen grottoes carved；Qimin Yaoshu, Commentary on the Water Classic; Zu Chongzhi's pi
+
+## Sui（581–618）
+- 大时代：Sui–Tang
+- 都城：Daxing (Chang'an)
+- 特征：Reunified the realm; founded the exam system and the Grand Canal.
+- 总结：Its institutions (exams, canal) had lasting impact; short-lived but bridging.
+
+### 帝王
+- Sui Wendi (Yang Jian)（Founding）：581–604，在位约 23 年，庙号 Gaozu，谥号 Wen。The Kaihuang era of good rule; ended the division
+- Sui Yangdi (Yang Guang)（Second）：604–618，在位约 14 年，谥号 Yang。Dug the canal, campaigned against Goguryeo; fell
+
+### 人才
+- Civil Officials：Gao Jiong（Founding worthy chancellor）
+- Generals：Yang Su（Famed general who pacified Chen）
+- Others：Yuwen Kai（Built the Eastern Capital）
+
+### 制度
+- Founded the exam system (subject examinations)
+- The Three Departments and Six Ministries
+- Dug the Grand Canal
+- Equal-field and zuyongdiao
+- Built the Eastern Capital
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Ended the north–south split; rebuilt unification；Created the Three Departments and Six Ministries; pioneered exam-based recruitment
+- Economy：Dug the Grand Canal, linking north–south transport；Pursued the equal-field and zuyongdiao; built granaries and the Eastern Capital
+- Culture：Northern and southern literary styles blended；Woodblock printing first appeared (the start of printing)
+
+## Tang（618–907）
+- 大时代：Sui–Tang
+- 都城：Chang'an
+- 特征：A cosmopolitan golden age of radiant culture, with all nations paying tribute. Major emperors (incl. Wu Zhou), ~290 yrs.
+- 总结：One of the strongest and most open eras of imperial China; its culture radiated across East Asia.
+
+### 帝王
+- Tang Gaozu (Li Yuan)（Founding）：618–626，在位约 8 年，庙号 Gaozu。Rose at Jinyang
+- Tang Taizong (Li Shimin)（Zhenguan）：626–649，在位约 23 年，庙号 Taizong，谥号 Wen。The Zhenguan era of good rule
+- Tang Gaozong (Li Zhi)：649–683，在位约 34 年，庙号 Gaozong。The Yonghui era of good rule
+- Tang Zhongzong (Li Xian)：684，在位约 1 年。First reign, deposed
+- Tang Ruizong (Li Dan)：684–690，在位约 6 年。First reign; Empress Wu in power
+- Wu Zetian（Empress regnant）：690–705，在位约 15 年，谥号 Zetian。China's only empress regnant
+- Tang Zhongzong (Li Xian)（Restored）：705–710，在位约 5 年，谥号 Xiaohe。The Shenlong restoration
+- Tang Ruizong (Li Dan)（Restored）：710–712，在位约 2 年，谥号 Xuanzhen。Abdicated to Xuanzong
+- Tang Xuanzong (Li Longji)（Kaiyuan → Tianbao）：712–756，在位约 44 年，庙号 Xuanzong，谥号 Ming。The Kaiyuan heyday → the An–Shi Rebellion
+- Tang Suzong (Li Heng)：756–762，在位约 6 年，庙号 Suzong。Recovered the two capitals
+- Tang Daizong (Li Yu)：762–779，在位约 17 年，庙号 Daizong。The An–Shi Rebellion quelled
+- Tang Dezong (Li Kuo)：779–805，在位约 26 年，庙号 Dezong。Failed to rein in the vassals
+- Tang Shunzong (Li Song)：805，在位约 1 年，庙号 Shunzong。The Yongzhen reform; abdicated within months
+- Tang Xianzong (Li Chun)：805–820，在位约 15 年，庙号 Xianzong。The Yuanhe restoration
+- Tang Muzong (Li Heng)：820–824，在位约 4 年，庙号 Muzong。Negligent rule
+- Tang Jingzong (Li Zhan)：824–826，在位约 2 年，庙号 Jingzong。Assassinated
+- Tang Wenzong (Li Ang)：826–840，在位约 14 年，庙号 Wenzong。The Sweet Dew Incident
+- Tang Wuzong (Li Yan)：840–846，在位约 6 年，庙号 Wuzong。The Huichang persecution of Buddhism
+- Tang Xuanzong (Li Chen)：846–859，在位约 13 年，庙号 Xuanzong。The Dazhong era of good rule
+- Tang Yizong (Li Cui)：859–873，在位约 14 年，庙号 Yizong。Tang in decline
+- Tang Xizong (Li Xuan)：873–888，在位约 15 年，庙号 Xizong。The Huang Chao revolt
+- Tang Zhaozong (Li Ye)：888–904，在位约 16 年，庙号 Zhaozong。Controlled by regional warlords
+- Tang Aidi (Li Zhu)（Last ruler）：904–907，在位约 3 年，庙号 Aidi。The Tang fell
+
+### 人才
+- Civil Officials：Wei Zheng（Remonstrating minister）；Fang Xuanling（Fang the planner）；Du Ruhui（Du the decider）；Di Renjie（Famed judge and chancellor）；Zhangsun Wuji（First on the Lingyan Pavilion）
+- Generals：Guo Ziyi（Quelled the An–Shi Rebellion）
+- Thinkers & Men of Letters：Li Bai（The Immortal Poet）；Du Fu（The Sage of Poetry）；Xuanzang（Journeyed west for scriptures）
+
+### 制度
+- Refined the exam system (jinshi branch)
+- The Three Departments and Six Ministries
+- The equal-field system and the zuyongdiao tax
+- The statute and ordinance code
+- The Kaiyuan–Tianbao heyday
+- The jiedushi (frontier commands)
+
+### 三维（政治 · 经济 · 文化）
+- Politics：The Three Departments and Six Ministries matured; the exam system (jinshi) refined；An enlightened ethnic policy; all nations paying tribute
+- Economy：Shift from zuyongdiao to the two-tax system; the Silk Road at its peak；Chang'an as an international metropolis; thriving commerce
+- Culture：A golden age of poetry (Li Bai, Du Fu)；Painting and calligraphy at their height; Xuanzang's westward journey; Buddhism Sinicized；Gunpowder first recorded in the Tang; already used in war by late Tang
+
+## Five Dynasties and Ten Kingdoms（907–960）
+- 大时代：Sui–Tang
+- 都城：Rotating Central Plain
+- 特征：After Tang fell, the Central Plain saw five dynasties in turn and ten kingdoms around. Major Central Plain rulers (ten kingdoms not counted), 53 yrs.
+- 总结：The tail of great division; warlord misrule, finally reunified by Song.
+
+### 帝王
+- Zhu Wen, Taizu of Later Liang（Later Liang）：907–912，在位约 5 年，谥号 Taizu。Replaced Tang
+- Zhu Youzhen, Last Emperor of Later Liang（Later Liang）：913–923，在位约 11 年。Liang fell to Tang
+- Li Cunxu, Zhuangzong of Later Tang（Later Tang）：923–926，在位约 3 年，谥号 Zhuangzong。Brave; favored actors
+- Li Siyuan, Mingzong of Later Tang（Later Tang）：926–933，在位约 7 年，谥号 Mingzong。An age of modest peace
+- Li Congke, Last Emperor of Later Tang（Later Tang）：934–936，在位约 3 年。Fell to Jin
+- Shi Jingtang, Gaozu of Later Jin（Later Jin）：936–942，在位约 6 年，谥号 Gaozu。Ceded the Sixteen Prefectures of Yan–Yun
+- Shi Chonggui, Emperor Chu of Later Jin（Later Jin）：942–947，在位约 5 年。Fell to the Khitan
+- Liu Zhiyuan, Gaozu of Later Han（Later Han）：947–948，在位约 1 年，谥号 Gaozu。Founded Han
+- Liu Chengyou, Hidden Emperor of Later Han（Later Han）：948–951，在位约 3 年。Fell to Zhou
+- Guo Wei, Taizu of Later Zhou（Later Zhou）：951–954，在位约 3 年，谥号 Taizu。Reformed abuses
+- Chai Rong, Shizong of Later Zhou（Later Zhou）：954–959，在位约 5 年，谥号 Shizong。Strove to govern well
+- Chai Zongxun, Respectful Emperor of Later Zhou（Last ruler）：959–960，在位约 1 年。Abdicated to Song
+
+### 人才
+- Civil Officials：Feng Dao（Served many dynasties; an unshakeable politician）
+- Others：Li Yu（Last lord of Southern Tang; the emperor of ci）
+
+### 制度
+- The warlord separatism continued
+- The Sixteen Prefectures ceded to the Khitan
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Warlords misruled; warlord separatism continued；Five dynasties in the Central Plain; ten kingdoms around
+- Economy：The south was relatively calm; the economic center kept moving south；Overseas trade and commerce thrived in Wuyue etc.
+- Culture：The rise of ci poetry (Li Yu of Southern Tang)；Woodblock printing spread (e.g., the Tripitaka)
+
+## Liao（916–1125）
+- 大时代：Song–Yuan
+- 都城：Shangjing (Linhuang Prefecture)
+- 特征：Founded by the Khitan, stood against Northern Song; after the Chanyuan treaty a long standoff; finally destroyed by Jin.
+- 总结：A northern steppe regime; created the northern/southern office system, with far-reaching influence.
+
+### 帝王
+- Liao Taizu (Yelü Abaoji)（Founding）：916–926，在位约 10 年。Unified the Khitan, founded the state
+- Liao Taizong (Yelü Deguang)：926–947，在位约 21 年。Renamed the state Liao; took the Sixteen Prefectures
+- Liao Shizong (Yelü Ruan)：947–951，在位约 4 年。Killed in internal strife
+- Liao Muzong (Yelü Jing)：951–969，在位约 18 年。Dissolute and brutal; assassinated
+- Liao Jingzong (Yelü Xian)：969–982，在位约 13 年。Bridging the preceding and following
+- Liao Shengzong (Yelü Longxu)：982–1031，在位约 49 年。The Chanyuan treaty; Liao at its zenith
+- Liao Xingzong (Yelü Zongzhen)：1031–1055，在位约 24 年。Maintained the legacy
+- Liao Daozong (Yelü Hongji)：1055–1101，在位约 46 年。Liao declined
+- Liao Tianzuodi (Yelü Yanxi)（Last ruler）：1101–1125，在位约 24 年。Liao fell to Jin
+
+### 人才
+- Civil Officials：Han Yanhui（Aided Taizu in setting institutions）
+- Others：Shulü Ping（Empress of Taizu; regent）；Empress Dowager Xiao (Chengtian)（Wife of Jingzong; the Chanyuan treaty）
+
+### 制度
+- The northern and southern chancellery system
+- The ordo (palace guard) system
+- The four-season nahuai (seasonal camps)
+- The exam system on the Han model
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Dual rule by northern/southern offices: Han system for Han, state system for Khitan；Succession often in turmoil; the Xiao clan (empress's kin) held power
+- Economy：Nomadism and farming side by side; the Sixteen Prefectures were a fiscal core；Border-market trade with Song; annual gifts replenished finances
+- Culture：Created the Khitan large and small scripts；Favored Buddhism; absorbed Han culture
+
+## Song（Northern Song 960–1127 / Southern Song 1127–1279）
+- 大时代：Song–Yuan
+- 都城：Bianjing → Lin'an
+- 特征：Civilian over military, with a pinnacle of economy, culture and science; ci poetry thrived. Major emperors, ~319 yrs.
+- 总结：A zenith of civil governance yet militarily weak; economy and urban culture unprecedented.
+
+### 帝王
+- Song Taizu (Zhao Kuangyin)（Founding）：960–976，在位约 16 年，庙号 Taizu。The Chenqiao mutiny; relinquished military power over wine
+- Song Taizong (Zhao Jiong)：976–997，在位约 21 年，庙号 Taizong。Completed the unification
+- Song Zhenzong (Zhao Heng)：997–1022，在位约 25 年，庙号 Zhenzong。The Treaty of Chanyuan
+- Song Renzong (Zhao Zhen)（Renzong's flourishing rule）：1022–1063，在位约 41 年，庙号 Renzong。A host of famous ministers emerged
+- Song Yingzong (Zhao Shu)：1063–1067，在位约 4 年，庙号 Yingzong。The Pu dispute
+- Song Shenzong (Zhao Xu)：1067–1085，在位约 18 年，庙号 Shenzong。Backed Wang Anshi's reforms
+- Song Zhezong (Zhao Xu)：1085–1100，在位约 15 年，庙号 Zhezong。Resumed the reformist line
+- Song Huizong (Zhao Ji)：1100–1125，在位约 25 年，庙号 Huizong。An artist emperor who lost the realm
+- Song Qinzong (Zhao Huan)（Last of Northern Song）：1125–1127，在位约 2 年，庙号 Qinzong。The Jingkang Incident
+- Song Gaozong (Zhao Gou)（Southern Song）：1127–1162，在位约 35 年，庙号 Gaozong。A precarious peace south of the Yangtze
+- Song Xiaozong (Zhao Shen)：1162–1189，在位约 27 年，庙号 Xiaozong。Northern expeditions fell short
+- Song Guangzong (Zhao Dun)：1189–1194，在位约 5 年，庙号 Guangzong。Empress Li interfered in politics
+- Song Ningzong (Zhao Kuo)：1194–1224，在位约 30 年，庙号 Ningzong。The Qingyuan proscription of the Learning of the Way
+- Song Lizong (Zhao Yun)：1224–1264，在位约 40 年，庙号 Lizong。Allied with Mongols to destroy Jin
+- Song Duzong (Zhao Qi)：1264–1274，在位约 10 年，庙号 Duzong，谥号 Duan。Jia Sidao monopolized power
+- Song Gongdi (Zhao Xian)：1274–1276，在位约 2 年。Surrendered to Yuan
+- Song Duanzong (Zhao Shi)：1276–1278，在位约 2 年。In exile
+- Song Last Emperor (Zhao Bing)（Last ruler）：1278–1279，在位约 1 年。Perished with Song at Yaishan
+
+### 人才
+- Civil Officials：Zhao Pu（Architect of relinquishing military power over wine）；Kou Zhun（Argued for war at Chanyuan）；Fan Zhongyan（The Qingli reforms）；Wang Anshi（The Xining reform）；Sima Guang（Comprehensive Mirror in Aid of Governance）
+- Generals：Yue Fei（Loyal unto death）；Han Shizhong（Famed general against the Jin）
+- Thinkers & Men of Letters：Su Shi（Literary giant）；Shen Kuo（Dream Pool Essays）；Li Qingzhao（Mistress of the gentle ci style）；Wen Tianxiang（Upright, unyielding spirit）
+
+### 制度
+- Relinquished military power over wine
+- Civilian over military
+- Expanded exams (name-sealing)
+- The Qingli New Policies
+- Wang Anshi's reform (green sprouts, market exchange)
+- The Treaty of Chanyuan
+- A precarious peace south of the Yangtze
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Civilian over military; strengthened centralization；Expanded and name-sealed exams; a precarious peace after Chanyuan
+- Economy：Unprecedented commercial economy; the jiaozi (paper money) appeared；The maritime Silk Road at its peak; market towns rose
+- Culture：Song ci poetry and Neo-Confucianism (Cheng–Zhu) flourished；Bi Sheng invented movable type; the compass used for navigation and gunpowder widely in war; the Comprehensive Mirror
+
+## Western Xia（1038–1227）
+- 大时代：Song–Yuan
+- 都城：Xingqing Prefecture (Yinchuan)
+- 特征：Founded by the Tangut; held the Hexi Corridor, created the Tangut script, stood against Song, Liao and Jin; finally fell to the Mongols.
+- 总结：A northwestern separatist regime; Buddhism and Tangut–Han culture blended.
+
+### 帝王
+- Emperor Jingzong of Xia (Li Yuanhao)（Founding）：1038–1048，在位约 10 年。Declared himself emperor, founded the state, created the Tangut script
+- Emperor Yizong of Xia (Li Liangzuo)：1048–1067，在位约 19 年。Enthroned as a child
+- Emperor Huizong of Xia (Li Bingchang)：1067–1086，在位约 19 年。His mother's clan monopolized power
+- Emperor Chongzong of Xia (Li Ganshun)：1086–1139，在位约 53 年。Maneuvered between Song and Jin
+- Emperor Renzong of Xia (Li Renxiao)：1139–1193，在位约 54 年。The heyday of Western Xia
+- Emperor Huanzong of Xia (Li Chunyou)：1193–1206，在位约 13 年。Maintained the legacy
+- Emperor Xiangzong of Xia (Li Anquan)：1206–1211，在位约 5 年。Seized the throne by coup
+- Emperor Shenzong of Xia (Li Zunxu)：1211–1223，在位约 12 年。Allied with Mongols against Jin
+- Emperor Xianzong of Xia (Li Dewang)：1223–1226，在位约 3 年。Resisted the Mongols
+- Last Emperor of Xia (Li Xian)（Last ruler）：1226–1227，在位约 1 年。Fell to the Mongols
+
+### 人才
+- Others：Yeli Renrong（Created the Tangut script）；Empress Dowager Moang（Ruled from behind the curtain）
+
+### 制度
+- Tangut–Han separate rule
+- Created the Tangut script
+- The military-commission system
+- The temple-based economy
+
+### 三维（政治 · 经济 · 文化）
+- Politics：The Tangut founded the state; Tangut–Han separate rule; throne vs. empress's clan；Maneuvered between Song, Liao and Jin
+- Economy：Held the Hexi Corridor, controlled Silk Road trade；Xingqing as the capital; farming and herding together
+- Culture：Created the Tangut script, translated sutras and promoted Buddhism；Buddhism at its height, blending Han and Tibetan cultures
+
+## Jin（1115–1234）
+- 大时代：Song–Yuan
+- 都城：Huining Prefecture → Zhongdu (Beijing)
+- 特征：Founded by the Jurchen; destroyed Liao and Northern Song, stood against Southern Song; finally fell to the Mongols.
+- 总结：The Jurchen rose in the northeast, advanced the Han system, finally fell to the Mongol–Song alliance.
+
+### 帝王
+- Jin Taizu (Wanyan Aguda)（Founding）：1115–1123，在位约 8 年。Rose against Liao, founded the state
+- Jin Taizong (Wanyan Sheng)：1123–1135，在位约 12 年。Destroyed Liao, attacked Song; the Jingkang Incident
+- Jin Xizong (Wanyan Dan)：1135–1150，在位约 15 年。Pushed sinicization reforms
+- Prince Hailing (Wanyan Liang)：1150–1161，在位约 11 年。Moved the capital to Zhongdu; killed invading the south
+- Jin Shizong (Wanyan Yong)：1161–1189，在位约 28 年。The Dading era of good rule
+- Jin Zhangzong (Wanyan Jing)：1189–1208，在位约 19 年。Jin at its zenith
+- Prince Weishao (Wanyan Yongji)：1208–1213，在位约 5 年。The Mongols invaded the south
+- Jin Xuanzong (Wanyan Xun)：1213–1224，在位约 11 年。Moved south to Bianjing
+- Jin Aizong (Wanyan Shouxu)（Last ruler）：1224–1234，在位约 10 年。Fell to the Mongol–Song
+
+### 人才
+- Generals：Wanyan Zongbi (Wuzhu)（Famed general against Song）
+- Others：Wanyan Xiyin（Created the Jurchen script）
+
+### 制度
+- The meng'an–mouke system
+- Reforms on the Han model
+- Moved the capital to Zhongdu
+- Paper money (jiaochao)
+
+### 三维（政治 · 经济 · 文化）
+- Politics：The Jurchen rose; destroyed Liao and Northern Song; stood against Southern Song；Pursued the Han system; imperial power centralized
+- Economy：Meng'an–mouke alongside tuntian；Issued jiaochao; Zhongdu as a northern metropolis
+- Culture：Created the Jurchen script；Sinicization and exams together; zhugongdiao storytelling rose
+
+## Yuan（1271–1368）
+- 大时代：Song–Yuan
+- 都城：Dadu (Beijing)
+- 特征：A unified dynasty founded by the Mongols, with unprecedented territory. Major emperors, ~97 yrs.
+- 总结：The first unified rule by a minority; post roads linked Eurasia.
+
+### 帝王
+- Yuan Shizu (Kublai)（Founding）：1271–1294，在位约 24 年，庙号 Shizu。Named the state Yuan, destroyed Song, unified
+- Yuan Chengzong (Temür)：1294–1307，在位约 13 年，庙号 Chengzong。Maintained the legacy
+- Yuan Wuzong (Haishan)：1307–1311，在位约 4 年，庙号 Wuzong。Lavish rewards
+- Yuan Renzong (Ayurbarwada)：1311–1320，在位约 9 年，庙号 Renzong。Restored the exams
+- Yuan Yingzong (Shidebala)：1320–1323，在位约 3 年，庙号 Yingzong。The Nanpo incident
+- Yuan Taidingdi (Yesün Temür)：1323–1328，在位约 5 年。Maintained the legacy
+- Yuan Wenzong (Tugh Temür)：1328–1332，在位约 4 年，庙号 Wenzong。Civilian governance
+- Yuan Shundi (Toghon Temür)（Last ruler）：1333–1368，在位约 35 年，庙号 Huizong。The state fell
+
+### 人才
+- Civil Officials：Yelü Chucai（A famed minister of statecraft）；Zhao Mengfu（Master of calligraphy and painting）
+- Others：Guo Shoujing（Astronomy and hydraulics）；Marco Polo（Visiting traveler）；Guan Hanqing（Master of Yuan drama）
+
+### 制度
+- The provincial system (Zhongshu Sheng)
+- The four-class system
+- Paper money (jiaochao)
+- Connected post roads
+- The route–prefecture–county system
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Created the provincial system; unprecedented territory；The four-class system; clear ethnic hierarchy
+- Economy：Paper money (jiaochao) widespread; post roads linked Eurasia；Sea transport and canal transport together
+- Culture：Yuan drama flourished (Guan Hanqing)；Calligraphy–painting (Zhao Mengfu); Marco Polo and Sino-foreign exchange
+
+## Ming（1368–1644）
+- 大时代：Ming–Qing
+- 都城：Nanjing → Beijing
+- 特征：Han restored unification; the sea ban coexisted with Zheng He's voyages. Major emperors, 276 yrs.
+- 总结：Autocracy intensified yet a vibrant commodity economy; big moves by land and sea.
+
+### 帝王
+- Ming Taizu (Zhu Yuanzhang)（Hongwu Emperor）：1368–1398，在位约 30 年，庙号 Taizu，谥号 Gao。Drove out the Yuan, founded Ming
+- Ming Hui Emperor (Zhu Yunwen)（Jianwen）：1398–1402，在位约 4 年，谥号 Hui。Failed to rein in the vassals
+- Ming Chengzu (Zhu Di)（Yongle）：1402–1424，在位约 22 年，庙号 Chengzu，谥号 Wen。Moved the capital to Beijing; voyages to the West
+- Ming Renzong (Zhu Gaochi)：1424–1425，在位约 1 年，庙号 Renzong，谥号 Zhao。Prelude to the Ren–Xuan era
+- Ming Xuanzong (Zhu Zhanji)：1425–1435，在位约 10 年，庙号 Xuanzong，谥号 Zhang。The Ren–Xuan era of good rule
+- Ming Yingzong (Zhu Qizhen)：1435–1449 / 1457–1464，在位约 21 年，庙号 Yingzong，谥号 Rui。Reigned twice; the Tumu crisis
+- Ming Daizong (Zhu Qiyu)（Jingtai）：1449–1457，在位约 8 年，谥号 Jing。Defended Beijing
+- Ming Xianzong (Zhu Jianshen)：1464–1487，在位约 23 年，庙号 Xianzong，谥号 Chun。Favored Consort Wan
+- Ming Xiaozong (Zhu Youcheng)：1487–1505，在位约 18 年，庙号 Xiaozong，谥号 Jing。The Hongzhi Restoration
+- Ming Wuzong (Zhu Houzhao)：1505–1521，在位约 16 年，庙号 Wuzong，谥号 Yi。Given to pleasure
+- Ming Shizong (Zhu Houcong)（Jiajing）：1521–1567，在位约 45 年，庙号 Shizong，谥号 Su。Favored Daoism, neglected rule
+- Ming Muzong (Zhu Zaihou)：1567–1572，在位约 5 年，庙号 Muzong，谥号 Zhuang。The Longqing opening of trade
+- Ming Shenzong (Zhu Yijun)（Wanli）：1572–1620，在位约 48 年，庙号 Shenzong，谥号 Xian。Neglected rule for years
+- Ming Guangzong (Zhu Changluo)：1620，在位约 1 年，庙号 Guangzong，谥号 Zhen。Emperor for one month
+- Ming Xizong (Zhu Youjiao)：1620–1627，在位约 7 年，庙号 Xizong，谥号 Zhe。Wei Zhongxian's misrule
+- Ming Sizong (Zhu Youjian)（Last ruler）：1627–1644，在位约 17 年，庙号 Sizong，谥号 Lie。Hanged himself on Coal Hill
+
+### 人才
+- Civil Officials：Liu Bowen（Founding strategist）；Yu Qian（Defended Beijing）；Zhang Juzheng（Reforming senior grand secretary）；Hai Rui（An incorruptible official）
+- Generals：Qi Jiguang（Fought the Japanese pirates）；Zheng Chenggong (Koxinga)（Recovered Taiwan）
+- Thinkers & Men of Letters：Wang Shouren (Wang Yangming)（Synthesis of the School of Mind）；Xu Xiake（Geographer）；Song Yingxing（Tiangong Kaiwu (Exploitation of the Works of Nature)）
+
+### 制度
+- Abolished the chancellor, set up the Grand Secretariat
+- The embattled offices (Embroidered Uniform Guard / Eastern Depot)
+- Yongle moved the capital to Beijing
+- Zheng He's voyages to the West
+- The Single Whip law
+- The sea ban
+- Eight-legged essay examinations
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Abolished the chancellor, set up the Grand Secretariat; imperial power strengthened；Embattled secret police ran rampant; Yongle moved the capital to Beijing
+- Economy：The Single Whip law and silver monetization；Zheng He's voyages coexisted with the sea ban; a vibrant commodity economy
+- Culture：The School of Mind (Wang Yangming) arose；Yongle Encyclopedia, Tiangong Kaiwu, Compendium of Materia Medica; fiction flourished
+
+## Qing（1636–1912）
+- 大时代：Ming–Qing
+- 都城：Beijing
+- 特征：China's last dynasty; at its height territory peaked, later hit by modern upheavals (Nurhaci founded Later Jin in 1616 as its precursor). Major emperors, ~276 yrs.
+- 总结：The final chapter of imperial rule, turning from prosperity to decline as it entered the world system.
+
+### 帝王
+- Qing Taizong (Hong Taiji)（Renamed the state Qing）：1636–1643，在位约 7 年，庙号 Taizong，谥号 Wen。Renamed the state Qing; eve of entering the pass
+- Qing Shizu (Fulin)（Shunzhi）：1643–1661，在位约 18 年，庙号 Shizu，谥号 Zhang。Entered the Central Plains
+- Qing Shengzu (Xuanye)（Kangxi）：1661–1722，在位约 61 年，庙号 Shengzu，谥号 Ren。Consolidated and expanded
+- Qing Shizong (Yinzhen)（Yongzheng）：1722–1735，在位约 13 年，庙号 Shizong，谥号 Xian。Diligent and reform-minded
+- Qing Gaozong (Hongli)（Qianlong）：1735–1796，在位约 61 年，庙号 Gaozong，谥号 Chun。The Ten Great Campaigns
+- Qing Renzong (Yongyan)（Jiaqing）：1796–1820，在位约 24 年，庙号 Renzong，谥号 Rui。From prosperity to decline
+- Qing Xuanzong (Minning)（Daoguang）：1820–1850，在位约 30 年，庙号 Xuanzong，谥号 Cheng。The Opium War
+- Qing Wenzong (Yizhu)（Xianfeng）：1850–1861，在位约 11 年，庙号 Wenzong，谥号 Xian。The Anglo-French expedition
+- Qing Muzong (Zaichun)（Tongzhi）：1861–1874，在位约 13 年，庙号 Muzong，谥号 Yi。The Tongzhi Restoration
+- Qing Dezong (Zaitian)（Guangxu）：1875–1908，在位约 34 年，庙号 Dezong，谥号 Jing。The Hundred Days' Reform
+- Xuantong (Puyi)（Last ruler）：1908–1912，在位约 4 年。Qing fell; imperial rule ended
+
+### 人才
+- Civil Officials：Dorgon（Prince regent）；Zeng Guofan（Put down the Taiping Heavenly Kingdom）；Li Hongzhang（Self-Strengthening Movement）；Zuo Zongtang（Recovered Xinjiang）；Zhang Zhidong（A giant of the Self-Strengthening Movement）；Ji Yun（Chief editor of the Siku Quanshu）
+- Others：Lin Zexu（Banned opium, resisted Britain）；Kang Youwei（Reform leader）；Liang Qichao（Reform thinker）
+
+### 制度
+- Manchu–Han separation
+- The palace memorial system
+- Tax merged into land (Yongzheng)
+- Melting-loss silver to the treasury
+- Closed-door policy
+- Self-Strengthening Movement
+- Hundred Days' Reform
+- Late-Qing New Policies
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Manchu–Han separation and the memorial system; autocracy peaked；Territory fixed; later faced modern upheavals
+- Economy：Tax merged into land, melting-loss to treasury; the Kangxi–Qianlong heyday；Later closed-door policy; forced into the world system
+- Culture：The Complete Library in Four Branches and evidential scholarship；Peking opera took form; Western learning spread east (Self-Strengthening, Reform)
+
+## 历史大事记
+- 前2070 年：Founding of the Xia（Xia）— Qi, son of Yu, established hereditary rule — the start of “family rule” (approx.).
+- 前1600 年：Tang of Shang overthrows Xia（Shang）— Tang founds Shang; oracle bone script is China's earliest mature writing.
+- 前1046 年：Battle of Muye · Rise of Zhou（Zhou）— King Wu defeats Zhou, Shang falls and Zhou rises, enfeoffment begins.
+- 前841 年：Gonghe Regency（Zhou）— Commoner revolt; the start of China's precise chronology.
+- 前770 年：King Ping moves east（Zhou）— Eastern Zhou begins; the Spring and Autumn contending lords opens.
+- 前221 年：Qin unifies the six states（Qin）— Ying Zheng claims the imperial title; abolishes feudalism for commanderies.
+- 前209 年：Uprising of Chen Sheng & Wu Guang（Qin）— The first large-scale peasant uprising in Chinese history.
+- 前202 年：Founding of the Han（Han）— Liu Bang becomes emperor, opening the four-century Han.
+- 前138 年：Zhang Qian reaches the Western Regions（Han）— The Silk Road is opened.
+- 105 年：Cai Lun improves papermaking（Han）— Paper spreads; a revolution in knowledge transmission.
+- 184 年：Yellow Turban Rebellion（Han）— Eastern Han shaken; heroes rise across the land.
+- 200 年：Battle of Guandu（Three Kingdoms）— Cao Cao defeats Yuan Shao, laying the base to unite the north.
+- 208 年：Battle of Red Cliffs（Three Kingdoms）— Sun–Liu coalition breaks Cao Cao; the tripartite pattern forms.
+- 220 年：Cao Pi takes the throne（Three Kingdoms）— Eastern Han ends; the Three Kingdoms era begins.
+- 280 年：Western Jin destroys Wu（Jin）— Ends the Three Kingdoms split; brief unification.
+- 317 年：Gentry cross south（Jin）— Eastern Jin founded; the gentry clans migrate south.
+- 383 年：Battle of Fei River（Jin）— Eastern Jin wins outnumbered; Former Qin collapses.
+- 589 年：Sui destroys Chen, reunifies（Sui）— Ends the north–south split; realm restored to unity.
+- 605 年：Grand Canal dug（Sui）— Links north and south; shapes a millennium of grain transport.
+- 618 年：Founding of the Tang（Tang）— Li Yuan founds Tang; China enters its golden age.
+- 626 年：Xuanwu Gate Incident（Tang）— Li Shimin takes the throne, opening the Zhenguan era.
+- 755 年：An–Shi Rebellion（Tang）— The turning point of Tang's decline from prosperity.
+- 907 年：Tang falls · Five Dynasties begin（Five Dynasties & Ten Kingdoms）— Zhu Wen replaces Tang; the Central Plains enter the Five Dynasties.
+- 1004 年：Treaty of Chanyuan（Song）— Song–Liao peace; a long standoff pattern forms.
+- 1127 年：Jingkang Incident（Song）— Jin destroys Northern Song; the Song court flees south.
+- 1206 年：Genghis Khan founds Mongolia（Yuan）— Mongols rise, beginning conquest and expansion.
+- 1279 年：Battle of Yaishan（Yuan）— Southern Song falls; Yuan unifies the realm.
+- 1405 年：Zheng He's voyages（Ming）— Voyages to the Western Oceans, on an unprecedented scale.
+- 1616 年：Nurhaci founds Later Jin（Qing）— The Qing precursor rises in the Northeast.
+- 1644 年：Ming falls · Qing enters the pass（Qing）— Dynastic change; Qing settles the Central Plains.
+- 1840 年：Opium War（Qing）— The beginning of modern Chinese history.
+- 1912 年：Qing emperor abdicates（Qing）— Imperial rule ends; two millennia of dynasty history closes.
+
+## 四大发明
+- 📜 Papermaking（Eastern Han，Cai Lun (improved, 105 AD)）：Using bark, hemp, rag and such to improve papermaking; cheap, accessible paper became a key vehicle for knowledge. 世界影响：Reached Arabia in the 8th c., then Europe, advancing world civilization.
+- 🖨️ Printing（Sui–Tang → Northern Song，Woodblock (Sui–Tang) · Bi Sheng invented movable type (Northern Song)）：Woodblock printing began in Sui–Tang; in the Northern Song Bi Sheng made clay movable type, hugely boosting book replication. 世界影响：Accelerated knowledge diffusion, preluding European movable type.
+- 💥 Gunpowder（Tang → Song，Tang alchemists · Song military use）：First recorded in Tang alchemical texts; used in war by late Tang; widely used in Song weapons. 世界影响：Changed warfare; spread west to Europe via Mongols in the 13th c.
+- 🧭 Compass（Warring States → Northern Song，“Sinan” of Warring States · used for navigation in Northern Song）：The Warring States had the pointing tool “Sinan”; the Northern Song made an artificial magnetized compass for sea navigation. 世界影响：Supported ocean voyages and the Age of Discovery, reshaping world geography.
+
+## 帝王之最
+
+### 在位最长
+- Jie (Lügui)（Xia，c. 1676–1600 BC，约 76 年）
+- Tai Wu（Shang，c. 1487–1412 BC，约 75 年）
+- Qing Shengzu (Xuanye)（Qing，1661–1722，约 61 年）
+- Qing Gaozong (Hongli)（Qing，1735–1796，约 61 年）
+- King Nan（Zhou，314–256 BC，约 59 年）
+- Wu Ding（Shang，c. 1176–1117 BC，约 59 年）
+
+### 在位最短
+- Ming Guangzong (Zhu Changluo)（Ming，29 日）
+- Ziying（Qin，46 日）
+- Tang Zhongzong (Li Xian)（Tang，2 月）
+- Chai Zongxun, Respectful Emperor of Later Zhou（Five Dynasties & Ten Kingdoms，6 月）
+- Tang Shunzong (Li Song)（Tang，6 月）
+- Ming Renzong (Zhu Gaochi)（Ming，8 月）
+
+### 帝王最多的朝代
+- Zhou：36 位
+- Shang：26 位
+- Han：25 位
+- Tang：23 位
+- Song：18 位
+- Xia：17 位

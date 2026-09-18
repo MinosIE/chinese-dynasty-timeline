@@ -5,6 +5,7 @@
 ## 数据入口
 - [王朝总览](https://MinosIE.github.io/chinese-dynasty-timeline/data/overview.json)：全部王朝概览（名称、年代、都城、特征、总结、计数）
 - [王朝详情目录](https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/)：每个王朝的完整详情 JSON（帝王世系、人才、政策）
+- [全量文本](https://MinosIE.github.io/chinese-dynasty-timeline/llms-full.txt)：整站结构化数据的纯文本全文（便于 AI 搜索引擎整站引用）
 - [英文索引](https://MinosIE.github.io/chinese-dynasty-timeline/llms-en.txt)：English version of this index
 
 ## 各王朝速览

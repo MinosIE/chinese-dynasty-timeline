@@ -14,6 +14,7 @@
   node scripts/build-search-en.mjs  # 补回英文（必须紧跟上一条）
   node scripts/build-records.mjs    # 重建帝王之最（含英文）
   node scripts/build-geo.mjs        # 重建 llms.txt / llms-en.txt / robots.txt / sitemap.xml
+  node scripts/build-llms-full.mjs  # 重建 llms-full.txt / llms-full-en.txt（整站全文，供 GEO）
   node scripts/check-i18n.mjs       # 双语完整性校验（缺失即失败）
   ```
 - **改代码前必读**：[§3 AI Agent 开发指导](#3-ai-agent-开发指导-最高优先级)（尤其 3.2 禁止项 与 3.3 联动表）。
@@ -50,6 +51,7 @@ data/
 scripts/                # Node ESM 构建期脚本（见 1.4 表）
 .github/workflows/ci.yml# CI：重生成派生文件 + 校验一致性
 llms.txt / llms-en.txt  # ⚙派生：GEO 索引（build-geo.mjs 生成）
+llms-full.txt / llms-full-en.txt  # ⚙派生：GEO 全文（build-llms-full.mjs 生成，整站结构化数据纯文本）
 robots.txt / sitemap.xml# ⚙派生：build-geo.mjs 生成
 PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AGENTS.md 重复维护）
 ```
@@ -170,7 +172,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 - 本项目**无测试框架**。等价校验手段：
   - `node scripts/check-i18n.mjs` — 双语数据完整性（**必须通过**）
   - `node scripts/validate-data.mjs` — 帝王年份时序（**信息性**，见 3.7）
-  - `node scripts/build-*.mjs` 后 `git diff --exit-code -- data llms.txt llms-en.txt robots.txt sitemap.xml` — 派生文件一致性
+  - `node scripts/build-*.mjs` 后 `git diff --exit-code -- data llms.txt llms-en.txt llms-full.txt llms-full-en.txt robots.txt sitemap.xml` — 派生文件一致性
 - 改动了渲染逻辑 → 用浏览器实际打开对应模块确认（本项目配置了 chrome-devtools MCP 可用于截图 / 控制台检查）。
 
 ---
@@ -253,7 +255,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 ### 3.7 如何避免破坏已有功能（回归清单）
 
 - [ ] `node scripts/check-i18n.mjs` 通过（英文无缺失）。
-- [ ] 重跑全部 `build-*.mjs` 后 `git diff --exit-code -- data llms.txt llms-en.txt robots.txt sitemap.xml` 为空。
+- [ ] 重跑全部 `build-*.mjs` 后 `git diff --exit-code -- data llms.txt llms-en.txt llms-full.txt llms-full-en.txt robots.txt sitemap.xml` 为空。
 - [ ] 浏览器控制台**零** error / warn。
 - [ ] 中英双语各看一遍：措辞无残留、数字单位正确（`约4000` / `~4000`）。
 - [ ] 明暗主题切换正常，`localStorage` 记忆生效。
@@ -270,7 +272,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 | 本文件 | `AGENTS.md` | Agent 改本仓库的操作手册 | 🔴必读 | 每次改动前 |
 | 产品需求 | `PRD.md` | 功能清单（F1–F24）、数据规范、验收标准、路线图 | 🟡常用 | 改功能 / 定方案 / 查路线图 |
 | 使用说明 | `README.md` | 功能概览、目录结构、构建命令、字段示例 | 🟡常用 | 上手 / 对外说明 |
-| GEO 索引 | `llms.txt`、`llms-en.txt` | 给 LLM 的站点索引（⚙派生） | 🟢参考 | 调整 GEO 输出时（改 `build-geo.mjs`） |
+| GEO 索引 | `llms.txt`、`llms-en.txt`、`llms-full.txt`、`llms-full-en.txt` | 给 LLM 的站点索引（⚙派生） | 🟢参考 | 调整 GEO 输出时（改 `build-geo.mjs` / `build-llms-full.mjs`） |
 | 站点地图 | `sitemap.xml`、`robots.txt` | 爬虫（⚙派生） | 🟢参考 | 同上 |
 | 封面源 | `assets/og-source.html` | 分享图源文件 | 🟢参考 | 重做分享图时 |
 

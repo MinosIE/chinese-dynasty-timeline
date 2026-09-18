@@ -5,6 +5,7 @@
 ## Data endpoints
 - [Dynasty overview](https://MinosIE.github.io/chinese-dynasty-timeline/data/overview.json): all dynasties (name / years / capital / feature / summary / counts). English text lives in the sibling `*En` fields.
 - [Dynasty details](https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/): per-dynasty JSON (emperors, talents, policies, aspects); English text in `*En` fields.
+- [Full text](https://MinosIE.github.io/chinese-dynasty-timeline/llms-full-en.txt): full plain-text dump of all structured data (for whole-site LLM citation).
 - [Chinese index](https://MinosIE.github.io/chinese-dynasty-timeline/llms.txt): 中文索引
 
 ## Dynasty quick view
