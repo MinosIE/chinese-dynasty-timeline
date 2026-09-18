@@ -1,50 +1,59 @@
 {
   "id": "sui",
   "name": "隋",
+  "nameEn": "Sui",
   "years": "581–618",
+  "yearsEn": "581–618",
   "era": "隋唐",
   "capital": "大兴(长安)",
+  "capitalEn": "Daxing (Chang'an)",
   "feature": "重归一统，开创科举与大运河。",
+  "featureEn": "Reunified the realm; founded the exam system and the Grand Canal.",
   "summary": "制度创制(科举、运河)深远，短祚而承前启后。",
+  "summaryEn": "Its institutions (exams, canal) had lasting impact; short-lived but bridging.",
   "emperors": [
     {
       "n": "隋文帝(杨坚)",
+      "nEn": "Sui Wendi (Yang Jian)",
       "t": "开国",
+      "tEn": "Founding",
       "rg": "581–604",
+      "rgEn": "581–604",
       "ry": 23,
       "mt": "高祖",
+      "mtEn": "Gaozu",
       "gh": "开皇",
+      "ghEn": "Kaihuang",
       "sh": "文",
-      "note": "开皇之治，结束分裂"
+      "shEn": "Wen",
+      "note": "开皇之治，结束分裂",
+      "noteEn": "The Kaihuang era of good rule; ended the division"
     },
     {
       "n": "隋炀帝(杨广)",
+      "nEn": "Sui Yangdi (Yang Guang)",
       "t": "二世",
+      "tEn": "Second",
       "rg": "604–618",
+      "rgEn": "604–618",
       "ry": 14,
       "gh": "大业",
+      "ghEn": "Daye",
       "sh": "炀",
-      "note": "开运河征高句丽，亡"
+      "shEn": "Yang",
+      "note": "开运河征高句丽，亡",
+      "noteEn": "Dug the canal, campaigned against Goguryeo; fell"
     }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "高颎",
-        "note": "开国良相"
-      }
+      { "n": "高颎", "nEn": "Gao Jiong", "note": "开国良相", "noteEn": "Founding worthy chancellor" }
     ],
     "武将": [
-      {
-        "n": "杨素",
-        "note": "平陈名将"
-      }
+      { "n": "杨素", "nEn": "Yang Su", "note": "平陈名将", "noteEn": "Famed general who pacified Chen" }
     ],
     "其他": [
-      {
-        "n": "宇文恺",
-        "note": "营造东都"
-      }
+      { "n": "宇文恺", "nEn": "Yuwen Kai", "note": "营造东都", "noteEn": "Built the Eastern Capital" }
     ]
   },
   "policies": [
@@ -53,6 +62,13 @@
     "开凿大运河",
     "均田租庸调",
     "营建东都"
+  ],
+  "policiesEn": [
+    "Founded the exam system (subject examinations)",
+    "The Three Departments and Six Ministries",
+    "Dug the Grand Canal",
+    "Equal-field and zuyongdiao",
+    "Built the Eastern Capital"
   ],
   "aspects": {
     "政治": [
@@ -66,6 +82,20 @@
     "文化": [
       "南北文风交融",
       "雕版印刷术初现（印刷术之始）"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Ended the north–south split; rebuilt unification",
+      "Created the Three Departments and Six Ministries; pioneered exam-based recruitment"
+    ],
+    "经济": [
+      "Dug the Grand Canal, linking north–south transport",
+      "Pursued the equal-field and zuyongdiao; built granaries and the Eastern Capital"
+    ],
+    "文化": [
+      "Northern and southern literary styles blended",
+      "Woodblock printing first appeared (the start of printing)"
     ]
   }
 }

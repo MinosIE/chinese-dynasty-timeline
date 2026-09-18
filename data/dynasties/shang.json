@@ -1,227 +1,63 @@
 {
   "id": "shang",
   "name": "商",
+  "nameEn": "Shang",
   "years": "前1600–前1046",
+  "yearsEn": "1600–1046 BC",
   "era": "先秦",
   "capital": "殷(今安阳)",
+  "capitalEn": "Yin (present-day Anyang)",
   "feature": "甲骨文与青铜文明高峰，神权与王权合一；以下据传统王系约数列主要君主，合计约554年。",
+  "featureEn": "Zenith of oracle-bone script and bronze civilization, with theocratic and royal power fused. Major rulers per the traditional line, ~554 yrs.",
   "summary": "甲骨文证实商王世系，是中国有同期文字记载的最早王朝。",
+  "summaryEn": "Oracle bones confirm the Shang royal genealogy — the earliest dynasty with contemporaneous written records in China.",
   "emperors": [
-    {
-      "n": "汤(天乙)",
-      "t": "开国",
-      "rg": "约前1600–前1588",
-      "ry": 12,
-      "mt": "太祖",
-      "note": "灭夏建商"
-    },
-    {
-      "n": "外丙",
-      "t": "",
-      "rg": "约前1588–前1586",
-      "ry": 2,
-      "note": "伊尹摄政"
-    },
-    {
-      "n": "仲壬",
-      "t": "",
-      "rg": "约前1586–前1582",
-      "ry": 4,
-      "note": "伊尹摄政"
-    },
-    {
-      "n": "太甲",
-      "t": "",
-      "rg": "约前1582–前1570",
-      "ry": 12,
-      "mt": "太宗",
-      "note": "伊尹放太甲，悔过中兴"
-    },
-    {
-      "n": "沃丁",
-      "t": "",
-      "rg": "约前1570–前1541",
-      "ry": 29,
-      "note": "伊尹卒"
-    },
-    {
-      "n": "太庚",
-      "t": "",
-      "rg": "约前1541–前1516",
-      "ry": 25,
-      "note": "诸侯宾服"
-    },
-    {
-      "n": "小甲",
-      "t": "",
-      "rg": "约前1516–前1499",
-      "ry": 17,
-      "note": "守成"
-    },
-    {
-      "n": "雍己",
-      "t": "",
-      "rg": "约前1499–前1487",
-      "ry": 12,
-      "note": "诸侯叛"
-    },
-    {
-      "n": "太戊",
-      "t": "",
-      "rg": "约前1487–前1412",
-      "ry": 75,
-      "mt": "中宗",
-      "note": "太戊中兴，商势复盛"
-    },
-    {
-      "n": "仲丁",
-      "t": "",
-      "rg": "约前1412–前1401",
-      "ry": 11,
-      "note": "迁隞"
-    },
-    {
-      "n": "外壬",
-      "t": "",
-      "rg": "约前1401–前1386",
-      "ry": 15,
-      "note": "九世之乱起"
-    },
-    {
-      "n": "河亶甲",
-      "t": "",
-      "rg": "约前1386–前1377",
-      "ry": 9,
-      "note": "迁相"
-    },
-    {
-      "n": "祖乙",
-      "t": "",
-      "rg": "约前1377–前1358",
-      "ry": 19,
-      "mt": "中宗",
-      "note": "迁邢，殷复兴"
-    },
-    {
-      "n": "祖辛",
-      "t": "",
-      "rg": "约前1358–前1342",
-      "ry": 16,
-      "note": "守成"
-    },
-    {
-      "n": "沃甲",
-      "t": "",
-      "rg": "约前1342–前1317",
-      "ry": 25,
-      "note": "守成"
-    },
-    {
-      "n": "祖丁",
-      "t": "",
-      "rg": "约前1317–前1285",
-      "ry": 32,
-      "note": "守成"
-    },
-    {
-      "n": "南庚",
-      "t": "",
-      "rg": "约前1285–前1260",
-      "ry": 25,
-      "note": "迁奄"
-    },
-    {
-      "n": "阳甲",
-      "t": "",
-      "rg": "约前1260–前1253",
-      "ry": 7,
-      "note": "诸侯弱"
-    },
-    {
-      "n": "盘庚",
-      "t": "",
-      "rg": "约前1253–前1225",
-      "ry": 28,
-      "note": "迁殷稳定政局"
-    },
-    {
-      "n": "小辛",
-      "t": "",
-      "rg": "约前1225–前1204",
-      "ry": 21,
-      "note": "殷复衰"
-    },
-    {
-      "n": "小乙",
-      "t": "",
-      "rg": "约前1204–前1176",
-      "ry": 28,
-      "note": "守成"
-    },
-    {
-      "n": "武丁",
-      "t": "",
-      "rg": "约前1176–前1117",
-      "ry": 59,
-      "mt": "高宗",
-      "note": "武丁中兴，国力鼎盛"
-    },
-    {
-      "n": "祖庚",
-      "t": "",
-      "rg": "约前1117–前1106",
-      "ry": 11,
-      "note": "守成"
-    },
-    {
-      "n": "祖甲",
-      "t": "",
-      "rg": "约前1106–前1073",
-      "ry": 33,
-      "note": "革新礼制"
-    },
-    {
-      "n": "廪辛",
-      "t": "",
-      "rg": "约前1073–前1067",
-      "ry": 6,
-      "note": "征伐"
-    },
-    {
-      "n": "帝辛(纣王)",
-      "t": "末代",
-      "rg": "约前1067–前1046",
-      "ry": 21,
-      "sh": "纣",
-      "note": "暴虐，牧野之战亡"
-    }
+    { "n": "汤(天乙)", "nEn": "Tang (Tian Yi)", "t": "开国", "tEn": "Founding", "rg": "约前1600–前1588", "rgEn": "c. 1600–1588 BC", "ry": 12, "mt": "太祖", "mtEn": "Taizu", "note": "灭夏建商", "noteEn": "Destroyed Xia, founded Shang" },
+    { "n": "外丙", "nEn": "Wai Bing", "t": "", "tEn": "", "rg": "约前1588–前1586", "rgEn": "c. 1588–1586 BC", "ry": 2, "note": "伊尹摄政", "noteEn": "Yi Yin as regent" },
+    { "n": "仲壬", "nEn": "Zhong Ren", "t": "", "tEn": "", "rg": "约前1586–前1582", "rgEn": "c. 1586–1582 BC", "ry": 4, "note": "伊尹摄政", "noteEn": "Yi Yin as regent" },
+    { "n": "太甲", "nEn": "Tai Jia", "t": "", "tEn": "", "rg": "约前1582–前1570", "rgEn": "c. 1582–1570 BC", "ry": 12, "mt": "太宗", "mtEn": "Taizong", "note": "伊尹放太甲，悔过中兴", "noteEn": "Yi Yin exiled Tai Jia; he repented and restored order" },
+    { "n": "沃丁", "nEn": "Wo Ding", "t": "", "tEn": "", "rg": "约前1570–前1541", "rgEn": "c. 1570–1541 BC", "ry": 29, "note": "伊尹卒", "noteEn": "Yi Yin died" },
+    { "n": "太庚", "nEn": "Tai Geng", "t": "", "tEn": "", "rg": "约前1541–前1516", "rgEn": "c. 1541–1516 BC", "ry": 25, "note": "诸侯宾服", "noteEn": "Vassals were submissive" },
+    { "n": "小甲", "nEn": "Xiao Jia", "t": "", "tEn": "", "rg": "约前1516–前1499", "rgEn": "c. 1516–1499 BC", "ry": 17, "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "雍己", "nEn": "Yong Ji", "t": "", "tEn": "", "rg": "约前1499–前1487", "rgEn": "c. 1499–1487 BC", "ry": 12, "note": "诸侯叛", "noteEn": "Vassals rebelled" },
+    { "n": "太戊", "nEn": "Tai Wu", "t": "", "tEn": "", "rg": "约前1487–前1412", "rgEn": "c. 1487–1412 BC", "ry": 75, "mt": "中宗", "mtEn": "Zhongzong", "note": "太戊中兴，商势复盛", "noteEn": "The Tai Wu Restoration; Shang resurged" },
+    { "n": "仲丁", "nEn": "Zhong Ding", "t": "", "tEn": "", "rg": "约前1412–前1401", "rgEn": "c. 1412–1401 BC", "ry": 11, "note": "迁隞", "noteEn": "Moved to Ao" },
+    { "n": "外壬", "nEn": "Wai Ren", "t": "", "tEn": "", "rg": "约前1401–前1386", "rgEn": "c. 1401–1386 BC", "ry": 15, "note": "九世之乱起", "noteEn": "The Disorder of the Nine Generations began" },
+    { "n": "河亶甲", "nEn": "He Dan Jia", "t": "", "tEn": "", "rg": "约前1386–前1377", "rgEn": "c. 1386–1377 BC", "ry": 9, "note": "迁相", "noteEn": "Moved to Xiang" },
+    { "n": "祖乙", "nEn": "Zu Yi", "t": "", "tEn": "", "rg": "约前1377–前1358", "rgEn": "c. 1377–1358 BC", "ry": 19, "mt": "中宗", "mtEn": "Zhongzong", "note": "迁邢，殷复兴", "noteEn": "Moved to Xing; Yin revived" },
+    { "n": "祖辛", "nEn": "Zu Xin", "t": "", "tEn": "", "rg": "约前1358–前1342", "rgEn": "c. 1358–1342 BC", "ry": 16, "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "沃甲", "nEn": "Wo Jia", "t": "", "tEn": "", "rg": "约前1342–前1317", "rgEn": "c. 1342–1317 BC", "ry": 25, "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "祖丁", "nEn": "Zu Ding", "t": "", "tEn": "", "rg": "约前1317–前1285", "rgEn": "c. 1317–1285 BC", "ry": 32, "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "南庚", "nEn": "Nan Geng", "t": "", "tEn": "", "rg": "约前1285–前1260", "rgEn": "c. 1285–1260 BC", "ry": 25, "note": "迁奄", "noteEn": "Moved to Yan" },
+    { "n": "阳甲", "nEn": "Yang Jia", "t": "", "tEn": "", "rg": "约前1260–前1253", "rgEn": "c. 1260–1253 BC", "ry": 7, "note": "诸侯弱", "noteEn": "Vassals weakened" },
+    { "n": "盘庚", "nEn": "Pan Geng", "t": "", "tEn": "", "rg": "约前1253–前1225", "rgEn": "c. 1253–1225 BC", "ry": 28, "note": "迁殷稳定政局", "noteEn": "Moved to Yin, stabilizing politics" },
+    { "n": "小辛", "nEn": "Xiao Xin", "t": "", "tEn": "", "rg": "约前1225–前1204", "rgEn": "c. 1225–1204 BC", "ry": 21, "note": "殷复衰", "noteEn": "Yin declined again" },
+    { "n": "小乙", "nEn": "Xiao Yi", "t": "", "tEn": "", "rg": "约前1204–前1176", "rgEn": "c. 1204–1176 BC", "ry": 28, "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "武丁", "nEn": "Wu Ding", "t": "", "tEn": "", "rg": "约前1176–前1117", "rgEn": "c. 1176–1117 BC", "ry": 59, "mt": "高宗", "mtEn": "Gaozong", "note": "武丁中兴，国力鼎盛", "noteEn": "The Wu Ding Restoration; the state at its zenith" },
+    { "n": "祖庚", "nEn": "Zu Geng", "t": "", "tEn": "", "rg": "约前1117–前1106", "rgEn": "c. 1117–1106 BC", "ry": 11, "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "祖甲", "nEn": "Zu Jia", "t": "", "tEn": "", "rg": "约前1106–前1073", "rgEn": "c. 1106–1073 BC", "ry": 33, "note": "革新礼制", "noteEn": "Reformed the ritual system" },
+    { "n": "廪辛", "nEn": "Lin Xin", "t": "", "tEn": "", "rg": "约前1073–前1067", "rgEn": "c. 1073–1067 BC", "ry": 6, "note": "征伐", "noteEn": "Waged campaigns" },
+    { "n": "帝辛(纣王)", "nEn": "Di Xin (Zhou Wang)", "t": "末代", "tEn": "Last ruler", "rg": "约前1067–前1046", "rgEn": "c. 1067–1046 BC", "ry": 21, "sh": "纣", "shEn": "Zhou", "note": "暴虐，牧野之战亡", "noteEn": "Tyrannical; fell at the Battle of Muye" }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "伊尹",
-        "note": "开国名相，放太甲"
-      },
-      {
-        "n": "傅说",
-        "note": "武丁贤相"
-      }
+      { "n": "伊尹", "nEn": "Yi Yin", "note": "开国名相，放太甲", "noteEn": "Founding chancellor; exiled Tai Jia" },
+      { "n": "傅说", "nEn": "Fu Yue", "note": "武丁贤相", "noteEn": "Wise chancellor of Wu Ding" }
     ],
     "其他": [
-      {
-        "n": "妇好",
-        "note": "女将，多次征伐"
-      },
-      {
-        "n": "比干",
-        "note": "忠臣，剖腹"
-      }
+      { "n": "妇好", "nEn": "Fu Hao", "note": "女将，多次征伐", "noteEn": "A woman general who led many campaigns" },
+      { "n": "比干", "nEn": "Bigan", "note": "忠臣，剖腹", "noteEn": "A loyal minister; disemboweled" }
     ]
   },
   "policies": [
     "甲骨文占卜记事",
     "青铜礼器制度",
     "内外服制"
+  ],
+  "policiesEn": [
+    "Oracle-bone divination and record-keeping",
+    "The bronze ritual-vessel system",
+    "The inner and outer service system"
   ],
   "aspects": {
     "政治": [
@@ -235,6 +71,20 @@
     "文化": [
       "甲骨文是中国最早的成熟文字系统",
       "青铜礼器与祖先祭祀文化鼎盛"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Kingship and theocracy fused; all matters decided by divination",
+      "The inner-outer service system; the royal domain governed the four quarters"
+    ],
+    "经济": [
+      "Highly developed bronze casting (e.g., the Simuwu ding)",
+      "Agriculture and herding side by side; cowries appeared as primitive money"
+    ],
+    "文化": [
+      "Oracle-bone script is China's earliest mature writing system",
+      "Bronze ritual vessels and ancestor worship at their height"
     ]
   }
 }
