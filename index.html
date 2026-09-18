@@ -61,6 +61,7 @@ const ASPECT_ORDER=["政治","经济","文化"];
 const ASPECT_COLORS={"政治":"#D4351C","经济":"#059669","文化":"#7C3AED"};
 const STAR=new Set(["禹(大禹)","汤(天乙)","武丁","周武王(姬发)","秦始皇(嬴政)","汉高祖(刘邦)","汉武帝(刘彻)","王莽(新)","汉光武帝(刘秀)","蜀汉昭烈帝(刘备)","吴大帝(孙权)","晋武帝(司马炎)","北魏孝文帝(拓跋宏)","梁武帝(萧衍)","隋文帝(杨坚)","隋炀帝(杨广)","唐太宗(李世民)","武则天","唐玄宗(李隆基)","宋太祖(赵匡胤)","宋徽宗(赵佶)","元世祖(忽必烈)","明太祖(朱元璋)","明成祖(朱棣)","清圣祖(玄烨)","清世宗(胤禛)","清高宗(弘历)"]);
 const LEGEND=new Set(["秦始皇(嬴政)","汉武帝(刘彻)","唐太宗(李世民)","清圣祖(玄烨)"]);
+const LEGEND_DYNASTIES=new Set(["qin","han","tang","qing"]);
 const ERAS=["全部","先秦","秦汉","三国两晋南北朝","隋唐","宋元","明清"];
 
 const tl=document.getElementById('timeline');
@@ -104,7 +105,7 @@ function render(){
       <article class="card collapsed">
         <span class="accent" style="background:${ec}"></span>
         <div class="chead">
-          <span class="name">${o.name}</span><span class="years">${o.years}</span>
+          <span class="name">${o.name}</span><span class="years">${o.years}</span>${LEGEND_DYNASTIES.has(o.id)?'<span class="legend-mark">👑 千古一帝</span>':''}
           <span class="meta">${o.capital} · 存续${o.duration}</span>
           <span class="toggle"><span class="chev">▾</span>展开详情</span>
         </div>

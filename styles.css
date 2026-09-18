@@ -89,6 +89,8 @@
   .chead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:18px 22px;cursor:pointer}
   .chead .name{font-size:20px;font-weight:800;color:var(--text-strong)}
   .chead .years{color:var(--brand);font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+  .legend-mark{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#E8C05A,#C79A3A);color:#3A1F1A;
+    font-size:11px;font-weight:800;border-radius:999px;padding:2px 9px;line-height:1.5;white-space:nowrap}
   .chead .meta{color:var(--text-mute);font-size:12.5px;margin-left:auto;text-align:right}
   .chead .toggle{color:var(--text-mute);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
   .chead .toggle .chev{display:inline-block;transition:transform .42s cubic-bezier(.4,0,.2,1)}
