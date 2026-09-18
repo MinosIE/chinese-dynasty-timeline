@@ -1,265 +1,371 @@
 {
   "id": "han",
   "name": "汉",
+  "nameEn": "Han",
   "years": "西汉前202–公元8 / 东汉25–220",
+  "yearsEn": "Western Han 202 BC–AD 8 / Eastern Han 25–220",
   "era": "秦汉",
   "capital": "长安→洛阳",
+  "capitalEn": "Chang'an → Luoyang",
   "feature": "大一统定型，丝路开通，儒术独尊，国号成族称。列主要帝，合计约420年。",
+  "featureEn": "Unification settled, the Silk Road opened, Confucianism made orthodox, and the dynasty's name became the ethnonym. Major emperors, ~420 yrs.",
   "summary": "奠定中华主体民族认同与集权范式，「汉」成为族称。",
+  "summaryEn": "Forged the core Han identity and the centralized model; “Han” became the name of the people.",
   "emperors": [
     {
       "n": "汉高祖(刘邦)",
+      "nEn": "Han Gaozu (Liu Bang)",
       "t": "开国",
+      "tEn": "Founding",
       "rg": "前202–前195",
+      "rgEn": "202–195 BC",
       "ry": 8,
       "mt": "太祖",
+      "mtEn": "Taizu",
       "sh": "高",
-      "note": "布衣起兵，开基"
+      "shEn": "Gao",
+      "note": "布衣起兵，开基",
+      "noteEn": "Rose from commoner origins, founded the dynasty"
     },
     {
       "n": "汉惠帝(刘盈)",
+      "nEn": "Han Huidi (Liu Ying)",
       "t": "",
+      "tEn": "",
       "rg": "前195–前188",
+      "rgEn": "195–188 BC",
       "ry": 7,
       "sh": "惠",
-      "note": "吕后临朝"
+      "shEn": "Hui",
+      "note": "吕后临朝",
+      "noteEn": "Empress Lü in power"
     },
     {
       "n": "吕后(称制)",
+      "nEn": "Empress Lü (regent)",
       "t": "临朝",
+      "tEn": "Regent",
       "rg": "前188–前180",
+      "rgEn": "188–180 BC",
       "ry": 8,
-      "note": "实际执政，文景母"
+      "note": "实际执政，文景母",
+      "noteEn": "De facto ruler; mother of the Wen and Jing emperors"
     },
     {
       "n": "汉文帝(刘恒)",
+      "nEn": "Han Wendi (Liu Heng)",
       "t": "文景",
+      "tEn": "Wen–Jing era",
       "rg": "前180–前157",
+      "rgEn": "180–157 BC",
       "ry": 23,
       "mt": "太宗",
+      "mtEn": "Taizong",
       "sh": "文",
-      "note": "文景之治，休养生息"
+      "shEn": "Wen",
+      "note": "文景之治，休养生息",
+      "noteEn": "The Wen–Jing era of good rule; rest and recuperation"
     },
     {
       "n": "汉景帝(刘启)",
+      "nEn": "Han Jingdi (Liu Qi)",
       "t": "文景",
+      "tEn": "Wen–Jing era",
       "rg": "前157–前141",
+      "rgEn": "157–141 BC",
       "ry": 16,
       "sh": "景",
-      "note": "削藩平定七国"
+      "shEn": "Jing",
+      "note": "削藩平定七国",
+      "noteEn": "Reined in the vassals, quelled the Seven Kingdoms revolt"
     },
     {
       "n": "汉武帝(刘彻)",
+      "nEn": "Han Wudi (Liu Che)",
       "t": "盛世",
+      "tEn": "Heyday",
       "rg": "前141–前87",
+      "rgEn": "141–87 BC",
       "ry": 54,
       "mt": "世宗",
+      "mtEn": "Shizong",
       "gh": "建元",
+      "ghEn": "Jianyuan",
       "sh": "武",
-      "note": "拓西域，强汉"
+      "shEn": "Wu",
+      "note": "拓西域，强汉",
+      "noteEn": "Expanded into the Western Regions; a mighty Han"
     },
     {
       "n": "汉昭帝(刘弗陵)",
+      "nEn": "Han Zhaodi (Liu Fuling)",
       "t": "",
+      "tEn": "",
       "rg": "前87–前74",
+      "rgEn": "87–74 BC",
       "ry": 13,
       "gh": "始元",
+      "ghEn": "Shiyuan",
       "sh": "昭",
-      "note": "霍光辅政"
+      "shEn": "Zhao",
+      "note": "霍光辅政",
+      "noteEn": "Huoguang as regent"
     },
     {
       "n": "汉宣帝(刘询)",
+      "nEn": "Han Xuandi (Liu Xun)",
       "t": "",
+      "tEn": "",
       "rg": "前74–前49",
+      "rgEn": "74–49 BC",
       "ry": 25,
       "mt": "中宗",
+      "mtEn": "Zhongzong",
       "gh": "本始",
+      "ghEn": "Benshi",
       "sh": "宣",
-      "note": "孝宣之治"
+      "shEn": "Xuan",
+      "note": "孝宣之治",
+      "noteEn": "The Xiaoxuan era of good rule"
     },
     {
       "n": "汉元帝(刘奭)",
+      "nEn": "Han Yuandi (Liu Shi)",
       "t": "",
+      "tEn": "",
       "rg": "前49–前33",
+      "rgEn": "49–33 BC",
       "ry": 16,
       "mt": "高宗",
+      "mtEn": "Gaozong",
       "sh": "元",
-      "note": "儒术独尊"
+      "shEn": "Yuan",
+      "note": "儒术独尊",
+      "noteEn": "Confucianism made sole orthodoxy"
     },
     {
       "n": "汉成帝(刘骜)",
+      "nEn": "Han Chengdi (Liu Ao)",
       "t": "",
+      "tEn": "",
       "rg": "前33–前7",
+      "rgEn": "33–7 BC",
       "ry": 26,
       "sh": "成",
-      "note": "外戚王氏起"
+      "shEn": "Cheng",
+      "note": "外戚王氏起",
+      "noteEn": "The Wang clan (empress's kin) rose"
     },
     {
       "n": "汉哀帝(刘欣)",
+      "nEn": "Han Aidi (Liu Xin)",
       "t": "",
+      "tEn": "",
       "rg": "前7–前1",
+      "rgEn": "7–1 BC",
       "ry": 6,
       "sh": "哀",
-      "note": "托孤王莽"
+      "shEn": "Ai",
+      "note": "托孤王莽",
+      "noteEn": "Entrusted the orphan to Wang Mang"
     },
     {
       "n": "汉平帝(刘衎)",
+      "nEn": "Han Pingdi (Liu Kan)",
       "t": "",
+      "tEn": "",
       "rg": "前1–公元5",
+      "rgEn": "1 BC–AD 5",
       "ry": 6,
       "sh": "平",
-      "note": "王莽摄政"
+      "shEn": "Ping",
+      "note": "王莽摄政",
+      "noteEn": "Wang Mang as regent"
     },
     {
       "n": "孺子婴(刘婴)",
+      "nEn": "Ruzi Ying (Liu Ying)",
       "t": "居摄",
+      "tEn": "Regency",
       "rg": "6–8",
+      "rgEn": "6–8",
       "ry": 2,
-      "note": "王莽摄政，汉祚将终"
+      "note": "王莽摄政，汉祚将终",
+      "noteEn": "Wang Mang as regent; the Han mandate near its end"
     },
     {
       "n": "王莽(新)",
+      "nEn": "Wang Mang (Xin)",
       "t": "代汉",
+      "tEn": "Usurped Han",
       "rg": "9–23",
+      "rgEn": "9–23",
       "ry": 15,
       "sh": "新",
-      "note": "建新朝，托古改制"
+      "shEn": "Xin",
+      "note": "建新朝，托古改制",
+      "noteEn": "Founded the Xin; revived antiquity in reform"
     },
     {
       "n": "更始帝(刘玄)",
+      "nEn": "Gengshi Emperor (Liu Xuan)",
       "t": "复汉",
+      "tEn": "Restored Han",
       "rg": "23–25",
+      "rgEn": "23–25",
       "ry": 2,
-      "note": "绿林军立，后为赤眉所杀"
+      "note": "绿林军立，后为赤眉所杀",
+      "noteEn": "Set up by the Green Forest army; later killed by the Red Eyebrows"
     },
     {
       "n": "汉光武帝(刘秀)",
+      "nEn": "Han Guangwudi (Liu Xiu)",
       "t": "东汉开",
+      "tEn": "Eastern Han founder",
       "rg": "25–57",
+      "rgEn": "25–57",
       "ry": 33,
       "mt": "世祖",
+      "mtEn": "Shizu",
       "sh": "光武",
-      "note": "光武中兴"
+      "shEn": "Guangwu",
+      "note": "光武中兴",
+      "noteEn": "The Guangwu Restoration"
     },
     {
       "n": "汉明帝(刘庄)",
+      "nEn": "Han Mingdi (Liu Zhuang)",
       "t": "",
+      "tEn": "",
       "rg": "57–75",
+      "rgEn": "57–75",
       "ry": 18,
       "sh": "明",
-      "note": "佛教传入中原"
+      "shEn": "Ming",
+      "note": "佛教传入中原",
+      "noteEn": "Buddhism entered the Central Plains"
     },
     {
       "n": "汉章帝(刘炟)",
+      "nEn": "Han Zhangdi (Liu Da)",
       "t": "",
+      "tEn": "",
       "rg": "75–88",
+      "rgEn": "75–88",
       "ry": 13,
       "sh": "章",
-      "note": "明章之治"
+      "shEn": "Zhang",
+      "note": "明章之治",
+      "noteEn": "The Ming–Zhang era of good rule"
     },
     {
       "n": "汉和帝(刘肇)",
+      "nEn": "Han Hedi (Liu Zhao)",
       "t": "",
+      "tEn": "",
       "rg": "88–105",
+      "rgEn": "88–105",
       "ry": 17,
       "sh": "和",
-      "note": "窦宪破匈奴"
+      "shEn": "He",
+      "note": "窦宪破匈奴",
+      "noteEn": "Dou Xian crushed the Xiongnu"
     },
     {
       "n": "汉殇帝(刘隆)",
+      "nEn": "Han Shangdi (Liu Long)",
       "t": "",
+      "tEn": "",
       "rg": "105–106",
+      "rgEn": "105–106",
       "ry": 1,
       "sh": "殇",
-      "note": "即位时生下百余日，在位八月"
+      "shEn": "Shang",
+      "note": "即位时生下百余日，在位八月",
+      "noteEn": "Enthroned over a hundred days old; reigned eight months"
     },
     {
       "n": "汉安帝(刘祜)",
+      "nEn": "Han Andi (Liu Hu)",
       "t": "",
+      "tEn": "",
       "rg": "106–125",
+      "rgEn": "106–125",
       "ry": 19,
       "sh": "安",
-      "note": "外戚宦官争"
+      "shEn": "An",
+      "note": "外戚宦官争",
+      "noteEn": "Struggle between empress's kin and eunuchs"
     },
     {
       "n": "汉顺帝(刘保)",
+      "nEn": "Han Shundi (Liu Bao)",
       "t": "",
+      "tEn": "",
       "rg": "125–144",
+      "rgEn": "125–144",
       "ry": 19,
       "sh": "顺",
-      "note": "宦官得势"
+      "shEn": "Shun",
+      "note": "宦官得势",
+      "noteEn": "Eunuchs gained the upper hand"
     },
     {
       "n": "汉桓帝(刘志)",
+      "nEn": "Han Huandi (Liu Zhi)",
       "t": "",
+      "tEn": "",
       "rg": "147–167",
+      "rgEn": "147–167",
       "ry": 21,
       "sh": "桓",
-      "note": "党锢之祸"
+      "shEn": "Huan",
+      "note": "党锢之祸",
+      "noteEn": "The Partisan Proscriptions"
     },
     {
       "n": "汉灵帝(刘宏)",
+      "nEn": "Han Lingdi (Liu Hong)",
       "t": "",
+      "tEn": "",
       "rg": "168–189",
+      "rgEn": "168–189",
       "ry": 22,
       "sh": "灵",
-      "note": "黄巾之乱"
+      "shEn": "Ling",
+      "note": "黄巾之乱",
+      "noteEn": "The Yellow Turban Rebellion"
     },
     {
       "n": "汉献帝(刘协)",
+      "nEn": "Han Xiandi (Liu Xie)",
       "t": "末代",
+      "tEn": "Last ruler",
       "rg": "189–220",
+      "rgEn": "189–220",
       "ry": 31,
       "sh": "献",
-      "note": "傀儡，汉亡"
+      "shEn": "Xian",
+      "note": "傀儡，汉亡",
+      "noteEn": "A puppet; the Han fell"
     }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "萧何",
-        "note": "汉初相国"
-      },
-      {
-        "n": "张良",
-        "note": "谋臣"
-      },
-      {
-        "n": "董仲舒",
-        "note": "独尊儒术"
-      },
-      {
-        "n": "霍光",
-        "note": "辅政大臣"
-      }
+      { "n": "萧何", "nEn": "Xiao He", "note": "汉初相国", "noteEn": "Chancellor at the dawn of Han" },
+      { "n": "张良", "nEn": "Zhang Liang", "note": "谋臣", "noteEn": "Strategist" },
+      { "n": "董仲舒", "nEn": "Dong Zhongshu", "note": "独尊儒术", "noteEn": "Made Confucianism sole orthodoxy" },
+      { "n": "霍光", "nEn": "Huoguang", "note": "辅政大臣", "noteEn": "Regent minister" }
     ],
     "武将": [
-      {
-        "n": "韩信",
-        "note": "兵仙"
-      },
-      {
-        "n": "卫青",
-        "note": "击匈奴"
-      },
-      {
-        "n": "霍去病",
-        "note": "封狼居胥"
-      },
-      {
-        "n": "班超",
-        "note": "投笔从戎，通西域"
-      }
+      { "n": "韩信", "nEn": "Han Xin", "note": "兵仙", "noteEn": "The god of war" },
+      { "n": "卫青", "nEn": "Wei Qing", "note": "击匈奴", "noteEn": "Struck the Xiongnu" },
+      { "n": "霍去病", "nEn": "Huo Qubing", "note": "封狼居胥", "noteEn": "Sealed the Langjuxu summit" },
+      { "n": "班超", "nEn": "Ban Chao", "note": "投笔从戎，通西域", "noteEn": "Cast aside the pen for the sword; opened the Western Regions" }
     ],
     "思想·文人": [
-      {
-        "n": "司马迁",
-        "note": "《史记》"
-      },
-      {
-        "n": "蔡伦",
-        "note": "改进造纸术"
-      }
+      { "n": "司马迁", "nEn": "Sima Qian", "note": "《史记》", "noteEn": "Records of the Grand Historian" },
+      { "n": "蔡伦", "nEn": "Cai Lun", "note": "改进造纸术", "noteEn": "Improved papermaking" }
     ]
   },
   "policies": [
@@ -269,6 +375,14 @@
     "丝绸之路",
     "盐铁官营",
     "均输平准"
+  ],
+  "policiesEn": [
+    "Parallel princedoms → the Enfeoffment Reduction Edict",
+    "Dismissed the Hundred Schools, upheld Confucianism alone",
+    "The recommendation system",
+    "The Silk Road",
+    "State monopoly on salt and iron",
+    "Equal-transport and price-stabilization"
   ],
   "aspects": {
     "政治": [
@@ -282,6 +396,20 @@
     "文化": [
       "罢黜百家、独尊儒术",
       "《史记》《汉书》传世；蔡伦改进造纸术，佛教传入"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "After parallel princedoms, the Enfeoffment Reduction Edict reined in vassals and centralized power",
+      "The recommendation system selected officials; empress's kin and eunuchs took turns monopolizing power"
+    ],
+    "经济": [
+      "Opened the Silk Road; state salt-iron monopoly, equal-transport and price-stabilization",
+      "Advances in agriculture, textiles and iron-smelting"
+    ],
+    "文化": [
+      "Dismissed the Hundred Schools, upheld Confucianism alone",
+      "Records of the Grand Historian and Book of Han survived; Cai Lun improved papermaking; Buddhism arrived"
     ]
   }
 }

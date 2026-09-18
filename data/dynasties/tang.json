@@ -1,262 +1,378 @@
 {
   "id": "tang",
   "name": "唐",
+  "nameEn": "Tang",
   "years": "618–907",
+  "yearsEn": "618–907",
   "era": "隋唐",
   "capital": "长安",
+  "capitalEn": "Chang'an",
   "feature": "盛世开放，文化璀璨，万国来朝。列主要帝系（含武周），合计约290年。",
+  "featureEn": "A cosmopolitan golden age of radiant culture, with all nations paying tribute. Major emperors (incl. Wu Zhou), ~290 yrs.",
   "summary": "中国古代最强盛开放的时代之一，文化辐射整个东亚。",
+  "summaryEn": "One of the strongest and most open eras of imperial China; its culture radiated across East Asia.",
   "emperors": [
     {
       "n": "唐高祖(李渊)",
+      "nEn": "Tang Gaozu (Li Yuan)",
       "t": "开国",
+      "tEn": "Founding",
       "rg": "618–626",
+      "rgEn": "618–626",
       "ry": 8,
       "mt": "高祖",
+      "mtEn": "Gaozu",
       "gh": "武德",
-      "note": "晋阳起兵"
+      "ghEn": "Wude",
+      "note": "晋阳起兵",
+      "noteEn": "Rose at Jinyang"
     },
     {
       "n": "唐太宗(李世民)",
+      "nEn": "Tang Taizong (Li Shimin)",
       "t": "贞观",
+      "tEn": "Zhenguan",
       "rg": "626–649",
+      "rgEn": "626–649",
       "ry": 23,
       "mt": "太宗",
+      "mtEn": "Taizong",
       "gh": "贞观",
+      "ghEn": "Zhenguan",
       "sh": "文",
-      "note": "贞观之治"
+      "shEn": "Wen",
+      "note": "贞观之治",
+      "noteEn": "The Zhenguan era of good rule"
     },
     {
       "n": "唐高宗(李治)",
+      "nEn": "Tang Gaozong (Li Zhi)",
       "t": "",
+      "tEn": "",
       "rg": "649–683",
+      "rgEn": "649–683",
       "ry": 34,
       "mt": "高宗",
+      "mtEn": "Gaozong",
       "gh": "永徽",
-      "note": "永徽之治"
+      "ghEn": "Yonghui",
+      "note": "永徽之治",
+      "noteEn": "The Yonghui era of good rule"
     },
     {
       "n": "唐中宗(李显)",
+      "nEn": "Tang Zhongzong (Li Xian)",
       "t": "",
+      "tEn": "",
       "rg": "684",
+      "rgEn": "684",
       "ry": 1,
       "gh": "嗣圣",
-      "note": "首次在位被废"
+      "ghEn": "Sisheng",
+      "note": "首次在位被废",
+      "noteEn": "First reign, deposed"
     },
     {
       "n": "唐睿宗(李旦)",
+      "nEn": "Tang Ruizong (Li Dan)",
       "t": "",
+      "tEn": "",
       "rg": "684–690",
+      "rgEn": "684–690",
       "ry": 6,
       "gh": "文明",
-      "note": "首次在位，武后临朝"
+      "ghEn": "Wenming",
+      "note": "首次在位，武后临朝",
+      "noteEn": "First reign; Empress Wu in power"
     },
     {
       "n": "武则天",
+      "nEn": "Wu Zetian",
       "t": "女皇",
+      "tEn": "Empress regnant",
       "rg": "690–705",
+      "rgEn": "690–705",
       "ry": 15,
       "gh": "天授",
+      "ghEn": "Tianshou",
       "sh": "则天",
-      "note": "中国唯一女皇帝"
+      "shEn": "Zetian",
+      "note": "中国唯一女皇帝",
+      "noteEn": "China's only empress regnant"
     },
     {
       "n": "唐中宗(李显)",
+      "nEn": "Tang Zhongzong (Li Xian)",
       "t": "复",
+      "tEn": "Restored",
       "rg": "705–710",
+      "rgEn": "705–710",
       "ry": 5,
       "gh": "神龙",
+      "ghEn": "Shenlong",
       "sh": "孝和",
-      "note": "神龙复辟"
+      "shEn": "Xiaohe",
+      "note": "神龙复辟",
+      "noteEn": "The Shenlong restoration"
     },
     {
       "n": "唐睿宗(李旦)",
+      "nEn": "Tang Ruizong (Li Dan)",
       "t": "复",
+      "tEn": "Restored",
       "rg": "710–712",
+      "rgEn": "710–712",
       "ry": 2,
       "gh": "景云",
+      "ghEn": "Jingyun",
       "sh": "玄真",
-      "note": "禅于玄宗"
+      "shEn": "Xuanzhen",
+      "note": "禅于玄宗",
+      "noteEn": "Abdicated to Xuanzong"
     },
     {
       "n": "唐玄宗(李隆基)",
+      "nEn": "Tang Xuanzong (Li Longji)",
       "t": "开元→天宝",
+      "tEn": "Kaiyuan → Tianbao",
       "rg": "712–756",
+      "rgEn": "712–756",
       "ry": 44,
       "mt": "玄宗",
+      "mtEn": "Xuanzong",
       "gh": "开元",
+      "ghEn": "Kaiyuan",
       "sh": "明",
-      "note": "开元盛世→安史之乱"
+      "shEn": "Ming",
+      "note": "开元盛世→安史之乱",
+      "noteEn": "The Kaiyuan heyday → the An–Shi Rebellion"
     },
     {
       "n": "唐肃宗(李亨)",
+      "nEn": "Tang Suzong (Li Heng)",
       "t": "",
+      "tEn": "",
       "rg": "756–762",
+      "rgEn": "756–762",
       "ry": 6,
       "mt": "肃宗",
+      "mtEn": "Suzong",
       "gh": "至德",
-      "note": "收复两京"
+      "ghEn": "Zhide",
+      "note": "收复两京",
+      "noteEn": "Recovered the two capitals"
     },
     {
       "n": "唐代宗(李豫)",
+      "nEn": "Tang Daizong (Li Yu)",
       "t": "",
+      "tEn": "",
       "rg": "762–779",
+      "rgEn": "762–779",
       "ry": 17,
       "mt": "代宗",
+      "mtEn": "Daizong",
       "gh": "宝应",
-      "note": "安史平"
+      "ghEn": "Baoying",
+      "note": "安史平",
+      "noteEn": "The An–Shi Rebellion quelled"
     },
     {
       "n": "唐德宗(李适)",
+      "nEn": "Tang Dezong (Li Kuo)",
       "t": "",
+      "tEn": "",
       "rg": "779–805",
+      "rgEn": "779–805",
       "ry": 26,
       "mt": "德宗",
+      "mtEn": "Dezong",
       "gh": "建中",
-      "note": "削藩失败"
+      "ghEn": "Jianzhong",
+      "note": "削藩失败",
+      "noteEn": "Failed to rein in the vassals"
     },
     {
       "n": "唐顺宗(李诵)",
+      "nEn": "Tang Shunzong (Li Song)",
       "t": "",
+      "tEn": "",
       "rg": "805",
+      "rgEn": "805",
       "ry": 1,
       "mt": "顺宗",
+      "mtEn": "Shunzong",
       "gh": "永贞",
-      "note": "永贞革新，一月退位"
+      "ghEn": "Yongzhen",
+      "note": "永贞革新，一月退位",
+      "noteEn": "The Yongzhen reform; abdicated in a month"
     },
     {
       "n": "唐宪宗(李纯)",
+      "nEn": "Tang Xianzong (Li Chun)",
       "t": "",
+      "tEn": "",
       "rg": "805–820",
+      "rgEn": "805–820",
       "ry": 15,
       "mt": "宪宗",
+      "mtEn": "Xianzong",
       "gh": "元和",
-      "note": "元和中兴"
+      "ghEn": "Yuanhe",
+      "note": "元和中兴",
+      "noteEn": "The Yuanhe restoration"
     },
     {
       "n": "唐穆宗(李恒)",
+      "nEn": "Tang Muzong (Li Heng)",
       "t": "",
+      "tEn": "",
       "rg": "820–824",
+      "rgEn": "820–824",
       "ry": 4,
       "mt": "穆宗",
+      "mtEn": "Muzong",
       "gh": "长庆",
-      "note": "怠政"
+      "ghEn": "Changqing",
+      "note": "怠政",
+      "noteEn": "Negligent rule"
     },
     {
       "n": "唐敬宗(李湛)",
+      "nEn": "Tang Jingzong (Li Zhan)",
       "t": "",
+      "tEn": "",
       "rg": "824–826",
+      "rgEn": "824–826",
       "ry": 2,
       "mt": "敬宗",
+      "mtEn": "Jingzong",
       "gh": "宝历",
-      "note": "被弑"
+      "ghEn": "Baoli",
+      "note": "被弑",
+      "noteEn": "Assassinated"
     },
     {
       "n": "唐文宗(李昂)",
+      "nEn": "Tang Wenzong (Li Ang)",
       "t": "",
+      "tEn": "",
       "rg": "826–840",
+      "rgEn": "826–840",
       "ry": 14,
       "mt": "文宗",
+      "mtEn": "Wenzong",
       "gh": "大和",
-      "note": "甘露之变"
+      "ghEn": "Dahe",
+      "note": "甘露之变",
+      "noteEn": "The Sweet Dew Incident"
     },
     {
       "n": "唐武宗(李炎)",
+      "nEn": "Tang Wuzong (Li Yan)",
       "t": "",
+      "tEn": "",
       "rg": "840–846",
+      "rgEn": "840–846",
       "ry": 6,
       "mt": "武宗",
+      "mtEn": "Wuzong",
       "gh": "会昌",
-      "note": "会昌灭佛"
+      "ghEn": "Huichang",
+      "note": "会昌灭佛",
+      "noteEn": "The Huichang persecution of Buddhism"
     },
     {
       "n": "唐宣宗(李忱)",
+      "nEn": "Tang Xuanzong (Li Chen)",
       "t": "",
+      "tEn": "",
       "rg": "846–859",
+      "rgEn": "846–859",
       "ry": 13,
       "mt": "宣宗",
+      "mtEn": "Xuanzong",
       "gh": "大中",
-      "note": "大中之治"
+      "ghEn": "Dazhong",
+      "note": "大中之治",
+      "noteEn": "The Dazhong era of good rule"
     },
     {
       "n": "唐懿宗(李漼)",
+      "nEn": "Tang Yizong (Li Cui)",
       "t": "",
+      "tEn": "",
       "rg": "859–873",
+      "rgEn": "859–873",
       "ry": 14,
       "mt": "懿宗",
+      "mtEn": "Yizong",
       "gh": "咸通",
-      "note": "唐衰"
+      "ghEn": "Xiantong",
+      "note": "唐衰",
+      "noteEn": "Tang in decline"
     },
     {
       "n": "唐僖宗(李儇)",
+      "nEn": "Tang Xizong (Li Xuan)",
       "t": "",
+      "tEn": "",
       "rg": "873–888",
+      "rgEn": "873–888",
       "ry": 15,
       "mt": "僖宗",
+      "mtEn": "Xizong",
       "gh": "乾符",
-      "note": "黄巢乱"
+      "ghEn": "Qianfu",
+      "note": "黄巢乱",
+      "noteEn": "The Huang Chao revolt"
     },
     {
       "n": "唐昭宗(李晔)",
+      "nEn": "Tang Zhaozong (Li Ye)",
       "t": "",
+      "tEn": "",
       "rg": "888–904",
+      "rgEn": "888–904",
       "ry": 16,
       "mt": "昭宗",
+      "mtEn": "Zhaozong",
       "gh": "龙纪",
-      "note": "藩镇挟制"
+      "ghEn": "Longji",
+      "note": "藩镇挟制",
+      "noteEn": "Controlled by regional warlords"
     },
     {
       "n": "唐哀帝(李柷)",
+      "nEn": "Tang Aidi (Li Zhu)",
       "t": "末代",
+      "tEn": "Last ruler",
       "rg": "904–907",
+      "rgEn": "904–907",
       "ry": 3,
       "mt": "哀帝",
+      "mtEn": "Aidi",
       "gh": "天祐",
-      "note": "唐亡"
+      "ghEn": "Tianyou",
+      "note": "唐亡",
+      "noteEn": "The Tang fell"
     }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "魏征",
-        "note": "谏臣"
-      },
-      {
-        "n": "房玄龄",
-        "note": "房谋"
-      },
-      {
-        "n": "杜如晦",
-        "note": "杜断"
-      },
-      {
-        "n": "狄仁杰",
-        "note": "断案名相"
-      },
-      {
-        "n": "长孙无忌",
-        "note": "凌烟阁首"
-      }
+      { "n": "魏征", "nEn": "Wei Zheng", "note": "谏臣", "noteEn": "Remonstrating minister" },
+      { "n": "房玄龄", "nEn": "Fang Xuanling", "note": "房谋", "noteEn": "Fang the planner" },
+      { "n": "杜如晦", "nEn": "Du Ruhui", "note": "杜断", "noteEn": "Du the decider" },
+      { "n": "狄仁杰", "nEn": "Di Renjie", "note": "断案名相", "noteEn": "Famed judge and chancellor" },
+      { "n": "长孙无忌", "nEn": "Zhangsun Wuji", "note": "凌烟阁首", "noteEn": "First on the Lingyan Pavilion" }
     ],
     "武将": [
-      {
-        "n": "郭子仪",
-        "note": "平安史之乱"
-      }
+      { "n": "郭子仪", "nEn": "Guo Ziyi", "note": "平安史之乱", "noteEn": "Quelled the An–Shi Rebellion" }
     ],
     "思想·文人": [
-      {
-        "n": "李白",
-        "note": "诗仙"
-      },
-      {
-        "n": "杜甫",
-        "note": "诗圣"
-      },
-      {
-        "n": "玄奘",
-        "note": "西行取经"
-      }
+      { "n": "李白", "nEn": "Li Bai", "note": "诗仙", "noteEn": "The Immortal Poet" },
+      { "n": "杜甫", "nEn": "Du Fu", "note": "诗圣", "noteEn": "The Sage of Poetry" },
+      { "n": "玄奘", "nEn": "Xuanzang", "note": "西行取经", "noteEn": "Journeyed west for scriptures" }
     ]
   },
   "policies": [
@@ -266,6 +382,14 @@
     "律令格式",
     "开天盛世",
     "节度使(藩镇)"
+  ],
+  "policiesEn": [
+    "Refined the exam system (jinshi branch)",
+    "The Three Departments and Six Ministries",
+    "The equal-field system and the zuyongdiao tax",
+    "The statute and ordinance code",
+    "The Kaiyuan–Tianbao heyday",
+    "The jiedushi (frontier commands)"
   ],
   "aspects": {
     "政治": [
@@ -280,6 +404,21 @@
       "诗歌黄金时代（李白、杜甫）",
       "书画鼎盛，玄奘西行，佛教中国化",
       "火药最早见载于唐代，唐末已用于军事"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "The Three Departments and Six Ministries matured; the exam system (jinshi) refined",
+      "An enlightened ethnic policy; all nations paying tribute"
+    ],
+    "经济": [
+      "Shift from zuyongdiao to the two-tax system; the Silk Road at its peak",
+      "Chang'an as an international metropolis; thriving commerce"
+    ],
+    "文化": [
+      "A golden age of poetry (Li Bai, Du Fu)",
+      "Painting and calligraphy at their height; Xuanzang's westward journey; Buddhism Sinicized",
+      "Gunpowder first recorded in the Tang; already used in war by late Tang"
     ]
   }
 }

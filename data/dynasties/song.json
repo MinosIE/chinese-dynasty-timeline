@@ -1,219 +1,293 @@
 {
   "id": "song",
   "name": "宋",
+  "nameEn": "Song",
   "years": "北宋960–1127 / 南宋1127–1279",
+  "yearsEn": "Northern Song 960–1127 / Southern Song 1127–1279",
   "era": "宋元",
   "capital": "汴京→临安",
+  "capitalEn": "Bianjing → Lin'an",
   "feature": "重文轻武，经济文化科技鼎盛，词风尤盛。列主要帝，合计约319年。",
+  "featureEn": "Civilian over military, with a pinnacle of economy, culture and science; ci poetry thrived. Major emperors, ~319 yrs.",
   "summary": "文治巅峰而军事积弱，经济与市民文化空前繁荣。",
+  "summaryEn": "A zenith of civil governance yet militarily weak; economy and urban culture unprecedented.",
   "emperors": [
     {
       "n": "宋太祖(赵匡胤)",
+      "nEn": "Song Taizu (Zhao Kuangyin)",
       "t": "开国",
+      "tEn": "Founding",
       "rg": "960–976",
+      "rgEn": "960–976",
       "ry": 16,
       "mt": "太祖",
+      "mtEn": "Taizu",
       "gh": "建隆",
-      "note": "陈桥兵变，杯酒释兵权"
+      "ghEn": "Jianlong",
+      "note": "陈桥兵变，杯酒释兵权",
+      "noteEn": "The Chenqiao mutiny; relinquished military power over wine"
     },
     {
       "n": "宋太宗(赵炅)",
+      "nEn": "Song Taizong (Zhao Jiong)",
       "t": "",
+      "tEn": "",
       "rg": "976–997",
+      "rgEn": "976–997",
       "ry": 21,
       "mt": "太宗",
+      "mtEn": "Taizong",
       "gh": "太平兴国",
-      "note": "完成统一"
+      "ghEn": "Taiping Xingguo",
+      "note": "完成统一",
+      "noteEn": "Completed the unification"
     },
     {
       "n": "宋真宗(赵恒)",
+      "nEn": "Song Zhenzong (Zhao Heng)",
       "t": "",
+      "tEn": "",
       "rg": "997–1022",
+      "rgEn": "997–1022",
       "ry": 25,
       "mt": "真宗",
+      "mtEn": "Zhenzong",
       "gh": "咸平",
-      "note": "澶渊之盟"
+      "ghEn": "Xianping",
+      "note": "澶渊之盟",
+      "noteEn": "The Treaty of Chanyuan"
     },
     {
       "n": "宋仁宗(赵祯)",
+      "nEn": "Song Renzong (Zhao Zhen)",
       "t": "仁宗盛治",
+      "tEn": "Renzong's flourishing rule",
       "rg": "1022–1063",
+      "rgEn": "1022–1063",
       "ry": 41,
       "mt": "仁宗",
+      "mtEn": "Renzong",
       "gh": "天圣",
-      "note": "名臣辈出"
+      "ghEn": "Tiansheng",
+      "note": "名臣辈出",
+      "noteEn": "A host of famous ministers emerged"
     },
     {
       "n": "宋英宗(赵曙)",
+      "nEn": "Song Yingzong (Zhao Shu)",
       "t": "",
+      "tEn": "",
       "rg": "1063–1067",
+      "rgEn": "1063–1067",
       "ry": 4,
       "mt": "英宗",
+      "mtEn": "Yingzong",
       "gh": "治平",
-      "note": "濮议"
+      "ghEn": "Zhiping",
+      "note": "濮议",
+      "noteEn": "The Pu dispute"
     },
     {
       "n": "宋神宗(赵顼)",
+      "nEn": "Song Shenzong (Zhao Xu)",
       "t": "",
+      "tEn": "",
       "rg": "1067–1085",
+      "rgEn": "1067–1085",
       "ry": 18,
       "mt": "神宗",
+      "mtEn": "Shenzong",
       "gh": "熙宁",
-      "note": "支持王安石变法"
+      "ghEn": "Xining",
+      "note": "支持王安石变法",
+      "noteEn": "Backed Wang Anshi's reforms"
     },
     {
       "n": "宋哲宗(赵煦)",
+      "nEn": "Song Zhezong (Zhao Xu)",
       "t": "",
+      "tEn": "",
       "rg": "1085–1100",
+      "rgEn": "1085–1100",
       "ry": 15,
       "mt": "哲宗",
+      "mtEn": "Zhezong",
       "gh": "元祐",
-      "note": "绍圣绍述"
+      "ghEn": "Yuanyou",
+      "note": "绍圣绍述",
+      "noteEn": "Resumed the reformist line"
     },
     {
       "n": "宋徽宗(赵佶)",
+      "nEn": "Song Huizong (Zhao Ji)",
       "t": "",
+      "tEn": "",
       "rg": "1100–1125",
+      "rgEn": "1100–1125",
       "ry": 25,
       "mt": "徽宗",
+      "mtEn": "Huizong",
       "gh": "建中靖国",
-      "note": "艺术家亡国"
+      "ghEn": "Jianzhong Jingguo",
+      "note": "艺术家亡国",
+      "noteEn": "An artist emperor who lost the realm"
     },
     {
       "n": "宋钦宗(赵桓)",
+      "nEn": "Song Qinzong (Zhao Huan)",
       "t": "北宋末",
+      "tEn": "Last of Northern Song",
       "rg": "1125–1127",
+      "rgEn": "1125–1127",
       "ry": 2,
       "mt": "钦宗",
+      "mtEn": "Qinzong",
       "gh": "靖康",
-      "note": "靖康之变"
+      "ghEn": "Jingkang",
+      "note": "靖康之变",
+      "noteEn": "The Jingkang Incident"
     },
     {
       "n": "宋高宗(赵构)",
+      "nEn": "Song Gaozong (Zhao Gou)",
       "t": "南宋",
+      "tEn": "Southern Song",
       "rg": "1127–1162",
+      "rgEn": "1127–1162",
       "ry": 35,
       "mt": "高宗",
+      "mtEn": "Gaozong",
       "gh": "建炎",
-      "note": "偏安江南"
+      "ghEn": "Jianyan",
+      "note": "偏安江南",
+      "noteEn": "A precarious peace south of the Yangtze"
     },
     {
       "n": "宋孝宗(赵昚)",
+      "nEn": "Song Xiaozong (Zhao Shen)",
       "t": "",
+      "tEn": "",
       "rg": "1162–1189",
+      "rgEn": "1162–1189",
       "ry": 27,
       "mt": "孝宗",
+      "mtEn": "Xiaozong",
       "gh": "隆兴",
-      "note": "北伐未竟"
+      "ghEn": "Longxing",
+      "note": "北伐未竟",
+      "noteEn": "Northern expeditions fell short"
     },
     {
       "n": "宋光宗(赵惇)",
+      "nEn": "Song Guangzong (Zhao Dun)",
       "t": "",
+      "tEn": "",
       "rg": "1189–1194",
+      "rgEn": "1189–1194",
       "ry": 5,
       "mt": "光宗",
+      "mtEn": "Guangzong",
       "gh": "绍熙",
-      "note": "李后干政"
+      "ghEn": "Shaoxi",
+      "note": "李后干政",
+      "noteEn": "Empress Li interfered in politics"
     },
     {
       "n": "宋宁宗(赵扩)",
+      "nEn": "Song Ningzong (Zhao Kuo)",
       "t": "",
+      "tEn": "",
       "rg": "1194–1224",
+      "rgEn": "1194–1224",
       "ry": 30,
       "mt": "宁宗",
+      "mtEn": "Ningzong",
       "gh": "庆元",
-      "note": "庆元党禁"
+      "ghEn": "Qingyuan",
+      "note": "庆元党禁",
+      "noteEn": "The Qingyuan proscription of the Learning of the Way"
     },
     {
       "n": "宋理宗(赵昀)",
+      "nEn": "Song Lizong (Zhao Yun)",
       "t": "",
+      "tEn": "",
       "rg": "1224–1264",
+      "rgEn": "1224–1264",
       "ry": 40,
       "mt": "理宗",
+      "mtEn": "Lizong",
       "gh": "宝庆",
-      "note": "联蒙灭金"
+      "ghEn": "Baoqing",
+      "note": "联蒙灭金",
+      "noteEn": "Allied with Mongols to destroy Jin"
     },
     {
       "n": "宋度宗(赵禥)",
+      "nEn": "Song Duzong (Zhao Qi)",
       "t": "",
+      "tEn": "",
       "rg": "1264–1274",
+      "rgEn": "1264–1274",
       "ry": 10,
       "mt": "度宗",
+      "mtEn": "Duzong",
       "sh": "端",
-      "note": "贾似道专权"
+      "shEn": "Duan",
+      "note": "贾似道专权",
+      "noteEn": "Jia Sidao monopolized power"
     },
     {
       "n": "宋恭帝(赵㬎)",
+      "nEn": "Song Gongdi (Zhao Xian)",
       "t": "",
+      "tEn": "",
       "rg": "1274–1276",
+      "rgEn": "1274–1276",
       "ry": 2,
-      "note": "降元"
+      "note": "降元",
+      "noteEn": "Surrendered to Yuan"
     },
     {
       "n": "宋端宗(赵昰)",
+      "nEn": "Song Duanzong (Zhao Shi)",
       "t": "",
+      "tEn": "",
       "rg": "1276–1278",
+      "rgEn": "1276–1278",
       "ry": 2,
-      "note": "流亡"
+      "note": "流亡",
+      "noteEn": "In exile"
     },
     {
       "n": "宋末帝(赵昺)",
+      "nEn": "Song Last Emperor (Zhao Bing)",
       "t": "末代",
+      "tEn": "Last ruler",
       "rg": "1278–1279",
+      "rgEn": "1278–1279",
       "ry": 1,
-      "note": "崖山亡宋"
+      "note": "崖山亡宋",
+      "noteEn": "Perished with Song at Yaishan"
     }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "赵普",
-        "note": "杯酒释兵权谋主"
-      },
-      {
-        "n": "寇准",
-        "note": "澶渊主战"
-      },
-      {
-        "n": "范仲淹",
-        "note": "庆历新政"
-      },
-      {
-        "n": "王安石",
-        "note": "熙宁变法"
-      },
-      {
-        "n": "司马光",
-        "note": "《资治通鉴》"
-      }
+      { "n": "赵普", "nEn": "Zhao Pu", "note": "杯酒释兵权谋主", "noteEn": "Architect of relinquishing military power over wine" },
+      { "n": "寇准", "nEn": "Kou Zhun", "note": "澶渊主战", "noteEn": "Argued for war at Chanyuan" },
+      { "n": "范仲淹", "nEn": "Fan Zhongyan", "note": "庆历新政", "noteEn": "The Qingli reforms" },
+      { "n": "王安石", "nEn": "Wang Anshi", "note": "熙宁变法", "noteEn": "The Xining reform" },
+      { "n": "司马光", "nEn": "Sima Guang", "note": "《资治通鉴》", "noteEn": "Comprehensive Mirror in Aid of Governance" }
     ],
     "武将": [
-      {
-        "n": "岳飞",
-        "note": "精忠报国"
-      },
-      {
-        "n": "韩世忠",
-        "note": "抗金名将"
-      }
+      { "n": "岳飞", "nEn": "Yue Fei", "note": "精忠报国", "noteEn": "Loyal unto death" },
+      { "n": "韩世忠", "nEn": "Han Shizhong", "note": "抗金名将", "noteEn": "Famed general against the Jin" }
     ],
     "思想·文人": [
-      {
-        "n": "苏轼",
-        "note": "文豪"
-      },
-      {
-        "n": "沈括",
-        "note": "《梦溪笔谈》"
-      },
-      {
-        "n": "李清照",
-        "note": "婉约词宗"
-      },
-      {
-        "n": "文天祥",
-        "note": "浩然正气"
-      }
+      { "n": "苏轼", "nEn": "Su Shi", "note": "文豪", "noteEn": "Literary giant" },
+      { "n": "沈括", "nEn": "Shen Kuo", "note": "《梦溪笔谈》", "noteEn": "Dream Pool Essays" },
+      { "n": "李清照", "nEn": "Li Qingzhao", "note": "婉约词宗", "noteEn": "Mistress of the gentle ci style" },
+      { "n": "文天祥", "nEn": "Wen Tianxiang", "note": "浩然正气", "noteEn": "Upright, unyielding spirit" }
     ]
   },
   "policies": [
@@ -224,6 +298,15 @@
     "王安石变法(青苗市易)",
     "澶渊之盟",
     "偏安江南"
+  ],
+  "policiesEn": [
+    "Relinquished military power over wine",
+    "Civilian over military",
+    "Expanded exams (name-sealing)",
+    "The Qingli New Policies",
+    "Wang Anshi's reform (green sprouts, market exchange)",
+    "The Treaty of Chanyuan",
+    "A precarious peace south of the Yangtze"
   ],
   "aspects": {
     "政治": [
@@ -237,6 +320,20 @@
     "文化": [
       "宋词、理学（程朱）并盛",
       "毕昇发明活字印刷，指南针用于航海、火药广泛用于军事；《资治通鉴》"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Civilian over military; strengthened centralization",
+      "Expanded and name-sealed exams; a precarious peace after Chanyuan"
+    ],
+    "经济": [
+      "Unprecedented commercial economy; the jiaozi (paper money) appeared",
+      "The maritime Silk Road at its peak; market towns rose"
+    ],
+    "文化": [
+      "Song ci poetry and Neo-Confucianism (Cheng–Zhu) flourished",
+      "Bi Sheng invented movable type; the compass used for navigation and gunpowder widely in war; the Comprehensive Mirror"
     ]
   }
 }

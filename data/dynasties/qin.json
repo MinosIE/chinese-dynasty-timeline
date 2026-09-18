@@ -1,54 +1,80 @@
 {
   "id": "qin",
   "name": "秦",
+  "nameEn": "Qin",
   "years": "前221–前207",
+  "yearsEn": "221–207 BC",
   "era": "秦汉",
   "capital": "咸阳",
+  "capitalEn": "Xianyang",
   "feature": "中国首个大一统中央集权帝国，制度影响两千年。",
+  "featureEn": "China's first unified centralized empire; its institutions shaped two millennia.",
   "summary": "虽短祚却确立帝制框架，中央集权范式沿用两千年。",
+  "summaryEn": "Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years.",
   "emperors": [
     {
       "n": "秦始皇(嬴政)",
+      "nEn": "Qin Shi Huang (Ying Zheng)",
       "t": "始皇帝",
+      "tEn": "First Emperor",
       "rg": "前221–前210",
+      "rgEn": "221–210 BC",
       "ry": 11,
       "sh": "始皇帝",
-      "note": "灭六国，称皇帝"
+      "shEn": "First Emperor",
+      "note": "灭六国，称皇帝",
+      "noteEn": "Conquered the six states and claimed the imperial title"
     },
     {
       "n": "秦二世(胡亥)",
+      "nEn": "Qin Ershi (Hu Hai)",
       "t": "二世",
+      "tEn": "Second Emperor",
       "rg": "前210–前207",
+      "rgEn": "210–207 BC",
       "ry": 3,
-      "note": "暴政速亡"
+      "note": "暴政速亡",
+      "noteEn": "Tyranny led to a swift fall"
     },
     {
       "n": "子婴",
+      "nEn": "Ziying",
       "t": "末代",
+      "tEn": "Last ruler",
       "rg": "前207",
+      "rgEn": "207 BC",
       "ry": 1,
-      "note": "在位46日，降刘邦"
+      "note": "在位46日，降刘邦",
+      "noteEn": "Reigned 46 days, surrendered to Liu Bang"
     }
   ],
   "talents": {
     "文臣": [
       {
         "n": "李斯",
-        "note": "丞相，郡县制/书同文"
+        "nEn": "Li Si",
+        "note": "丞相，郡县制/书同文",
+        "noteEn": "Chancellor; commanderies-counties system and unified writing"
       },
       {
         "n": "赵高",
-        "note": "乱政，指鹿为马"
+        "nEn": "Zhao Gao",
+        "note": "乱政，指鹿为马",
+        "noteEn": "Usurped power; “pointing at a deer and calling it a horse”"
       }
     ],
     "武将": [
       {
         "n": "王翦",
-        "note": "灭楚名将"
+        "nEn": "Wang Jian",
+        "note": "灭楚名将",
+        "noteEn": "Famed general who destroyed Chu"
       },
       {
         "n": "蒙恬",
-        "note": "北击匈奴，修长城"
+        "nEn": "Meng Tian",
+        "note": "北击匈奴，修长城",
+        "noteEn": "Struck the Xiongnu in the north, built the Great Wall"
       }
     ]
   },
@@ -59,6 +85,14 @@
     "修长城驰道",
     "焚书坑儒",
     "以法为教"
+  ],
+  "policiesEn": [
+    "Commanderies and counties",
+    "Unified writing, carts and tracks",
+    "Unified weights, measures and coinage",
+    "Built the Great Wall and highways",
+    "Burning of books and burying of scholars",
+    "Governing by law as the teaching"
   ],
   "aspects": {
     "政治": [
@@ -72,6 +106,20 @@
     "文化": [
       "书同文，以小篆统一文字",
       "焚书坑儒，思想文化受强管控"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Founded the imperial system, the Three Excellencies and Nine Ministers, and commanderies-counties",
+      "The centralized system was thereby established"
+    ],
+    "经济": [
+      "Unified weights, measures, coinage and axle gauges",
+      "Built highways and the Lingqu Canal; emphasized agriculture, restrained commerce"
+    ],
+    "文化": [
+      "Unified writing; standardized the script in small seal script",
+      "Burning books and burying scholars; thought and culture under tight control"
     ]
   }
 }
