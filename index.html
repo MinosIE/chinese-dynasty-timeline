@@ -79,10 +79,10 @@
 
   <section class="module" id="m-span">
     <section class="spanchart">
-      <div class="inv-head"><h2>朝代存续一览</h2><p>长度按年代比例 · 点击色条可跳转</p></div>
+      <div class="inv-head"><h2>朝代存续一览</h2><p>长度按年代比例 · 点击任意行可跳转</p></div>
       <div class="span-wrap">
         <div class="span-rows" id="spanRows"></div>
-        <div class="span-axis"><span class="span-name"></span><div class="span-ticks" id="spanTicks"></div></div>
+        <div class="span-axis"><span></span><div class="span-ticks" id="spanTicks"></div><span></span></div>
       </div>
     </section>
   </section>
@@ -324,18 +324,20 @@ function renderSpan(){
   const list=overview.filter(o=>typeof o.start==='number'&&typeof o.end==='number').sort((a,b)=>a.start-b.start);
   const min=-2100,max=1950,pct=y=>(y-min)/(max-min)*100;
   document.getElementById('spanRows').innerHTML=list.map(o=>{
-    const l=pct(o.start),w=Math.max(0.7,pct(o.end)-pct(o.start));
+    const l=pct(o.start),w=Math.max(0.8,pct(o.end)-pct(o.start));
     const col=ERA_COLORS[o.era]||'#697386';
-    return `<div class="span-row"><span class="span-name">${o.name}</span><div class="span-track"><span class="span-bar" role="button" tabindex="0" data-dynasty="${o.id}" style="left:${l}%;width:${w}%;background:${col}" title="${o.name} ${o.years}（存续${o.duration}）"></span></div></div>`;
+    const label=w>9?`<span class="span-bar-label">${o.duration}</span>`:'';
+    const fmt=y=>y<0?('前'+(-y)):y;
+    return `<div class="span-row" role="button" tabindex="0" data-dynasty="${o.id}" title="${o.name} ${o.years}（存续${o.duration}）"><span class="span-name">${o.name}</span><div class="span-track"><span class="span-bar" style="left:${l}%;width:${w}%;background:linear-gradient(135deg,${col},${col}cc)">${label}</span></div><span class="span-years">${fmt(o.start)}–${fmt(o.end)}</span></div>`;
   }).join('');
   const ticks=[-2000,-1500,-1000,-500,1,500,1000,1500,1900];
   document.getElementById('spanTicks').innerHTML=ticks.map(t=>{
     const lbl=t<0?('前'+(-t)):(t===1?'公元':t);
     return `<span class="span-tick" style="left:${pct(t)}%">${lbl}</span>`;
   }).join('');
-  document.querySelectorAll('.span-bar').forEach(b=>{
-    const go=()=>jumpToDynasty(b.dataset.dynasty);
-    b.onclick=go;b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  document.querySelectorAll('.span-row').forEach(r=>{
+    const go=()=>jumpToDynasty(r.dataset.dynasty);
+    r.onclick=go;r.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
   });
 }
 

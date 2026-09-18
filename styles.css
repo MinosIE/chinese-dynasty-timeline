@@ -155,13 +155,20 @@
   .inv-link:hover{border-color:var(--brand);color:var(--brand)}
   /* 朝代存续可视化 */
   .span-wrap{overflow-x:auto}
-  .span-rows{display:flex;flex-direction:column;gap:6px;min-width:620px}
-  .span-row{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:10px}
+  .span-rows{display:flex;flex-direction:column;gap:5px;min-width:680px}
+  .span-row{display:grid;grid-template-columns:76px 1fr 116px;align-items:center;gap:12px;padding:2px 0;
+    cursor:pointer;border-radius:8px;transition:.15s}
+  .span-row:hover{background:var(--chip-bg)}
+  .span-row:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
   .span-name{font-size:12.5px;font-weight:600;color:var(--text-soft);text-align:right;white-space:nowrap}
-  .span-track{position:relative;height:20px;background:var(--chip-bg);border-radius:5px}
-  .span-bar{position:absolute;top:2px;bottom:2px;border-radius:4px;cursor:pointer;transition:.15s}
-  .span-bar:hover,.span-bar:focus-visible{filter:brightness(1.15);outline:2px solid var(--text-strong);outline-offset:1px}
-  .span-axis{display:grid;grid-template-columns:92px 1fr;gap:10px;margin-top:4px;min-width:620px}
+  .span-track{position:relative;height:22px;background:var(--chip-bg);border-radius:6px;
+    background-image:linear-gradient(90deg,var(--border) 0 1px,transparent 1px);
+    background-size:12.3457% 100%;background-position:2.4691% 0}
+  .span-bar{position:absolute;top:2px;bottom:2px;border-radius:5px;min-width:4px;
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .span-bar-label{font-size:11px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35);white-space:nowrap;padding:0 7px}
+  .span-years{font-size:11.5px;color:var(--text-mute);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+  .span-axis{display:grid;grid-template-columns:76px 1fr 116px;gap:12px;margin-top:6px;min-width:680px}
   .span-ticks{position:relative;height:16px}
   .span-tick{position:absolute;transform:translateX(-50%);font-size:11px;color:var(--text-mute);white-space:nowrap}
   /* 历史大事记 */
