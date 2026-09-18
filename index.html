@@ -45,6 +45,11 @@
   <nav class="tabs" id="tabs"></nav>
   <main class="timeline" id="timeline"></main>
 
+  <section class="inventions">
+    <div class="inv-head"><h2>四大发明</h2><p>改变世界的中国创造 · 点击可跳转到对应朝代</p></div>
+    <div class="inv-grid" id="inventions"></div>
+  </section>
+
   <p class="foot">
     <span class="legend">👑 深红卡片</span> = 后世誉为「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）　·　<span class="legend">★ 金色卡片</span> = 该朝代代表性名君　·　点击卡片可展开/收起详情（首次展开才加载该朝数据）<br>
     数据为科普概览，细节以权威史料为准　·　可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说
@@ -220,6 +225,28 @@ function injectJsonLd(){
   document.head.appendChild(s);
 }
 
+/* ---------- 四大发明 ---------- */
+function renderInventions(list){
+  document.getElementById('inventions').innerHTML=list.map(v=>`
+    <article class="inv">
+      <div class="inv-top"><span class="inv-emoji">${v.emoji}</span><span class="inv-name">${v.name}</span></div>
+      <span class="inv-era">${v.era}</span>
+      <span class="inv-person">${v.person}</span>
+      <p class="inv-desc">${v.desc}</p>
+      <p class="inv-world">🌍 ${v.world}</p>
+      <button class="inv-link" data-dynasty="${v.dynastyId}">查看「${v.dynastyLabel}」→</button>
+    </article>`).join('');
+  document.querySelectorAll('.inv-link').forEach(b=>b.onclick=()=>jumpToDynasty(b.dataset.dynasty));
+}
+function jumpToDynasty(id){
+  if(active!=="全部"){active="全部";[...tabsEl.children].forEach(c=>c.classList.toggle('active',c.textContent==="全部"));render();}
+  const node=document.getElementById(id);
+  if(!node)return;
+  const card=node.querySelector('.card');
+  if(card.classList.contains('collapsed'))node.querySelector('.chead').click();
+  node.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
 /* ---------- 称号 hover 说明 ---------- */
 const tip=document.createElement('div');tip.className='hon-tip';document.body.appendChild(tip);
 function showTip(el){const t=el.dataset.tip;if(!t)return;tip.textContent=t;tip.classList.add('show');
@@ -243,6 +270,7 @@ document.addEventListener('mouseout',e=>{if(e.target.closest('.hontag'))tip.clas
   renderKpis();
   render();
   injectJsonLd();
+  try{const r=await fetch('data/inventions.json');if(r.ok)renderInventions(await r.json());}catch(e){}
 })();
 </script>
 </body>
