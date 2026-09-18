@@ -135,6 +135,27 @@
     color:var(--text-soft);font-size:12px;font-weight:600;padding:5px 12px;border-radius:999px;cursor:pointer;
     font-family:inherit;transition:.15s}
   .inv-link:hover{border-color:var(--brand);color:var(--brand)}
+  /* 朝代存续可视化 */
+  .span-wrap{overflow-x:auto}
+  .span-rows{display:flex;flex-direction:column;gap:6px;min-width:620px}
+  .span-row{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:10px}
+  .span-name{font-size:12.5px;font-weight:600;color:var(--text-soft);text-align:right;white-space:nowrap}
+  .span-track{position:relative;height:20px;background:var(--chip-bg);border-radius:5px}
+  .span-bar{position:absolute;top:2px;bottom:2px;border-radius:4px;cursor:pointer;transition:.15s}
+  .span-bar:hover,.span-bar:focus-visible{filter:brightness(1.15);outline:2px solid var(--text-strong);outline-offset:1px}
+  .span-axis{display:grid;grid-template-columns:92px 1fr;gap:10px;margin-top:4px;min-width:620px}
+  .span-ticks{position:relative;height:16px}
+  .span-tick{position:absolute;transform:translateX(-50%);font-size:11px;color:var(--text-mute);white-space:nowrap}
+  /* 历史大事记 */
+  .ev-list{display:flex;flex-direction:column;border-left:2px solid var(--border);margin-left:10px}
+  .ev{display:flex;gap:14px;padding:9px 0 9px 20px;position:relative;cursor:pointer;align-items:baseline}
+  .ev::before{content:"";position:absolute;left:-8px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--brand)}
+  .ev:hover .ev-name{color:var(--brand)}
+  .ev:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:6px}
+  .ev-year{flex-shrink:0;width:76px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;font-size:13px;text-align:right}
+  .ev-main{display:flex;flex-direction:column;gap:1px;min-width:0}
+  .ev-name{font-size:14px;font-weight:700;color:var(--text-strong)}
+  .ev-x{font-size:12.5px;color:var(--text-mute)}
   .chead .meta{color:var(--text-mute);font-size:12.5px;margin-left:auto;text-align:right}
   .chead .toggle{color:var(--text-mute);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
   .chead .toggle .chev{display:inline-block;transition:transform .42s cubic-bezier(.4,0,.2,1)}

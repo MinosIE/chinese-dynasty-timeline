@@ -54,12 +54,25 @@
     <div class="search-results" id="searchResults" hidden></div>
   </div>
 
+  <section class="spanchart">
+    <div class="inv-head"><h2>朝代存续一览</h2><p>长度按年代比例 · 点击色条可跳转</p></div>
+    <div class="span-wrap">
+      <div class="span-rows" id="spanRows"></div>
+      <div class="span-axis"><span class="span-name"></span><div class="span-ticks" id="spanTicks"></div></div>
+    </div>
+  </section>
+
   <nav class="tabs" id="tabs"></nav>
   <main class="timeline" id="timeline"></main>
 
   <section class="inventions">
     <div class="inv-head"><h2>四大发明</h2><p>改变世界的中国创造 · 点击可跳转到对应朝代</p></div>
     <div class="inv-grid" id="inventions"></div>
+  </section>
+
+  <section class="events">
+    <div class="inv-head"><h2>历史大事记</h2><p>关键节点 · 点击可跳转到对应朝代</p></div>
+    <div class="ev-list" id="evList"></div>
   </section>
 
   <p class="foot">
@@ -76,7 +89,7 @@ const ERA_COLORS={"先秦":"#C79A3A","秦汉":"#D4351C","三国两晋南北朝":
 const ROLE_COLORS={"文臣":"#3B82F6","武将":"#EF4444","思想·文人":"#10B981","其他":"#F59E0B"};
 const ASPECT_ORDER=["政治","经济","文化"];
 const ASPECT_COLORS={"政治":"#D4351C","经济":"#059669","文化":"#7C3AED"};
-const STAR=new Set(["禹(大禹)","汤(天乙)","武丁","周武王(姬发)","秦始皇(嬴政)","汉高祖(刘邦)","汉武帝(刘彻)","王莽(新)","汉光武帝(刘秀)","蜀汉昭烈帝(刘备)","吴大帝(孙权)","晋武帝(司马炎)","北魏孝文帝(拓跋宏)","梁武帝(萧衍)","隋文帝(杨坚)","隋炀帝(杨广)","唐太宗(李世民)","武则天","唐玄宗(李隆基)","宋太祖(赵匡胤)","宋徽宗(赵佶)","元世祖(忽必烈)","明太祖(朱元璋)","明成祖(朱棣)","清圣祖(玄烨)","清世宗(胤禛)","清高宗(弘历)"]);
+const STAR=new Set(["禹(大禹)","汤(天乙)","武丁","周武王(姬发)","秦始皇(嬴政)","汉高祖(刘邦)","汉武帝(刘彻)","王莽(新)","汉光武帝(刘秀)","蜀汉昭烈帝(刘备)","吴大帝(孙权)","晋武帝(司马炎)","北魏孝文帝(拓跋宏)","梁武帝(萧衍)","隋文帝(杨坚)","隋炀帝(杨广)","唐太宗(李世民)","武则天","唐玄宗(李隆基)","宋太祖(赵匡胤)","宋徽宗(赵佶)","元世祖(忽必烈)","明太祖(朱元璋)","明成祖(朱棣)","清圣祖(玄烨)","清世宗(胤禛)","清高宗(弘历)","辽太祖(耶律阿保机)","金太祖(完颜阿骨打)","夏景宗(李元昊)"]);
 const LEGEND=new Set(["秦始皇(嬴政)","汉武帝(刘彻)","唐太宗(李世民)","清圣祖(玄烨)"]);
 const LEGEND_DYNASTIES=new Set(["qin","han","tang","qing"]);
 const HONOR_REASON={
@@ -106,7 +119,10 @@ const HONOR_REASON={
 "明太祖(朱元璋)":"驱元建明，布衣天子。",
 "明成祖(朱棣)":"开创永乐盛世，迁都北京、郑和下西洋。",
 "清世宗(胤禛)":"勤于政事、锐意革新，承前启后。",
-"清高宗(弘历)":"十全武功，康乾盛世之极。"
+"清高宗(弘历)":"十全武功，康乾盛世之极。",
+"辽太祖(耶律阿保机)":"统一契丹诸部，建立辽朝，创制契丹文字。",
+"金太祖(完颜阿骨打)":"起兵抗辽，建立金朝，创猛安谋克制。",
+"夏景宗(李元昊)":"称帝建西夏，创制西夏文，与宋辽鼎立。"
 };
 const ERAS=["全部","先秦","秦汉","三国两晋南北朝","隋唐","宋元","明清"];
 
@@ -276,6 +292,38 @@ document.addEventListener('focusin',e=>{const el=e.target.closest('.hontag');if(
 document.addEventListener('focusout',e=>{if(e.target.closest('.hontag'))hideTip();});
 document.addEventListener('click',e=>{const el=e.target.closest('.hontag');if(el){showTip(el);return;}hideTip();});
 
+/* ---------- 朝代存续可视化 ---------- */
+function renderSpan(){
+  const list=overview.filter(o=>typeof o.start==='number'&&typeof o.end==='number').sort((a,b)=>a.start-b.start);
+  const min=-2100,max=1950,pct=y=>(y-min)/(max-min)*100;
+  document.getElementById('spanRows').innerHTML=list.map(o=>{
+    const l=pct(o.start),w=Math.max(0.7,pct(o.end)-pct(o.start));
+    const col=ERA_COLORS[o.era]||'#697386';
+    return `<div class="span-row"><span class="span-name">${o.name}</span><div class="span-track"><span class="span-bar" role="button" tabindex="0" data-dynasty="${o.id}" style="left:${l}%;width:${w}%;background:${col}" title="${o.name} ${o.years}（存续${o.duration}）"></span></div></div>`;
+  }).join('');
+  const ticks=[-2000,-1500,-1000,-500,1,500,1000,1500,1900];
+  document.getElementById('spanTicks').innerHTML=ticks.map(t=>{
+    const lbl=t<0?('前'+(-t)):(t===1?'公元':t);
+    return `<span class="span-tick" style="left:${pct(t)}%">${lbl}</span>`;
+  }).join('');
+  document.querySelectorAll('.span-bar').forEach(b=>{
+    const go=()=>jumpToDynasty(b.dataset.dynasty);
+    b.onclick=go;b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+}
+
+/* ---------- 历史大事记 ---------- */
+function renderEvents(list){
+  document.getElementById('evList').innerHTML=list.map(e=>{
+    const y=e.y<0?('前'+(-e.y)):e.y;
+    return `<div class="ev" role="button" tabindex="0" data-dynasty="${e.d}"><span class="ev-year">${y}</span><span class="ev-main"><span class="ev-name">${e.t}</span><span class="ev-x">${e.x}</span></span></div>`;
+  }).join('');
+  document.querySelectorAll('.ev').forEach(el=>{
+    const go=()=>jumpToDynasty(el.dataset.dynasty);
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+}
+
 /* ---------- 搜索 ---------- */
 let searchIndex=null;
 const searchEl=document.getElementById('search');
@@ -310,8 +358,10 @@ document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidde
   }
   renderKpis();
   render();
+  renderSpan();
   injectJsonLd();
   try{const r=await fetch('data/inventions.json');if(r.ok)renderInventions(await r.json());}catch(e){}
+  try{const r=await fetch('data/events.json');if(r.ok)renderEvents(await r.json());}catch(e){}
 })();
 </script>
 </body>

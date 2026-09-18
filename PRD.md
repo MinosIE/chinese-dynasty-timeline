@@ -1,6 +1,6 @@
 # 中华王朝时间轴 · 产品需求文档（PRD）
 
-> 版本：v1.5　|　日期：2026-09-18　|　状态：JSON 化 + 按需加载 + 明暗主题 + 三维内容 + 帝王分级 + 搜索 + GEO
+> 版本：v1.6　|　日期：2026-09-18　|　状态：JSON 化 + 按需加载 + 明暗主题 + 三维内容 + 帝王分级 + 搜索 + 存续可视化 + 大事记 + GEO
 
 ---
 
@@ -46,14 +46,15 @@
 - **F11 四大发明专版**：独立板块展示四大发明的朝代、代表人物与世界影响。
 - **F12 分享封面图**：Open Graph / Twitter 分享缩略图（1200×630）。
 - **F13 无障碍**：卡片展开与称号说明支持键盘（Enter / 空格 / 聚焦）与触屏点击。
+- **F14 存续可视化**：按年代比例的时间跨度条，点击色条跳转到对应朝代。
+- **F15 历史大事记**：关键历史事件时间线，点击跳转到对应朝代。
+- **F16 同时期政权**：补充辽、西夏、金，共 18 个朝代。
 
 ### 4.2 规划中（Roadmap / v2+）
 
-- **F14** 顶部朝代存续时长可视化（甘特 / 条形）。
-- **F15** 单朝代分享卡片 / 海报导出。
-- **F16** 大事件时间标注（安史之乱、靖康之变等）。
-- **F17** 多语言（繁体 / 英文）切换。
-- **F18** 朝代疆域缩略图 / 关系图谱。
+- **F17** 单朝代分享卡片 / 海报导出。
+- **F18** 多语言（繁体 / 英文）切换。
+- **F19** 朝代疆域缩略图 / 关系图谱。
 
 ## 5. 信息架构
 
@@ -94,17 +95,19 @@ index.html               # 结构与逻辑（含 SEO/GEO meta）
 styles.css               # 样式（明暗主题）
 favicon.svg              # 站点图标
 og-cover.png             # 分享封面图（1200×630）
-data/overview.json       # 全部王朝概览
-data/dynasties/*.json    # 15 个王朝详情
-data/inventions.json     # 四大发明
-data/search.json         # 搜索索引
-llms.txt                 # 给 LLM 的站点索引
-robots.txt               # 爬虫规则
-sitemap.xml              # 站点地图
-scripts/build-geo.mjs    # 生成 GEO 文件
-scripts/build-search.mjs # 生成搜索索引
-scripts/validate-data.mjs# 校验帝王年份排序
-assets/og-source.html    # 封面图源文件
+data/overview.json         # 全部王朝概览
+data/dynasties/*.json      # 18 个王朝详情
+data/inventions.json       # 四大发明
+data/events.json           # 历史大事记
+data/search.json           # 搜索索引
+llms.txt                   # 给 LLM 的站点索引
+robots.txt                 # 爬虫规则
+sitemap.xml                # 站点地图
+scripts/build-geo.mjs      # 生成 GEO 文件
+scripts/build-search.mjs   # 生成搜索索引
+scripts/update-overview.mjs# 补充年代跨度并插入新朝代
+scripts/validate-data.mjs  # 校验帝王年份排序
+assets/og-source.html      # 封面图源文件
 ```
 
 ## 9. GEO（生成式引擎优化）
