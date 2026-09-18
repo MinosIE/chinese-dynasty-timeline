@@ -152,6 +152,9 @@ const I18N={
     viewPrefix:"查看「",viewSuffix:"」→",
     recLongest:"在位最长",recShortest:"在位最短",recMost:"帝王数量最多",
     recDynMeta:"共 {n} 位帝王",recUnitYear:"年",recUnitRuler:"位",
+    recValDay:"约{n}日",recValMonth:"约{n}个月",recApprox:"约",
+    recNoteLong:"「约」为传说或存疑纪年（如夏、商），与信史不完全可比。",
+    recNoteShort:"「约」为按月 / 日估算；史料仅记年至者按 1 年计。",
     searchEmpty:"未找到「{q}」相关内容",
     srType:{dynasty:"朝代",ruler:"帝王",figure:"人物",institution:"制度",invention:"发明",event:"事件",achievement:"成就"},
     overviewFail:"概览数据加载失败：请确认 data/overview.json 存在且通过 HTTP 访问（GitHub Pages 部署后正常）。",
@@ -185,6 +188,9 @@ const I18N={
     viewPrefix:"View “",viewSuffix:"” →",
     recLongest:"Longest Reign",recShortest:"Shortest Reign",recMost:"Most Rulers",
     recDynMeta:"{n} rulers",recUnitYear:" yrs",recUnitRuler:"",
+    recValDay:"~{n} days",recValMonth:"~{n} mo",recApprox:"~",
+    recNoteLong:"“~” marks legendary or uncertain chronologies (e.g. Xia, Shang), not strictly comparable with documented reigns.",
+    recNoteShort:"“~” marks month/day estimates; where sources record only years, a reign counts as 1 year.",
     searchEmpty:"No results for “{q}”",
     srType:{dynasty:"Dynasty",ruler:"Ruler",figure:"Figure",institution:"Institution",invention:"Invention",event:"Event",achievement:"Achievement"},
     overviewFail:"Failed to load overview data: ensure data/overview.json exists and is served over HTTP (works after GitHub Pages deploy).",
@@ -560,26 +566,30 @@ document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',(
 /* ---------- 帝王之最 ---------- */
 function renderRecords(r){
   const medal=['gold','silver','bronze'];
-  const card=(title,items,kind)=>{
-    const max=Math.max(...items.map(x=>kind==='dyn'?x.count:x.ry));
+  // 统一度量：朝代=帝王数；帝王=在位月数（日/30，年×12），以便短在位者按精度排序
+  const metricOf=(x,kind)=>kind==='dyn'?x.count:(x.rd!=null?x.rd/30:(x.rm!=null?x.rm:x.ry*12));
+  const card=(title,items,kind,note)=>{
+    const max=Math.max(...items.map(x=>metricOf(x,kind)));
     const rows=items.map((i,idx)=>{
-      const val=kind==='dyn'?i.count:i.ry;
-      const w=max?Math.round(val/max*100):0;
+      const w=max?Math.round(metricOf(i,kind)/max*100):0;
       const badge=idx<3?medal[idx]:'';
       const name=kind==='dyn'?L(i,'dynasty'):L(i,'name');
+      const mark=(kind!=='dyn'&&i.approx)?`<span class="rec-approx">${t('recApprox')}</span>`:'';
       const meta=kind==='dyn'?t('recDynMeta',{n:i.count}):(L(i,'dynasty')+' · '+(L(i,'rg')||''));
-      const valTxt=kind==='dyn'?(i.count+t('recUnitRuler')):(i.ry+t('recUnitYear'));
+      const valTxt=kind==='dyn'?(i.count+t('recUnitRuler')):(i.rd!=null?t('recValDay',{n:i.rd}):(i.rm!=null?t('recValMonth',{n:i.rm}):(i.ry+t('recUnitYear'))));
       return `<li class="rec-item ${badge}" data-dynasty="${i.id}">
         <span class="rec-rank">${idx+1}</span>
         <div class="rec-body">
-          <div class="rec-top"><span class="rec-name">${name}</span><span class="rec-meta">${meta}</span></div>
+          <div class="rec-top"><span class="rec-nm"><span class="rec-name">${name}</span>${mark}</span><span class="rec-meta">${meta}</span></div>
           <div class="rec-barwrap"><div class="rec-bar"><span class="rec-fill" style="width:${w}%"></span></div><span class="rec-val">${valTxt}</span></div>
         </div></li>`;
     }).join('');
-    return `<div class="rec-card"><h3 class="rec-title">${title}</h3><ol class="rec-list">${rows}</ol></div>`;
+    return `<div class="rec-card"><h3 class="rec-title">${title}</h3><ol class="rec-list">${rows}</ol>${note?`<p class="rec-note">${note}</p>`:''}</div>`;
   };
   document.getElementById('recGrid').innerHTML=
-    card(t('recLongest'),r.longest,'emp')+card(t('recShortest'),r.shortest,'emp')+card(t('recMost'),r.mostEmperors,'dyn');
+    card(t('recLongest'),r.longest,'emp',t('recNoteLong'))+
+    card(t('recShortest'),r.shortest,'emp',t('recNoteShort'))+
+    card(t('recMost'),r.mostEmperors,'dyn','');
   document.querySelectorAll('#recGrid .rec-item').forEach(el=>{
     const go=()=>jumpToDynasty(el.dataset.dynasty);
     el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};

@@ -214,6 +214,9 @@
   .rec-name{font-size:14px;font-weight:700;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .rec-item:hover .rec-name{color:var(--brand)}
   .rec-meta{font-size:11.5px;color:var(--text-mute);white-space:nowrap;flex-shrink:0}
+  .rec-nm{display:inline-flex;align-items:center;gap:5px;min-width:0}
+  .rec-approx{flex-shrink:0;font-size:10.5px;font-weight:800;line-height:1;color:var(--brand);
+    background:var(--brand-50);border:1px solid var(--brand-100);border-radius:4px;padding:2px 5px}
   .rec-barwrap{display:flex;align-items:center;gap:10px}
   .rec-bar{flex:1;height:9px;background:var(--chip-bg);border-radius:5px;overflow:hidden}
   .rec-fill{display:block;height:100%;border-radius:5px;background:var(--brand)}
@@ -221,6 +224,7 @@
   .rec-item.silver .rec-fill{background:linear-gradient(90deg,#d3d8df,#9aa1ab)}
   .rec-item.bronze .rec-fill{background:linear-gradient(90deg,#eaa86e,#c47e3f)}
   .rec-val{flex-shrink:0;font-size:13px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;min-width:42px;text-align:right}
+  .rec-note{margin-top:12px;padding-top:9px;border-top:1px dashed var(--border);font-size:11.5px;line-height:1.65;color:var(--text-mute)}
 
   .chead .meta{color:var(--text-mute);font-size:12.5px;margin-left:auto;text-align:right}
   .chead .toggle{color:var(--text-mute);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}

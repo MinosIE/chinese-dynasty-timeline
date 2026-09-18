@@ -145,7 +145,8 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 - 源字段结构（以 `han.json` 为准）：
   - 详情顶层：`id,name,nameEn,years,yearsEn,era,capital,capitalEn,feature,featureEn,summary,summaryEn,emperors,talents,policies,policiesEn,aspects,aspectsEn`
-  - 帝王：`n,nEn,t,tEn,rg,rgEn,ry,mt,mtEn,sh,shEn,note,noteEn`（`ry` 为数字）
+  - 帝王：`n,nEn,t,tEn,rg,rgEn,ry,mt,mtEn,sh,shEn,note,noteEn`（`ry` 为整数年）
+  - 短在位精度（可选，仅在有明确史料时补）：`rd`（天数）/ `rm`（月数）；供「帝王之最 · 在位最短」按真实时长排序，展示一律带「约」
   - 人才：`talents[role][] = {n,nEn,note,noteEn}`，`role ∈ 文臣|武将|思想·文人|其他`
   - 制度：`policies[]` 与 `policiesEn[]` **等长并行**；三维：`aspects{政治,经济,文化}` 与 `aspectsEn` **同键等长**
   - 概览：`id,name,nameEn,years,yearsEn,era,capital,capitalEn,approx,start,end,duration,durationEn,feature,featureEn,summary,summaryEn,counts{emperors,talents,policies}`
@@ -210,6 +211,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 |---|---|---|
 | **新增 / 删改一个朝代** | ① `data/dynasties/<id>.json`（含 `*En`）② `data/overview.json`（含 `*En`，且 `counts` 必须存在）③ 跑 build-search → build-search-en → build-records → build-geo ④ 若为并存政权，检查 `scripts/update-overview.mjs` 的 `SPAN/ORDER`（仅作参考，勿运行） | `overview` 缺条目→该朝不显示；缺 `counts`→`renderKpis()` 抛 `Cannot read properties of undefined (reading 'emperors')`（**真实发生过**） |
 | **改某帝王的 `n`（名号）** | ① 详情数据 ② `index.html` 的 `STAR` / `LEGEND`（按中文名匹配）③ 详情里的 `LEGEND_DYNASTIES` 不受影响 ④ 重跑 `build-records.mjs`（帝王之最）与 `build-search*.mjs` | 名君高亮失效、帝王之最英文名不同步 |
+| **给某帝王补短在位精度 `rd` / `rm`** | ① 详情数据 ② 重跑 `build-records.mjs` | 帝王之最「在位最短」仍按整数年并列，排名退化为数组顺序 |
 | **新增一个人才角色** | ① 数据 `talents[新role]` ② `index.html` 的 `ROLE_EN` 与 `ROLE_COLORS`（否则英文显示中文键 / 无色） | 英文模式角色名回落为中文；圆点无色 |
 | **新增一个 `aspects` 维度** | ① 数据 `aspects` + `aspectsEn` ② `index.html` 的 `ASPECT_EN`、`ASPECT_ORDER`、`ASPECT_COLORS` | 维度不渲染或被过滤掉 |
 | **新增 era（大时代）** | ① `index.html` 的 `ERAS`、`ERA_COLORS`、`I18N.zh.era`、`I18N.en.era`、`renderEvents` 的 `ORDER`（共 5 处）② 详情/概览数据的 `era` 值 | Tab 与大事记分组缺该时代 |
@@ -224,6 +226,8 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 | 英文模式混入中文数字/文案 | 硬编码，未走 `t()`/`L()` | 数字与文案都进 `I18N`（如 `kpiYearsV`） |
 | 中文模式出现英文标签（"Civil Officials"/"Politics"） | 无条件使用 `ROLE_EN[role]` / `ASPECT_EN[k]` | 必须 `lang==='en' ? EN : 中文键` |
 | `records.json` 英文被清空 | 运行 `build-records.mjs` 而脚本未产出 `*En` | 脚本已支持产出 `nameEn/rgEn/dynastyEn`；改字段时同步维护 |
+| 帝王之最「在位最短」6 人全显示「1 年」 | `ry` 是整数年，12 位短在位者并列，取前 6 = 数组顺序 | 短在位者补 `rd`/`rm`，榜单按 `monthsOf()`（`rd/30` → `rm` → `ry×12`）排序 |
+| 帝王之最把传说纪年排在信史之前却无说明 | 夏商周多带「约」年，与信史混排 | 条目带 `approx`（`rg` 含「约」或 `note` 含「岁余/不足/存疑/待考/传说/争议」）→ 渲染「约」徽标 + 卡片脚注 |
 | 大事记连线穿过卡片文字 / 与年份标签重叠 | 走线未落在标签高度带或未走行间隙 | 连线节点取 `.ev-year` 中心；换行在「上行卡片底 + 下行卡片顶」之间走；年份标签 `z-index:2` 压线，箭头须从标签**右缘**起画（否则被标签遮住） |
 | 大事记连线顺序倒序 | 行方向交替时按 DOM 顺序取值 | 每行一律按 x 升序（时间正序）；行间连接只做「右→左」一次（见 `drawEvTimeline`） |
 | CI 失败在 `git diff --exit-code` | 改了源数据但没重跑派生脚本 | 按 0 节顺序重跑全部 `build-*.mjs` 后再提交 |
@@ -304,6 +308,7 @@ F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F22 
 | `og-cover.png` | 约 730KB，未压缩 | 分享图加载偏慢 |
 | 仓库根 | 无 `.gitignore` | 易误提交临时文件（如本地截图） |
 | `scripts/validate-data.mjs` | 不阻断（三国/南北朝分组列出致误报） | 只能人工判读 |
+| `data/dynasties/*.json` | 多数帝王只有整数年 `ry`；目前仅 10 位短在位者补了 `rd`/`rm` | 「在位最长/最短」整体粒度仍是「年」；已加口径脚注说明 |
 
 ### 5.5 已知问题
 
@@ -318,3 +323,4 @@ F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F22 
 ## 6. 变更记录（本文件）
 
 - 2026-09-18：首次生成。基于当日仓库快照（`main` @ `d5a205f`）梳理架构、数据模型、i18n 约定、派生流水线、CI 与真实踩坑清单。
+- 2026-09-18：帝王之最改为「月/日」精度口径（新增可选字段 `rd`/`rm`、`approx` 存疑标记、卡片口径脚注）；补充 §2.5 字段、§3.3/§3.4 联动与踩坑、§5.4 技术债。

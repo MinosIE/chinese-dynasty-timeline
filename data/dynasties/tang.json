@@ -67,6 +67,7 @@
       "rg": "684",
       "rgEn": "684",
       "ry": 1,
+      "rm": 2,
       "gh": "嗣圣",
       "ghEn": "Sisheng",
       "note": "首次在位被废",
@@ -200,12 +201,13 @@
       "rg": "805",
       "rgEn": "805",
       "ry": 1,
+      "rm": 6,
       "mt": "顺宗",
       "mtEn": "Shunzong",
       "gh": "永贞",
       "ghEn": "Yongzhen",
-      "note": "永贞革新，一月退位",
-      "noteEn": "The Yongzhen reform; abdicated in a month"
+      "note": "永贞革新，在位数月",
+      "noteEn": "The Yongzhen reform; abdicated within months"
     },
     {
       "n": "唐宪宗(李纯)",

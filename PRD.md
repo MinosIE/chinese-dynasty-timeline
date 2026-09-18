@@ -49,7 +49,7 @@
 - **F14 存续可视化**：按年代比例的时间跨度条，点击色条跳转到对应朝代。
 - **F15 历史大事记**：关键历史事件时间线，点击跳转到对应朝代。
 - **F16 同时期政权**：补充辽、西夏、金，共 18 个朝代。
-- **F17 帝王之最**：基于帝王世系统计在位最长 / 最短、帝王数量最多的朝代，可跳转。
+- **F17 帝王之最**：基于帝王世系统计在位最长 / 最短、帝王数量最多的朝代，可跳转。口径：短在位者用 `rd`（日）/ `rm`（月）精度排序并标注「约」；传说 / 存疑纪年（夏商周等）标「约」，卡片底部附口径说明。
 - **F18 模块化布局**：概览首页 + 吸顶模块导航，分区切换，避免页面超长、突出重点。
 - **F19 中英双语**：左上角一键切换中 / 英（主题切换位于右上角）；静态文案、数据（`*En` 字段）、搜索、SEO/GEO 全面双语，并支持 `?lang=en` 直达英文。
 
@@ -84,6 +84,7 @@ Hero（标题 + KPI：王朝数 / 年数 / 帝王与人才）
 - **概览字段**：`id,name,years,era,capital,approx,duration,feature,summary,counts{emperors,talents,policies}`。
 - **详情字段**：`id,name,years,era,capital,feature,summary,emperors[],talents{},policies[],aspects{政治,经济,文化}`。
 - **帝王字段**：`n(名号),t(代际),rg(在位),ry(年数),gh(年号),mt(庙号),sh(谥号),note(备注)`。
+- **短在位精度（可选）**：`rd`（在位天数）/ `rm`（在位月数），仅在有明确史料时补；用于「在位最短」按真实时长排序，展示一律带「约」。
 - **双语字段**：所有展示型文案附同名 `*En`（如 `nameEn / yearsEn / capitalEn / summaryEn / noteEn`）；`policiesEn`（并行数组）、`aspectsEn`（并行对象，键同中文）。英文缺失时自动回退中文。
 - 修改数据后按序重新生成派生文件：`node scripts/build-search.mjs` → `node scripts/build-search-en.mjs` → `node scripts/build-records.mjs` → `node scripts/build-geo.mjs`；并用 `node scripts/check-i18n.mjs` 校验双语完整性。
 

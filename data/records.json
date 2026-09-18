@@ -8,7 +8,8 @@
       "rgEn": "c. 1676–1600 BC",
       "id": "xia",
       "dynasty": "夏",
-      "dynastyEn": "Xia"
+      "dynastyEn": "Xia",
+      "approx": true
     },
     {
       "name": "太戊",
@@ -18,7 +19,8 @@
       "rgEn": "c. 1487–1412 BC",
       "id": "shang",
       "dynasty": "商",
-      "dynastyEn": "Shang"
+      "dynastyEn": "Shang",
+      "approx": true
     },
     {
       "name": "清圣祖(玄烨)",
@@ -41,6 +43,16 @@
       "dynastyEn": "Qing"
     },
     {
+      "name": "周赧王",
+      "nameEn": "King Nan",
+      "ry": 59,
+      "rg": "前314–前256",
+      "rgEn": "314–256 BC",
+      "id": "zhou",
+      "dynasty": "周",
+      "dynastyEn": "Zhou"
+    },
+    {
       "name": "武丁",
       "nameEn": "Wu Ding",
       "ry": 59,
@@ -48,50 +60,11 @@
       "rgEn": "c. 1176–1117 BC",
       "id": "shang",
       "dynasty": "商",
-      "dynastyEn": "Shang"
-    },
-    {
-      "name": "不降",
-      "nameEn": "Bu Jiang",
-      "ry": 59,
-      "rg": "约前1838–前1779",
-      "rgEn": "c. 1838–1779 BC",
-      "id": "xia",
-      "dynasty": "夏",
-      "dynastyEn": "Xia"
+      "dynastyEn": "Shang",
+      "approx": true
     }
   ],
   "shortest": [
-    {
-      "name": "汉殇帝(刘隆)",
-      "nameEn": "Han Shangdi (Liu Long)",
-      "ry": 1,
-      "rg": "105–106",
-      "rgEn": "105–106",
-      "id": "han",
-      "dynasty": "汉",
-      "dynastyEn": "Han"
-    },
-    {
-      "name": "晋简文帝(司马昱)",
-      "nameEn": "Sima Yu, Emperor Jianwen of Jin",
-      "ry": 1,
-      "rg": "371–372",
-      "rgEn": "371–372",
-      "id": "jin",
-      "dynasty": "晋",
-      "dynastyEn": "Jin"
-    },
-    {
-      "name": "明仁宗(朱高炽)",
-      "nameEn": "Ming Renzong (Zhu Gaochi)",
-      "ry": 1,
-      "rg": "1424–1425",
-      "rgEn": "1424–1425",
-      "id": "ming",
-      "dynasty": "明",
-      "dynastyEn": "Ming"
-    },
     {
       "name": "明光宗(朱常洛)",
       "nameEn": "Ming Guangzong (Zhu Changluo)",
@@ -100,7 +73,8 @@
       "rgEn": "1620",
       "id": "ming",
       "dynasty": "明",
-      "dynastyEn": "Ming"
+      "dynastyEn": "Ming",
+      "rd": 29
     },
     {
       "name": "子婴",
@@ -110,17 +84,52 @@
       "rgEn": "207 BC",
       "id": "qin",
       "dynasty": "秦",
-      "dynastyEn": "Qin"
+      "dynastyEn": "Qin",
+      "rd": 46
     },
     {
-      "name": "宋末帝(赵昺)",
-      "nameEn": "Song Last Emperor (Zhao Bing)",
+      "name": "唐中宗(李显)",
+      "nameEn": "Tang Zhongzong (Li Xian)",
       "ry": 1,
-      "rg": "1278–1279",
-      "rgEn": "1278–1279",
-      "id": "song",
-      "dynasty": "宋",
-      "dynastyEn": "Song"
+      "rg": "684",
+      "rgEn": "684",
+      "id": "tang",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "rm": 2
+    },
+    {
+      "name": "后周恭帝(柴宗训)",
+      "nameEn": "Chai Zongxun, Respectful Emperor of Later Zhou",
+      "ry": 1,
+      "rg": "959–960",
+      "rgEn": "959–960",
+      "id": "wudai",
+      "dynasty": "五代十国",
+      "dynastyEn": "Five Dynasties & Ten Kingdoms",
+      "rm": 6
+    },
+    {
+      "name": "唐顺宗(李诵)",
+      "nameEn": "Tang Shunzong (Li Song)",
+      "ry": 1,
+      "rg": "805",
+      "rgEn": "805",
+      "id": "tang",
+      "dynasty": "唐",
+      "dynastyEn": "Tang",
+      "rm": 6
+    },
+    {
+      "name": "明仁宗(朱高炽)",
+      "nameEn": "Ming Renzong (Zhu Gaochi)",
+      "ry": 1,
+      "rg": "1424–1425",
+      "rgEn": "1424–1425",
+      "id": "ming",
+      "dynasty": "明",
+      "dynastyEn": "Ming",
+      "rm": 8
     }
   ],
   "mostEmperors": [

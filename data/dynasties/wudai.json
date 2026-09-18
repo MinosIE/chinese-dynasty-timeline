@@ -19,11 +19,11 @@
     { "n": "后唐末帝(李从珂)", "nEn": "Li Congke, Last Emperor of Later Tang", "t": "后唐", "tEn": "Later Tang", "rg": "934–936", "rgEn": "934–936", "ry": 3, "note": "亡于晋", "noteEn": "Fell to Jin" },
     { "n": "后晋高祖(石敬瑭)", "nEn": "Shi Jingtang, Gaozu of Later Jin", "t": "后晋", "tEn": "Later Jin", "rg": "936–942", "rgEn": "936–942", "ry": 6, "gh": "天福", "ghEn": "Tianfu", "sh": "高祖", "shEn": "Gaozu", "note": "割燕云十六州", "noteEn": "Ceded the Sixteen Prefectures of Yan–Yun" },
     { "n": "后晋出帝(石重贵)", "nEn": "Shi Chonggui, Emperor Chu of Later Jin", "t": "后晋", "tEn": "Later Jin", "rg": "942–947", "rgEn": "942–947", "ry": 5, "note": "亡于契丹", "noteEn": "Fell to the Khitan" },
-    { "n": "后汉高祖(刘知远)", "nEn": "Liu Zhiyuan, Gaozu of Later Han", "t": "后汉", "tEn": "Later Han", "rg": "947–948", "rgEn": "947–948", "ry": 1, "gh": "乾祐", "ghEn": "Qianyou", "sh": "高祖", "shEn": "Gaozu", "note": "建汉", "noteEn": "Founded Han" },
+    { "n": "后汉高祖(刘知远)", "nEn": "Liu Zhiyuan, Gaozu of Later Han", "t": "后汉", "tEn": "Later Han", "rg": "947–948", "rgEn": "947–948", "ry": 1, "rm": 10, "gh": "乾祐", "ghEn": "Qianyou", "sh": "高祖", "shEn": "Gaozu", "note": "建汉", "noteEn": "Founded Han" },
     { "n": "后汉隐帝(刘承祐)", "nEn": "Liu Chengyou, Hidden Emperor of Later Han", "t": "后汉", "tEn": "Later Han", "rg": "948–951", "rgEn": "948–951", "ry": 3, "note": "亡于周", "noteEn": "Fell to Zhou" },
     { "n": "后周太祖(郭威)", "nEn": "Guo Wei, Taizu of Later Zhou", "t": "后周", "tEn": "Later Zhou", "rg": "951–954", "rgEn": "951–954", "ry": 3, "gh": "广顺", "ghEn": "Guangshun", "sh": "太祖", "shEn": "Taizu", "note": "革弊政", "noteEn": "Reformed abuses" },
     { "n": "后周世宗(柴荣)", "nEn": "Chai Rong, Shizong of Later Zhou", "t": "后周", "tEn": "Later Zhou", "rg": "954–959", "rgEn": "954–959", "ry": 5, "sh": "世宗", "shEn": "Shizong", "note": "励精图治", "noteEn": "Strove to govern well" },
-    { "n": "后周恭帝(柴宗训)", "nEn": "Chai Zongxun, Respectful Emperor of Later Zhou", "t": "末代", "tEn": "Last ruler", "rg": "959–960", "rgEn": "959–960", "ry": 1, "note": "禅于宋", "noteEn": "Abdicated to Song" }
+    { "n": "后周恭帝(柴宗训)", "nEn": "Chai Zongxun, Respectful Emperor of Later Zhou", "t": "末代", "tEn": "Last ruler", "rg": "959–960", "rgEn": "959–960", "ry": 1, "rm": 6, "note": "禅于宋", "noteEn": "Abdicated to Song" }
   ],
   "talents": {
     "文臣": [
