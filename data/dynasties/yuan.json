@@ -1,108 +1,35 @@
 {
   "id": "yuan",
   "name": "元",
+  "nameEn": "Yuan",
   "years": "1271–1368",
+  "yearsEn": "1271–1368",
   "era": "宋元",
   "capital": "大都(北京)",
+  "capitalEn": "Dadu (Beijing)",
   "feature": "蒙古建立的大一统王朝，疆域空前。列主要帝，合计约97年。",
+  "featureEn": "A unified dynasty founded by the Mongols, with unprecedented territory. Major emperors, ~97 yrs.",
   "summary": "首次由少数民族完成大一统，驿站连通欧亚。",
+  "summaryEn": "The first unified rule by a minority; post roads linked Eurasia.",
   "emperors": [
-    {
-      "n": "元世祖(忽必烈)",
-      "t": "开国",
-      "rg": "1271–1294",
-      "ry": 24,
-      "mt": "世祖",
-      "gh": "至元",
-      "note": "定国号元，灭宋统一"
-    },
-    {
-      "n": "元成宗(铁穆耳)",
-      "t": "",
-      "rg": "1294–1307",
-      "ry": 13,
-      "mt": "成宗",
-      "gh": "元贞",
-      "note": "守成"
-    },
-    {
-      "n": "元武宗(海山)",
-      "t": "",
-      "rg": "1307–1311",
-      "ry": 4,
-      "mt": "武宗",
-      "gh": "至大",
-      "note": "滥赏"
-    },
-    {
-      "n": "元仁宗(爱育黎拔力八达)",
-      "t": "",
-      "rg": "1311–1320",
-      "ry": 9,
-      "mt": "仁宗",
-      "gh": "皇庆",
-      "note": "复科举"
-    },
-    {
-      "n": "元英宗(硕德八剌)",
-      "t": "",
-      "rg": "1320–1323",
-      "ry": 3,
-      "mt": "英宗",
-      "gh": "至治",
-      "note": "南坡之变"
-    },
-    {
-      "n": "元泰定帝(也孙铁木儿)",
-      "t": "",
-      "rg": "1323–1328",
-      "ry": 5,
-      "gh": "泰定",
-      "note": "守成"
-    },
-    {
-      "n": "元文宗(图帖睦尔)",
-      "t": "",
-      "rg": "1328–1332",
-      "ry": 4,
-      "mt": "文宗",
-      "gh": "天历",
-      "note": "文治"
-    },
-    {
-      "n": "元顺帝(妥懽帖睦尔)",
-      "t": "末代",
-      "rg": "1333–1368",
-      "ry": 35,
-      "mt": "惠宗",
-      "gh": "至顺",
-      "note": "亡国"
-    }
+    { "n": "元世祖(忽必烈)", "nEn": "Yuan Shizu (Kublai)", "t": "开国", "tEn": "Founding", "rg": "1271–1294", "rgEn": "1271–1294", "ry": 24, "mt": "世祖", "mtEn": "Shizu", "gh": "至元", "ghEn": "Zhiyuan", "note": "定国号元，灭宋统一", "noteEn": "Named the state Yuan, destroyed Song, unified" },
+    { "n": "元成宗(铁穆耳)", "nEn": "Yuan Chengzong (Temür)", "t": "", "tEn": "", "rg": "1294–1307", "rgEn": "1294–1307", "ry": 13, "mt": "成宗", "mtEn": "Chengzong", "gh": "元贞", "ghEn": "Yuanzhen", "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "元武宗(海山)", "nEn": "Yuan Wuzong (Haishan)", "t": "", "tEn": "", "rg": "1307–1311", "rgEn": "1307–1311", "ry": 4, "mt": "武宗", "mtEn": "Wuzong", "gh": "至大", "ghEn": "Zhidai", "note": "滥赏", "noteEn": "Lavish rewards" },
+    { "n": "元仁宗(爱育黎拔力八达)", "nEn": "Yuan Renzong (Ayurbarwada)", "t": "", "tEn": "", "rg": "1311–1320", "rgEn": "1311–1320", "ry": 9, "mt": "仁宗", "mtEn": "Renzong", "gh": "皇庆", "ghEn": "Huangqing", "note": "复科举", "noteEn": "Restored the exams" },
+    { "n": "元英宗(硕德八剌)", "nEn": "Yuan Yingzong (Shidebala)", "t": "", "tEn": "", "rg": "1320–1323", "rgEn": "1320–1323", "ry": 3, "mt": "英宗", "mtEn": "Yingzong", "gh": "至治", "ghEn": "Zhizhi", "note": "南坡之变", "noteEn": "The Nanpo incident" },
+    { "n": "元泰定帝(也孙铁木儿)", "nEn": "Yuan Taidingdi (Yesün Temür)", "t": "", "tEn": "", "rg": "1323–1328", "rgEn": "1323–1328", "ry": 5, "gh": "泰定", "ghEn": "Taiding", "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "元文宗(图帖睦尔)", "nEn": "Yuan Wenzong (Tugh Temür)", "t": "", "tEn": "", "rg": "1328–1332", "rgEn": "1328–1332", "ry": 4, "mt": "文宗", "mtEn": "Wenzong", "gh": "天历", "ghEn": "Tianli", "note": "文治", "noteEn": "Civilian governance" },
+    { "n": "元顺帝(妥懽帖睦尔)", "nEn": "Yuan Shundi (Toghon Temür)", "t": "末代", "tEn": "Last ruler", "rg": "1333–1368", "rgEn": "1333–1368", "ry": 35, "mt": "惠宗", "mtEn": "Huizong", "gh": "至顺", "ghEn": "Zhishun", "note": "亡国", "noteEn": "The state fell" }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "耶律楚材",
-        "note": "治国名相"
-      },
-      {
-        "n": "赵孟頫",
-        "note": "书画大家"
-      }
+      { "n": "耶律楚材", "nEn": "Yelü Chucai", "note": "治国名相", "noteEn": "A famed minister of statecraft" },
+      { "n": "赵孟頫", "nEn": "Zhao Mengfu", "note": "书画大家", "noteEn": "Master of calligraphy and painting" }
     ],
     "其他": [
-      {
-        "n": "郭守敬",
-        "note": "天文水利"
-      },
-      {
-        "n": "马可·波罗",
-        "note": "客卿游历"
-      },
-      {
-        "n": "关汉卿",
-        "note": "元曲大家"
-      }
+      { "n": "郭守敬", "nEn": "Guo Shoujing", "note": "天文水利", "noteEn": "Astronomy and hydraulics" },
+      { "n": "马可·波罗", "nEn": "Marco Polo", "note": "客卿游历", "noteEn": "Visiting traveler" },
+      { "n": "关汉卿", "nEn": "Guan Hanqing", "note": "元曲大家", "noteEn": "Master of Yuan drama" }
     ]
   },
   "policies": [
@@ -111,6 +38,13 @@
     "纸币(交钞)",
     "驿站贯通",
     "路府州县制"
+  ],
+  "policiesEn": [
+    "The provincial system (Zhongshu Sheng)",
+    "The four-class system",
+    "Paper money (jiaochao)",
+    "Connected post roads",
+    "The route–prefecture–county system"
   ],
   "aspects": {
     "政治": [
@@ -124,6 +58,20 @@
     "文化": [
       "元曲兴盛（关汉卿）",
       "书画（赵孟頫），马可·波罗等中外交流"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Created the provincial system; unprecedented territory",
+      "The four-class system; clear ethnic hierarchy"
+    ],
+    "经济": [
+      "Paper money (jiaochao) widespread; post roads linked Eurasia",
+      "Sea transport and canal transport together"
+    ],
+    "文化": [
+      "Yuan drama flourished (Guan Hanqing)",
+      "Calligraphy–painting (Zhao Mengfu); Marco Polo and Sino-foreign exchange"
     ]
   }
 }

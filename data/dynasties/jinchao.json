@@ -1,30 +1,73 @@
 {
   "id": "jinchao",
   "name": "金",
+  "nameEn": "Jin",
   "years": "1115–1234",
+  "yearsEn": "1115–1234",
   "era": "宋元",
   "capital": "会宁府→中都(北京)",
+  "capitalEn": "Huining Prefecture → Zhongdu (Beijing)",
   "feature": "女真建立，灭辽亡北宋，与南宋对峙，后为蒙古所灭。",
+  "featureEn": "Founded by the Jurchen; destroyed Liao and Northern Song, stood against Southern Song; finally fell to the Mongols.",
   "summary": "女真崛起于东北，推进汉制，终亡于蒙宋联军。",
+  "summaryEn": "The Jurchen rose in the northeast, advanced the Han system, finally fell to the Mongol–Song alliance.",
   "emperors": [
-    { "n": "金太祖(完颜阿骨打)", "t": "开国", "rg": "1115–1123", "ry": 8, "note": "起兵抗辽，建国" },
-    { "n": "金太宗(完颜吴乞买)", "t": "", "rg": "1123–1135", "ry": 12, "note": "灭辽伐宋，靖康之变" },
-    { "n": "金熙宗(完颜亶)", "t": "", "rg": "1135–1150", "ry": 15, "note": "推行汉化改革" },
-    { "n": "海陵王(完颜亮)", "t": "", "rg": "1150–1161", "ry": 11, "note": "迁都中都，南侵遇弑" },
-    { "n": "金世宗(完颜雍)", "t": "", "rg": "1161–1189", "ry": 28, "note": "大定之治" },
-    { "n": "金章宗(完颜璟)", "t": "", "rg": "1189–1208", "ry": 19, "note": "金之极盛" },
-    { "n": "卫绍王(完颜永济)", "t": "", "rg": "1208–1213", "ry": 5, "note": "蒙古南侵" },
-    { "n": "金宣宗(完颜珣)", "t": "", "rg": "1213–1224", "ry": 11, "note": "南迁汴京" },
-    { "n": "金哀宗(完颜守绪)", "t": "末代", "rg": "1224–1234", "ry": 10, "note": "亡于蒙宋" }
+    { "n": "金太祖(完颜阿骨打)", "nEn": "Jin Taizu (Wanyan Aguda)", "t": "开国", "tEn": "Founding", "rg": "1115–1123", "rgEn": "1115–1123", "ry": 8, "note": "起兵抗辽，建国", "noteEn": "Rose against Liao, founded the state" },
+    { "n": "金太宗(完颜吴乞买)", "nEn": "Jin Taizong (Wanyan Sheng)", "t": "", "tEn": "", "rg": "1123–1135", "rgEn": "1123–1135", "ry": 12, "note": "灭辽伐宋，靖康之变", "noteEn": "Destroyed Liao, attacked Song; the Jingkang Incident" },
+    { "n": "金熙宗(完颜亶)", "nEn": "Jin Xizong (Wanyan Dan)", "t": "", "tEn": "", "rg": "1135–1150", "rgEn": "1135–1150", "ry": 15, "note": "推行汉化改革", "noteEn": "Pushed sinicization reforms" },
+    { "n": "海陵王(完颜亮)", "nEn": "Prince Hailing (Wanyan Liang)", "t": "", "tEn": "", "rg": "1150–1161", "rgEn": "1150–1161", "ry": 11, "note": "迁都中都，南侵遇弑", "noteEn": "Moved the capital to Zhongdu; killed invading the south" },
+    { "n": "金世宗(完颜雍)", "nEn": "Jin Shizong (Wanyan Yong)", "t": "", "tEn": "", "rg": "1161–1189", "rgEn": "1161–1189", "ry": 28, "note": "大定之治", "noteEn": "The Dading era of good rule" },
+    { "n": "金章宗(完颜璟)", "nEn": "Jin Zhangzong (Wanyan Jing)", "t": "", "tEn": "", "rg": "1189–1208", "rgEn": "1189–1208", "ry": 19, "note": "金之极盛", "noteEn": "Jin at its zenith" },
+    { "n": "卫绍王(完颜永济)", "nEn": "Prince Weishao (Wanyan Yongji)", "t": "", "tEn": "", "rg": "1208–1213", "rgEn": "1208–1213", "ry": 5, "note": "蒙古南侵", "noteEn": "The Mongols invaded the south" },
+    { "n": "金宣宗(完颜珣)", "nEn": "Jin Xuanzong (Wanyan Xun)", "t": "", "tEn": "", "rg": "1213–1224", "rgEn": "1213–1224", "ry": 11, "note": "南迁汴京", "noteEn": "Moved south to Bianjing" },
+    { "n": "金哀宗(完颜守绪)", "nEn": "Jin Aizong (Wanyan Shouxu)", "t": "末代", "tEn": "Last ruler", "rg": "1224–1234", "rgEn": "1224–1234", "ry": 10, "note": "亡于蒙宋", "noteEn": "Fell to the Mongol–Song" }
   ],
   "talents": {
-    "武将": [{ "n": "完颜宗弼(兀术)", "note": "攻宋名将" }],
-    "其他": [{ "n": "完颜希尹", "note": "创制女真文字" }]
+    "武将": [
+      { "n": "完颜宗弼(兀术)", "nEn": "Wanyan Zongbi (Wuzhu)", "note": "攻宋名将", "noteEn": "Famed general against Song" }
+    ],
+    "其他": [
+      { "n": "完颜希尹", "nEn": "Wanyan Xiyin", "note": "创制女真文字", "noteEn": "Created the Jurchen script" }
+    ]
   },
-  "policies": ["猛安谋克", "汉制改革", "迁都中都", "纸币(交钞)"],
+  "policies": [
+    "猛安谋克",
+    "汉制改革",
+    "迁都中都",
+    "纸币(交钞)"
+  ],
+  "policiesEn": [
+    "The meng'an–mouke system",
+    "Reforms on the Han model",
+    "Moved the capital to Zhongdu",
+    "Paper money (jiaochao)"
+  ],
   "aspects": {
-    "政治": ["女真崛起，灭辽亡北宋，与南宋对峙", "推行汉制，皇权集中"],
-    "经济": ["猛安谋克与屯田并行", "发行交钞，中都为北方都会"],
-    "文化": ["创制女真文字", "汉化与科举并行，诸宫调等说唱兴起"]
+    "政治": [
+      "女真崛起，灭辽亡北宋，与南宋对峙",
+      "推行汉制，皇权集中"
+    ],
+    "经济": [
+      "猛安谋克与屯田并行",
+      "发行交钞，中都为北方都会"
+    ],
+    "文化": [
+      "创制女真文字",
+      "汉化与科举并行，诸宫调等说唱兴起"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "The Jurchen rose; destroyed Liao and Northern Song; stood against Southern Song",
+      "Pursued the Han system; imperial power centralized"
+    ],
+    "经济": [
+      "Meng'an–mouke alongside tuntian",
+      "Issued jiaochao; Zhongdu as a northern metropolis"
+    ],
+    "文化": [
+      "Created the Jurchen script",
+      "Sinicization and exams together; zhugongdiao storytelling rose"
+    ]
   }
 }

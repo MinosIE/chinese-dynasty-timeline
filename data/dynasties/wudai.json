@@ -1,127 +1,45 @@
 {
   "id": "wudai",
   "name": "五代十国",
+  "nameEn": "Five Dynasties and Ten Kingdoms",
   "years": "907–960",
+  "yearsEn": "907–960",
   "era": "隋唐",
   "capital": "中原轮换",
+  "capitalEn": "Rotating Central Plain",
   "feature": "唐亡后中原五代更替、周边十国并立。列中原五代主要君主（十国并立不计入），合计53年。",
+  "featureEn": "After Tang fell, the Central Plain saw five dynasties in turn and ten kingdoms around. Major Central Plain rulers (ten kingdoms not counted), 53 yrs.",
   "summary": "大分裂尾声，武人乱政，终由宋重新统一。",
+  "summaryEn": "The tail of great division; warlord misrule, finally reunified by Song.",
   "emperors": [
-    {
-      "n": "后梁太祖(朱温)",
-      "t": "后梁",
-      "rg": "907–912",
-      "ry": 5,
-      "gh": "开平",
-      "sh": "太祖",
-      "note": "代唐"
-    },
-    {
-      "n": "后梁末帝(朱友贞)",
-      "t": "后梁",
-      "rg": "913–923",
-      "ry": 11,
-      "note": "梁亡于唐"
-    },
-    {
-      "n": "后唐庄宗(李存勖)",
-      "t": "后唐",
-      "rg": "923–926",
-      "ry": 3,
-      "gh": "同光",
-      "sh": "庄宗",
-      "note": "骁勇，宠伶人"
-    },
-    {
-      "n": "后唐明宗(李嗣源)",
-      "t": "后唐",
-      "rg": "926–933",
-      "ry": 7,
-      "gh": "天成",
-      "sh": "明宗",
-      "note": "小康之世"
-    },
-    {
-      "n": "后唐末帝(李从珂)",
-      "t": "后唐",
-      "rg": "934–936",
-      "ry": 3,
-      "note": "亡于晋"
-    },
-    {
-      "n": "后晋高祖(石敬瑭)",
-      "t": "后晋",
-      "rg": "936–942",
-      "ry": 6,
-      "gh": "天福",
-      "sh": "高祖",
-      "note": "割燕云十六州"
-    },
-    {
-      "n": "后晋出帝(石重贵)",
-      "t": "后晋",
-      "rg": "942–947",
-      "ry": 5,
-      "note": "亡于契丹"
-    },
-    {
-      "n": "后汉高祖(刘知远)",
-      "t": "后汉",
-      "rg": "947–948",
-      "ry": 1,
-      "gh": "乾祐",
-      "sh": "高祖",
-      "note": "建汉"
-    },
-    {
-      "n": "后汉隐帝(刘承祐)",
-      "t": "后汉",
-      "rg": "948–951",
-      "ry": 3,
-      "note": "亡于周"
-    },
-    {
-      "n": "后周太祖(郭威)",
-      "t": "后周",
-      "rg": "951–954",
-      "ry": 3,
-      "gh": "广顺",
-      "sh": "太祖",
-      "note": "革弊政"
-    },
-    {
-      "n": "后周世宗(柴荣)",
-      "t": "后周",
-      "rg": "954–959",
-      "ry": 5,
-      "sh": "世宗",
-      "note": "励精图治"
-    },
-    {
-      "n": "后周恭帝(柴宗训)",
-      "t": "末代",
-      "rg": "959–960",
-      "ry": 1,
-      "note": "禅于宋"
-    }
+    { "n": "后梁太祖(朱温)", "nEn": "Zhu Wen, Taizu of Later Liang", "t": "后梁", "tEn": "Later Liang", "rg": "907–912", "rgEn": "907–912", "ry": 5, "gh": "开平", "ghEn": "Kaiping", "sh": "太祖", "shEn": "Taizu", "note": "代唐", "noteEn": "Replaced Tang" },
+    { "n": "后梁末帝(朱友贞)", "nEn": "Zhu Youzhen, Last Emperor of Later Liang", "t": "后梁", "tEn": "Later Liang", "rg": "913–923", "rgEn": "913–923", "ry": 11, "note": "梁亡于唐", "noteEn": "Liang fell to Tang" },
+    { "n": "后唐庄宗(李存勖)", "nEn": "Li Cunxu, Zhuangzong of Later Tang", "t": "后唐", "tEn": "Later Tang", "rg": "923–926", "rgEn": "923–926", "ry": 3, "gh": "同光", "ghEn": "Tongguang", "sh": "庄宗", "shEn": "Zhuangzong", "note": "骁勇，宠伶人", "noteEn": "Brave; favored actors" },
+    { "n": "后唐明宗(李嗣源)", "nEn": "Li Siyuan, Mingzong of Later Tang", "t": "后唐", "tEn": "Later Tang", "rg": "926–933", "rgEn": "926–933", "ry": 7, "gh": "天成", "ghEn": "Tiancheng", "sh": "明宗", "shEn": "Mingzong", "note": "小康之世", "noteEn": "An age of modest peace" },
+    { "n": "后唐末帝(李从珂)", "nEn": "Li Congke, Last Emperor of Later Tang", "t": "后唐", "tEn": "Later Tang", "rg": "934–936", "rgEn": "934–936", "ry": 3, "note": "亡于晋", "noteEn": "Fell to Jin" },
+    { "n": "后晋高祖(石敬瑭)", "nEn": "Shi Jingtang, Gaozu of Later Jin", "t": "后晋", "tEn": "Later Jin", "rg": "936–942", "rgEn": "936–942", "ry": 6, "gh": "天福", "ghEn": "Tianfu", "sh": "高祖", "shEn": "Gaozu", "note": "割燕云十六州", "noteEn": "Ceded the Sixteen Prefectures of Yan–Yun" },
+    { "n": "后晋出帝(石重贵)", "nEn": "Shi Chonggui, Emperor Chu of Later Jin", "t": "后晋", "tEn": "Later Jin", "rg": "942–947", "rgEn": "942–947", "ry": 5, "note": "亡于契丹", "noteEn": "Fell to the Khitan" },
+    { "n": "后汉高祖(刘知远)", "nEn": "Liu Zhiyuan, Gaozu of Later Han", "t": "后汉", "tEn": "Later Han", "rg": "947–948", "rgEn": "947–948", "ry": 1, "gh": "乾祐", "ghEn": "Qianyou", "sh": "高祖", "shEn": "Gaozu", "note": "建汉", "noteEn": "Founded Han" },
+    { "n": "后汉隐帝(刘承祐)", "nEn": "Liu Chengyou, Hidden Emperor of Later Han", "t": "后汉", "tEn": "Later Han", "rg": "948–951", "rgEn": "948–951", "ry": 3, "note": "亡于周", "noteEn": "Fell to Zhou" },
+    { "n": "后周太祖(郭威)", "nEn": "Guo Wei, Taizu of Later Zhou", "t": "后周", "tEn": "Later Zhou", "rg": "951–954", "rgEn": "951–954", "ry": 3, "gh": "广顺", "ghEn": "Guangshun", "sh": "太祖", "shEn": "Taizu", "note": "革弊政", "noteEn": "Reformed abuses" },
+    { "n": "后周世宗(柴荣)", "nEn": "Chai Rong, Shizong of Later Zhou", "t": "后周", "tEn": "Later Zhou", "rg": "954–959", "rgEn": "954–959", "ry": 5, "sh": "世宗", "shEn": "Shizong", "note": "励精图治", "noteEn": "Strove to govern well" },
+    { "n": "后周恭帝(柴宗训)", "nEn": "Chai Zongxun, Respectful Emperor of Later Zhou", "t": "末代", "tEn": "Last ruler", "rg": "959–960", "rgEn": "959–960", "ry": 1, "note": "禅于宋", "noteEn": "Abdicated to Song" }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "冯道",
-        "note": "历仕多朝，政坛不倒"
-      }
+      { "n": "冯道", "nEn": "Feng Dao", "note": "历仕多朝，政坛不倒", "noteEn": "Served many dynasties; an unshakeable politician" }
     ],
     "其他": [
-      {
-        "n": "李煜",
-        "note": "南唐后主，词帝"
-      }
+      { "n": "李煜", "nEn": "Li Yu", "note": "南唐后主，词帝", "noteEn": "Last lord of Southern Tang; the emperor of ci" }
     ]
   },
   "policies": [
     "藩镇割据延续",
     "燕云十六州割让契丹"
+  ],
+  "policiesEn": [
+    "The warlord separatism continued",
+    "The Sixteen Prefectures ceded to the Khitan"
   ],
   "aspects": {
     "政治": [
@@ -135,6 +53,20 @@
     "文化": [
       "词的兴起（南唐李煜）",
       "雕版印刷推广（如《大藏经》）"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Warlords misruled; warlord separatism continued",
+      "Five dynasties in the Central Plain; ten kingdoms around"
+    ],
+    "经济": [
+      "The south was relatively calm; the economic center kept moving south",
+      "Overseas trade and commerce thrived in Wuyue etc."
+    ],
+    "文化": [
+      "The rise of ci poetry (Li Yu of Southern Tang)",
+      "Woodblock printing spread (e.g., the Tripitaka)"
     ]
   }
 }

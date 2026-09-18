@@ -1,112 +1,46 @@
 {
   "id": "sanguo",
   "name": "三国",
+  "nameEn": "Three Kingdoms",
   "years": "220–280",
+  "yearsEn": "220–280",
   "era": "三国两晋南北朝",
   "capital": "魏蜀吴",
+  "capitalEn": "Wei, Shu and Wu",
   "feature": "魏蜀吴鼎立，群雄与智谋的演义舞台。三政权同时并存，以下年数不相加（存续以时期计）。",
+  "featureEn": "Wei, Shu and Wu stood in a tripartite balance; a stage of heroes and stratagems. The three coexisted; reign years are not summed (counted by period).",
   "summary": "乱世英豪辈出，《三国演义》使其深入民心。",
+  "summaryEn": "An age of heroes; Romance of the Three Kingdoms made it household lore.",
   "emperors": [
-    {
-      "n": "魏文帝(曹丕)",
-      "t": "魏",
-      "rg": "220–226",
-      "ry": 6,
-      "gh": "黄初",
-      "sh": "文",
-      "note": "代汉称帝"
-    },
-    {
-      "n": "魏明帝(曹叡)",
-      "t": "魏",
-      "rg": "226–239",
-      "ry": 13,
-      "gh": "太和",
-      "sh": "明",
-      "note": "大兴土木"
-    },
-    {
-      "n": "魏元帝(曹奂)",
-      "t": "魏末",
-      "rg": "260–265",
-      "ry": 5,
-      "note": "禅于晋"
-    },
-    {
-      "n": "蜀汉昭烈帝(刘备)",
-      "t": "蜀",
-      "rg": "221–223",
-      "ry": 2,
-      "gh": "章武",
-      "sh": "昭烈",
-      "note": "兴复汉室"
-    },
-    {
-      "n": "蜀汉后主(刘禅)",
-      "t": "蜀",
-      "rg": "223–263",
-      "ry": 40,
-      "sh": "怀",
-      "note": "乐不思蜀"
-    },
-    {
-      "n": "吴大帝(孙权)",
-      "t": "吴",
-      "rg": "222–252",
-      "ry": 30,
-      "gh": "黄武",
-      "sh": "大",
-      "note": "据江东"
-    },
-    {
-      "n": "吴末帝(孙皓)",
-      "t": "吴末",
-      "rg": "264–280",
-      "ry": 16,
-      "note": "暴虐，吴亡"
-    }
+    { "n": "魏文帝(曹丕)", "nEn": "Cao Pi, Emperor Wen of Wei", "t": "魏", "tEn": "Wei", "rg": "220–226", "rgEn": "220–226", "ry": 6, "gh": "黄初", "ghEn": "Huangchu", "sh": "文", "shEn": "Wen", "note": "代汉称帝", "noteEn": "Usurped Han, declared himself emperor" },
+    { "n": "魏明帝(曹叡)", "nEn": "Cao Rui, Emperor Ming of Wei", "t": "魏", "tEn": "Wei", "rg": "226–239", "rgEn": "226–239", "ry": 13, "gh": "太和", "ghEn": "Taihe", "sh": "明", "shEn": "Ming", "note": "大兴土木", "noteEn": "Massive building works" },
+    { "n": "魏元帝(曹奂)", "nEn": "Cao Huan, Emperor Yuan of Wei", "t": "魏末", "tEn": "Late Wei", "rg": "260–265", "rgEn": "260–265", "ry": 5, "note": "禅于晋", "noteEn": "Abdicated to Jin" },
+    { "n": "蜀汉昭烈帝(刘备)", "nEn": "Liu Bei, Emperor Zhaolie of Shu Han", "t": "蜀", "tEn": "Shu", "rg": "221–223", "rgEn": "221–223", "ry": 2, "gh": "章武", "ghEn": "Zhangwu", "sh": "昭烈", "shEn": "Zhaolie", "note": "兴复汉室", "noteEn": "Sought to revive the Han" },
+    { "n": "蜀汉后主(刘禅)", "nEn": "Liu Shan, Later Lord of Shu", "t": "蜀", "tEn": "Shu", "rg": "223–263", "rgEn": "223–263", "ry": 40, "sh": "怀", "shEn": "Huai", "note": "乐不思蜀", "noteEn": "“Found new pleasures and forgot Shu”" },
+    { "n": "吴大帝(孙权)", "nEn": "Sun Quan, Great Emperor of Wu", "t": "吴", "tEn": "Wu", "rg": "222–252", "rgEn": "222–252", "ry": 30, "gh": "黄武", "ghEn": "Huangwu", "sh": "大", "shEn": "Da", "note": "据江东", "noteEn": "Held the Jiangdong region" },
+    { "n": "吴末帝(孙皓)", "nEn": "Sun Hao, Last Emperor of Wu", "t": "吴末", "tEn": "Late Wu", "rg": "264–280", "rgEn": "264–280", "ry": 16, "note": "暴虐，吴亡", "noteEn": "Tyrannical; Wu fell" }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "曹操",
-        "note": "魏武，雄才"
-      },
-      {
-        "n": "诸葛亮",
-        "note": "蜀相，鞠躬尽瘁"
-      },
-      {
-        "n": "司马懿",
-        "note": "魏权臣"
-      },
-      {
-        "n": "陆逊",
-        "note": "吴大将"
-      }
+      { "n": "曹操", "nEn": "Cao Cao", "note": "魏武，雄才", "noteEn": "The martial Duke of Wei, a towering talent" },
+      { "n": "诸葛亮", "nEn": "Zhuge Liang", "note": "蜀相，鞠躬尽瘁", "noteEn": "Chancellor of Shu; devoted unto death" },
+      { "n": "司马懿", "nEn": "Sima Yi", "note": "魏权臣", "noteEn": "Powerful minister of Wei" },
+      { "n": "陆逊", "nEn": "Lu Xun", "note": "吴大将", "noteEn": "Great general of Wu" }
     ],
     "武将": [
-      {
-        "n": "关羽",
-        "note": "武圣"
-      },
-      {
-        "n": "张飞",
-        "note": "猛将"
-      },
-      {
-        "n": "赵云",
-        "note": "常山赵子龙"
-      },
-      {
-        "n": "周瑜",
-        "note": "东吴都督"
-      }
+      { "n": "关羽", "nEn": "Guan Yu", "note": "武圣", "noteEn": "The Martial Saint" },
+      { "n": "张飞", "nEn": "Zhang Fei", "note": "猛将", "noteEn": "A fierce general" },
+      { "n": "赵云", "nEn": "Zhao Yun", "note": "常山赵子龙", "noteEn": "Zhao Zilong of Changshan" },
+      { "n": "周瑜", "nEn": "Zhou Yu", "note": "东吴都督", "noteEn": "Commander of Eastern Wu" }
     ]
   },
   "policies": [
     "屯田制",
     "九品中正制(魏)"
+  ],
+  "policiesEn": [
+    "The tuntian (military-agriculture) system",
+    "The nine-rank system (Wei)"
   ],
   "aspects": {
     "政治": [
@@ -120,6 +54,20 @@
     "文化": [
       "建安文学慷慨悲凉",
       "书法（钟繇）与谋略文化兴盛"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Wei, Shu and Wu stood tripartite; civil and military rule fused",
+      "Wei used the nine-rank system; the gentry's power rose"
+    ],
+    "经济": [
+      "The tuntian system restored production; Jiangnan developed faster",
+      "Shu brocade, Wu shipbuilding and overseas trade flourished"
+    ],
+    "文化": [
+      "Jian'an literature, solemn and stirring",
+      "Calligraphy (Zhong Yao) and strategy culture thrived"
     ]
   }
 }

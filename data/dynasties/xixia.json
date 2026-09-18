@@ -1,30 +1,72 @@
 {
   "id": "xixia",
   "name": "西夏",
+  "nameEn": "Western Xia",
   "years": "1038–1227",
+  "yearsEn": "1038–1227",
   "era": "宋元",
   "capital": "兴庆府(银川)",
+  "capitalEn": "Xingqing Prefecture (Yinchuan)",
   "feature": "党项羌建立，据河西走廊，创西夏文，与宋、辽、金鼎立，终亡于蒙古。",
+  "featureEn": "Founded by the Tangut; held the Hexi Corridor, created the Tangut script, stood against Song, Liao and Jin; finally fell to the Mongols.",
   "summary": "西北割据政权，佛教与番汉文化交融。",
+  "summaryEn": "A northwestern separatist regime; Buddhism and Tangut–Han culture blended.",
   "emperors": [
-    { "n": "夏景宗(李元昊)", "t": "开国", "rg": "1038–1048", "ry": 10, "note": "称帝建国，创西夏文" },
-    { "n": "夏毅宗(李谅祚)", "t": "", "rg": "1048–1067", "ry": 19, "note": "幼年即位" },
-    { "n": "夏惠宗(李秉常)", "t": "", "rg": "1067–1086", "ry": 19, "note": "母党专权" },
-    { "n": "夏崇宗(李乾顺)", "t": "", "rg": "1086–1139", "ry": 53, "note": "周旋于宋金" },
-    { "n": "夏仁宗(李仁孝)", "t": "", "rg": "1139–1193", "ry": 54, "note": "西夏盛世" },
-    { "n": "夏桓宗(李纯祐)", "t": "", "rg": "1193–1206", "ry": 13, "note": "守成" },
-    { "n": "夏襄宗(李安全)", "t": "", "rg": "1206–1211", "ry": 5, "note": "政变即位" },
-    { "n": "夏神宗(李遵顼)", "t": "", "rg": "1211–1223", "ry": 12, "note": "附蒙攻金" },
-    { "n": "夏献宗(李德旺)", "t": "", "rg": "1223–1226", "ry": 3, "note": "抗蒙" },
-    { "n": "夏末帝(李睍)", "t": "末代", "rg": "1226–1227", "ry": 1, "note": "亡于蒙古" }
+    { "n": "夏景宗(李元昊)", "nEn": "Emperor Jingzong of Xia (Li Yuanhao)", "t": "开国", "tEn": "Founding", "rg": "1038–1048", "rgEn": "1038–1048", "ry": 10, "note": "称帝建国，创西夏文", "noteEn": "Declared himself emperor, founded the state, created the Tangut script" },
+    { "n": "夏毅宗(李谅祚)", "nEn": "Emperor Yizong of Xia (Li Liangzuo)", "t": "", "tEn": "", "rg": "1048–1067", "rgEn": "1048–1067", "ry": 19, "note": "幼年即位", "noteEn": "Enthroned as a child" },
+    { "n": "夏惠宗(李秉常)", "nEn": "Emperor Huizong of Xia (Li Bingchang)", "t": "", "tEn": "", "rg": "1067–1086", "rgEn": "1067–1086", "ry": 19, "note": "母党专权", "noteEn": "His mother's clan monopolized power" },
+    { "n": "夏崇宗(李乾顺)", "nEn": "Emperor Chongzong of Xia (Li Ganshun)", "t": "", "tEn": "", "rg": "1086–1139", "rgEn": "1086–1139", "ry": 53, "note": "周旋于宋金", "noteEn": "Maneuvered between Song and Jin" },
+    { "n": "夏仁宗(李仁孝)", "nEn": "Emperor Renzong of Xia (Li Renxiao)", "t": "", "tEn": "", "rg": "1139–1193", "rgEn": "1139–1193", "ry": 54, "note": "西夏盛世", "noteEn": "The heyday of Western Xia" },
+    { "n": "夏桓宗(李纯祐)", "nEn": "Emperor Huanzong of Xia (Li Chunyou)", "t": "", "tEn": "", "rg": "1193–1206", "rgEn": "1193–1206", "ry": 13, "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "夏襄宗(李安全)", "nEn": "Emperor Xiangzong of Xia (Li Anquan)", "t": "", "tEn": "", "rg": "1206–1211", "rgEn": "1206–1211", "ry": 5, "note": "政变即位", "noteEn": "Seized the throne by coup" },
+    { "n": "夏神宗(李遵顼)", "nEn": "Emperor Shenzong of Xia (Li Zunxu)", "t": "", "tEn": "", "rg": "1211–1223", "rgEn": "1211–1223", "ry": 12, "note": "附蒙攻金", "noteEn": "Allied with Mongols against Jin" },
+    { "n": "夏献宗(李德旺)", "nEn": "Emperor Xianzong of Xia (Li Dewang)", "t": "", "tEn": "", "rg": "1223–1226", "rgEn": "1223–1226", "ry": 3, "note": "抗蒙", "noteEn": "Resisted the Mongols" },
+    { "n": "夏末帝(李睍)", "nEn": "Last Emperor of Xia (Li Xian)", "t": "末代", "tEn": "Last ruler", "rg": "1226–1227", "rgEn": "1226–1227", "ry": 1, "note": "亡于蒙古", "noteEn": "Fell to the Mongols" }
   ],
   "talents": {
-    "其他": [{ "n": "野利仁荣", "note": "创制西夏文" }, { "n": "没藏太后", "note": "临朝称制" }]
+    "其他": [
+      { "n": "野利仁荣", "nEn": "Yeli Renrong", "note": "创制西夏文", "noteEn": "Created the Tangut script" },
+      { "n": "没藏太后", "nEn": "Empress Dowager Moang", "note": "临朝称制", "noteEn": "Ruled from behind the curtain" }
+    ]
   },
-  "policies": ["番汉分治", "创制西夏文", "军司制", "佛寺经济"],
+  "policies": [
+    "番汉分治",
+    "创制西夏文",
+    "军司制",
+    "佛寺经济"
+  ],
+  "policiesEn": [
+    "Tangut–Han separate rule",
+    "Created the Tangut script",
+    "The military-commission system",
+    "The temple-based economy"
+  ],
   "aspects": {
-    "政治": ["党项立国，番汉分治，皇权与后族角力", "周旋于宋、辽、金之间"],
-    "经济": ["据河西走廊，控丝路商贸", "兴庆府为都会，农牧并举"],
-    "文化": ["创制西夏文，译经兴佛", "佛教鼎盛，兼融汉、藏文化"]
+    "政治": [
+      "党项立国，番汉分治，皇权与后族角力",
+      "周旋于宋、辽、金之间"
+    ],
+    "经济": [
+      "据河西走廊，控丝路商贸",
+      "兴庆府为都会，农牧并举"
+    ],
+    "文化": [
+      "创制西夏文，译经兴佛",
+      "佛教鼎盛，兼融汉、藏文化"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "The Tangut founded the state; Tangut–Han separate rule; throne vs. empress's clan",
+      "Maneuvered between Song, Liao and Jin"
+    ],
+    "经济": [
+      "Held the Hexi Corridor, controlled Silk Road trade",
+      "Xingqing as the capital; farming and herding together"
+    ],
+    "文化": [
+      "Created the Tangut script, translated sutras and promoted Buddhism",
+      "Buddhism at its height, blending Han and Tibetan cultures"
+    ]
   }
 }
