@@ -38,13 +38,17 @@
 <script>
 (function(){try{var t=localStorage.getItem('theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
 </script>
+<script>
+(function(){try{var l=localStorage.getItem('lang');if(!l){l=(navigator.language||'zh').toLowerCase().startsWith('en')?'en':'zh';}document.documentElement.lang=l==='en'?'en':'zh-CN';}catch(e){}})();
+</script>
 </head>
 <body>
 <div class="wrap">
   <section class="hero">
     <button class="theme-btn" id="themeBtn" title="切换明暗主题" aria-label="切换明暗主题">🌙 夜间</button>
-    <h1>中华王朝 · 千年脉络</h1>
-    <p>从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。</p>
+    <button class="lang-btn" id="langBtn" title="切换语言 / Switch language" aria-label="切换语言">🌐 <span id="langLabel">中文</span></button>
+    <h1 data-i18n="heroTitle">中华王朝 · 千年脉络</h1>
+    <p data-i18n="heroSub">从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。</p>
     <div class="kpis" id="kpis"></div>
   </section>
 
@@ -55,21 +59,21 @@
   </div>
 
   <nav class="modnav" id="modNav">
-    <button class="mod active" data-go="m-home">概览</button>
-    <button class="mod" data-go="m-timeline">朝代时间轴</button>
-    <button class="mod" data-go="m-span">存续一览</button>
-    <button class="mod" data-go="m-inv">四大发明</button>
-    <button class="mod" data-go="m-events">大事记</button>
-    <button class="mod" data-go="m-records">帝王之最</button>
+    <button class="mod active" data-go="m-home" data-i18n="nav.home">概览</button>
+    <button class="mod" data-go="m-timeline" data-i18n="nav.timeline">朝代时间轴</button>
+    <button class="mod" data-go="m-span" data-i18n="nav.span">存续一览</button>
+    <button class="mod" data-go="m-inv" data-i18n="nav.inv">四大发明</button>
+    <button class="mod" data-go="m-events" data-i18n="nav.events">大事记</button>
+    <button class="mod" data-go="m-records" data-i18n="nav.records">帝王之最</button>
   </nav>
 
   <section class="module active" id="m-home">
-    <p class="home-lead">从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始</p>
+    <p class="home-lead" data-i18n="homeLead">从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始</p>
     <div class="home-grid">
-      <button class="entry" data-go="m-timeline"><span class="entry-ic">📜</span><span class="entry-t">朝代时间轴</span><span class="entry-d">18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化</span><span class="entry-go">进入 →</span></button>
-      <button class="entry" data-go="m-span"><span class="entry-ic">📊</span><span class="entry-t">存续一览</span><span class="entry-d">按年代比例对比各朝长短，一眼看三千年</span><span class="entry-go">进入 →</span></button>
-      <button class="entry" data-go="m-inv"><span class="entry-ic">🧭</span><span class="entry-t">四大发明</span><span class="entry-d">造纸、印刷、火药、指南针的朝代、人物与世界影响</span><span class="entry-go">进入 →</span></button>
-      <button class="entry" data-go="m-events"><span class="entry-ic">🗓️</span><span class="entry-t">历史大事记</span><span class="entry-d">32 个关键节点，串起王朝兴替</span><span class="entry-go">进入 →</span></button>
+      <button class="entry" data-go="m-timeline"><span class="entry-ic">📜</span><span class="entry-t" data-i18n="entry.timeline.t">朝代时间轴</span><span class="entry-d" data-i18n="entry.timeline.d">18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-span"><span class="entry-ic">📊</span><span class="entry-t" data-i18n="entry.span.t">存续一览</span><span class="entry-d" data-i18n="entry.span.d">按年代比例对比各朝长短，一眼看三千年</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-inv"><span class="entry-ic">🧭</span><span class="entry-t" data-i18n="entry.inv.t">四大发明</span><span class="entry-d" data-i18n="entry.inv.d">造纸、印刷、火药、指南针的朝代、人物与世界影响</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-events"><span class="entry-ic">🗓️</span><span class="entry-t" data-i18n="entry.events.t">历史大事记</span><span class="entry-d" data-i18n="entry.events.d">32 个关键节点，串起王朝兴替</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
     </div>
   </section>
 
@@ -80,7 +84,7 @@
 
   <section class="module" id="m-span">
     <section class="spanchart">
-      <div class="inv-head"><h2>朝代存续一览</h2><p>长度按年代比例 · 点击任意行可跳转</p></div>
+      <div class="inv-head"><h2 data-i18n="spanTitle">朝代存续一览</h2><p data-i18n="spanSub">长度按年代比例 · 点击任意行可跳转</p></div>
       <div class="span-wrap">
         <div class="span-rows" id="spanRows"></div>
         <div class="span-axis"><span></span><div class="span-ticks" id="spanTicks"></div><span></span></div>
@@ -90,27 +94,24 @@
 
   <section class="module" id="m-inv">
     <section class="inventions">
-      <div class="inv-head"><h2>四大发明</h2><p>改变世界的中国创造 · 点击可跳转到对应朝代</p></div>
+      <div class="inv-head"><h2 data-i18n="invTitle">四大发明</h2><p data-i18n="invSub">改变世界的中国创造 · 点击可跳转到对应朝代</p></div>
       <div class="inv-grid" id="inventions"></div>
     </section>
   </section>
 
   <section class="module" id="m-events">
     <section class="events">
-      <div class="inv-head"><h2>历史大事记</h2><p>关键节点 · 点击可跳转到对应朝代</p></div>
+      <div class="inv-head"><h2 data-i18n="evTitle">历史大事记</h2><p data-i18n="evSub">关键节点 · 点击可跳转到对应朝代</p></div>
       <div class="ev-groups" id="evList"></div>
     </section>
   </section>
 
   <section class="module" id="m-records">
-    <div class="inv-head"><h2>帝王之最</h2><p>基于各朝代帝王世系统计 · 点击可跳转到对应朝代</p></div>
+    <div class="inv-head"><h2 data-i18n="recTitle">帝王之最</h2><p data-i18n="recSub">基于各朝代帝王世系统计 · 点击可跳转到对应朝代</p></div>
     <div class="rec-grid" id="recGrid"></div>
   </section>
 
-  <p class="foot">
-    <span class="legend">👑 深红卡片</span> = 后世誉为「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）　·　<span class="legend">★ 金色卡片</span> = 该朝代代表性名君　·　点击卡片可展开/收起详情（首次展开才加载该朝数据）<br>
-    数据为科普概览，细节以权威史料为准　·　可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说
-  </p>
+  <p class="foot" id="foot"></p>
 </div>
 
 <noscript><p style="text-align:center;padding:20px">本页为交互式时间轴，建议开启 JavaScript 以获得完整体验。各朝代数据见 <code>data/overview.json</code> 与 <code>data/dynasties/</code>。</p></noscript>
@@ -120,6 +121,84 @@
 </button>
 <script>
 const SITE="https://MinosIE.github.io/chinese-dynasty-timeline/";
+/* ---------- 多语言 I18N ---------- */
+const I18N={
+  zh:{
+    docTitle:"中华王朝 · 千年脉络 | 中国历史朝代科普",docDesc:"从夏到清的中国历史朝代科普：每个王朝的概览、帝王世系、核心人才与关键制度一目了然，帮你建立三千年王朝脉络。",
+    heroTitle:"中华王朝 · 千年脉络",
+    heroSub:"从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。",
+    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最"},
+    homeLead:"从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始",
+    entry:{timeline:{t:"朝代时间轴",d:"18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"}},
+    enter:"进入 →",
+    spanTitle:"朝代存续一览",spanSub:"长度按年代比例 · 点击任意行可跳转",
+    invTitle:"四大发明",invSub:"改变世界的中国创造 · 点击可跳转到对应朝代",
+    evTitle:"历史大事记",evSub:"关键节点 · 点击可跳转到对应朝代",
+    recTitle:"帝王之最",recSub:"基于各朝代帝王世系统计 · 点击可跳转到对应朝代",
+    searchPh:"搜索：朝代 / 帝王 / 人物 / 制度 / 发明，如「李世民」「科举」「火药」",
+    kpiMain:"主要王朝",kpiYears:"年王朝（夏→清）",kpiPeople:"帝王与人才",
+    statEmperors:"帝王",statTalents:"人才",statPolicies:"制度",unitPerson:"位",unitItem:"项",
+    tabAll:"全部",
+    expand:"展开详情",collapse:"收起详情",
+    loadingDetail:"正在加载 {id} 详情…",
+    loadFail:"详情加载失败，请检查网络或 data/dynasties/{id}.json 是否存在。",
+    secEmperors:"帝王世系",secTalents:"核心人才",secPolicies:"政策与制度",secAspects:"政治 · 经济 · 文化",
+    legendTag:"千古一帝",starTag:"名君",
+    reign:"在位",reignYears:"年",reignTitle:"年号",templeTitle:"庙号",posthumousTitle:"谥号",
+    viewPrefix:"查看「",viewSuffix:"」→",
+    recLongest:"在位最长",recShortest:"在位最短",recMost:"帝王数量最多",
+    recDynMeta:"共 {n} 位帝王",recUnitYear:"年",recUnitRuler:"位",
+    searchEmpty:"未找到「{q}」相关内容",
+    srType:{dynasty:"朝代",ruler:"帝王",figure:"人物",institution:"制度",invention:"发明",event:"事件",achievement:"成就"},
+    overviewFail:"概览数据加载失败：请确认 data/overview.json 存在且通过 HTTP 访问（GitHub Pages 部署后正常）。",
+    toTop:"返回顶部",langName:"中文",themeNight:"🌙 夜间",themeDay:"☀️ 日间",
+    jsonName:"中华王朝时间轴",jsonDesc:"科普中国历史朝代（夏到清）的静态网页，含各王朝概览、帝王世系、核心人才与关键制度。",
+    era:{"全部":"全部","先秦":"先秦","秦汉":"秦汉","三国两晋南北朝":"三国两晋南北朝","隋唐":"隋唐","宋元":"宋元","明清":"明清"},
+    foot:'<span class="legend">👑 深红卡片</span> = 后世誉为「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）　·　<span class="legend">★ 金色卡片</span> = 该朝代代表性名君　·　点击卡片可展开/收起详情（首次展开才加载该朝数据）<br>数据为科普概览，细节以权威史料为准　·　可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说'
+  },
+  en:{
+    docTitle:"Chinese Dynasties · A Millennial Saga",docDesc:"From Xia to Qing: explore each Chinese dynasty's overview, imperial lineage, key talents, and pivotal institutions at a glance — three millennia of power, order, and civilization.",
+    heroTitle:"Chinese Dynasties · A Millennial Saga",
+    heroSub:"From Xia to Qing, explore each dynasty's imperial lineage, key talents, and pivotal institutions — and grasp three millennia of power, order, and civilization.",
+    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers"},
+    homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 18 dynasties. Pick a section to begin.",
+    entry:{timeline:{t:"Dynastic Timeline",d:"18 dynasties with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"}},
+    enter:"Enter →",
+    spanTitle:"Dynastic Spans",spanSub:"Bars scaled by era · click any row to jump",
+    invTitle:"Four Great Inventions",invSub:"Chinese creations that changed the world · click to jump to the dynasty",
+    evTitle:"Key Events",evSub:"Key milestones · click to jump to the dynasty",
+    recTitle:"Top Rulers",recSub:"Based on each dynasty's imperial genealogy · click to jump",
+    searchPh:"Search: dynasty / ruler / figure / institution / invention, e.g. “Li Shimin”, “keju”, “gunpowder”",
+    kpiMain:"Major Dynasties",kpiYears:"Yrs of Dynasties (Xia→Qing)",kpiPeople:"Rulers & Talents",
+    statEmperors:"Rulers",statTalents:"Talents",statPolicies:"Policies",unitPerson:"",unitItem:"",
+    tabAll:"All",
+    expand:"Expand",collapse:"Collapse",
+    loadingDetail:"Loading {id} details…",
+    loadFail:"Failed to load details. Check your network or whether data/dynasties/{id}.json exists.",
+    secEmperors:"Imperial Lineage",secTalents:"Key Talents",secPolicies:"Policies & Institutions",secAspects:"Politics · Economy · Culture",
+    legendTag:"Eternal Emperor",starTag:"Renowned Ruler",
+    reign:"Reigned",reignYears:"yrs",reignTitle:"Reign title",templeTitle:"Temple name",posthumousTitle:"Posthumous name",
+    viewPrefix:"View “",viewSuffix:"” →",
+    recLongest:"Longest Reign",recShortest:"Shortest Reign",recMost:"Most Rulers",
+    recDynMeta:"{n} rulers",recUnitYear:" yrs",recUnitRuler:"",
+    searchEmpty:"No results for “{q}”",
+    srType:{dynasty:"Dynasty",ruler:"Ruler",figure:"Figure",institution:"Institution",invention:"Invention",event:"Event",achievement:"Achievement"},
+    overviewFail:"Failed to load overview data: ensure data/overview.json exists and is served over HTTP (works after GitHub Pages deploy).",
+    toTop:"Back to top",langName:"EN",themeNight:"🌙 Night",themeDay:"☀️ Day",
+    jsonName:"Chinese Dynasties Timeline",jsonDesc:"A static page introducing Chinese dynasties (Xia to Qing) with overviews, imperial lineages, key talents, and pivotal institutions.",
+    era:{"全部":"All","先秦":"Pre-Qin","秦汉":"Qin–Han","三国两晋南北朝":"Three Kingdoms & Divisions","隋唐":"Sui–Tang","宋元":"Song–Yuan","明清":"Ming–Qing"},
+    foot:'<span class="legend">👑 Deep-red card</span> = hailed as an “Eternal Emperor” (Qin Shi Huang, Han Wudi, Tang Taizong, Kangxi)　·　<span class="legend">★ Gold card</span> = the dynasty’s representative renowned ruler　·　Click a card to expand/collapse details (data loads on first expand)<br>Content is for general education; defer to authoritative sources for details　·　Recorded dynasty history spans ~4000 years; tracing back to prehistoric Liangzhu/Longshan (~5000 years) gives the saying “five thousand years of civilization.”'
+  }
+};
+let lang=(function(){try{return localStorage.getItem('lang')||(navigator.language.toLowerCase().startsWith('en')?'en':'zh');}catch(e){return 'zh';}})();
+document.documentElement.lang=I18N[lang].htmlLang||(lang==='en'?'en':'zh-CN');
+const ERA_LABELS=I18N[lang].era;
+function t(key,vars){
+  const get=k=>k.split('.').reduce((o,p)=>(o==null?undefined:o[p]),I18N[lang]);
+  let s=get(key); if(s===undefined)s=key.split('.').reduce((o,p)=>(o==null?undefined:o[p]),I18N.zh); if(s===undefined)s=key;
+  if(vars&&typeof s==='string')for(const k in vars)s=s.replace(new RegExp('\\{'+k+'\\}','g'),vars[k]);
+  return s;
+}
 const ERA_COLORS={"先秦":"#C79A3A","秦汉":"#D4351C","三国两晋南北朝":"#7C3AED","隋唐":"#0EA5E9","宋元":"#059669","明清":"#EA580C"};
 const ROLE_COLORS={"文臣":"#3B82F6","武将":"#EF4444","思想·文人":"#10B981","其他":"#F59E0B"};
 const ASPECT_ORDER=["政治","经济","文化"];
@@ -170,24 +249,29 @@ let active="全部";
 
 /* ---------- 主题 ---------- */
 const themeBtn=document.getElementById('themeBtn');
-function syncThemeIcon(){themeBtn.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️ 日间':'🌙 夜间';}
+function syncThemeIcon(){themeBtn.textContent=document.documentElement.getAttribute('data-theme')==='dark'?t('themeDay'):t('themeNight');}
 syncThemeIcon();
 themeBtn.onclick=()=>{const next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
   document.documentElement.setAttribute('data-theme',next);localStorage.setItem('theme',next);syncThemeIcon();};
+const langBtn=document.getElementById('langBtn');
+if(langBtn)langBtn.onclick=()=>setLang(lang==='zh'?'en':'zh');
 
 /* ---------- Tabs ---------- */
-ERAS.forEach(e=>{const b=document.createElement('div');b.className='tab'+(e===active?' active':'');
-  b.textContent=e;b.onclick=()=>{active=e;[...tabsEl.children].forEach(c=>c.classList.toggle('active',c.textContent===e));render();};
-  tabsEl.appendChild(b);});
+function renderTabs(){
+  tabsEl.innerHTML='';
+  ERAS.forEach(e=>{const b=document.createElement('div');b.className='tab'+(e===active?' active':'');
+    b.textContent=I18N[lang].era[e]||e;b.onclick=()=>{active=e;renderTabs();render();};
+    tabsEl.appendChild(b);});
+}
 
 /* ---------- KPI ---------- */
 function renderKpis(){
   const dynasties=overview.length;
   const people=overview.reduce((s,o)=>s+o.counts.emperors+o.counts.talents,0);
   kpisEl.innerHTML=`
-    <div class="kpi"><div class="badge">👑</div><div style="display:flex;flex-direction:column"><span class="v">${dynasties}</span><span class="l">主要王朝</span></div></div>
-    <div class="kpi"><div class="badge">📜</div><div style="display:flex;flex-direction:column"><span class="v">约4000</span><span class="l">年王朝（夏→清）</span></div></div>
-    <div class="kpi"><div class="badge">⚔️</div><div style="display:flex;flex-direction:column"><span class="v">${people}+</span><span class="l">帝王与人才</span></div></div>`;
+    <div class="kpi"><div class="badge">👑</div><div style="display:flex;flex-direction:column"><span class="v">${dynasties}</span><span class="l">${t('kpiMain')}</span></div></div>
+    <div class="kpi"><div class="badge">📜</div><div style="display:flex;flex-direction:column"><span class="v">约4000</span><span class="l">${t('kpiYears')}</span></div></div>
+    <div class="kpi"><div class="badge">⚔️</div><div style="display:flex;flex-direction:column"><span class="v">${people}+</span><span class="l">${t('kpiPeople')}</span></div></div>`;
 }
 
 /* ---------- 渲染概览时间轴 ---------- */
@@ -202,15 +286,15 @@ function render(){
       <article class="card collapsed">
         <span class="accent" style="background:${ec}"></span>
         <div class="chead" role="button" tabindex="0" aria-expanded="false">
-          <span class="name">${o.name}</span><span class="years">${o.years}</span>${LEGEND_DYNASTIES.has(o.id)?'<span class="legend-mark">👑 千古一帝</span>':''}
-          <span class="meta">${o.capital} · 存续${o.duration}</span>
-          <span class="toggle"><span class="chev">▾</span>展开详情</span>
+          <span class="name">${o.name}</span><span class="years">${o.years}</span>${LEGEND_DYNASTIES.has(o.id)?`<span class="legend-mark">👑 ${t('legendTag')}</span>`:''}
+          <span class="meta">${o.capital} · ${o.duration}</span>
+          <span class="toggle"><span class="chev">▾</span>${t('expand')}</span>
         </div>
         <div class="feature">${o.feature}</div>
         <div class="stats">
-          <span class="stat">帝王 <b>${o.counts.emperors}</b> 位</span>
-          <span class="stat">人才 <b>${o.counts.talents}</b> 位</span>
-          <span class="stat">制度 <b>${o.counts.policies}</b> 项</span>
+          <span class="stat">${t('statEmperors')} <b>${o.counts.emperors}</b>${t('unitPerson')}</span>
+          <span class="stat">${t('statTalents')} <b>${o.counts.talents}</b>${t('unitPerson')}</span>
+          <span class="stat">${t('statPolicies')} <b>${o.counts.policies}</b>${t('unitItem')}</span>
         </div>
         <div class="panel"><div class="panel-i"><div class="detail" data-id="${o.id}"></div></div></div>
       </article>`;
@@ -219,7 +303,7 @@ function render(){
     const toggle=()=>{
       const collapsed=card.classList.toggle('collapsed');
       head.setAttribute('aria-expanded',String(!collapsed));
-      node.querySelector('.toggle').innerHTML=`<span class="chev">▾</span>${collapsed?'展开详情':'收起详情'}`;
+      node.querySelector('.toggle').innerHTML=`<span class="chev">▾</span>${collapsed?t('expand'):t('collapse')}`;
       if(!collapsed) loadDetail(o.id, node.querySelector('.detail'));
     };
     head.onclick=toggle;
@@ -234,7 +318,7 @@ async function loadDetail(id, container){
   if(container.dataset.loaded) return;
   if(cache[id]){container.innerHTML=buildDetail(cache[id]);container.dataset.loaded="1";return;}
   container.dataset.loaded="1";
-  container.innerHTML=`<div class="loading"><span class="spinner"></span>正在加载 ${id} 详情…</div>`;
+  container.innerHTML=`<div class="loading"><span class="spinner"></span>${t('loadingDetail',{id})}</div>`;
   try{
     const res=await fetch(`data/dynasties/${id}.json`);
     if(!res.ok) throw new Error(res.status);
@@ -242,12 +326,12 @@ async function loadDetail(id, container){
     cache[id]=d;
     container.innerHTML=buildDetail(d);
   }catch(e){
-    container.innerHTML=`<div class="loading">详情加载失败，请检查网络或 data/dynasties/${id}.json 是否存在。</div>`;
+    container.innerHTML=`<div class="loading">${t('loadFail',{id})}</div>`;
   }
 }
 
 function buildDetail(d){
-  const emperors=d.emperors.map(e=>{const legend=LEGEND.has(e.n);const star=!legend&&STAR.has(e.n);return `<div class="emp${legend?' legend':(star?' star':'')}"><div class="emp-top"><span class="star-ic">${legend?'👑':(star?'★':'')}</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${legend?`<span class="etag legend-tag hontag" tabindex="0" aria-label="千古一帝：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>千古一帝</span>`:(star?`<span class="etag star-tag hontag" tabindex="0" aria-label="名君：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>名君</span>`:'')}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
+  const emperors=d.emperors.map(e=>{const legend=LEGEND.has(e.n);const star=!legend&&STAR.has(e.n);return `<div class="emp${legend?' legend':(star?' star':'')}"><div class="emp-top"><span class="star-ic">${legend?'👑':(star?'★':'')}</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${legend?`<span class="etag legend-tag hontag" tabindex="0" aria-label="${t('legendTag')}：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>${t('legendTag')}</span>`:(star?`<span class="etag star-tag hontag" tabindex="0" aria-label="${t('starTag')}：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>${t('starTag')}</span>`:'')}</div><div class="emp-meta"><span class="er">${lang==='zh'?`在位 ${e.rg}（${e.ry}年）`:`${t('reign')} ${e.rg} (${e.ry} ${t('reignYears')})`}</span>${e.gh?`<span class="etag">${t('reignTitle')} ${e.gh}</span>`:''}${e.mt?`<span class="etag">${t('templeTitle')} ${e.mt}</span>`:''}${e.sh?`<span class="etag">${t('posthumousTitle')} ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
   let talents='';
   for(const role in d.talents){
     const col=ROLE_COLORS[role]||"#F59E0B";
@@ -263,12 +347,12 @@ function buildDetail(d){
     }).join('');
   }
   return `<div class="body">
-      <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--brand)">👑</span><span class="t">帝王世系</span><span class="c">${d.emperors.length}位</span></div>
+      <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--brand)">👑</span><span class="t">${t('secEmperors')}</span><span class="c">${d.emperors.length}${t('unitPerson')}</span></div>
         <div class="emps">${emperors}</div></div>
-      <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--info,#0EA5E9)">⚔️</span><span class="t">核心人才</span></div>${talents}</div>
-      <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--gold)">📜</span><span class="t">政策与制度</span></div>
+      <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--info,#0EA5E9)">⚔️</span><span class="t">${t('secTalents')}</span></div>${talents}</div>
+      <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--gold)">📜</span><span class="t">${t('secPolicies')}</span></div>
         <div class="pills">${pills}</div></div>
-      ${aspects?`<div class="sec"><div class="sec-h"><span class="ic" style="background:#0EA5E9">🏛️</span><span class="t">政治 · 经济 · 文化</span></div><div class="aspects">${aspects}</div></div>`:''}
+      ${aspects?`<div class="sec"><div class="sec-h"><span class="ic" style="background:#0EA5E9">🏛️</span><span class="t">${t('secAspects')}</span></div><div class="aspects">${aspects}</div></div>`:''}
       <div class="summary">${d.summary}</div>
     </div>`;
 }
@@ -278,8 +362,8 @@ function injectJsonLd(){
   const data={
     "@context":"https://schema.org",
     "@type":"ItemList",
-    "name":"中华王朝时间轴",
-    "description":"科普中国历史朝代（夏到清）的静态网页，含各王朝概览、帝王世系、核心人才与关键制度。",
+    "name":t('jsonName'),
+    "description":t('jsonDesc'),
     "url":SITE,
     "itemListElement":overview.map((o,i)=>({
       "@type":"ListItem","position":i+1,
@@ -300,13 +384,13 @@ function renderInventions(list){
       <span class="inv-person">${v.person}</span>
       <p class="inv-desc">${v.desc}</p>
       <p class="inv-world">🌍 ${v.world}</p>
-      <button class="inv-link" data-dynasty="${v.dynastyId}">查看「${v.dynastyLabel}」→</button>
+      <button class="inv-link" data-dynasty="${v.dynastyId}">${t('viewPrefix')}${v.dynastyLabel}${t('viewSuffix')}</button>
     </article>`).join('');
   document.querySelectorAll('.inv-link').forEach(b=>b.onclick=()=>jumpToDynasty(b.dataset.dynasty));
 }
 function jumpToDynasty(id){
   switchModule('m-timeline');
-  if(active!=="全部"){active="全部";[...tabsEl.children].forEach(c=>c.classList.toggle('active',c.textContent==="全部"));render();}
+  if(active!=="全部"){active="全部";renderTabs();render();}
   const node=document.getElementById(id);
   if(!node)return;
   const card=node.querySelector('.card');
@@ -336,11 +420,11 @@ function renderSpan(){
     const l=pct(o.start),w=Math.max(0.8,pct(o.end)-pct(o.start));
     const col=ERA_COLORS[o.era]||'#697386';
     const fmt=y=>y<0?('前'+(-y)):y;
-    return `<div class="span-row" role="button" tabindex="0" data-dynasty="${o.id}" title="${o.name} ${o.years}（存续${o.duration}）"><span class="span-name">${o.name}<span class="span-year">${o.duration}</span></span><div class="span-track"><span class="span-bar" style="left:${l}%;width:${w}%;background:linear-gradient(135deg,${col},${col}cc)"></span></div></div>`;
+    return `<div class="span-row" role="button" tabindex="0" data-dynasty="${o.id}" title="${o.name} ${o.years}"><span class="span-name">${o.name}<span class="span-year">${o.duration}</span></span><div class="span-track"><span class="span-bar" style="left:${l}%;width:${w}%;background:linear-gradient(135deg,${col},${col}cc)"></span></div></div>`;
   }).join('');
   const ticks=[-2000,-1500,-1000,-500,1,500,1000,1500,1900];
   document.getElementById('spanTicks').innerHTML=ticks.map(t=>{
-    const lbl=t<0?('前'+(-t)):(t===1?'公元':t);
+    const lbl=t<0?((lang==='zh'?'前':'BC ')+(-t)):(t===1?(lang==='zh'?'公元':'AD'):t);
     return `<span class="span-tick" style="left:${pct(t)}%">${lbl}</span>`;
   }).join('');
   document.querySelectorAll('.span-row').forEach(r=>{
@@ -357,9 +441,9 @@ function renderEvents(list){
   list.forEach(e=>{const era=eraById[e.d]||"其他";(groups[era]=groups[era]||[]).push(e);});
   document.getElementById('evList').innerHTML=ORDER.filter(k=>groups[k]).map(k=>`
     <section class="ev-group">
-      <h3 class="ev-gh">${k}</h3>
+      <h3 class="ev-gh">${I18N[lang].era[k]||k}</h3>
       <div class="ev-list">${groups[k].map(e=>{
-        const y=e.y<0?('前'+(-e.y)):e.y;
+        const y=e.y<0?((lang==='zh'?'前':'BC ')+(-e.y)):e.y;
         return `<div class="ev" role="button" tabindex="0" data-dynasty="${e.d}"><span class="ev-year">${y}</span><span class="ev-main"><span class="ev-name">${e.t}</span><span class="ev-x">${e.x}</span></span></div>`;
       }).join('')}</div>
     </section>`).join('');
@@ -392,8 +476,8 @@ function renderRecords(r){
       const w=max?Math.round(val/max*100):0;
       const badge=idx<3?medal[idx]:'';
       const name=kind==='dyn'?i.dynasty:i.name;
-      const meta=kind==='dyn'?('共 '+i.count+' 位帝王'):(i.dynasty+' · '+(i.rg||''));
-      const valTxt=kind==='dyn'?(i.count+'位'):(i.ry+'年');
+      const meta=kind==='dyn'?t('recDynMeta',{n:i.count}):(i.dynasty+' · '+(i.rg||''));
+      const valTxt=kind==='dyn'?(i.count+t('recUnitRuler')):(i.ry+t('recUnitYear'));
       return `<li class="rec-item ${badge}" data-dynasty="${i.id}">
         <span class="rec-rank">${idx+1}</span>
         <div class="rec-body">
@@ -404,7 +488,7 @@ function renderRecords(r){
     return `<div class="rec-card"><h3 class="rec-title">${title}</h3><ol class="rec-list">${rows}</ol></div>`;
   };
   document.getElementById('recGrid').innerHTML=
-    card('在位最长',r.longest,'emp')+card('在位最短',r.shortest,'emp')+card('帝王数量最多',r.mostEmperors,'dyn');
+    card(t('recLongest'),r.longest,'emp')+card(t('recShortest'),r.shortest,'emp')+card(t('recMost'),r.mostEmperors,'dyn');
   document.querySelectorAll('#recGrid .rec-item').forEach(el=>{
     const go=()=>jumpToDynasty(el.dataset.dynasty);
     el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
@@ -419,8 +503,8 @@ async function ensureSearch(){if(searchIndex)return;try{const r=await fetch('dat
 function runSearch(q){
   if(!q){srEl.hidden=true;srEl.innerHTML='';return;}
   const res=searchIndex.filter(it=>it.n.includes(q)||(it.x&&it.x.includes(q))).slice(0,40);
-  if(!res.length){srEl.innerHTML=`<div class="sr-empty">未找到「${q}」相关内容</div>`;srEl.hidden=false;return;}
-  srEl.innerHTML=res.map(it=>`<div class="sr-item" data-dynasty="${it.d}" role="button" tabindex="0"><span class="sr-type">${it.t}</span><span class="sr-name">${it.n}</span>${it.x?`<span class="sr-x">${it.x}</span>`:''}<span class="sr-dyn">${it.dn}</span></div>`).join('');
+  if(!res.length){srEl.innerHTML=`<div class="sr-empty">${t('searchEmpty',{q})}</div>`;srEl.hidden=false;return;}
+  srEl.innerHTML=res.map(it=>`<div class="sr-item" data-dynasty="${it.d}" role="button" tabindex="0"><span class="sr-type">${t('srType.'+it.t)}</span><span class="sr-name">${it.n}</span>${it.x?`<span class="sr-x">${it.x}</span>`:''}<span class="sr-dyn">${it.dn}</span></div>`).join('');
   srEl.hidden=false;
   srEl.querySelectorAll('.sr-item').forEach(el=>{el.onclick=()=>pickResult(el);el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pickResult(el);}};});
 }
@@ -433,6 +517,30 @@ searchEl.addEventListener('keydown',e=>{
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidden=true;});
 
+/* ---------- 多语言切换 ---------- */
+let invData=null,evData=null,recData=null;
+function applyStaticLang(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n);});
+  if(searchEl)searchEl.placeholder=t('searchPh');
+  document.title=t('docTitle');
+  const md=document.querySelector('meta[name="description"]');if(md)md.setAttribute('content',t('docDesc'));
+  syncThemeIcon();
+  const tt=document.getElementById('toTop');if(tt){tt.title=t('toTop');tt.setAttribute('aria-label',t('toTop'));}
+  const fl=document.getElementById('foot');if(fl)fl.innerHTML=t('foot');
+  const ll=document.getElementById('langLabel');if(ll)ll.textContent=t('langName');
+}
+function rerenderTranslatable(){
+  renderKpis();renderTabs();render();renderSpan();
+  if(invData)renderInventions(invData);
+  if(evData)renderEvents(evData);
+  if(recData)renderRecords(recData);
+}
+function setLang(next){
+  lang=next;localStorage.setItem('lang',next);
+  document.documentElement.lang=I18N[lang].htmlLang||(next==='en'?'en':'zh-CN');
+  applyStaticLang();rerenderTranslatable();
+}
+
 /* ---------- 启动 ---------- */
 (async function init(){
   try{
@@ -440,16 +548,18 @@ document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidde
     if(!res.ok) throw new Error(res.status);
     overview=await res.json();
   }catch(e){
-    tl.innerHTML=`<div class="loading">概览数据加载失败：请确认 data/overview.json 存在且通过 HTTP 访问（GitHub Pages 部署后正常）。</div>`;
+    tl.innerHTML=`<div class="loading">${t('overviewFail')}</div>`;
     return;
   }
+  applyStaticLang();
+  renderTabs();
   renderKpis();
   render();
   renderSpan();
   injectJsonLd();
-  try{const r=await fetch('data/inventions.json');if(r.ok)renderInventions(await r.json());}catch(e){}
-  try{const r=await fetch('data/events.json');if(r.ok)renderEvents(await r.json());}catch(e){}
-  try{const r=await fetch('data/records.json');if(r.ok)renderRecords(await r.json());}catch(e){}
+  try{const r=await fetch('data/inventions.json');if(r.ok){invData=await r.json();renderInventions(invData);}}catch(e){}
+  try{const r=await fetch('data/events.json');if(r.ok){evData=await r.json();renderEvents(evData);}}catch(e){}
+  try{const r=await fetch('data/records.json');if(r.ok){recData=await r.json();renderRecords(recData);}}catch(e){}
   const h=decodeURIComponent(location.hash.slice(1));
   if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
 })();
