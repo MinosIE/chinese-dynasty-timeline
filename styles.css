@@ -59,7 +59,7 @@
   .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
     border-radius:50%;background:radial-gradient(circle,rgba(212,53,28,.35),transparent 70%)}
   .hero h1{font-size:34px;font-weight:800;letter-spacing:1px;color:#fff}
-  .hero p{color:rgba(255,255,255,.78);font-size:15px;max-width:620px}
+  .hero p{color:rgba(255,255,255,.78);font-size:15px}
   .kpis{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
   .kpi{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.10);
     border:1px solid rgba(255,255,255,.16);border-radius:var(--r3);padding:16px 22px;min-width:160px}
@@ -166,7 +166,7 @@
     background-size:12.3457% 100%;background-position:2.4691% 0}
   .span-bar{position:absolute;top:2px;bottom:2px;border-radius:5px;min-width:4px;
     display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .span-bar-label{font-size:11px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35);white-space:nowrap;padding:0 7px}
+  .span-bar-label{font-size:11px;font-weight:700;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35);white-space:nowrap;padding:0 7px}\n  .span-bar-label.out{position:absolute;top:50%;transform:translateY(-50%);padding:0 0 0 5px;color:var(--text-soft);\n    text-shadow:none;font-weight:600;pointer-events:none}
   .span-years{font-size:11.5px;color:var(--text-mute);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
   .span-axis{display:grid;grid-template-columns:76px 1fr 116px;gap:12px;margin-top:6px;min-width:680px}
   .span-ticks{position:relative;height:16px}

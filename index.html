@@ -326,9 +326,9 @@ function renderSpan(){
   document.getElementById('spanRows').innerHTML=list.map(o=>{
     const l=pct(o.start),w=Math.max(0.8,pct(o.end)-pct(o.start));
     const col=ERA_COLORS[o.era]||'#697386';
-    const label=w>9?`<span class="span-bar-label">${o.duration}</span>`:'';
+    const label=`<span class="span-bar-label${w>9?'':' out'}">${o.duration}</span>`;
     const fmt=y=>y<0?('前'+(-y)):y;
-    return `<div class="span-row" role="button" tabindex="0" data-dynasty="${o.id}" title="${o.name} ${o.years}（存续${o.duration}）"><span class="span-name">${o.name}</span><div class="span-track"><span class="span-bar" style="left:${l}%;width:${w}%;background:linear-gradient(135deg,${col},${col}cc)">${label}</span></div><span class="span-years">${fmt(o.start)}–${fmt(o.end)}</span></div>`;
+    return `<div class="span-row" role="button" tabindex="0" data-dynasty="${o.id}" title="${o.name} ${o.years}（存续${o.duration}）"><span class="span-name">${o.name}</span><div class="span-track"><span class="span-bar" style="left:${l}%;width:${w}%;background:linear-gradient(135deg,${col},${col}cc)">${w>9?label:''}</span>${w<=9?`<span class="span-bar-label out" style="left:${l+w}%">${o.duration}</span>`:''}</div><span class="span-years">${fmt(o.start)}–${fmt(o.end)}</span></div>`;
   }).join('');
   const ticks=[-2000,-1500,-1000,-500,1,500,1000,1500,1900];
   document.getElementById('spanTicks').innerHTML=ticks.map(t=>{
