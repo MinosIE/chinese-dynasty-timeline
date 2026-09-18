@@ -140,7 +140,7 @@ const I18N={
     evTitle:"历史大事记",evSub:"关键节点 · 点击可跳转到对应朝代",
     recTitle:"帝王之最",recSub:"基于各朝代帝王世系统计 · 点击可跳转到对应朝代",
     searchPh:"搜索：朝代 / 帝王 / 人物 / 制度 / 发明，如「李世民」「科举」「火药」",
-    kpiMain:"主要王朝",kpiYears:"年王朝（夏→清）",kpiPeople:"帝王与人才",
+    kpiMain:"主要王朝",kpiYears:"年王朝（夏→清）",kpiYearsV:"约4000",kpiPeople:"帝王与人才",
     statEmperors:"帝王",statTalents:"人才",statPolicies:"制度",unitPerson:"位",unitItem:"项",
     tabAll:"全部",
     expand:"展开详情",collapse:"收起详情",
@@ -173,7 +173,7 @@ const I18N={
     evTitle:"Key Events",evSub:"Key milestones · click to jump to the dynasty",
     recTitle:"Top Rulers",recSub:"Based on each dynasty's imperial genealogy · click to jump",
     searchPh:"Search: dynasty / ruler / figure / institution / invention, e.g. “Li Shimin”, “keju”, “gunpowder”",
-    kpiMain:"Major Dynasties",kpiYears:"Yrs of Dynasties (Xia→Qing)",kpiPeople:"Rulers & Talents",
+    kpiMain:"Major Dynasties",kpiYears:"Yrs of Dynasties (Xia→Qing)",kpiYearsV:"~4000",kpiPeople:"Rulers & Talents",
     statEmperors:"Rulers",statTalents:"Talents",statPolicies:"Policies",unitPerson:"",unitItem:"",
     tabAll:"All",
     expand:"Expand",collapse:"Collapse",
@@ -309,7 +309,7 @@ function renderKpis(){
   const people=overview.reduce((s,o)=>s+o.counts.emperors+o.counts.talents,0);
   kpisEl.innerHTML=`
     <div class="kpi"><div class="badge">👑</div><div style="display:flex;flex-direction:column"><span class="v">${dynasties}</span><span class="l">${t('kpiMain')}</span></div></div>
-    <div class="kpi"><div class="badge">📜</div><div style="display:flex;flex-direction:column"><span class="v">约4000</span><span class="l">${t('kpiYears')}</span></div></div>
+    <div class="kpi"><div class="badge">📜</div><div style="display:flex;flex-direction:column"><span class="v">${t('kpiYearsV')}</span><span class="l">${t('kpiYears')}</span></div></div>
     <div class="kpi"><div class="badge">⚔️</div><div style="display:flex;flex-direction:column"><span class="v">${people}+</span><span class="l">${t('kpiPeople')}</span></div></div>`;
 }
 

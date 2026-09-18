@@ -19,7 +19,7 @@ https://MinosIE.github.io/chinese-dynasty-timeline/
 - **帝王之最**：在位最长 / 最短、帝王数量最多的朝代。
 - **搜索**：按朝代 / 帝王 / 人物 / 制度 / 发明检索并跳转。
 - **明暗主题**：右上角切换，记忆偏好，首访跟随系统。
-- **中英双语**：右上角一键切换中 / 英，文案与数据全量双语；`?lang=en` 可直达英文。
+- **中英双语**：左上角一键切换中 / 英（主题切换在右上角），文案与数据全量双语；`?lang=en` 可直达英文。
 - **GEO / SEO**：JSON-LD、llms.txt / llms-en.txt、hreflang、robots.txt、sitemap.xml、Open Graph 分享图。
 
 ## 目录结构

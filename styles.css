@@ -51,7 +51,7 @@
     font-size:13px;font-weight:600;cursor:pointer;backdrop-filter:blur(4px);
     display:inline-flex;align-items:center;gap:6px;font-family:inherit;transition:.2s}
   .theme-btn:hover{background:rgba(255,255,255,.2);transform:translateY(-1px)}
-  .lang-btn{position:absolute;top:64px;right:18px;z-index:5;height:40px;padding:0 14px;border-radius:999px;
+  .lang-btn{position:absolute;top:18px;left:18px;z-index:5;height:40px;padding:0 14px;border-radius:999px;
     border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.12);color:#fff;
     font-size:13px;font-weight:600;cursor:pointer;backdrop-filter:blur(4px);
     display:inline-flex;align-items:center;gap:6px;font-family:inherit;transition:.2s}
