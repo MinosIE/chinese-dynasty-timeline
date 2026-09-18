@@ -1,0 +1,242 @@
+[
+  {
+    "id": "xia",
+    "name": "夏",
+    "years": "约前2070–前1600",
+    "era": "先秦",
+    "capital": "阳城(传说)",
+    "approx": true,
+    "duration": "约470年",
+    "feature": "传说中首个世袭王朝，「家天下」由此开端；以下据古本竹书纪年约数列主要君主，合计约470年。",
+    "summary": "信史待考，多与二里头考古互证，标志中原早期国家雏形。",
+    "counts": {
+      "emperors": 17,
+      "talents": 2,
+      "policies": 3
+    }
+  },
+  {
+    "id": "shang",
+    "name": "商",
+    "years": "前1600–前1046",
+    "era": "先秦",
+    "capital": "殷(今安阳)",
+    "approx": true,
+    "duration": "约554年",
+    "feature": "甲骨文与青铜文明高峰，神权与王权合一；以下据传统王系约数列主要君主，合计约554年。",
+    "summary": "甲骨文证实商王世系，是中国有同期文字记载的最早王朝。",
+    "counts": {
+      "emperors": 26,
+      "talents": 4,
+      "policies": 3
+    }
+  },
+  {
+    "id": "zhou",
+    "name": "周",
+    "years": "西周前1046–前771 / 东周前770–前256",
+    "era": "先秦",
+    "capital": "镐京→洛邑",
+    "approx": true,
+    "duration": "约790年",
+    "feature": "分封宗法礼乐奠基；东周百家争鸣，思想爆炸。列主要王（谥号），合计约790年。",
+    "summary": "礼乐文明奠基期，百家争鸣直接塑造此后两千年文化基因。",
+    "counts": {
+      "emperors": 36,
+      "talents": 11,
+      "policies": 6
+    }
+  },
+  {
+    "id": "qin",
+    "name": "秦",
+    "years": "前221–前207",
+    "era": "秦汉",
+    "capital": "咸阳",
+    "approx": false,
+    "duration": "15年",
+    "feature": "中国首个大一统中央集权帝国，制度影响两千年。",
+    "summary": "虽短祚却确立帝制框架，中央集权范式沿用两千年。",
+    "counts": {
+      "emperors": 3,
+      "talents": 4,
+      "policies": 6
+    }
+  },
+  {
+    "id": "han",
+    "name": "汉",
+    "years": "西汉前202–公元8 / 东汉25–220",
+    "era": "秦汉",
+    "capital": "长安→洛阳",
+    "approx": true,
+    "duration": "约420年",
+    "feature": "大一统定型，丝路开通，儒术独尊，国号成族称。列主要帝，合计约420年。",
+    "summary": "奠定中华主体民族认同与集权范式，「汉」成为族称。",
+    "counts": {
+      "emperors": 24,
+      "talents": 10,
+      "policies": 6
+    }
+  },
+  {
+    "id": "sanguo",
+    "name": "三国",
+    "years": "220–280",
+    "era": "三国两晋南北朝",
+    "capital": "魏蜀吴",
+    "approx": false,
+    "duration": "60年",
+    "feature": "魏蜀吴鼎立，群雄与智谋的演义舞台。三政权同时并存，以下年数不相加（存续以时期计）。",
+    "summary": "乱世英豪辈出，《三国演义》使其深入民心。",
+    "counts": {
+      "emperors": 7,
+      "talents": 8,
+      "policies": 2
+    }
+  },
+  {
+    "id": "jin",
+    "name": "晋",
+    "years": "西晋265–316 / 东晋317–420",
+    "era": "三国两晋南北朝",
+    "capital": "洛阳→建康",
+    "approx": true,
+    "duration": "约155年",
+    "feature": "短暂统一后长期分裂，门阀士族兴盛。列主要帝，合计约155年。",
+    "summary": "统一旋即崩解，开启南北长期对峙的过渡期。",
+    "counts": {
+      "emperors": 13,
+      "talents": 5,
+      "policies": 4
+    }
+  },
+  {
+    "id": "nanbeichao",
+    "name": "南北朝",
+    "years": "420–589",
+    "era": "三国两晋南北朝",
+    "capital": "南北对峙",
+    "approx": false,
+    "duration": "170年",
+    "feature": "南北政权并立，民族大融合，佛教兴盛。南北同时在位，以下年数不相加（存续以时期计）。",
+    "summary": "民族融合关键期，为隋唐盛世积蓄多元养分。",
+    "counts": {
+      "emperors": 10,
+      "talents": 4,
+      "policies": 3
+    }
+  },
+  {
+    "id": "sui",
+    "name": "隋",
+    "years": "581–618",
+    "era": "隋唐",
+    "capital": "大兴(长安)",
+    "approx": false,
+    "duration": "37年",
+    "feature": "重归一统，开创科举与大运河。",
+    "summary": "制度创制(科举、运河)深远，短祚而承前启后。",
+    "counts": {
+      "emperors": 2,
+      "talents": 3,
+      "policies": 5
+    }
+  },
+  {
+    "id": "tang",
+    "name": "唐",
+    "years": "618–907",
+    "era": "隋唐",
+    "capital": "长安",
+    "approx": false,
+    "duration": "290年",
+    "feature": "盛世开放，文化璀璨，万国来朝。列主要帝系（含武周），合计约290年。",
+    "summary": "中国古代最强盛开放的时代之一，文化辐射整个东亚。",
+    "counts": {
+      "emperors": 23,
+      "talents": 9,
+      "policies": 6
+    }
+  },
+  {
+    "id": "wudai",
+    "name": "五代十国",
+    "years": "907–960",
+    "era": "隋唐",
+    "capital": "中原轮换",
+    "approx": false,
+    "duration": "53年",
+    "feature": "唐亡后中原五代更替、周边十国并立。列中原五代主要君主（十国并立不计入），合计53年。",
+    "summary": "大分裂尾声，武人乱政，终由宋重新统一。",
+    "counts": {
+      "emperors": 12,
+      "talents": 2,
+      "policies": 2
+    }
+  },
+  {
+    "id": "song",
+    "name": "宋",
+    "years": "北宋960–1127 / 南宋1127–1279",
+    "era": "宋元",
+    "capital": "汴京→临安",
+    "approx": false,
+    "duration": "319年",
+    "feature": "重文轻武，经济文化科技鼎盛，词风尤盛。列主要帝，合计约319年。",
+    "summary": "文治巅峰而军事积弱，经济与市民文化空前繁荣。",
+    "counts": {
+      "emperors": 18,
+      "talents": 11,
+      "policies": 7
+    }
+  },
+  {
+    "id": "yuan",
+    "name": "元",
+    "years": "1271–1368",
+    "era": "宋元",
+    "capital": "大都(北京)",
+    "approx": true,
+    "duration": "约97年",
+    "feature": "蒙古建立的大一统王朝，疆域空前。列主要帝，合计约97年。",
+    "summary": "首次由少数民族完成大一统，驿站连通欧亚。",
+    "counts": {
+      "emperors": 8,
+      "talents": 5,
+      "policies": 5
+    }
+  },
+  {
+    "id": "ming",
+    "name": "明",
+    "years": "1368–1644",
+    "era": "明清",
+    "capital": "南京→北京",
+    "approx": false,
+    "duration": "276年",
+    "feature": "汉族重建大一统，海禁与郑和下西洋并存。列主要帝，合计276年。",
+    "summary": "专制强化而商品经济活跃，海陆两端各有大动作。",
+    "counts": {
+      "emperors": 16,
+      "talents": 9,
+      "policies": 7
+    }
+  },
+  {
+    "id": "qing",
+    "name": "清",
+    "years": "1636–1912",
+    "era": "明清",
+    "capital": "北京",
+    "approx": false,
+    "duration": "276年",
+    "feature": "中国最后王朝，前期疆域极盛，后期遭遇近代变局（努尔哈赤建后金1616为清前身）。列主要帝，合计约276年。",
+    "summary": "古代帝制终结篇，由盛转衰卷入世界体系。",
+    "counts": {
+      "emperors": 11,
+      "talents": 9,
+      "policies": 8
+    }
+  }
+]
