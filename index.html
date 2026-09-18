@@ -539,7 +539,8 @@ const srEl=document.getElementById('searchResults');
 async function ensureSearch(){if(searchIndex)return;try{const r=await fetch('data/search.json');searchIndex=r.ok?await r.json():[];}catch(e){searchIndex=[];}}
 function runSearch(q){
   if(!q){srEl.hidden=true;srEl.innerHTML='';return;}
-  const res=searchIndex.filter(it=>it.n.includes(q)||(it.x&&it.x.includes(q))).slice(0,40);
+  const ql=q.toLowerCase();
+  const res=searchIndex.filter(it=>it.n.includes(q)||(it.x&&it.x.includes(q))||(it.nEn&&it.nEn.toLowerCase().includes(ql))||(it.xEn&&it.xEn.toLowerCase().includes(ql))).slice(0,40);
   if(!res.length){srEl.innerHTML=`<div class="sr-empty">${t('searchEmpty',{q})}</div>`;srEl.hidden=false;return;}
   srEl.innerHTML=res.map(it=>`<div class="sr-item" data-dynasty="${it.d}" role="button" tabindex="0"><span class="sr-type">${t('srType.'+it.t)}</span><span class="sr-name">${L(it,'n')}</span>${it.x?`<span class="sr-x">${L(it,'x')}</span>`:''}<span class="sr-dyn">${L(it,'dn')}</span></div>`).join('');
   srEl.hidden=false;
