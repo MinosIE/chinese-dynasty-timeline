@@ -479,7 +479,7 @@ function renderEvents(list){
   document.getElementById('evList').innerHTML=ORDER.filter(k=>groups[k]).map(k=>`
     <section class="ev-group">
       <h3 class="ev-gh">${I18N[lang].era[k]||k}</h3>
-      <div class="ev-list">${groups[k].map(e=>{
+      <div class="ev-list">${[...groups[k]].sort((a,b)=>a.y-b.y).map(e=>{
         const y=e.y<0?((lang==='zh'?'前':'BC ')+(-e.y)):e.y;
         return `<div class="ev" role="button" tabindex="0" data-dynasty="${e.d}"><span class="ev-year">${y}</span><span class="ev-main"><span class="ev-name">${L(e,'t')}</span><span class="ev-x">${L(e,'x')}</span></span></div>`;
       }).join('')}</div>
