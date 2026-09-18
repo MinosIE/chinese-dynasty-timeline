@@ -97,7 +97,7 @@
   <section class="module" id="m-events">
     <section class="events">
       <div class="inv-head"><h2>历史大事记</h2><p>关键节点 · 点击可跳转到对应朝代</p></div>
-      <div class="ev-list" id="evList"></div>
+      <div class="ev-groups" id="evList"></div>
     </section>
   </section>
 
@@ -341,10 +341,18 @@ function renderSpan(){
 
 /* ---------- 历史大事记 ---------- */
 function renderEvents(list){
-  document.getElementById('evList').innerHTML=list.map(e=>{
-    const y=e.y<0?('前'+(-e.y)):e.y;
-    return `<div class="ev" role="button" tabindex="0" data-dynasty="${e.d}"><span class="ev-year">${y}</span><span class="ev-main"><span class="ev-name">${e.t}</span><span class="ev-x">${e.x}</span></span></div>`;
-  }).join('');
+  const eraById=Object.fromEntries(overview.map(o=>[o.id,o.era]));
+  const ORDER=["先秦","秦汉","三国两晋南北朝","隋唐","宋元","明清"];
+  const groups={};
+  list.forEach(e=>{const era=eraById[e.d]||"其他";(groups[era]=groups[era]||[]).push(e);});
+  document.getElementById('evList').innerHTML=ORDER.filter(k=>groups[k]).map(k=>`
+    <section class="ev-group">
+      <h3 class="ev-gh">${k}</h3>
+      <div class="ev-list">${groups[k].map(e=>{
+        const y=e.y<0?('前'+(-e.y)):e.y;
+        return `<div class="ev" role="button" tabindex="0" data-dynasty="${e.d}"><span class="ev-year">${y}</span><span class="ev-main"><span class="ev-name">${e.t}</span><span class="ev-x">${e.x}</span></span></div>`;
+      }).join('')}</div>
+    </section>`).join('');
   document.querySelectorAll('.ev').forEach(el=>{
     const go=()=>jumpToDynasty(el.dataset.dynasty);
     el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};

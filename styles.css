@@ -165,7 +165,11 @@
   .span-ticks{position:relative;height:16px}
   .span-tick{position:absolute;transform:translateX(-50%);font-size:11px;color:var(--text-mute);white-space:nowrap}
   /* 历史大事记 */
-  .ev-list{display:flex;flex-direction:column;border-left:2px solid var(--border);margin-left:10px}
+  .ev-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;align-items:start}
+  .ev-group{background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-card);padding:16px 18px 14px}
+  .ev-gh{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--brand);margin-bottom:12px}
+  .ev-gh::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand)}
+  .ev-list{display:flex;flex-direction:column;border-left:2px solid var(--border);margin-left:5px}
   .ev{display:flex;gap:14px;padding:9px 0 9px 20px;position:relative;cursor:pointer;align-items:baseline}
   .ev::before{content:"";position:absolute;left:-8px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--brand)}
   .ev:hover .ev-name{color:var(--brand)}
