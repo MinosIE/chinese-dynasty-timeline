@@ -2,45 +2,69 @@
   {
     "id": "paper",
     "name": "造纸术",
+    "nameEn": "Papermaking",
     "emoji": "📜",
     "era": "东汉",
+    "eraEn": "Eastern Han",
     "dynastyLabel": "汉",
+    "dynastyLabelEn": "Han",
     "dynastyId": "han",
     "person": "蔡伦（改进，105 年）",
+    "personEn": "Cai Lun (improved, 105 AD)",
     "desc": "以树皮、麻头、破布等为原料改进造纸，纸张廉价易得，成为知识传播的重要载体。",
-    "world": "8 世纪传入阿拉伯，后传入欧洲，推动世界文明进程。"
+    "descEn": "Using bark, hemp, rag and such to improve papermaking; cheap, accessible paper became a key vehicle for knowledge.",
+    "world": "8 世纪传入阿拉伯，后传入欧洲，推动世界文明进程。",
+    "worldEn": "Reached Arabia in the 8th c., then Europe, advancing world civilization."
   },
   {
     "id": "printing",
     "name": "印刷术",
+    "nameEn": "Printing",
     "emoji": "🖨️",
     "era": "隋唐 → 北宋",
+    "eraEn": "Sui–Tang → Northern Song",
     "dynastyLabel": "隋 / 宋",
+    "dynastyLabelEn": "Sui / Song",
     "dynastyId": "sui",
     "person": "雕版印刷（隋唐）· 毕昇发明活字（北宋）",
+    "personEn": "Woodblock (Sui–Tang) · Bi Sheng invented movable type (Northern Song)",
     "desc": "雕版印刷始于隋唐；北宋毕昇以胶泥制活字，书籍复制效率大幅提升。",
-    "world": "加速知识普及，为欧洲活字印刷提供先声。"
+    "descEn": "Woodblock printing began in Sui–Tang; in the Northern Song Bi Sheng made clay movable type, hugely boosting book replication.",
+    "world": "加速知识普及，为欧洲活字印刷提供先声。",
+    "worldEn": "Accelerated knowledge diffusion, preluding European movable type."
   },
   {
     "id": "gunpowder",
     "name": "火药",
+    "nameEn": "Gunpowder",
     "emoji": "💥",
     "era": "唐 → 宋",
+    "eraEn": "Tang → Song",
     "dynastyLabel": "唐 / 宋",
+    "dynastyLabelEn": "Tang / Song",
     "dynastyId": "tang",
     "person": "唐代炼丹方士 · 宋代军用",
+    "personEn": "Tang alchemists · Song military use",
     "desc": "唐代最早见载于炼丹著作，唐末用于军事；宋代火药武器广泛应用。",
-    "world": "改变战争形态，13 世纪经蒙古西传至欧洲。"
+    "descEn": "First recorded in Tang alchemical texts; used in war by late Tang; widely used in Song weapons.",
+    "world": "改变战争形态，13 世纪经蒙古西传至欧洲。",
+    "worldEn": "Changed warfare; spread west to Europe via Mongols in the 13th c."
   },
   {
     "id": "compass",
     "name": "指南针",
+    "nameEn": "Compass",
     "emoji": "🧭",
     "era": "战国 → 北宋",
+    "eraEn": "Warring States → Northern Song",
     "dynastyLabel": "周 / 宋",
+    "dynastyLabelEn": "Zhou / Song",
     "dynastyId": "song",
     "person": "战国「司南」· 北宋用于航海",
+    "personEn": "“Sinan” of Warring States · used for navigation in Northern Song",
     "desc": "战国已有指向工具「司南」；北宋制成人工磁化指南针并用于航海定向。",
-    "world": "支撑远洋航行与大航海，重塑世界地理格局。"
+    "descEn": "The Warring States had the pointing tool “Sinan”; the Northern Song made an artificial magnetized compass for sea navigation.",
+    "world": "支撑远洋航行与大航海，重塑世界地理格局。",
+    "worldEn": "Supported ocean voyages and the Age of Discovery, reshaping world geography."
   }
 ]

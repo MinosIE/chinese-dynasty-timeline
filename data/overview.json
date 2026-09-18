@@ -2,325 +2,343 @@
   {
     "id": "xia",
     "name": "夏",
+    "nameEn": "Xia",
     "years": "约前2070–前1600",
+    "yearsEn": "c. 2070–1600 BC",
     "era": "先秦",
     "capital": "阳城(传说)",
+    "capitalEn": "Yangcheng (legendary)",
     "approx": true,
     "start": -2070,
     "end": -1600,
     "duration": "约470年",
+    "durationEn": "~470 yrs",
     "feature": "传说中首个世袭王朝，「家天下」由此开端；以下据古本竹书纪年约数列主要君主，合计约470年。",
+    "featureEn": "The first hereditary dynasty in legend; the “family rule” began here. Major rulers listed per the Bamboo Annals, totaling ~470 yrs.",
     "summary": "信史待考，多与二里头考古互证，标志中原早期国家雏形。",
-    "counts": {
-      "emperors": 17,
-      "talents": 2,
-      "policies": 3
-    }
+    "summaryEn": "Historicity still debated, cross-checked with Erlitou archaeology; marks the dawn of early statehood in the Central Plains."
   },
   {
     "id": "shang",
     "name": "商",
+    "nameEn": "Shang",
     "years": "前1600–前1046",
+    "yearsEn": "1600–1046 BC",
     "era": "先秦",
     "capital": "殷(今安阳)",
+    "capitalEn": "Yin (present-day Anyang)",
     "approx": true,
     "start": -1600,
     "end": -1046,
     "duration": "约554年",
+    "durationEn": "~554 yrs",
     "feature": "甲骨文与青铜文明高峰，神权与王权合一；以下据传统王系约数列主要君主，合计约554年。",
+    "featureEn": "Zenith of oracle-bone script and bronze civilization, with theocratic and royal power fused. Major rulers per the traditional line, ~554 yrs.",
     "summary": "甲骨文证实商王世系，是中国有同期文字记载的最早王朝。",
-    "counts": {
-      "emperors": 26,
-      "talents": 4,
-      "policies": 3
-    }
+    "summaryEn": "Oracle bones confirm the Shang royal genealogy — the earliest dynasty with contemporaneous written records in China."
   },
   {
     "id": "zhou",
     "name": "周",
+    "nameEn": "Zhou",
     "years": "西周前1046–前771 / 东周前770–前256",
+    "yearsEn": "Western Zhou 1046–771 BC / Eastern Zhou 770–256 BC",
     "era": "先秦",
     "capital": "镐京→洛邑",
+    "capitalEn": "Haojing → Luoyi",
     "approx": true,
     "start": -1046,
     "end": -256,
     "duration": "约790年",
+    "durationEn": "~790 yrs",
     "feature": "分封宗法礼乐奠基；东周百家争鸣，思想爆炸。列主要王（谥号），合计约790年。",
+    "featureEn": "Founded feudalism, kinship hierarchy and ritual music; the Eastern Zhou saw the Hundred Schools flourish. Major kings (posthumous names), ~790 yrs.",
     "summary": "礼乐文明奠基期，百家争鸣直接塑造此后两千年文化基因。",
-    "counts": {
-      "emperors": 36,
-      "talents": 11,
-      "policies": 6
-    }
+    "summaryEn": "The bedrock of ritual-music civilization; the Hundred Schools directly shaped two millennia of cultural DNA."
   },
   {
     "id": "qin",
     "name": "秦",
+    "nameEn": "Qin",
     "years": "前221–前207",
+    "yearsEn": "221–207 BC",
     "era": "秦汉",
     "capital": "咸阳",
+    "capitalEn": "Xianyang",
     "approx": false,
     "start": -221,
     "end": -207,
     "duration": "15年",
+    "durationEn": "15 yrs",
     "feature": "中国首个大一统中央集权帝国，制度影响两千年。",
+    "featureEn": "China's first unified centralized empire; its institutions shaped two millennia.",
     "summary": "虽短祚却确立帝制框架，中央集权范式沿用两千年。",
-    "counts": {
-      "emperors": 3,
-      "talents": 4,
-      "policies": 6
-    }
+    "summaryEn": "Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years."
   },
   {
     "id": "han",
     "name": "汉",
+    "nameEn": "Han",
     "years": "西汉前202–公元8 / 东汉25–220",
+    "yearsEn": "Western Han 202 BC–AD 8 / Eastern Han 25–220",
     "era": "秦汉",
     "capital": "长安→洛阳",
+    "capitalEn": "Chang'an → Luoyang",
     "approx": true,
     "start": -202,
     "end": 220,
     "duration": "约421年",
+    "durationEn": "~421 yrs",
     "feature": "大一统定型，丝路开通，儒术独尊，国号成族称。列主要帝，合计约421年。",
+    "featureEn": "Unification settled, the Silk Road opened, Confucianism made orthodox, and the dynasty's name became the ethnonym. Major emperors, ~421 yrs.",
     "summary": "奠定中华主体民族认同与集权范式，「汉」成为族称。",
-    "counts": {
-      "emperors": 25,
-      "talents": 10,
-      "policies": 6
-    }
+    "summaryEn": "Forged the core Han identity and the centralized model; “Han” became the name of the people."
   },
   {
     "id": "sanguo",
     "name": "三国",
+    "nameEn": "Three Kingdoms",
     "years": "220–280",
+    "yearsEn": "220–280",
     "era": "三国两晋南北朝",
     "capital": "魏蜀吴",
+    "capitalEn": "Wei · Shu · Wu",
     "approx": false,
     "start": 220,
     "end": 280,
     "duration": "60年",
+    "durationEn": "60 yrs",
     "feature": "魏蜀吴鼎立，群雄与智谋的演义舞台。三政权同时并存，以下年数不相加（存续以时期计）。",
+    "featureEn": "Wei, Shu and Wu stood in a tripartite balance — a stage of heroes and stratagems. The three coexisted, so tenures are not summed (duration counted by period).",
     "summary": "乱世英豪辈出，《三国演义》使其深入民心。",
-    "counts": {
-      "emperors": 7,
-      "talents": 8,
-      "policies": 2
-    }
+    "summaryEn": "An age of rising heroes, immortalized by Romance of the Three Kingdoms."
   },
   {
     "id": "jin",
     "name": "晋",
+    "nameEn": "Jin",
     "years": "西晋265–316 / 东晋317–420",
+    "yearsEn": "Western Jin 265–316 / Eastern Jin 317–420",
     "era": "三国两晋南北朝",
     "capital": "洛阳→建康",
+    "capitalEn": "Luoyang → Jiankang",
     "approx": true,
     "start": 265,
     "end": 420,
     "duration": "约158年",
+    "durationEn": "~158 yrs",
     "feature": "短暂统一后长期分裂，门阀士族兴盛。列主要帝，合计约158年。",
+    "featureEn": "Brief unity followed by long division; the gentry clans rose. Major emperors, ~158 yrs.",
     "summary": "统一旋即崩解，开启南北长期对峙的过渡期。",
-    "counts": {
-      "emperors": 15,
-      "talents": 5,
-      "policies": 4
-    }
+    "summaryEn": "Unity quickly collapsed, opening a long north–south standoff."
   },
   {
     "id": "nanbeichao",
     "name": "南北朝",
+    "nameEn": "Northern & Southern Dynasties",
     "years": "420–589",
+    "yearsEn": "420–589",
     "era": "三国两晋南北朝",
     "capital": "南北对峙",
+    "capitalEn": "North–South standoff",
     "approx": false,
     "start": 420,
     "end": 589,
     "duration": "170年",
+    "durationEn": "170 yrs",
     "feature": "南北政权并立，民族大融合，佛教兴盛。南北同时在位，以下年数不相加（存续以时期计）。",
+    "featureEn": "Northern and southern regimes coexisted, with great ethnic fusion and the spread of Buddhism. Tenures not summed (duration by period).",
     "summary": "民族融合关键期，为隋唐盛世积蓄多元养分。",
-    "counts": {
-      "emperors": 10,
-      "talents": 4,
-      "policies": 3
-    }
+    "summaryEn": "A key era of ethnic fusion, storing diverse nourishment for the Sui–Tang heyday."
   },
   {
     "id": "sui",
     "name": "隋",
+    "nameEn": "Sui",
     "years": "581–618",
+    "yearsEn": "581–618",
     "era": "隋唐",
     "capital": "大兴(长安)",
+    "capitalEn": "Daxing (Chang'an)",
     "approx": false,
     "start": 581,
     "end": 618,
     "duration": "37年",
+    "durationEn": "37 yrs",
     "feature": "重归一统，开创科举与大运河。",
+    "featureEn": "Reunified the realm; founded the exam system and the Grand Canal.",
     "summary": "制度创制(科举、运河)深远，短祚而承前启后。",
-    "counts": {
-      "emperors": 2,
-      "talents": 3,
-      "policies": 5
-    }
+    "summaryEn": "Its institutions (exams, canal) had lasting impact; short-lived but bridging."
   },
   {
     "id": "tang",
     "name": "唐",
+    "nameEn": "Tang",
     "years": "618–907",
+    "yearsEn": "618–907",
     "era": "隋唐",
     "capital": "长安",
+    "capitalEn": "Chang'an",
     "approx": false,
     "start": 618,
     "end": 907,
     "duration": "290年",
+    "durationEn": "290 yrs",
     "feature": "盛世开放，文化璀璨，万国来朝。列主要帝系（含武周），合计约290年。",
+    "featureEn": "A cosmopolitan golden age of radiant culture, with all nations paying tribute. Major emperors (incl. Wu Zhou), ~290 yrs.",
     "summary": "中国古代最强盛开放的时代之一，文化辐射整个东亚。",
-    "counts": {
-      "emperors": 23,
-      "talents": 9,
-      "policies": 6
-    }
+    "summaryEn": "One of the strongest and most open eras of imperial China; its culture radiated across East Asia."
   },
   {
     "id": "wudai",
     "name": "五代十国",
+    "nameEn": "Five Dynasties & Ten Kingdoms",
     "years": "907–960",
+    "yearsEn": "907–960",
     "era": "隋唐",
     "capital": "中原轮换",
+    "capitalEn": "Rotating Central Plains",
     "approx": false,
     "start": 907,
     "end": 960,
     "duration": "53年",
+    "durationEn": "53 yrs",
     "feature": "唐亡后中原五代更替、周边十国并立。列中原五代主要君主（十国并立不计入），合计53年。",
+    "featureEn": "After Tang fell, five dynasties succeeded in the Central Plains while ten kingdoms stood around. Major Central Plains rulers (ten kingdoms excluded), 53 yrs.",
     "summary": "大分裂尾声，武人乱政，终由宋重新统一。",
-    "counts": {
-      "emperors": 12,
-      "talents": 2,
-      "policies": 2
-    }
+    "summaryEn": "The tail of great fragmentation, warlord misrule, ended by Song's reunification."
   },
   {
     "id": "liao",
     "name": "辽",
+    "nameEn": "Liao",
     "years": "916–1125",
+    "yearsEn": "916–1125",
     "era": "宋元",
     "capital": "上京临潢府",
+    "capitalEn": "Shangjing (Linhuang)",
     "approx": false,
     "start": 916,
     "end": 1125,
     "duration": "209年",
+    "durationEn": "209 yrs",
     "feature": "契丹建立，与北宋并立；澶渊之盟后长期对峙，末年为金所灭。",
+    "featureEn": "Founded by the Khitan, standing alongside Northern Song; after the Chanyuan Treaty a long standoff, ended by Jin.",
     "summary": "北方草原政权，创南北面官分治，影响深远。",
-    "counts": {
-      "emperors": 9,
-      "talents": 3,
-      "policies": 4
-    }
+    "summaryEn": "A northern steppe polity that pioneered dual administration, with far-reaching influence."
   },
   {
     "id": "song",
     "name": "宋",
+    "nameEn": "Song",
     "years": "北宋960–1127 / 南宋1127–1279",
+    "yearsEn": "Northern Song 960–1127 / Southern Song 1127–1279",
     "era": "宋元",
     "capital": "汴京→临安",
+    "capitalEn": "Bianjing → Lin'an",
     "approx": false,
     "start": 960,
     "end": 1279,
     "duration": "319年",
+    "durationEn": "319 yrs",
     "feature": "重文轻武，经济文化科技鼎盛，词风尤盛。列主要帝，合计约319年。",
+    "featureEn": "Civilian over military, with a pinnacle of economy, culture and science; ci poetry thrived. Major emperors, ~319 yrs.",
     "summary": "文治巅峰而军事积弱，经济与市民文化空前繁荣。",
-    "counts": {
-      "emperors": 18,
-      "talents": 11,
-      "policies": 7
-    }
+    "summaryEn": "A zenith of civil governance yet militarily weak; economy and urban culture unprecedented."
   },
   {
     "id": "xixia",
     "name": "西夏",
+    "nameEn": "Western Xia",
     "years": "1038–1227",
+    "yearsEn": "1038–1227",
     "era": "宋元",
     "capital": "兴庆府(银川)",
+    "capitalEn": "Xingqing (Yinchuan)",
     "approx": false,
     "start": 1038,
     "end": 1227,
     "duration": "189年",
+    "durationEn": "189 yrs",
     "feature": "党项羌建立，据河西走廊，创西夏文，与宋、辽、金鼎立，终亡于蒙古。",
+    "featureEn": "Founded by the Tangut, holding the Hexi Corridor, created the Tangut script, standing with Song, Liao and Jin; fell to Mongols.",
     "summary": "西北割据政权，佛教与番汉文化交融。",
-    "counts": {
-      "emperors": 10,
-      "talents": 2,
-      "policies": 4
-    }
+    "summaryEn": "A northwestern regime where Buddhism and Tangut–Han culture blended."
   },
   {
     "id": "jinchao",
     "name": "金",
+    "nameEn": "Jin",
     "years": "1115–1234",
+    "yearsEn": "1115–1234",
     "era": "宋元",
     "capital": "会宁府→中都(北京)",
+    "capitalEn": "Huining → Zhongdu (Beijing)",
     "approx": false,
     "start": 1115,
     "end": 1234,
     "duration": "119年",
+    "durationEn": "119 yrs",
     "feature": "女真建立，灭辽亡北宋，与南宋对峙，后为蒙古所灭。",
+    "featureEn": "Founded by the Jurchen, destroyed Liao and Northern Song, standing against Southern Song; fell to Mongols.",
     "summary": "女真崛起于东北，推进汉制，终亡于蒙宋联军。",
-    "counts": {
-      "emperors": 9,
-      "talents": 2,
-      "policies": 4
-    }
+    "summaryEn": "The Jurchen rose in the Northeast, advanced Han institutions, ended by the Mongol–Song alliance."
   },
   {
     "id": "yuan",
     "name": "元",
+    "nameEn": "Yuan",
     "years": "1271–1368",
+    "yearsEn": "1271–1368",
     "era": "宋元",
     "capital": "大都(北京)",
+    "capitalEn": "Dadu (Beijing)",
     "approx": true,
     "start": 1271,
     "end": 1368,
     "duration": "约97年",
+    "durationEn": "~97 yrs",
     "feature": "蒙古建立的大一统王朝，疆域空前。列主要帝，合计约97年。",
+    "featureEn": "A unified dynasty founded by the Mongols, with unprecedented territory. Major emperors, ~97 yrs.",
     "summary": "首次由少数民族完成大一统，驿站连通欧亚。",
-    "counts": {
-      "emperors": 8,
-      "talents": 5,
-      "policies": 5
-    }
+    "summaryEn": "First time a minority completed unification; relay stations linked Eurasia."
   },
   {
     "id": "ming",
     "name": "明",
+    "nameEn": "Ming",
     "years": "1368–1644",
+    "yearsEn": "1368–1644",
     "era": "明清",
     "capital": "南京→北京",
+    "capitalEn": "Nanjing → Beijing",
     "approx": false,
     "start": 1368,
     "end": 1644,
     "duration": "276年",
+    "durationEn": "276 yrs",
     "feature": "汉族重建大一统，海禁与郑和下西洋并存。列主要帝，合计276年。",
+    "featureEn": "Han restored unification; the sea ban coexisted with Zheng He's voyages. Major emperors, 276 yrs.",
     "summary": "专制强化而商品经济活跃，海陆两端各有大动作。",
-    "counts": {
-      "emperors": 16,
-      "talents": 9,
-      "policies": 7
-    }
+    "summaryEn": "Autocracy intensified yet a vibrant commodity economy; big moves by land and sea."
   },
   {
     "id": "qing",
     "name": "清",
+    "nameEn": "Qing",
     "years": "1636–1912",
+    "yearsEn": "1636–1912",
     "era": "明清",
     "capital": "北京",
+    "capitalEn": "Beijing",
     "approx": false,
     "start": 1636,
     "end": 1912,
     "duration": "276年",
+    "durationEn": "276 yrs",
     "feature": "中国最后王朝，前期疆域极盛，后期遭遇近代变局（努尔哈赤建后金1616为清前身）。列主要帝，合计约276年。",
+    "featureEn": "China's last dynasty; at its height territory peaked, later hit by modern upheavals (Nurhaci founded Later Jin in 1616 as its precursor). Major emperors, ~276 yrs.",
     "summary": "古代帝制终结篇，由盛转衰卷入世界体系。",
-    "counts": {
-      "emperors": 11,
-      "talents": 9,
-      "policies": 8
-    }
+    "summaryEn": "The final chapter of imperial rule, turning from prosperity to decline as it entered the world system."
   }
 ]

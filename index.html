@@ -199,6 +199,9 @@ function t(key,vars){
   if(vars&&typeof s==='string')for(const k in vars)s=s.replace(new RegExp('\\{'+k+'\\}','g'),vars[k]);
   return s;
 }
+function L(o,k){ return (lang==='en' && o!=null && o[k+'En']!=null)?o[k+'En']:o[k]; }
+const ROLE_EN={"文臣":"Civil Officials","武将":"Generals","思想·文人":"Thinkers & Men of Letters","其他":"Others"};
+const ASPECT_EN={"政治":"Politics","经济":"Economy","文化":"Culture"};
 const ERA_COLORS={"先秦":"#C79A3A","秦汉":"#D4351C","三国两晋南北朝":"#7C3AED","隋唐":"#0EA5E9","宋元":"#059669","明清":"#EA580C"};
 const ROLE_COLORS={"文臣":"#3B82F6","武将":"#EF4444","思想·文人":"#10B981","其他":"#F59E0B"};
 const ASPECT_ORDER=["政治","经济","文化"];
@@ -237,6 +240,38 @@ const HONOR_REASON={
 "辽太祖(耶律阿保机)":"统一契丹诸部，建立辽朝，创制契丹文字。",
 "金太祖(完颜阿骨打)":"起兵抗辽，建立金朝，创猛安谋克制。",
 "夏景宗(李元昊)":"称帝建西夏，创制西夏文，与宋辽鼎立。"
+};
+const HONOR_REASON_EN={
+"秦始皇(嬴政)":"Ended the Warring States and first claimed the title Emperor; abolished feudalism for commanderies, unified writing, carts and measures — the Ming scholar Li Zhi hailed him as the “Eternal Emperor.”",
+"汉武帝(刘彻)":"Struck the Xiongnu, opened the Silk Road to the West, and upheld Confucianism as state doctrine, shaping Han institutions and territory; often paired with Qin Shi Huang.",
+"唐太宗(李世民)":"Forged the Zhenguan era, heeding counsel and employing the worthy, expanding the realm and drawing tributary states — hailed as an “Eternal Emperor.”",
+"清圣祖(玄烨)":"Crushed the Three Feudatories, took Taiwan, repelled Russia and secured the northern frontier, opening the Kangxi–Qianlong heyday — an “Eternal Emperor.”",
+"禹(大禹)":"Tamed the floods and divided the land into nine provinces, founding the Xia and beginning hereditary rule.",
+"汤(天乙)":"Overthrew Xia and founded Shang, appointing Yi Yin — an exemplary founding ruler.",
+"武丁":"Wuding's revival brought Shang to its zenith.",
+"周武王(姬发)":"Defeated Shang and enfeoffed the nobles, laying the foundations of Zhou.",
+"汉高祖(刘邦)":"Rose from commoner origins to open the four-century Han enterprise.",
+"王莽(新)":"Usurped Han to found the Xin, reviving antiquity in reform — a polarizing figure.",
+"汉光武帝(刘秀)":"The Guangwu Restoration rebuilt the Han house.",
+"蜀汉昭烈帝(刘备)":"Sought to revive Han, renowned for benevolence.",
+"吴大帝(孙权)":"Held the Jiangdong heartland, standing with Wei and Shu.",
+"晋武帝(司马炎)":"Destroyed Wu and united the realm, ending the Three Kingdoms split.",
+"北魏孝文帝(拓跋宏)":"Moved the capital to Luoyang, adopted Han dress and surnames, driving ethnic fusion.",
+"梁武帝(萧衍)":"Reigned nearly half a century, devoted to Buddhism and letters.",
+"隋文帝(杨坚)":"Ended the north–south division, opening the Kaihuang era of good government.",
+"隋炀帝(杨广)":"Dug the Grand Canal and founded the exam system — merits and faults entwined.",
+"武则天":"China's only empress regnant, bridging eras.",
+"唐玄宗(李隆基)":"Forged the Kaiyuan heyday, the apex of Tang glory.",
+"宋太祖(赵匡胤)":"Founded the dynasty via the Chenqiao mutiny, relinquishing military power over wine.",
+"宋徽宗(赵佶)":"A master calligrapher and painter, yet his misrule brought the dynasty down.",
+"元世祖(忽必烈)":"Took the name Yuan, conquered Song to unify the realm with unprecedented territory.",
+"明太祖(朱元璋)":"Drove out the Yuan to found Ming, a commoner Son of Heaven.",
+"明成祖(朱棣)":"Opened the Yongle heyday; moved the capital to Beijing and sent Zheng He's voyages.",
+"清世宗(胤禛)":"Diligent and reform-minded, bridging predecessor and successor.",
+"清高宗(弘历)":"The Ten Great Campaigns, apex of the Kangxi–Qianlong heyday.",
+"辽太祖(耶律阿保机)":"United the Khitan tribes, founded Liao, created the Khitan script.",
+"金太祖(完颜阿骨打)":"Rose against Liao, founded Jin, creating the meng'an–mouke system.",
+"夏景宗(李元昊)":"Declared himself emperor of Western Xia, created the Tangut script, standing with Song and Liao."
 };
 const ERAS=["全部","先秦","秦汉","三国两晋南北朝","隋唐","宋元","明清"];
 
@@ -286,11 +321,11 @@ function render(){
       <article class="card collapsed">
         <span class="accent" style="background:${ec}"></span>
         <div class="chead" role="button" tabindex="0" aria-expanded="false">
-          <span class="name">${o.name}</span><span class="years">${o.years}</span>${LEGEND_DYNASTIES.has(o.id)?`<span class="legend-mark">👑 ${t('legendTag')}</span>`:''}
-          <span class="meta">${o.capital} · ${o.duration}</span>
+          <span class="name">${L(o,'name')}</span><span class="years">${L(o,'years')}</span>${LEGEND_DYNASTIES.has(o.id)?`<span class="legend-mark">👑 ${t('legendTag')}</span>`:''}
+          <span class="meta">${L(o,'capital')} · ${L(o,'duration')}</span>
           <span class="toggle"><span class="chev">▾</span>${t('expand')}</span>
         </div>
-        <div class="feature">${o.feature}</div>
+        <div class="feature">${L(o,'feature')}</div>
         <div class="stats">
           <span class="stat">${t('statEmperors')} <b>${o.counts.emperors}</b>${t('unitPerson')}</span>
           <span class="stat">${t('statTalents')} <b>${o.counts.talents}</b>${t('unitPerson')}</span>
@@ -331,19 +366,21 @@ async function loadDetail(id, container){
 }
 
 function buildDetail(d){
-  const emperors=d.emperors.map(e=>{const legend=LEGEND.has(e.n);const star=!legend&&STAR.has(e.n);return `<div class="emp${legend?' legend':(star?' star':'')}"><div class="emp-top"><span class="star-ic">${legend?'👑':(star?'★':'')}</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${legend?`<span class="etag legend-tag hontag" tabindex="0" aria-label="${t('legendTag')}：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>${t('legendTag')}</span>`:(star?`<span class="etag star-tag hontag" tabindex="0" aria-label="${t('starTag')}：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>${t('starTag')}</span>`:'')}</div><div class="emp-meta"><span class="er">${lang==='zh'?`在位 ${e.rg}（${e.ry}年）`:`${t('reign')} ${e.rg} (${e.ry} ${t('reignYears')})`}</span>${e.gh?`<span class="etag">${t('reignTitle')} ${e.gh}</span>`:''}${e.mt?`<span class="etag">${t('templeTitle')} ${e.mt}</span>`:''}${e.sh?`<span class="etag">${t('posthumousTitle')} ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
+  const hon=k=>(lang==='en'?HONOR_REASON_EN:HONOR_REASON)[k]||'';
+  const emperors=d.emperors.map(e=>{const legend=LEGEND.has(e.n);const star=!legend&&STAR.has(e.n);return `<div class="emp${legend?' legend':(star?' star':'')}"><div class="emp-top"><span class="star-ic">${legend?'👑':(star?'★':'')}</span><span class="en">${L(e,'n')}</span>${L(e,'t')?`<span class="et">${L(e,'t')}</span>`:''}${legend?`<span class="etag legend-tag hontag" tabindex="0" aria-label="${t('legendTag')}：${hon(e.n)}" data-tip="${hon(e.n)}"><span class="hint-ic">ⓘ</span>${t('legendTag')}</span>`:(star?`<span class="etag star-tag hontag" tabindex="0" aria-label="${t('starTag')}：${hon(e.n)}" data-tip="${hon(e.n)}"><span class="hint-ic">ⓘ</span>${t('starTag')}</span>`:'')}</div><div class="emp-meta"><span class="er">${lang==='zh'?`在位 ${L(e,'rg')}（${e.ry}年）`:`${t('reign')} ${L(e,'rg')} (${e.ry} ${t('reignYears')})`}</span>${e.gh?`<span class="etag">${t('reignTitle')} ${L(e,'gh')}</span>`:''}${e.mt?`<span class="etag">${t('templeTitle')} ${L(e,'mt')}</span>`:''}${e.sh?`<span class="etag">${t('posthumousTitle')} ${L(e,'sh')}</span>`:''}</div><span class="enote">${L(e,'note')}</span></div>`;}).join('');
   let talents='';
   for(const role in d.talents){
     const col=ROLE_COLORS[role]||"#F59E0B";
-    const chips=d.talents[role].map(p=>`<span class="chip"><b>${p.n}</b><span class="note">${p.note}</span></span>`).join('');
-    talents+=`<div class="tgroup"><div class="gt"><span class="dot" style="background:${col}"></span>${role}</div><div class="chips">${chips}</div></div>`;
+    const chips=d.talents[role].map(p=>`<span class="chip"><b>${L(p,'n')}</b><span class="note">${L(p,'note')}</span></span>`).join('');
+    talents+=`<div class="tgroup"><div class="gt"><span class="dot" style="background:${col}"></span>${ROLE_EN[role]||role}</div><div class="chips">${chips}</div></div>`;
   }
-  const pills=d.policies.map(p=>`<span class="pill">${p}</span>`).join('');
+  const pills=(lang==='en'&&d.policiesEn?d.policiesEn:d.policies).map(p=>`<span class="pill">${p}</span>`).join('');
   let aspects='';
   if(d.aspects){
-    aspects=ASPECT_ORDER.filter(k=>d.aspects[k]).map(k=>{
-      const items=d.aspects[k].map(x=>`<li>${x}</li>`).join('');
-      return `<div class="aspect"><div class="aspect-h"><span class="dot" style="background:${ASPECT_COLORS[k]}"></span>${k}</div><ul class="aspect-list">${items}</ul></div>`;
+    const a=lang==='en'&&d.aspectsEn?d.aspectsEn:d.aspects;
+    aspects=ASPECT_ORDER.filter(k=>a[k]).map(k=>{
+      const items=a[k].map(x=>`<li>${x}</li>`).join('');
+      return `<div class="aspect"><div class="aspect-h"><span class="dot" style="background:${ASPECT_COLORS[k]}"></span>${ASPECT_EN[k]||k}</div><ul class="aspect-list">${items}</ul></div>`;
     }).join('');
   }
   return `<div class="body">
@@ -353,7 +390,7 @@ function buildDetail(d){
       <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--gold)">📜</span><span class="t">${t('secPolicies')}</span></div>
         <div class="pills">${pills}</div></div>
       ${aspects?`<div class="sec"><div class="sec-h"><span class="ic" style="background:#0EA5E9">🏛️</span><span class="t">${t('secAspects')}</span></div><div class="aspects">${aspects}</div></div>`:''}
-      <div class="summary">${d.summary}</div>
+      <div class="summary">${L(d,'summary')}</div>
     </div>`;
 }
 
@@ -367,8 +404,8 @@ function injectJsonLd(){
     "url":SITE,
     "itemListElement":overview.map((o,i)=>({
       "@type":"ListItem","position":i+1,
-      "item":{"@type":"Thing","name":o.name,"description":o.feature+" "+o.summary,
-        "url":SITE+"#"+o.id,"additionalProperty":[{"@type":"PropertyValue","name":"时期","value":o.era},{"@type":"PropertyValue","name":"年代","value":o.years},{"@type":"PropertyValue","name":"都城","value":o.capital}]}
+      "item":{"@type":"Thing","name":L(o,'name'),"description":L(o,'feature')+" "+L(o,'summary'),
+        "url":SITE+"#"+o.id,"additionalProperty":[{"@type":"PropertyValue","name":"时期","value":o.era},{"@type":"PropertyValue","name":"年代","value":L(o,'years')},{"@type":"PropertyValue","name":"都城","value":L(o,'capital')}]}
     }))
   };
   const s=document.createElement('script');s.type='application/ld+json';s.textContent=JSON.stringify(data);
@@ -379,12 +416,12 @@ function injectJsonLd(){
 function renderInventions(list){
   document.getElementById('inventions').innerHTML=list.map(v=>`
     <article class="inv">
-      <div class="inv-top"><span class="inv-emoji">${v.emoji}</span><span class="inv-name">${v.name}</span></div>
-      <span class="inv-era">${v.era}</span>
-      <span class="inv-person">${v.person}</span>
-      <p class="inv-desc">${v.desc}</p>
-      <p class="inv-world">🌍 ${v.world}</p>
-      <button class="inv-link" data-dynasty="${v.dynastyId}">${t('viewPrefix')}${v.dynastyLabel}${t('viewSuffix')}</button>
+      <div class="inv-top"><span class="inv-emoji">${v.emoji}</span><span class="inv-name">${L(v,'name')}</span></div>
+      <span class="inv-era">${L(v,'era')}</span>
+      <span class="inv-person">${L(v,'person')}</span>
+      <p class="inv-desc">${L(v,'desc')}</p>
+      <p class="inv-world">🌍 ${L(v,'world')}</p>
+      <button class="inv-link" data-dynasty="${v.dynastyId}">${t('viewPrefix')}${L(v,'dynastyLabel')}${t('viewSuffix')}</button>
     </article>`).join('');
   document.querySelectorAll('.inv-link').forEach(b=>b.onclick=()=>jumpToDynasty(b.dataset.dynasty));
 }
@@ -420,7 +457,7 @@ function renderSpan(){
     const l=pct(o.start),w=Math.max(0.8,pct(o.end)-pct(o.start));
     const col=ERA_COLORS[o.era]||'#697386';
     const fmt=y=>y<0?('前'+(-y)):y;
-    return `<div class="span-row" role="button" tabindex="0" data-dynasty="${o.id}" title="${o.name} ${o.years}"><span class="span-name">${o.name}<span class="span-year">${o.duration}</span></span><div class="span-track"><span class="span-bar" style="left:${l}%;width:${w}%;background:linear-gradient(135deg,${col},${col}cc)"></span></div></div>`;
+    return `<div class="span-row" role="button" tabindex="0" data-dynasty="${o.id}" title="${L(o,'name')} ${L(o,'years')}"><span class="span-name">${L(o,'name')}<span class="span-year">${L(o,'duration')}</span></span><div class="span-track"><span class="span-bar" style="left:${l}%;width:${w}%;background:linear-gradient(135deg,${col},${col}cc)"></span></div></div>`;
   }).join('');
   const ticks=[-2000,-1500,-1000,-500,1,500,1000,1500,1900];
   document.getElementById('spanTicks').innerHTML=ticks.map(t=>{
@@ -444,7 +481,7 @@ function renderEvents(list){
       <h3 class="ev-gh">${I18N[lang].era[k]||k}</h3>
       <div class="ev-list">${groups[k].map(e=>{
         const y=e.y<0?((lang==='zh'?'前':'BC ')+(-e.y)):e.y;
-        return `<div class="ev" role="button" tabindex="0" data-dynasty="${e.d}"><span class="ev-year">${y}</span><span class="ev-main"><span class="ev-name">${e.t}</span><span class="ev-x">${e.x}</span></span></div>`;
+        return `<div class="ev" role="button" tabindex="0" data-dynasty="${e.d}"><span class="ev-year">${y}</span><span class="ev-main"><span class="ev-name">${L(e,'t')}</span><span class="ev-x">${L(e,'x')}</span></span></div>`;
       }).join('')}</div>
     </section>`).join('');
   document.querySelectorAll('.ev').forEach(el=>{
@@ -475,8 +512,8 @@ function renderRecords(r){
       const val=kind==='dyn'?i.count:i.ry;
       const w=max?Math.round(val/max*100):0;
       const badge=idx<3?medal[idx]:'';
-      const name=kind==='dyn'?i.dynasty:i.name;
-      const meta=kind==='dyn'?t('recDynMeta',{n:i.count}):(i.dynasty+' · '+(i.rg||''));
+      const name=kind==='dyn'?L(i,'dynasty'):L(i,'name');
+      const meta=kind==='dyn'?t('recDynMeta',{n:i.count}):(L(i,'dynasty')+' · '+(L(i,'rg')||''));
       const valTxt=kind==='dyn'?(i.count+t('recUnitRuler')):(i.ry+t('recUnitYear'));
       return `<li class="rec-item ${badge}" data-dynasty="${i.id}">
         <span class="rec-rank">${idx+1}</span>
@@ -504,7 +541,7 @@ function runSearch(q){
   if(!q){srEl.hidden=true;srEl.innerHTML='';return;}
   const res=searchIndex.filter(it=>it.n.includes(q)||(it.x&&it.x.includes(q))).slice(0,40);
   if(!res.length){srEl.innerHTML=`<div class="sr-empty">${t('searchEmpty',{q})}</div>`;srEl.hidden=false;return;}
-  srEl.innerHTML=res.map(it=>`<div class="sr-item" data-dynasty="${it.d}" role="button" tabindex="0"><span class="sr-type">${t('srType.'+it.t)}</span><span class="sr-name">${it.n}</span>${it.x?`<span class="sr-x">${it.x}</span>`:''}<span class="sr-dyn">${it.dn}</span></div>`).join('');
+  srEl.innerHTML=res.map(it=>`<div class="sr-item" data-dynasty="${it.d}" role="button" tabindex="0"><span class="sr-type">${t('srType.'+it.t)}</span><span class="sr-name">${L(it,'n')}</span>${it.x?`<span class="sr-x">${L(it,'x')}</span>`:''}<span class="sr-dyn">${L(it,'dn')}</span></div>`).join('');
   srEl.hidden=false;
   srEl.querySelectorAll('.sr-item').forEach(el=>{el.onclick=()=>pickResult(el);el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pickResult(el);}};});
 }
