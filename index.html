@@ -488,6 +488,43 @@ function renderEvents(list){
     const go=()=>jumpToDynasty(el.dataset.dynasty);
     el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
   });
+  document.querySelectorAll('#evList .ev-list').forEach(el=>{if(evRO)evRO.observe(el);drawEvTimeline(el);});
+}
+
+/* 大事记时间线：卡片横向连线 · 行末拐弯 · 末端箭头 */
+const SVGNS='http://www.w3.org/2000/svg';
+let evRO=null;
+if(typeof ResizeObserver!=='undefined')evRO=new ResizeObserver(es=>es.forEach(e=>drawEvTimeline(e.target)));
+function drawEvTimeline(el){
+  const items=[...el.querySelectorAll('.ev')];
+  el.querySelector('.ev-svg')?.remove();
+  const w=el.clientWidth,h=el.clientHeight;
+  if(!items.length||!w||!h)return;
+  const base=el.getBoundingClientRect();
+  const R=items.map(it=>{const r=it.getBoundingClientRect();
+    return {l:r.left-base.left,t:r.top-base.top,w:r.width,h:r.height,r:r.right-base.left,b:r.bottom-base.top};});
+  const brand=getComputedStyle(document.documentElement).getPropertyValue('--brand').trim()||'#D4351C';
+  const svg=document.createElementNS(SVGNS,'svg');
+  svg.setAttribute('class','ev-svg');svg.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  let d='';
+  for(let i=0;i<R.length-1;i++){
+    const a=R[i],b=R[i+1];
+    if(Math.abs(a.t-b.t)<3){const y=Math.round(a.t+a.h/2);d+=`M ${a.r} ${y} L ${b.l} ${y} `;}
+    else{const ax=a.l+a.w/2,bx=b.l+b.w/2,my=(a.b+b.t)/2;d+=`M ${ax} ${a.b} L ${ax} ${my} L ${bx} ${my} L ${bx} ${b.t} `;}
+  }
+  if(d){
+    const p=document.createElementNS(SVGNS,'path');
+    p.setAttribute('d',d.trim());p.setAttribute('fill','none');p.setAttribute('stroke',brand);
+    p.setAttribute('stroke-width','2');p.setAttribute('stroke-dasharray','6 5');p.setAttribute('stroke-linecap','round');
+    p.setAttribute('stroke-linejoin','round');p.setAttribute('opacity','.5');svg.appendChild(p);
+  }
+  const last=R[R.length-1],ay=Math.round(last.t+last.h/2),sx=last.r,ex=sx+13;
+  const arrow=document.createElementNS(SVGNS,'path');
+  arrow.setAttribute('d',`M ${sx} ${ay} L ${ex} ${ay} M ${ex-7} ${ay-4} L ${ex} ${ay} L ${ex-7} ${ay+4}`);
+  arrow.setAttribute('fill','none');arrow.setAttribute('stroke',brand);arrow.setAttribute('stroke-width','2');
+  arrow.setAttribute('stroke-linecap','round');arrow.setAttribute('stroke-linejoin','round');arrow.setAttribute('opacity','.7');
+  svg.appendChild(arrow);
+  el.appendChild(svg);
 }
 
 /* ---------- 模块切换 ---------- */
