@@ -182,7 +182,36 @@
   .ev-year{flex-shrink:0;width:76px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;font-size:13px;text-align:right}
   .ev-main{display:flex;flex-direction:column;gap:1px;min-width:0}
   .ev-name{font-size:14px;font-weight:700;color:var(--text-strong)}
-  .ev-x{font-size:12.5px;color:var(--text-mute)}\n  /* 帝王之最 */\n  .rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}\n  .rec-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-card);padding:16px 18px}\n  .rec-title{font-size:15px;font-weight:800;color:var(--text-strong);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}\n  .rec-list{list-style:none;display:flex;flex-direction:column;gap:8px;counter-reset:rec}\n  .rec-item{display:flex;align-items:center;gap:10px;cursor:pointer;border-radius:8px;padding:6px 8px;transition:.15s}\n  .rec-item:hover{background:var(--chip-bg)}\n  .rec-item:focus-visible{outline:2px solid var(--brand);outline-offset:2px}\n  .rec-rank{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:800;\n    display:flex;align-items:center;justify-content:center}\n  .rec-main{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}\n  .rec-name{font-size:14px;font-weight:700;color:var(--text-strong)}\n  .rec-item:hover .rec-name{color:var(--brand)}\n  .rec-meta{font-size:11.5px;color:var(--text-mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}\n  .rec-val{flex-shrink:0;font-size:13px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums}
+  .ev-x{font-size:12.5px;color:var(--text-mute)}\n  
+  /* 帝王之最 */
+  .rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .rec-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-card);padding:18px 20px}
+  .rec-title{font-size:15px;font-weight:800;color:var(--text-strong);margin-bottom:12px;padding-bottom:10px;
+    border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+  .rec-title::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--brand)}
+  .rec-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .rec-item{display:flex;align-items:center;gap:12px;cursor:pointer;border-radius:10px;padding:9px 11px;
+    transition:.15s;background:transparent}
+  .rec-item:hover{background:var(--chip-bg);transform:translateX(2px)}
+  .rec-item:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+  .rec-rank{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--chip-bg);color:var(--text-soft);
+    font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
+  .rec-item.gold .rec-rank{background:linear-gradient(135deg,#f6cf4b,#e0a200);color:#5a3d00;box-shadow:0 2px 8px rgba(224,162,0,.35)}
+  .rec-item.silver .rec-rank{background:linear-gradient(135deg,#e2e6ec,#aeb4bd);color:#3a3f47}
+  .rec-item.bronze .rec-rank{background:linear-gradient(135deg,#eaa86e,#c47e3f);color:#fff}
+  .rec-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+  .rec-top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+  .rec-name{font-size:14px;font-weight:700;color:var(--text-strong);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rec-item:hover .rec-name{color:var(--brand)}
+  .rec-meta{font-size:11.5px;color:var(--text-mute);white-space:nowrap;flex-shrink:0}
+  .rec-barwrap{display:flex;align-items:center;gap:10px}
+  .rec-bar{flex:1;height:9px;background:var(--chip-bg);border-radius:5px;overflow:hidden}
+  .rec-fill{display:block;height:100%;border-radius:5px;background:var(--brand)}
+  .rec-item.gold .rec-fill{background:linear-gradient(90deg,#f6cf4b,#e0a200)}
+  .rec-item.silver .rec-fill{background:linear-gradient(90deg,#d3d8df,#9aa1ab)}
+  .rec-item.bronze .rec-fill{background:linear-gradient(90deg,#eaa86e,#c47e3f)}
+  .rec-val{flex-shrink:0;font-size:13px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;min-width:42px;text-align:right}
+
   .chead .meta{color:var(--text-mute);font-size:12.5px;margin-left:auto;text-align:right}
   .chead .toggle{color:var(--text-mute);font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
   .chead .toggle .chev{display:inline-block;transition:transform .42s cubic-bezier(.4,0,.2,1)}

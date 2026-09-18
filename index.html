@@ -381,12 +381,27 @@ document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',(
 
 /* ---------- 帝王之最 ---------- */
 function renderRecords(r){
-  const card=(title,items,row)=>`<div class="rec-card"><h3 class="rec-title">${title}</h3><ol class="rec-list">${items.map(row).join('')}</ol></div>`;
-  const liLong=i=>`<li class="rec-item" data-dynasty="${i.id}"><span class="rec-rank">${i._r}</span><span class="rec-main"><span class="rec-name">${i.name}</span><span class="rec-meta">${i.dynasty} · ${i.rg||''}</span></span><span class="rec-val">${i.ry}年</span></li>`;
-  const liDyn=i=>`<li class="rec-item" data-dynasty="${i.id}"><span class="rec-rank">${i._r}</span><span class="rec-main"><span class="rec-name">${i.dynasty}</span><span class="rec-meta">共 ${i.count} 位帝王</span></span><span class="rec-val">${i.count}位</span></li>`;
-  r.longest.forEach((x,i)=>x._r=i+1);r.shortest.forEach((x,i)=>x._r=i+1);r.mostEmperors.forEach((x,i)=>x._r=i+1);
+  const medal=['gold','silver','bronze'];
+  const card=(title,items,kind)=>{
+    const max=Math.max(...items.map(x=>kind==='dyn'?x.count:x.ry));
+    const rows=items.map((i,idx)=>{
+      const val=kind==='dyn'?i.count:i.ry;
+      const w=max?Math.round(val/max*100):0;
+      const badge=idx<3?medal[idx]:'';
+      const name=kind==='dyn'?i.dynasty:i.name;
+      const meta=kind==='dyn'?('共 '+i.count+' 位帝王'):(i.dynasty+' · '+(i.rg||''));
+      const valTxt=kind==='dyn'?(i.count+'位'):(i.ry+'年');
+      return `<li class="rec-item ${badge}" data-dynasty="${i.id}">
+        <span class="rec-rank">${idx+1}</span>
+        <div class="rec-body">
+          <div class="rec-top"><span class="rec-name">${name}</span><span class="rec-meta">${meta}</span></div>
+          <div class="rec-barwrap"><div class="rec-bar"><span class="rec-fill" style="width:${w}%"></span></div><span class="rec-val">${valTxt}</span></div>
+        </div></li>`;
+    }).join('');
+    return `<div class="rec-card"><h3 class="rec-title">${title}</h3><ol class="rec-list">${rows}</ol></div>`;
+  };
   document.getElementById('recGrid').innerHTML=
-    card('在位最长',r.longest,liLong)+card('在位最短',r.shortest,liLong)+card('帝王数量最多',r.mostEmperors,liDyn);
+    card('在位最长',r.longest,'emp')+card('在位最短',r.shortest,'emp')+card('帝王数量最多',r.mostEmperors,'dyn');
   document.querySelectorAll('#recGrid .rec-item').forEach(el=>{
     const go=()=>jumpToDynasty(el.dataset.dynasty);
     el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
