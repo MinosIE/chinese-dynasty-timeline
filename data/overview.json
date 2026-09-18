@@ -70,11 +70,11 @@
     "era": "秦汉",
     "capital": "长安→洛阳",
     "approx": true,
-    "duration": "约420年",
-    "feature": "大一统定型，丝路开通，儒术独尊，国号成族称。列主要帝，合计约420年。",
+    "duration": "约421年",
+    "feature": "大一统定型，丝路开通，儒术独尊，国号成族称。列主要帝，合计约421年。",
     "summary": "奠定中华主体民族认同与集权范式，「汉」成为族称。",
     "counts": {
-      "emperors": 24,
+      "emperors": 25,
       "talents": 10,
       "policies": 6
     }
@@ -102,11 +102,11 @@
     "era": "三国两晋南北朝",
     "capital": "洛阳→建康",
     "approx": true,
-    "duration": "约155年",
-    "feature": "短暂统一后长期分裂，门阀士族兴盛。列主要帝，合计约155年。",
+    "duration": "约158年",
+    "feature": "短暂统一后长期分裂，门阀士族兴盛。列主要帝，合计约158年。",
     "summary": "统一旋即崩解，开启南北长期对峙的过渡期。",
     "counts": {
-      "emperors": 13,
+      "emperors": 15,
       "talents": 5,
       "policies": 4
     }

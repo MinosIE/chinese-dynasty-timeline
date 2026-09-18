@@ -22,11 +22,17 @@
 <meta property="og:url" content="https://MinosIE.github.io/chinese-dynasty-timeline/">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="中华王朝时间轴">
+<meta property="og:image" content="https://MinosIE.github.io/chinese-dynasty-timeline/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="中华王朝 · 千年脉络 — 中国历史朝代科普时间轴">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="中华王朝 · 千年脉络">
 <meta name="twitter:description" content="从夏到清的中国历史朝代科普：概览、帝王世系、核心人才与关键制度。">
+<meta name="twitter:image" content="https://MinosIE.github.io/chinese-dynasty-timeline/og-cover.png">
+<meta name="twitter:image:alt" content="中华王朝 · 千年脉络">
 
 <!-- 避免主题闪烁：首屏前即确定主题 -->
 <script>
@@ -41,6 +47,12 @@
     <p>从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。</p>
     <div class="kpis" id="kpis"></div>
   </section>
+
+  <div class="search">
+    <input id="search" type="search" autocomplete="off" aria-label="搜索"
+      placeholder="搜索：朝代 / 帝王 / 人物 / 制度 / 发明，如「李世民」「科举」「火药」">
+    <div class="search-results" id="searchResults" hidden></div>
+  </div>
 
   <nav class="tabs" id="tabs"></nav>
   <main class="timeline" id="timeline"></main>
@@ -138,7 +150,7 @@ function render(){
     node.innerHTML=`<span class="dot" style="border-color:${ec}"></span>
       <article class="card collapsed">
         <span class="accent" style="background:${ec}"></span>
-        <div class="chead">
+        <div class="chead" role="button" tabindex="0" aria-expanded="false">
           <span class="name">${o.name}</span><span class="years">${o.years}</span>${LEGEND_DYNASTIES.has(o.id)?'<span class="legend-mark">👑 千古一帝</span>':''}
           <span class="meta">${o.capital} · 存续${o.duration}</span>
           <span class="toggle"><span class="chev">▾</span>展开详情</span>
@@ -152,12 +164,15 @@ function render(){
         <div class="panel"><div class="panel-i"><div class="detail" data-id="${o.id}"></div></div></div>
       </article>`;
     const card=node.querySelector('.card');
-    node.querySelector('.chead').onclick=()=>{
+    const head=node.querySelector('.chead');
+    const toggle=()=>{
       const collapsed=card.classList.toggle('collapsed');
-      const t=node.querySelector('.toggle');
-      t.innerHTML=`<span class="chev">▾</span>${collapsed?'展开详情':'收起详情'}`;
+      head.setAttribute('aria-expanded',String(!collapsed));
+      node.querySelector('.toggle').innerHTML=`<span class="chev">▾</span>${collapsed?'展开详情':'收起详情'}`;
       if(!collapsed) loadDetail(o.id, node.querySelector('.detail'));
     };
+    head.onclick=toggle;
+    head.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}};
     tl.appendChild(node);
     if(matchMedia('(prefers-reduced-motion: reduce)').matches){node.classList.add('in');}else{io.observe(node);}
   });
@@ -181,7 +196,7 @@ async function loadDetail(id, container){
 }
 
 function buildDetail(d){
-  const emperors=d.emperors.map(e=>{const legend=LEGEND.has(e.n);const star=!legend&&STAR.has(e.n);return `<div class="emp${legend?' legend':(star?' star':'')}"><div class="emp-top"><span class="star-ic">${legend?'👑':(star?'★':'')}</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${legend?`<span class="etag legend-tag hontag" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>千古一帝</span>`:(star?`<span class="etag star-tag hontag" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>名君</span>`:'')}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
+  const emperors=d.emperors.map(e=>{const legend=LEGEND.has(e.n);const star=!legend&&STAR.has(e.n);return `<div class="emp${legend?' legend':(star?' star':'')}"><div class="emp-top"><span class="star-ic">${legend?'👑':(star?'★':'')}</span><span class="en">${e.n}</span>${e.t?`<span class="et">${e.t}</span>`:''}${legend?`<span class="etag legend-tag hontag" tabindex="0" aria-label="千古一帝：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>千古一帝</span>`:(star?`<span class="etag star-tag hontag" tabindex="0" aria-label="名君：${HONOR_REASON[e.n]||''}" data-tip="${HONOR_REASON[e.n]||''}"><span class="hint-ic">ⓘ</span>名君</span>`:'')}</div><div class="emp-meta"><span class="er">在位 ${e.rg}（${e.ry}年）</span>${e.gh?`<span class="etag">年号 ${e.gh}</span>`:''}${e.mt?`<span class="etag">庙号 ${e.mt}</span>`:''}${e.sh?`<span class="etag">谥号 ${e.sh}</span>`:''}</div><span class="enote">${e.note}</span></div>`;}).join('');
   let talents='';
   for(const role in d.talents){
     const col=ROLE_COLORS[role]||"#F59E0B";
@@ -254,8 +269,34 @@ function showTip(el){const t=el.dataset.tip;if(!t)return;tip.textContent=t;tip.c
   const left=Math.max(8,Math.min(r.left+r.width/2-tr.width/2,innerWidth-tr.width-8));
   let top=r.top-tr.height-10;if(top<8)top=r.bottom+10;
   tip.style.left=left+'px';tip.style.top=top+'px';}
+function hideTip(){tip.classList.remove('show');}
 document.addEventListener('mouseover',e=>{const el=e.target.closest('.hontag');if(el)showTip(el);});
-document.addEventListener('mouseout',e=>{if(e.target.closest('.hontag'))tip.classList.remove('show');});
+document.addEventListener('mouseout',e=>{if(e.target.closest('.hontag'))hideTip();});
+document.addEventListener('focusin',e=>{const el=e.target.closest('.hontag');if(el)showTip(el);});
+document.addEventListener('focusout',e=>{if(e.target.closest('.hontag'))hideTip();});
+document.addEventListener('click',e=>{const el=e.target.closest('.hontag');if(el){showTip(el);return;}hideTip();});
+
+/* ---------- 搜索 ---------- */
+let searchIndex=null;
+const searchEl=document.getElementById('search');
+const srEl=document.getElementById('searchResults');
+async function ensureSearch(){if(searchIndex)return;try{const r=await fetch('data/search.json');searchIndex=r.ok?await r.json():[];}catch(e){searchIndex=[];}}
+function runSearch(q){
+  if(!q){srEl.hidden=true;srEl.innerHTML='';return;}
+  const res=searchIndex.filter(it=>it.n.includes(q)||(it.x&&it.x.includes(q))).slice(0,40);
+  if(!res.length){srEl.innerHTML=`<div class="sr-empty">未找到「${q}」相关内容</div>`;srEl.hidden=false;return;}
+  srEl.innerHTML=res.map(it=>`<div class="sr-item" data-dynasty="${it.d}" role="button" tabindex="0"><span class="sr-type">${it.t}</span><span class="sr-name">${it.n}</span>${it.x?`<span class="sr-x">${it.x}</span>`:''}<span class="sr-dyn">${it.dn}</span></div>`).join('');
+  srEl.hidden=false;
+  srEl.querySelectorAll('.sr-item').forEach(el=>{el.onclick=()=>pickResult(el);el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pickResult(el);}};});
+}
+function pickResult(el){jumpToDynasty(el.dataset.dynasty);srEl.hidden=true;searchEl.value='';}
+searchEl.addEventListener('input',async()=>{await ensureSearch();runSearch(searchEl.value.trim());});
+searchEl.addEventListener('focus',async()=>{await ensureSearch();if(searchEl.value.trim())runSearch(searchEl.value.trim());});
+searchEl.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){searchEl.value='';srEl.hidden=true;searchEl.blur();}
+  if(e.key==='Enter'){const f=srEl.querySelector('.sr-item');if(f){e.preventDefault();pickResult(f);}}
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidden=true;});
 
 /* ---------- 启动 ---------- */
 (async function init(){

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>og-cover</title>
+<style>
+  html,body{margin:0}
+  .cover{width:1200px;height:630px;position:relative;overflow:hidden;box-sizing:border-box;
+    background:linear-gradient(160deg,#0A2540 0%,#1A3A5C 55%,#3A1F1A 100%);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;color:#fff;
+    display:flex;flex-direction:column;justify-content:center;padding:0 90px}
+  .cover::after{content:"";position:absolute;right:-120px;top:-150px;width:540px;height:540px;border-radius:50%;
+    background:radial-gradient(circle,rgba(212,53,28,.45),transparent 70%)}
+  .cover::before{content:"";position:absolute;left:-100px;bottom:-180px;width:440px;height:440px;border-radius:50%;
+    background:radial-gradient(circle,rgba(199,154,58,.25),transparent 70%)}
+  .brand{position:relative;font-size:20px;letter-spacing:5px;color:#F2C75C;font-weight:700;margin-bottom:20px}
+  h1{position:relative;font-size:76px;font-weight:800;letter-spacing:4px;margin:0 0 22px;line-height:1.08}
+  p{position:relative;font-size:25px;color:rgba(255,255,255,.84);margin:0 0 42px;max-width:900px;line-height:1.5}
+  .kpis{position:relative;display:flex;gap:44px}
+  .kpi{display:flex;flex-direction:column;gap:2px}
+  .kpi .v{font-size:40px;font-weight:800;color:#F2C75C;line-height:1.1}
+  .kpi .l{font-size:16px;color:rgba(255,255,255,.72)}
+  .line{position:absolute;left:90px;right:90px;bottom:58px;height:5px;border-radius:5px;
+    background:linear-gradient(90deg,#C79A3A,#D4351C,#0EA5E9)}
+</style>
+</head>
+<body>
+  <div class="cover">
+    <div class="brand">中国历史朝代科普 · 时间轴</div>
+    <h1>中华王朝 · 千年脉络</h1>
+    <p>从夏到清，一页看懂三千年权力、制度与文明的流转；含帝王世系、核心人才与政治 · 经济 · 文化。</p>
+    <div class="kpis">
+      <div class="kpi"><span class="v">15</span><span class="l">主要王朝</span></div>
+      <div class="kpi"><span class="v">约4000</span><span class="l">年王朝史（夏→清）</span></div>
+      <div class="kpi"><span class="v">322+</span><span class="l">帝王与人才</span></div>
+      <div class="kpi"><span class="v">4</span><span class="l">大发明专版</span></div>
+    </div>
+    <div class="line"></div>
+  </div>
+</body>
+</html>
