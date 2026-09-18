@@ -1,213 +1,49 @@
 {
   "id": "ming",
   "name": "明",
+  "nameEn": "Ming",
   "years": "1368–1644",
+  "yearsEn": "1368–1644",
   "era": "明清",
   "capital": "南京→北京",
+  "capitalEn": "Nanjing → Beijing",
   "feature": "汉族重建大一统，海禁与郑和下西洋并存。列主要帝，合计276年。",
+  "featureEn": "Han restored unification; the sea ban coexisted with Zheng He's voyages. Major emperors, 276 yrs.",
   "summary": "专制强化而商品经济活跃，海陆两端各有大动作。",
+  "summaryEn": "Autocracy intensified yet a vibrant commodity economy; big moves by land and sea.",
   "emperors": [
-    {
-      "n": "明太祖(朱元璋)",
-      "t": "洪武帝",
-      "rg": "1368–1398",
-      "ry": 30,
-      "mt": "太祖",
-      "gh": "洪武",
-      "sh": "高",
-      "note": "驱元建明"
-    },
-    {
-      "n": "明惠帝(朱允炆)",
-      "t": "建文",
-      "rg": "1398–1402",
-      "ry": 4,
-      "gh": "建文",
-      "sh": "惠",
-      "note": "削藩失败"
-    },
-    {
-      "n": "明成祖(朱棣)",
-      "t": "永乐",
-      "rg": "1402–1424",
-      "ry": 22,
-      "mt": "成祖",
-      "gh": "永乐",
-      "sh": "文",
-      "note": "迁都北京，下西洋"
-    },
-    {
-      "n": "明仁宗(朱高炽)",
-      "t": "",
-      "rg": "1424–1425",
-      "ry": 1,
-      "mt": "仁宗",
-      "gh": "洪熙",
-      "sh": "昭",
-      "note": "仁宣先声"
-    },
-    {
-      "n": "明宣宗(朱瞻基)",
-      "t": "",
-      "rg": "1425–1435",
-      "ry": 10,
-      "mt": "宣宗",
-      "gh": "宣德",
-      "sh": "章",
-      "note": "仁宣之治"
-    },
-    {
-      "n": "明英宗(朱祁镇)",
-      "t": "",
-      "rg": "1435–1464",
-      "ry": 21,
-      "mt": "英宗",
-      "gh": "正统",
-      "sh": "睿",
-      "note": "两度在位，土木堡之变"
-    },
-    {
-      "n": "明代宗(朱祁钰)",
-      "t": "景泰",
-      "rg": "1449–1457",
-      "ry": 8,
-      "gh": "景泰",
-      "sh": "景",
-      "note": "北京保卫战"
-    },
-    {
-      "n": "明宪宗(朱见深)",
-      "t": "",
-      "rg": "1464–1487",
-      "ry": 23,
-      "mt": "宪宗",
-      "gh": "成化",
-      "sh": "纯",
-      "note": "宠万贵妃"
-    },
-    {
-      "n": "明孝宗(朱祐樘)",
-      "t": "",
-      "rg": "1487–1505",
-      "ry": 18,
-      "mt": "孝宗",
-      "gh": "弘治",
-      "sh": "敬",
-      "note": "弘治中兴"
-    },
-    {
-      "n": "明武宗(朱厚照)",
-      "t": "",
-      "rg": "1505–1521",
-      "ry": 16,
-      "mt": "武宗",
-      "gh": "正德",
-      "sh": "毅",
-      "note": "荒嬉"
-    },
-    {
-      "n": "明世宗(朱厚熜)",
-      "t": "嘉靖",
-      "rg": "1521–1567",
-      "ry": 45,
-      "mt": "世宗",
-      "gh": "嘉靖",
-      "sh": "肃",
-      "note": "崇道怠政"
-    },
-    {
-      "n": "明穆宗(朱载坖)",
-      "t": "",
-      "rg": "1567–1572",
-      "ry": 5,
-      "mt": "穆宗",
-      "gh": "隆庆",
-      "sh": "庄",
-      "note": "隆庆开关"
-    },
-    {
-      "n": "明神宗(朱翊钧)",
-      "t": "万历",
-      "rg": "1572–1620",
-      "ry": 48,
-      "mt": "神宗",
-      "gh": "万历",
-      "sh": "显",
-      "note": "怠政多年"
-    },
-    {
-      "n": "明光宗(朱常洛)",
-      "t": "",
-      "rg": "1620",
-      "ry": 1,
-      "mt": "光宗",
-      "gh": "泰昌",
-      "sh": "贞",
-      "note": "一月天子"
-    },
-    {
-      "n": "明熹宗(朱由校)",
-      "t": "",
-      "rg": "1620–1627",
-      "ry": 7,
-      "mt": "熹宗",
-      "gh": "天启",
-      "sh": "悊",
-      "note": "魏忠贤乱政"
-    },
-    {
-      "n": "明思宗(朱由检)",
-      "t": "末代",
-      "rg": "1627–1644",
-      "ry": 17,
-      "mt": "思宗",
-      "gh": "崇祯",
-      "sh": "烈",
-      "note": "煤山自缢"
-    }
+    { "n": "明太祖(朱元璋)", "nEn": "Ming Taizu (Zhu Yuanzhang)", "t": "洪武帝", "tEn": "Hongwu Emperor", "rg": "1368–1398", "rgEn": "1368–1398", "ry": 30, "mt": "太祖", "mtEn": "Taizu", "gh": "洪武", "ghEn": "Hongwu", "sh": "高", "shEn": "Gao", "note": "驱元建明", "noteEn": "Drove out the Yuan, founded Ming" },
+    { "n": "明惠帝(朱允炆)", "nEn": "Ming Hui Emperor (Zhu Yunwen)", "t": "建文", "tEn": "Jianwen", "rg": "1398–1402", "rgEn": "1398–1402", "ry": 4, "gh": "建文", "ghEn": "Jianwen", "sh": "惠", "shEn": "Hui", "note": "削藩失败", "noteEn": "Failed to rein in the vassals" },
+    { "n": "明成祖(朱棣)", "nEn": "Ming Chengzu (Zhu Di)", "t": "永乐", "tEn": "Yongle", "rg": "1402–1424", "rgEn": "1402–1424", "ry": 22, "mt": "成祖", "mtEn": "Chengzu", "gh": "永乐", "ghEn": "Yongle", "sh": "文", "shEn": "Wen", "note": "迁都北京，下西洋", "noteEn": "Moved the capital to Beijing; voyages to the West" },
+    { "n": "明仁宗(朱高炽)", "nEn": "Ming Renzong (Zhu Gaochi)", "t": "", "tEn": "", "rg": "1424–1425", "rgEn": "1424–1425", "ry": 1, "mt": "仁宗", "mtEn": "Renzong", "gh": "洪熙", "ghEn": "Hongxi", "sh": "昭", "shEn": "Zhao", "note": "仁宣先声", "noteEn": "Prelude to the Ren–Xuan era" },
+    { "n": "明宣宗(朱瞻基)", "nEn": "Ming Xuanzong (Zhu Zhanji)", "t": "", "tEn": "", "rg": "1425–1435", "rgEn": "1425–1435", "ry": 10, "mt": "宣宗", "mtEn": "Xuanzong", "gh": "宣德", "ghEn": "Xuande", "sh": "章", "shEn": "Zhang", "note": "仁宣之治", "noteEn": "The Ren–Xuan era of good rule" },
+    { "n": "明英宗(朱祁镇)", "nEn": "Ming Yingzong (Zhu Qizhen)", "t": "", "tEn": "", "rg": "1435–1464", "rgEn": "1435–1464", "ry": 21, "mt": "英宗", "mtEn": "Yingzong", "gh": "正统", "ghEn": "Zhengtong", "sh": "睿", "shEn": "Rui", "note": "两度在位，土木堡之变", "noteEn": "Reigned twice; the Tumu crisis" },
+    { "n": "明代宗(朱祁钰)", "nEn": "Ming Daizong (Zhu Qiyu)", "t": "景泰", "tEn": "Jingtai", "rg": "1449–1457", "rgEn": "1449–1457", "ry": 8, "gh": "景泰", "ghEn": "Jingtai", "sh": "景", "shEn": "Jing", "note": "北京保卫战", "noteEn": "Defended Beijing" },
+    { "n": "明宪宗(朱见深)", "nEn": "Ming Xianzong (Zhu Jianshen)", "t": "", "tEn": "", "rg": "1464–1487", "rgEn": "1464–1487", "ry": 23, "mt": "宪宗", "mtEn": "Xianzong", "gh": "成化", "ghEn": "Chenghua", "sh": "纯", "shEn": "Chun", "note": "宠万贵妃", "noteEn": "Favored Consort Wan" },
+    { "n": "明孝宗(朱祐樘)", "nEn": "Ming Xiaozong (Zhu Youcheng)", "t": "", "tEn": "", "rg": "1487–1505", "rgEn": "1487–1505", "ry": 18, "mt": "孝宗", "mtEn": "Xiaozong", "gh": "弘治", "ghEn": "Hongzhi", "sh": "敬", "shEn": "Jing", "note": "弘治中兴", "noteEn": "The Hongzhi Restoration" },
+    { "n": "明武宗(朱厚照)", "nEn": "Ming Wuzong (Zhu Houzhao)", "t": "", "tEn": "", "rg": "1505–1521", "rgEn": "1505–1521", "ry": 16, "mt": "武宗", "mtEn": "Wuzong", "gh": "正德", "ghEn": "Zhengde", "sh": "毅", "shEn": "Yi", "note": "荒嬉", "noteEn": "Given to pleasure" },
+    { "n": "明世宗(朱厚熜)", "nEn": "Ming Shizong (Zhu Houcong)", "t": "嘉靖", "tEn": "Jiajing", "rg": "1521–1567", "rgEn": "1521–1567", "ry": 45, "mt": "世宗", "mtEn": "Shizong", "gh": "嘉靖", "ghEn": "Jiajing", "sh": "肃", "shEn": "Su", "note": "崇道怠政", "noteEn": "Favored Daoism, neglected rule" },
+    { "n": "明穆宗(朱载坖)", "nEn": "Ming Muzong (Zhu Zaihou)", "t": "", "tEn": "", "rg": "1567–1572", "rgEn": "1567–1572", "ry": 5, "mt": "穆宗", "mtEn": "Muzong", "gh": "隆庆", "ghEn": "Longqing", "sh": "庄", "shEn": "Zhuang", "note": "隆庆开关", "noteEn": "The Longqing opening of trade" },
+    { "n": "明神宗(朱翊钧)", "nEn": "Ming Shenzong (Zhu Yijun)", "t": "万历", "tEn": "Wanli", "rg": "1572–1620", "rgEn": "1572–1620", "ry": 48, "mt": "神宗", "mtEn": "Shenzong", "gh": "万历", "ghEn": "Wanli", "sh": "显", "shEn": "Xian", "note": "怠政多年", "noteEn": "Neglected rule for years" },
+    { "n": "明光宗(朱常洛)", "nEn": "Ming Guangzong (Zhu Changluo)", "t": "", "tEn": "", "rg": "1620", "rgEn": "1620", "ry": 1, "mt": "光宗", "mtEn": "Guangzong", "gh": "泰昌", "ghEn": "Taichang", "sh": "贞", "shEn": "Zhen", "note": "一月天子", "noteEn": "Emperor for one month" },
+    { "n": "明熹宗(朱由校)", "nEn": "Ming Xizong (Zhu Youjiao)", "t": "", "tEn": "", "rg": "1620–1627", "rgEn": "1620–1627", "ry": 7, "mt": "熹宗", "mtEn": "Xizong", "gh": "天启", "ghEn": "Tianqi", "sh": "悊", "shEn": "Zhe", "note": "魏忠贤乱政", "noteEn": "Wei Zhongxian's misrule" },
+    { "n": "明思宗(朱由检)", "nEn": "Ming Sizong (Zhu Youjian)", "t": "末代", "tEn": "Last ruler", "rg": "1627–1644", "rgEn": "1627–1644", "ry": 17, "mt": "思宗", "mtEn": "Sizong", "gh": "崇祯", "ghEn": "Chongzhen", "sh": "烈", "shEn": "Lie", "note": "煤山自缢", "noteEn": "Hanged himself on Coal Hill" }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "刘伯温",
-        "note": "开国谋臣"
-      },
-      {
-        "n": "于谦",
-        "note": "北京保卫战"
-      },
-      {
-        "n": "张居正",
-        "note": "改革首辅"
-      },
-      {
-        "n": "海瑞",
-        "note": "清官"
-      }
+      { "n": "刘伯温", "nEn": "Liu Bowen", "note": "开国谋臣", "noteEn": "Founding strategist" },
+      { "n": "于谦", "nEn": "Yu Qian", "note": "北京保卫战", "noteEn": "Defended Beijing" },
+      { "n": "张居正", "nEn": "Zhang Juzheng", "note": "改革首辅", "noteEn": "Reforming senior grand secretary" },
+      { "n": "海瑞", "nEn": "Hai Rui", "note": "清官", "noteEn": "An incorruptible official" }
     ],
     "武将": [
-      {
-        "n": "戚继光",
-        "note": "抗倭"
-      },
-      {
-        "n": "郑成功",
-        "note": "收复台湾"
-      }
+      { "n": "戚继光", "nEn": "Qi Jiguang", "note": "抗倭", "noteEn": "Fought the Japanese pirates" },
+      { "n": "郑成功", "nEn": "Zheng Chenggong (Koxinga)", "note": "收复台湾", "noteEn": "Recovered Taiwan" }
     ],
     "思想·文人": [
-      {
-        "n": "王守仁(阳明)",
-        "note": "心学集大成"
-      },
-      {
-        "n": "徐霞客",
-        "note": "地理学家"
-      },
-      {
-        "n": "宋应星",
-        "note": "《天工开物》"
-      }
+      { "n": "王守仁(阳明)", "nEn": "Wang Shouren (Wang Yangming)", "note": "心学集大成", "noteEn": "Synthesis of the School of Mind" },
+      { "n": "徐霞客", "nEn": "Xu Xiake", "note": "地理学家", "noteEn": "Geographer" },
+      { "n": "宋应星", "nEn": "Song Yingxing", "note": "《天工开物》", "noteEn": "Tiangong Kaiwu (Exploitation of the Works of Nature)" }
     ]
   },
   "policies": [
@@ -218,6 +54,15 @@
     "一条鞭法",
     "海禁",
     "八股取士"
+  ],
+  "policiesEn": [
+    "Abolished the chancellor, set up the Grand Secretariat",
+    "The embattled offices (Embroidered Uniform Guard / Eastern Depot)",
+    "Yongle moved the capital to Beijing",
+    "Zheng He's voyages to the West",
+    "The Single Whip law",
+    "The sea ban",
+    "Eight-legged essay examinations"
   ],
   "aspects": {
     "政治": [
@@ -231,6 +76,20 @@
     "文化": [
       "心学（王阳明）兴起",
       "《永乐大典》《天工开物》《本草纲目》；小说繁荣"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Abolished the chancellor, set up the Grand Secretariat; imperial power strengthened",
+      "Embattled secret police ran rampant; Yongle moved the capital to Beijing"
+    ],
+    "经济": [
+      "The Single Whip law and silver monetization",
+      "Zheng He's voyages coexisted with the sea ban; a vibrant commodity economy"
+    ],
+    "文化": [
+      "The School of Mind (Wang Yangming) arose",
+      "Yongle Encyclopedia, Tiangong Kaiwu, Compendium of Materia Medica; fiction flourished"
     ]
   }
 }

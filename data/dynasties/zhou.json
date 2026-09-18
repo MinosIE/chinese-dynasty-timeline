@@ -1,350 +1,71 @@
 {
   "id": "zhou",
   "name": "周",
+  "nameEn": "Zhou",
   "years": "西周前1046–前771 / 东周前770–前256",
+  "yearsEn": "Western Zhou 1046–771 BC / Eastern Zhou 770–256 BC",
   "era": "先秦",
   "capital": "镐京→洛邑",
+  "capitalEn": "Haojing → Luoyi",
   "feature": "分封宗法礼乐奠基；东周百家争鸣，思想爆炸。列主要王（谥号），合计约790年。",
+  "featureEn": "Founded feudalism, kinship hierarchy and ritual music; the Eastern Zhou saw the Hundred Schools flourish. Major kings (posthumous names), ~790 yrs.",
   "summary": "礼乐文明奠基期，百家争鸣直接塑造此后两千年文化基因。",
+  "summaryEn": "The bedrock of ritual-music civilization; the Hundred Schools directly shaped two millennia of cultural DNA.",
   "emperors": [
-    {
-      "n": "周武王(姬发)",
-      "t": "开国",
-      "rg": "前1046–前1043",
-      "ry": 3,
-      "sh": "武",
-      "note": "伐纣灭商，大封诸侯"
-    },
-    {
-      "n": "周成王",
-      "t": "",
-      "rg": "前1042–前1021",
-      "ry": 22,
-      "sh": "成",
-      "note": "周公辅政，成康之治"
-    },
-    {
-      "n": "周康王",
-      "t": "",
-      "rg": "前1020–前996",
-      "ry": 25,
-      "sh": "康",
-      "note": "成康之治，刑措不用"
-    },
-    {
-      "n": "周昭王",
-      "t": "",
-      "rg": "前995–前977",
-      "ry": 19,
-      "sh": "昭",
-      "note": "南征不复"
-    },
-    {
-      "n": "周穆王",
-      "t": "",
-      "rg": "前976–前922",
-      "ry": 55,
-      "sh": "穆",
-      "note": "西巡会西王母，周势极盛"
-    },
-    {
-      "n": "周共王",
-      "t": "",
-      "rg": "前922–前900",
-      "ry": 23,
-      "sh": "共",
-      "note": "驰骋游猎"
-    },
-    {
-      "n": "周懿王",
-      "t": "",
-      "rg": "前899–前892",
-      "ry": 8,
-      "sh": "懿",
-      "note": "王室渐衰"
-    },
-    {
-      "n": "周孝王",
-      "t": "",
-      "rg": "前891–前886",
-      "ry": 6,
-      "sh": "孝",
-      "note": "非嫡继位"
-    },
-    {
-      "n": "周夷王",
-      "t": "",
-      "rg": "前885–前878",
-      "ry": 8,
-      "sh": "夷",
-      "note": "诸侯来朝"
-    },
-    {
-      "n": "周厉王",
-      "t": "",
-      "rg": "前877–前841",
-      "ry": 37,
-      "sh": "厉",
-      "note": "专利暴政，国人暴动"
-    },
-    {
-      "n": "共和(摄政)",
-      "t": "",
-      "rg": "前841–前828",
-      "ry": 14,
-      "note": "周公召公共和行政，共和纪年始"
-    },
-    {
-      "n": "周宣王",
-      "t": "",
-      "rg": "前827–前782",
-      "ry": 46,
-      "sh": "宣",
-      "note": "宣王中兴"
-    },
-    {
-      "n": "周幽王",
-      "t": "西周末",
-      "rg": "前781–前771",
-      "ry": 11,
-      "sh": "幽",
-      "note": "烽火戏诸侯，西周亡"
-    },
-    {
-      "n": "周平王",
-      "t": "东周始",
-      "rg": "前770–前720",
-      "ry": 51,
-      "sh": "平",
-      "note": "东迁洛邑，东周始"
-    },
-    {
-      "n": "周桓王",
-      "t": "",
-      "rg": "前719–前697",
-      "ry": 23,
-      "sh": "桓",
-      "note": "繻葛之战败于郑"
-    },
-    {
-      "n": "周庄王",
-      "t": "",
-      "rg": "前696–前682",
-      "ry": 15,
-      "sh": "庄",
-      "note": "齐桓公始霸"
-    },
-    {
-      "n": "周釐王",
-      "t": "",
-      "rg": "前679–前677",
-      "ry": 3,
-      "sh": "釐",
-      "note": "齐桓公称霸"
-    },
-    {
-      "n": "周惠王",
-      "t": "",
-      "rg": "前676–前652",
-      "ry": 25,
-      "sh": "惠",
-      "note": "诸侯争霸"
-    },
-    {
-      "n": "周襄王",
-      "t": "",
-      "rg": "前651–前619",
-      "ry": 33,
-      "sh": "襄",
-      "note": "晋文公尊王"
-    },
-    {
-      "n": "周顷王",
-      "t": "",
-      "rg": "前618–前613",
-      "ry": 6,
-      "sh": "顷",
-      "note": "王室困顿，求赙"
-    },
-    {
-      "n": "周匡王",
-      "t": "",
-      "rg": "前612–前607",
-      "ry": 6,
-      "sh": "匡",
-      "note": "守成"
-    },
-    {
-      "n": "周定王",
-      "t": "",
-      "rg": "前606–前586",
-      "ry": 21,
-      "sh": "定",
-      "note": "楚庄王问鼎"
-    },
-    {
-      "n": "周简王",
-      "t": "",
-      "rg": "前585–前572",
-      "ry": 14,
-      "sh": "简",
-      "note": "诸侯会盟"
-    },
-    {
-      "n": "周灵王",
-      "t": "",
-      "rg": "前571–前545",
-      "ry": 27,
-      "sh": "灵",
-      "note": "孔子生"
-    },
-    {
-      "n": "周景王",
-      "t": "",
-      "rg": "前544–前520",
-      "ry": 25,
-      "sh": "景",
-      "note": "铸大钱大钟"
-    },
-    {
-      "n": "周悼王",
-      "t": "",
-      "rg": "前520",
-      "ry": 1,
-      "sh": "悼",
-      "note": "在位岁余"
-    },
-    {
-      "n": "周敬王",
-      "t": "",
-      "rg": "前519–前476",
-      "ry": 44,
-      "sh": "敬",
-      "note": "春秋末，王子朝乱"
-    },
-    {
-      "n": "周元王",
-      "t": "",
-      "rg": "前475–前469",
-      "ry": 7,
-      "sh": "元",
-      "note": "战国始"
-    },
-    {
-      "n": "周贞定王",
-      "t": "",
-      "rg": "前468–前441",
-      "ry": 28,
-      "sh": "贞定",
-      "note": "三家灭智伯"
-    },
-    {
-      "n": "周考王",
-      "t": "",
-      "rg": "前440–前426",
-      "ry": 15,
-      "sh": "考",
-      "note": "封弟于河南"
-    },
-    {
-      "n": "周威烈王",
-      "t": "",
-      "rg": "前425–前402",
-      "ry": 24,
-      "sh": "威烈",
-      "note": "命魏赵韩为诸侯"
-    },
-    {
-      "n": "周安王",
-      "t": "",
-      "rg": "前401–前376",
-      "ry": 26,
-      "sh": "安",
-      "note": "田氏代齐"
-    },
-    {
-      "n": "周烈王",
-      "t": "",
-      "rg": "前375–前369",
-      "ry": 6,
-      "sh": "烈",
-      "note": "魏齐称王"
-    },
-    {
-      "n": "周显王",
-      "t": "",
-      "rg": "前368–前321",
-      "ry": 48,
-      "sh": "显",
-      "note": "商鞅变法，秦强"
-    },
-    {
-      "n": "周慎靓王",
-      "t": "",
-      "rg": "前320–前315",
-      "ry": 6,
-      "sh": "慎靓",
-      "note": "五国相王"
-    },
-    {
-      "n": "周赧王",
-      "t": "东周末",
-      "rg": "前314–前256",
-      "ry": 59,
-      "sh": "赧",
-      "note": "东周亡，秦势起"
-    }
+    { "n": "周武王(姬发)", "nEn": "King Wu of Zhou (Ji Fa)", "t": "开国", "tEn": "Founding", "rg": "前1046–前1043", "rgEn": "1046–1043 BC", "ry": 3, "sh": "武", "shEn": "Wu", "note": "伐纣灭商，大封诸侯", "noteEn": "Defeated Zhou, destroyed Shang, enfeoffed the nobles" },
+    { "n": "周成王", "nEn": "King Cheng", "t": "", "tEn": "", "rg": "前1042–前1021", "rgEn": "1042–1021 BC", "ry": 22, "sh": "成", "shEn": "Cheng", "note": "周公辅政，成康之治", "noteEn": "The Duke of Zhou as regent; the Cheng–Kang era of good rule" },
+    { "n": "周康王", "nEn": "King Kang", "t": "", "tEn": "", "rg": "前1020–前996", "rgEn": "1020–996 BC", "ry": 25, "sh": "康", "shEn": "Kang", "note": "成康之治，刑措不用", "noteEn": "The Cheng–Kang era; punishments unused" },
+    { "n": "周昭王", "nEn": "King Zhao", "t": "", "tEn": "", "rg": "前995–前977", "rgEn": "995–977 BC", "ry": 19, "sh": "昭", "shEn": "Zhao", "note": "南征不复", "noteEn": "Lost on the southern campaign" },
+    { "n": "周穆王", "nEn": "King Mu", "t": "", "tEn": "", "rg": "前976–前922", "rgEn": "976–922 BC", "ry": 55, "sh": "穆", "shEn": "Mu", "note": "西巡会西王母，周势极盛", "noteEn": "Tour to the west, met the Queen Mother; Zhou at its peak" },
+    { "n": "周共王", "nEn": "King Gong", "t": "", "tEn": "", "rg": "前922–前900", "rgEn": "922–900 BC", "ry": 23, "sh": "共", "shEn": "Gong", "note": "驰骋游猎", "noteEn": "Given to hunting" },
+    { "n": "周懿王", "nEn": "King Yi", "t": "", "tEn": "", "rg": "前899–前892", "rgEn": "899–892 BC", "ry": 8, "sh": "懿", "shEn": "Yi", "note": "王室渐衰", "noteEn": "The royal house declined" },
+    { "n": "周孝王", "nEn": "King Xiao", "t": "", "tEn": "", "rg": "前891–前886", "rgEn": "891–886 BC", "ry": 6, "sh": "孝", "shEn": "Xiao", "note": "非嫡继位", "noteEn": "Succeeded though not the heir" },
+    { "n": "周夷王", "nEn": "King Yi", "t": "", "tEn": "", "rg": "前885–前878", "rgEn": "885–878 BC", "ry": 8, "sh": "夷", "shEn": "Yi", "note": "诸侯来朝", "noteEn": "Vassals came to court" },
+    { "n": "周厉王", "nEn": "King Li", "t": "", "tEn": "", "rg": "前877–前841", "rgEn": "877–841 BC", "ry": 37, "sh": "厉", "shEn": "Li", "note": "专利暴政，国人暴动", "noteEn": "Monopoly and tyranny; the commoner revolt" },
+    { "n": "共和(摄政)", "nEn": "Gonghe (regency)", "t": "", "tEn": "", "rg": "前841–前828", "rgEn": "841–828 BC", "ry": 14, "note": "周公召公共和行政，共和纪年始", "noteEn": "The Dukes of Zhou and Shao jointly governed; the Gonghe regency begins the chronicle" },
+    { "n": "周宣王", "nEn": "King Xuan", "t": "", "tEn": "", "rg": "前827–前782", "rgEn": "827–782 BC", "ry": 46, "sh": "宣", "shEn": "Xuan", "note": "宣王中兴", "noteEn": "The Xuan Restoration" },
+    { "n": "周幽王", "nEn": "King You", "t": "西周末", "tEn": "End of Western Zhou", "rg": "前781–前771", "rgEn": "781–771 BC", "ry": 11, "sh": "幽", "shEn": "You", "note": "烽火戏诸侯，西周亡", "noteEn": "Beacon fires to amuse the lords; Western Zhou fell" },
+    { "n": "周平王", "nEn": "King Ping", "t": "东周始", "tEn": "Start of Eastern Zhou", "rg": "前770–前720", "rgEn": "770–720 BC", "ry": 51, "sh": "平", "shEn": "Ping", "note": "东迁洛邑，东周始", "noteEn": "Moved east to Luoyi; Eastern Zhou began" },
+    { "n": "周桓王", "nEn": "King Huan", "t": "", "tEn": "", "rg": "前719–前697", "rgEn": "719–697 BC", "ry": 23, "sh": "桓", "shEn": "Huan", "note": "繻葛之战败于郑", "noteEn": "Defeated by Zheng at Xuge" },
+    { "n": "周庄王", "nEn": "King Zhuang", "t": "", "tEn": "", "rg": "前696–前682", "rgEn": "696–682 BC", "ry": 15, "sh": "庄", "shEn": "Zhuang", "note": "齐桓公始霸", "noteEn": "Duke Huan of Qi began his hegemony" },
+    { "n": "周釐王", "nEn": "King Xi", "t": "", "tEn": "", "rg": "前679–前677", "rgEn": "679–677 BC", "ry": 3, "sh": "釐", "shEn": "Xi", "note": "齐桓公称霸", "noteEn": "Duke Huan of Qi asserted hegemony" },
+    { "n": "周惠王", "nEn": "King Hui", "t": "", "tEn": "", "rg": "前676–前652", "rgEn": "676–652 BC", "ry": 25, "sh": "惠", "shEn": "Hui", "note": "诸侯争霸", "noteEn": "Contending hegemons" },
+    { "n": "周襄王", "nEn": "King Xiang", "t": "", "tEn": "", "rg": "前651–前619", "rgEn": "651–619 BC", "ry": 33, "sh": "襄", "shEn": "Xiang", "note": "晋文公尊王", "noteEn": "Duke Wen of Jin honored the king" },
+    { "n": "周顷王", "nEn": "King Qing", "t": "", "tEn": "", "rg": "前618–前613", "rgEn": "618–613 BC", "ry": 6, "sh": "顷", "shEn": "Qing", "note": "王室困顿，求赙", "noteEn": "Royal house in distress, sought funeral aid" },
+    { "n": "周匡王", "nEn": "King Kuang", "t": "", "tEn": "", "rg": "前612–前607", "rgEn": "612–607 BC", "ry": 6, "sh": "匡", "shEn": "Kuang", "note": "守成", "noteEn": "Maintained the legacy" },
+    { "n": "周定王", "nEn": "King Ding", "t": "", "tEn": "", "rg": "前606–前586", "rgEn": "606–586 BC", "ry": 21, "sh": "定", "shEn": "Ding", "note": "楚庄王问鼎", "noteEn": "King Zhuang of Chu inquired about the cauldrons" },
+    { "n": "周简王", "nEn": "King Jian", "t": "", "tEn": "", "rg": "前585–前572", "rgEn": "585–572 BC", "ry": 14, "sh": "简", "shEn": "Jian", "note": "诸侯会盟", "noteEn": "Vassals convened alliances" },
+    { "n": "周灵王", "nEn": "King Ling", "t": "", "tEn": "", "rg": "前571–前545", "rgEn": "571–545 BC", "ry": 27, "sh": "灵", "shEn": "Ling", "note": "孔子生", "noteEn": "Year of Confucius's birth" },
+    { "n": "周景王", "nEn": "King Jing", "t": "", "tEn": "", "rg": "前544–前520", "rgEn": "544–520 BC", "ry": 25, "sh": "景", "shEn": "Jing", "note": "铸大钱大钟", "noteEn": "Cast large coins and bells" },
+    { "n": "周悼王", "nEn": "King Dao", "t": "", "tEn": "", "rg": "前520", "rgEn": "520 BC", "ry": 1, "sh": "悼", "shEn": "Dao", "note": "在位岁余", "noteEn": "Reigned just over a year" },
+    { "n": "周敬王", "nEn": "King Jing", "t": "", "tEn": "", "rg": "前519–前476", "rgEn": "519–476 BC", "ry": 44, "sh": "敬", "shEn": "Jing", "note": "春秋末，王子朝乱", "noteEn": "End of Spring and Autumn; Prince Chao's revolt" },
+    { "n": "周元王", "nEn": "King Yuan", "t": "", "tEn": "", "rg": "前475–前469", "rgEn": "475–469 BC", "ry": 7, "sh": "元", "shEn": "Yuan", "note": "战国始", "noteEn": "The Warring States began" },
+    { "n": "周贞定王", "nEn": "King Zhending", "t": "", "tEn": "", "rg": "前468–前441", "rgEn": "468–441 BC", "ry": 28, "sh": "贞定", "shEn": "Zhending", "note": "三家灭智伯", "noteEn": "The three clans destroyed Zhibo" },
+    { "n": "周考王", "nEn": "King Kao", "t": "", "tEn": "", "rg": "前440–前426", "rgEn": "440–426 BC", "ry": 15, "sh": "考", "shEn": "Kao", "note": "封弟于河南", "noteEn": "Enfeoffed his brother in Henan" },
+    { "n": "周威烈王", "nEn": "King Weilie", "t": "", "tEn": "", "rg": "前425–前402", "rgEn": "425–402 BC", "ry": 24, "sh": "威烈", "shEn": "Weilie", "note": "命魏赵韩为诸侯", "noteEn": "Recognized Wei, Zhao and Han as vassals" },
+    { "n": "周安王", "nEn": "King An", "t": "", "tEn": "", "rg": "前401–前376", "rgEn": "401–376 BC", "ry": 26, "sh": "安", "shEn": "An", "note": "田氏代齐", "noteEn": "The Tian clan replaced Qi" },
+    { "n": "周烈王", "nEn": "King Lie", "t": "", "tEn": "", "rg": "前375–前369", "rgEn": "375–369 BC", "ry": 6, "sh": "烈", "shEn": "Lie", "note": "魏齐称王", "noteEn": "Wei and Qi took the royal title" },
+    { "n": "周显王", "nEn": "King Xian", "t": "", "tEn": "", "rg": "前368–前321", "rgEn": "368–321 BC", "ry": 48, "sh": "显", "shEn": "Xian", "note": "商鞅变法，秦强", "noteEn": "Shang Yang's reform; Qin grew strong" },
+    { "n": "周慎靓王", "nEn": "King Shenjing", "t": "", "tEn": "", "rg": "前320–前315", "rgEn": "320–315 BC", "ry": 6, "sh": "慎靓", "shEn": "Shenjing", "note": "五国相王", "noteEn": "Five states mutually granted kingship" },
+    { "n": "周赧王", "nEn": "King Nan", "t": "东周末", "tEn": "End of Eastern Zhou", "rg": "前314–前256", "rgEn": "314–256 BC", "ry": 59, "sh": "赧", "shEn": "Nan", "note": "东周亡，秦势起", "noteEn": "Eastern Zhou fell; Qin rose" }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "周公旦",
-        "note": "制礼作乐，奠定周制"
-      },
-      {
-        "n": "管仲",
-        "note": "齐相，尊王攘夷"
-      },
-      {
-        "n": "百里奚",
-        "note": "秦穆公贤臣"
-      }
+      { "n": "周公旦", "nEn": "Duke of Zhou", "note": "制礼作乐，奠定周制", "noteEn": "Established rites and music; founded the Zhou system" },
+      { "n": "管仲", "nEn": "Guan Zhong", "note": "齐相，尊王攘夷", "noteEn": "Prime minister of Qi; “revere the king, repel the barbarians”" },
+      { "n": "百里奚", "nEn": "Baili Xi", "note": "秦穆公贤臣", "noteEn": "Worthy minister of Duke Mu of Qin" }
     ],
     "武将": [
-      {
-        "n": "姜子牙(太公)",
-        "note": "兵家鼻祖，辅武王"
-      }
+      { "n": "姜子牙(太公)", "nEn": "Jiang Ziya (the Grand Duke)", "note": "兵家鼻祖，辅武王", "noteEn": "Progenitor of the military art; aided King Wu" }
     ],
     "思想·文人": [
-      {
-        "n": "孔子",
-        "note": "儒家创始人"
-      },
-      {
-        "n": "老子",
-        "note": "道家创始人"
-      },
-      {
-        "n": "孙武",
-        "note": "兵圣，《孙子兵法》"
-      },
-      {
-        "n": "孟子",
-        "note": "儒家亚圣"
-      },
-      {
-        "n": "庄子",
-        "note": "道家代表"
-      },
-      {
-        "n": "墨子",
-        "note": "墨家"
-      },
-      {
-        "n": "韩非",
-        "note": "法家集大成"
-      }
+      { "n": "孔子", "nEn": "Confucius", "note": "儒家创始人", "noteEn": "Founder of Confucianism" },
+      { "n": "老子", "nEn": "Laozi", "note": "道家创始人", "noteEn": "Founder of Daoism" },
+      { "n": "孙武", "nEn": "Sun Wu", "note": "兵圣，《孙子兵法》", "noteEn": "Sage of war; The Art of War" },
+      { "n": "孟子", "nEn": "Mencius", "note": "儒家亚圣", "noteEn": "Second sage of Confucianism" },
+      { "n": "庄子", "nEn": "Zhuangzi", "note": "道家代表", "noteEn": "Daoist representative" },
+      { "n": "墨子", "nEn": "Mozi", "note": "墨家", "noteEn": "Mohism" },
+      { "n": "韩非", "nEn": "Han Fei", "note": "法家集大成", "noteEn": "Synthesizer of Legalism" }
     ]
   },
   "policies": [
@@ -354,6 +75,14 @@
     "井田制",
     "春秋争霸",
     "战国变法(商鞅)"
+  ],
+  "policiesEn": [
+    "The enfeoffment system",
+    "The lineage (clan) system",
+    "The ritual and music system",
+    "The well-field system",
+    "Spring and Autumn hegemony",
+    "Warring States reforms (Shang Yang)"
   ],
   "aspects": {
     "政治": [
@@ -368,6 +97,21 @@
       "百家争鸣，奠定此后两千年思想格局",
       "《诗》《书》《易》等元典逐步形成",
       "战国已出现指向工具「司南」（指南针前身）"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Enfeoffment, lineage and ritual-music formed a trinity",
+      "Eastern Zhou kingship waned; Spring–Autumn hegemony and Warring-States reforms"
+    ],
+    "经济": [
+      "The well-field system prevailed; later iron tools and ox-plough spread",
+      "Handicrafts and commerce rose; cities grew"
+    ],
+    "文化": [
+      "The Hundred Schools contended, shaping two millennia of thought",
+      "Canons such as the Poetry, Documents and Changes took shape",
+      "The Warring States already had the pointing tool “Sinan” (forerunner of the compass)"
     ]
   }
 }

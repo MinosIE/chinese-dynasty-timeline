@@ -1,161 +1,42 @@
 {
   "id": "qing",
   "name": "清",
+  "nameEn": "Qing",
   "years": "1636–1912",
+  "yearsEn": "1636–1912",
   "era": "明清",
   "capital": "北京",
+  "capitalEn": "Beijing",
   "feature": "中国最后王朝，前期疆域极盛，后期遭遇近代变局（努尔哈赤建后金1616为清前身）。列主要帝，合计约276年。",
+  "featureEn": "China's last dynasty; at its height territory peaked, later hit by modern upheavals (Nurhaci founded Later Jin in 1616 as its precursor). Major emperors, ~276 yrs.",
   "summary": "古代帝制终结篇，由盛转衰卷入世界体系。",
+  "summaryEn": "The final chapter of imperial rule, turning from prosperity to decline as it entered the world system.",
   "emperors": [
-    {
-      "n": "清太宗(皇太极)",
-      "t": "改国号清",
-      "rg": "1636–1643",
-      "ry": 7,
-      "mt": "太宗",
-      "gh": "崇德",
-      "sh": "文",
-      "note": "改国号清，入关前夜"
-    },
-    {
-      "n": "清世祖(福临)",
-      "t": "顺治",
-      "rg": "1643–1661",
-      "ry": 18,
-      "mt": "世祖",
-      "gh": "顺治",
-      "sh": "章",
-      "note": "入主中原"
-    },
-    {
-      "n": "清圣祖(玄烨)",
-      "t": "康熙",
-      "rg": "1661–1722",
-      "ry": 61,
-      "mt": "圣祖",
-      "gh": "康熙",
-      "sh": "仁",
-      "note": "守成开拓"
-    },
-    {
-      "n": "清世宗(胤禛)",
-      "t": "雍正",
-      "rg": "1722–1735",
-      "ry": 13,
-      "mt": "世宗",
-      "gh": "雍正",
-      "sh": "宪",
-      "note": "勤政革新"
-    },
-    {
-      "n": "清高宗(弘历)",
-      "t": "乾隆",
-      "rg": "1735–1796",
-      "ry": 61,
-      "mt": "高宗",
-      "gh": "乾隆",
-      "sh": "纯",
-      "note": "十全武功"
-    },
-    {
-      "n": "清仁宗(颙琰)",
-      "t": "嘉庆",
-      "rg": "1796–1820",
-      "ry": 24,
-      "mt": "仁宗",
-      "gh": "嘉庆",
-      "sh": "睿",
-      "note": "由盛转衰"
-    },
-    {
-      "n": "清宣宗(旻宁)",
-      "t": "道光",
-      "rg": "1820–1850",
-      "ry": 30,
-      "mt": "宣宗",
-      "gh": "道光",
-      "sh": "成",
-      "note": "鸦片战争"
-    },
-    {
-      "n": "清文宗(奕詝)",
-      "t": "咸丰",
-      "rg": "1850–1861",
-      "ry": 11,
-      "mt": "文宗",
-      "gh": "咸丰",
-      "sh": "显",
-      "note": "英法联军"
-    },
-    {
-      "n": "清穆宗(载淳)",
-      "t": "同治",
-      "rg": "1861–1874",
-      "ry": 13,
-      "mt": "穆宗",
-      "gh": "同治",
-      "sh": "毅",
-      "note": "同光中兴"
-    },
-    {
-      "n": "清德宗(载湉)",
-      "t": "光绪",
-      "rg": "1875–1908",
-      "ry": 34,
-      "mt": "德宗",
-      "gh": "光绪",
-      "sh": "景",
-      "note": "戊戌维新"
-    },
-    {
-      "n": "清宣统(溥仪)",
-      "t": "末代",
-      "rg": "1908–1912",
-      "ry": 4,
-      "gh": "宣统",
-      "note": "清亡，帝制终结"
-    }
+    { "n": "清太宗(皇太极)", "nEn": "Qing Taizong (Hong Taiji)", "t": "改国号清", "tEn": "Renamed the state Qing", "rg": "1636–1643", "rgEn": "1636–1643", "ry": 7, "mt": "太宗", "mtEn": "Taizong", "gh": "崇德", "ghEn": "Chongde", "sh": "文", "shEn": "Wen", "note": "改国号清，入关前夜", "noteEn": "Renamed the state Qing; eve of entering the pass" },
+    { "n": "清世祖(福临)", "nEn": "Qing Shizu (Fulin)", "t": "顺治", "tEn": "Shunzhi", "rg": "1643–1661", "rgEn": "1643–1661", "ry": 18, "mt": "世祖", "mtEn": "Shizu", "gh": "顺治", "ghEn": "Shunzhi", "sh": "章", "shEn": "Zhang", "note": "入主中原", "noteEn": "Entered the Central Plains" },
+    { "n": "清圣祖(玄烨)", "nEn": "Qing Shengzu (Xuanye)", "t": "康熙", "tEn": "Kangxi", "rg": "1661–1722", "rgEn": "1661–1722", "ry": 61, "mt": "圣祖", "mtEn": "Shengzu", "gh": "康熙", "ghEn": "Kangxi", "sh": "仁", "shEn": "Ren", "note": "守成开拓", "noteEn": "Consolidated and expanded" },
+    { "n": "清世宗(胤禛)", "nEn": "Qing Shizong (Yinzhen)", "t": "雍正", "tEn": "Yongzheng", "rg": "1722–1735", "rgEn": "1722–1735", "ry": 13, "mt": "世宗", "mtEn": "Shizong", "gh": "雍正", "ghEn": "Yongzheng", "sh": "宪", "shEn": "Xian", "note": "勤政革新", "noteEn": "Diligent and reform-minded" },
+    { "n": "清高宗(弘历)", "nEn": "Qing Gaozong (Hongli)", "t": "乾隆", "tEn": "Qianlong", "rg": "1735–1796", "rgEn": "1735–1796", "ry": 61, "mt": "高宗", "mtEn": "Gaozong", "gh": "乾隆", "ghEn": "Qianlong", "sh": "纯", "shEn": "Chun", "note": "十全武功", "noteEn": "The Ten Great Campaigns" },
+    { "n": "清仁宗(颙琰)", "nEn": "Qing Renzong (Yongyan)", "t": "嘉庆", "tEn": "Jiaqing", "rg": "1796–1820", "rgEn": "1796–1820", "ry": 24, "mt": "仁宗", "mtEn": "Renzong", "gh": "嘉庆", "ghEn": "Jiaqing", "sh": "睿", "shEn": "Rui", "note": "由盛转衰", "noteEn": "From prosperity to decline" },
+    { "n": "清宣宗(旻宁)", "nEn": "Qing Xuanzong (Minning)", "t": "道光", "tEn": "Daoguang", "rg": "1820–1850", "rgEn": "1820–1850", "ry": 30, "mt": "宣宗", "mtEn": "Xuanzong", "gh": "道光", "ghEn": "Daoguang", "sh": "成", "shEn": "Cheng", "note": "鸦片战争", "noteEn": "The Opium War" },
+    { "n": "清文宗(奕詝)", "nEn": "Qing Wenzong (Yizhu)", "t": "咸丰", "tEn": "Xianfeng", "rg": "1850–1861", "rgEn": "1850–1861", "ry": 11, "mt": "文宗", "mtEn": "Wenzong", "gh": "咸丰", "ghEn": "Xianfeng", "sh": "显", "shEn": "Xian", "note": "英法联军", "noteEn": "The Anglo-French expedition" },
+    { "n": "清穆宗(载淳)", "nEn": "Qing Muzong (Zaichun)", "t": "同治", "tEn": "Tongzhi", "rg": "1861–1874", "rgEn": "1861–1874", "ry": 13, "mt": "穆宗", "mtEn": "Muzong", "gh": "同治", "ghEn": "Tongzhi", "sh": "毅", "shEn": "Yi", "note": "同光中兴", "noteEn": "The Tongzhi Restoration" },
+    { "n": "清德宗(载湉)", "nEn": "Qing Dezong (Zaitian)", "t": "光绪", "tEn": "Guangxu", "rg": "1875–1908", "rgEn": "1875–1908", "ry": 34, "mt": "德宗", "mtEn": "Dezong", "gh": "光绪", "ghEn": "Guangxu", "sh": "景", "shEn": "Jing", "note": "戊戌维新", "noteEn": "The Hundred Days' Reform" },
+    { "n": "清宣统(溥仪)", "nEn": "Xuantong (Puyi)", "t": "末代", "tEn": "Last ruler", "rg": "1908–1912", "rgEn": "1908–1912", "ry": 4, "gh": "宣统", "ghEn": "Xuantong", "note": "清亡，帝制终结", "noteEn": "Qing fell; imperial rule ended" }
   ],
   "talents": {
     "文臣": [
-      {
-        "n": "多尔衮",
-        "note": "摄政王"
-      },
-      {
-        "n": "曾国藩",
-        "note": "平定太平天国"
-      },
-      {
-        "n": "李鸿章",
-        "note": "洋务运动"
-      },
-      {
-        "n": "左宗棠",
-        "note": "收复新疆"
-      },
-      {
-        "n": "张之洞",
-        "note": "洋务巨擘"
-      },
-      {
-        "n": "纪晓岚",
-        "note": "《四库》总纂"
-      }
+      { "n": "多尔衮", "nEn": "Dorgon", "note": "摄政王", "noteEn": "Prince regent" },
+      { "n": "曾国藩", "nEn": "Zeng Guofan", "note": "平定太平天国", "noteEn": "Put down the Taiping Heavenly Kingdom" },
+      { "n": "李鸿章", "nEn": "Li Hongzhang", "note": "洋务运动", "noteEn": "Self-Strengthening Movement" },
+      { "n": "左宗棠", "nEn": "Zuo Zongtang", "note": "收复新疆", "noteEn": "Recovered Xinjiang" },
+      { "n": "张之洞", "nEn": "Zhang Zhidong", "note": "洋务巨擘", "noteEn": "A giant of the Self-Strengthening Movement" },
+      { "n": "纪晓岚", "nEn": "Ji Yun", "note": "《四库》总纂", "noteEn": "Chief editor of the Siku Quanshu" }
     ],
     "其他": [
-      {
-        "n": "林则徐",
-        "note": "禁烟抗英"
-      },
-      {
-        "n": "康有为",
-        "note": "维新领袖"
-      },
-      {
-        "n": "梁启超",
-        "note": "维新思想家"
-      }
+      { "n": "林则徐", "nEn": "Lin Zexu", "note": "禁烟抗英", "noteEn": "Banned opium, resisted Britain" },
+      { "n": "康有为", "nEn": "Kang Youwei", "note": "维新领袖", "noteEn": "Reform leader" },
+      { "n": "梁启超", "nEn": "Liang Qichao", "note": "维新思想家", "noteEn": "Reform thinker" }
     ]
   },
   "policies": [
@@ -167,6 +48,16 @@
     "洋务运动",
     "戊戌变法",
     "清末新政"
+  ],
+  "policiesEn": [
+    "Manchu–Han separation",
+    "The palace memorial system",
+    "Tax merged into land (Yongzheng)",
+    "Melting-loss silver to the treasury",
+    "Closed-door policy",
+    "Self-Strengthening Movement",
+    "Hundred Days' Reform",
+    "Late-Qing New Policies"
   ],
   "aspects": {
     "政治": [
@@ -180,6 +71,20 @@
     "文化": [
       "《四库全书》与考据学",
       "京剧形成，西学东渐（洋务、维新）"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Manchu–Han separation and the memorial system; autocracy peaked",
+      "Territory fixed; later faced modern upheavals"
+    ],
+    "经济": [
+      "Tax merged into land, melting-loss to treasury; the Kangxi–Qianlong heyday",
+      "Later closed-door policy; forced into the world system"
+    ],
+    "文化": [
+      "The Complete Library in Four Branches and evidential scholarship",
+      "Peking opera took form; Western learning spread east (Self-Strengthening, Reform)"
     ]
   }
 }
