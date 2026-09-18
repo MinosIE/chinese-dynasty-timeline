@@ -48,6 +48,10 @@ fs.writeFileSync('robots.txt',
 const urls = [
   `<url><loc>${SITE}</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>`,
   `<url><loc>${SITE}data/overview.json</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>`,
+  `<url><loc>${SITE}llms.txt</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
+  `<url><loc>${SITE}llms-en.txt</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`,
+  `<url><loc>${SITE}llms-full.txt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>`,
+  `<url><loc>${SITE}llms-full-en.txt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>`,
   ...overview.map(o => `<url><loc>${SITE}data/dynasties/${o.id}.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>`)
 ];
 fs.writeFileSync('sitemap.xml',
