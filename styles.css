@@ -45,7 +45,7 @@
   body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;
     background:var(--bg);color:var(--text);line-height:1.6;
     -webkit-font-smoothing:antialiased;padding-bottom:72px;transition:background .3s,color .3s}
-  .wrap{display:flex;flex-direction:column;gap:28px;max-width:1440px;margin:0 auto;padding:0 20px}
+  .wrap{display:flex;flex-direction:column;gap:28px;margin:0 auto;padding:0 28px}
   .theme-btn{position:absolute;top:18px;right:18px;z-index:5;height:40px;padding:0 15px;border-radius:999px;
     border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.12);color:#fff;
     font-size:13px;font-weight:600;cursor:pointer;backdrop-filter:blur(4px);
