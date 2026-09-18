@@ -45,10 +45,11 @@
   body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",Helvetica,Arial,sans-serif;
     background:var(--bg);color:var(--text);line-height:1.6;
     -webkit-font-smoothing:antialiased;padding-bottom:72px;transition:background .3s,color .3s}
-  .wrap{display:flex;flex-direction:column;gap:28px;max-width:1120px;margin:0 auto;padding:0 20px}
-  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;width:44px;height:44px;border-radius:50%;
+  .wrap{display:flex;flex-direction:column;gap:28px;max-width:1440px;margin:0 auto;padding:0 20px}
+  .theme-btn{position:fixed;top:16px;right:16px;z-index:50;height:40px;padding:0 15px;border-radius:999px;
     border:1px solid var(--border);background:var(--surface);color:var(--text-strong);
-    font-size:20px;cursor:pointer;box-shadow:var(--s-card);display:flex;align-items:center;justify-content:center;transition:.2s}
+    font-size:13px;font-weight:600;cursor:pointer;box-shadow:var(--s-card);
+    display:inline-flex;align-items:center;gap:6px;font-family:inherit;transition:.2s}
   .theme-btn:hover{transform:translateY(-1px);box-shadow:var(--s-lift)}
   /* hero */
   .hero{display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;
@@ -138,6 +139,14 @@
     padding:5px 13px;font-size:12.5px;font-weight:600}
   .summary{font-size:12.5px;font-style:italic;color:var(--text-mute);
     border-left:3px solid var(--gold);padding:8px 0 8px 12px;background:var(--chip-bg);border-radius:0 var(--r1) var(--r1) 0}
+  /* 政治 / 经济 / 文化 */
+  .aspects{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .aspect{background:var(--chip-bg);border:1px solid var(--border);border-radius:var(--r2);padding:12px 14px}
+  .aspect-h{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--text-strong);margin-bottom:7px}
+  .aspect-h .dot{width:8px;height:8px;border-radius:50%}
+  .aspect-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+  .aspect-list li{position:relative;padding-left:13px;font-size:12.5px;color:var(--text);line-height:1.6}
+  .aspect-list li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--text-mute)}
   .loading{display:flex;align-items:center;gap:10px;padding:22px;color:var(--text-mute);font-size:13px}
   .spinner{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--brand);
     border-radius:50%;animation:spin .8s linear infinite}

@@ -1,6 +1,6 @@
 # 中华王朝时间轴 · 产品需求文档（PRD）
 
-> 版本：v1.2　|　日期：2026-09-18　|　状态：JSON 化架构 + 明暗主题 + GEO 已实现
+> 版本：v1.3　|　日期：2026-09-18　|　状态：JSON 化 + 按需加载 + 明暗主题 + 三维内容 + GEO
 
 ---
 
@@ -41,15 +41,16 @@
 - **F6 明暗主题**：CSS 变量驱动的 light/dark 双主题，右上角切换，`localStorage` 记忆，首访跟随系统。
 - **F7 响应式 & 动效**：移动端适配；`IntersectionObserver` 滚动入场；尊重 `prefers-reduced-motion`。
 - **F8 科普免责与图例**：页脚标注数据性质、名君图例与「上下五千年」说明。
+- **F9 三维内容**：每个朝代详情含「政治 / 经济 / 文化」三方面要点。
 
 ### 4.2 规划中（Roadmap / v2+）
 
-- **F9** 顶部朝代存续时长可视化（甘特 / 条形）。
-- **F10** 搜索 / 关键词定位（帝王、人物、制度）。
-- **F11** 单朝代分享卡片 / 海报导出。
-- **F12** 大事件时间标注（安史之乱、靖康之变等）。
-- **F13** 多语言（繁体 / 英文）切换。
-- **F14** 朝代疆域缩略图 / 关系图谱。
+- **F10** 顶部朝代存续时长可视化（甘特 / 条形）。
+- **F11** 搜索 / 关键词定位（帝王、人物、制度）。
+- **F12** 单朝代分享卡片 / 海报导出。
+- **F13** 大事件时间标注（安史之乱、靖康之变等）。
+- **F14** 多语言（繁体 / 英文）切换。
+- **F15** 朝代疆域缩略图 / 关系图谱。
 
 ## 5. 信息架构
 
@@ -65,7 +66,7 @@ Hero（标题 + KPI：王朝数 / 年数 / 帝王与人才）
 
 - **唯一数据源**：`data/overview.json`（概览）+ `data/dynasties/*.json`（各朝详情）。
 - **概览字段**：`id,name,years,era,capital,approx,duration,feature,summary,counts{emperors,talents,policies}`。
-- **详情字段**：`id,name,years,era,capital,feature,summary,emperors[],talents{},policies[]`。
+- **详情字段**：`id,name,years,era,capital,feature,summary,emperors[],talents{},policies[],aspects{政治,经济,文化}`。
 - **帝王字段**：`n(名号),t(代际),rg(在位),ry(年数),gh(年号),mt(庙号),sh(谥号),note(备注)`。
 - 修改数据后运行 `node scripts/build-geo.mjs` 重新生成 GEO 文件。
 

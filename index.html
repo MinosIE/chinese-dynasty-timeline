@@ -34,7 +34,7 @@
 </script>
 </head>
 <body>
-<button class="theme-btn" id="themeBtn" title="切换明暗主题" aria-label="切换明暗主题">🌙</button>
+<button class="theme-btn" id="themeBtn" title="切换明暗主题" aria-label="切换明暗主题">🌙 夜间</button>
 <div class="wrap">
   <section class="hero">
     <h1>中华王朝 · 千年脉络</h1>
@@ -57,6 +57,8 @@
 const SITE="https://MinosIE.github.io/chinese-dynasty-timeline/";
 const ERA_COLORS={"先秦":"#C79A3A","秦汉":"#D4351C","三国两晋南北朝":"#7C3AED","隋唐":"#0EA5E9","宋元":"#059669","明清":"#EA580C"};
 const ROLE_COLORS={"文臣":"#3B82F6","武将":"#EF4444","思想·文人":"#10B981","其他":"#F59E0B"};
+const ASPECT_ORDER=["政治","经济","文化"];
+const ASPECT_COLORS={"政治":"#D4351C","经济":"#059669","文化":"#7C3AED"};
 const STAR=new Set(["禹(大禹)","汤(天乙)","武丁","周武王(姬发)","秦始皇(嬴政)","汉高祖(刘邦)","汉武帝(刘彻)","王莽(新)","汉光武帝(刘秀)","蜀汉昭烈帝(刘备)","吴大帝(孙权)","晋武帝(司马炎)","北魏孝文帝(拓跋宏)","梁武帝(萧衍)","隋文帝(杨坚)","隋炀帝(杨广)","唐太宗(李世民)","武则天","唐玄宗(李隆基)","宋太祖(赵匡胤)","宋徽宗(赵佶)","元世祖(忽必烈)","明太祖(朱元璋)","明成祖(朱棣)","清圣祖(玄烨)","清世宗(胤禛)","清高宗(弘历)"]);
 const ERAS=["全部","先秦","秦汉","三国两晋南北朝","隋唐","宋元","明清"];
 
@@ -69,7 +71,7 @@ let active="全部";
 
 /* ---------- 主题 ---------- */
 const themeBtn=document.getElementById('themeBtn');
-function syncThemeIcon(){themeBtn.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️':'🌙';}
+function syncThemeIcon(){themeBtn.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'☀️ 日间':'🌙 夜间';}
 syncThemeIcon();
 themeBtn.onclick=()=>{const next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
   document.documentElement.setAttribute('data-theme',next);localStorage.setItem('theme',next);syncThemeIcon();};
@@ -151,12 +153,20 @@ function buildDetail(d){
     talents+=`<div class="tgroup"><div class="gt"><span class="dot" style="background:${col}"></span>${role}</div><div class="chips">${chips}</div></div>`;
   }
   const pills=d.policies.map(p=>`<span class="pill">${p}</span>`).join('');
+  let aspects='';
+  if(d.aspects){
+    aspects=ASPECT_ORDER.filter(k=>d.aspects[k]).map(k=>{
+      const items=d.aspects[k].map(x=>`<li>${x}</li>`).join('');
+      return `<div class="aspect"><div class="aspect-h"><span class="dot" style="background:${ASPECT_COLORS[k]}"></span>${k}</div><ul class="aspect-list">${items}</ul></div>`;
+    }).join('');
+  }
   return `<div class="body">
       <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--brand)">👑</span><span class="t">帝王世系</span><span class="c">${d.emperors.length}位</span></div>
         <div class="emps">${emperors}</div></div>
       <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--info,#0EA5E9)">⚔️</span><span class="t">核心人才</span></div>${talents}</div>
       <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--gold)">📜</span><span class="t">政策与制度</span></div>
         <div class="pills">${pills}</div></div>
+      ${aspects?`<div class="sec"><div class="sec-h"><span class="ic" style="background:#0EA5E9">🏛️</span><span class="t">政治 · 经济 · 文化</span></div><div class="aspects">${aspects}</div></div>`:''}
       <div class="summary">${d.summary}</div>
     </div>`;
 }
