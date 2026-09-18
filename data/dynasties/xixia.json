@@ -20,8 +20,8 @@
     { "n": "夏桓宗(李纯祐)", "nEn": "Emperor Huanzong of Xia (Li Chunyou)", "t": "", "tEn": "", "rg": "1193–1206", "rgEn": "1193–1206", "ry": 13, "note": "守成", "noteEn": "Maintained the legacy" },
     { "n": "夏襄宗(李安全)", "nEn": "Emperor Xiangzong of Xia (Li Anquan)", "t": "", "tEn": "", "rg": "1206–1211", "rgEn": "1206–1211", "ry": 5, "note": "政变即位", "noteEn": "Seized the throne by coup" },
     { "n": "夏神宗(李遵顼)", "nEn": "Emperor Shenzong of Xia (Li Zunxu)", "t": "", "tEn": "", "rg": "1211–1223", "rgEn": "1211–1223", "ry": 12, "note": "附蒙攻金", "noteEn": "Allied with Mongols against Jin" },
-    { "n": "夏献宗(李德旺)", "nEn": "Emperor Xianzong of Xia (Li Dewang)", "t": "", "tEn": "", "rg": "1223–1226", "rgEn": "1223–1226", "ry": 3, "note": "抗蒙", "noteEn": "Resisted the Mongols" },
-    { "n": "夏末帝(李睍)", "nEn": "Last Emperor of Xia (Li Xian)", "t": "末代", "tEn": "Last ruler", "rg": "1226–1227", "rgEn": "1226–1227", "ry": 1, "note": "亡于蒙古", "noteEn": "Fell to the Mongols" }
+    { "n": "夏献宗(李德旺)", "nEn": "Emperor Xianzong of Xia (Li Dewang)", "t": "", "tEn": "", "rg": "1223–1226", "rgEn": "1223–1226", "ry": 3, "rm": 42, "note": "抗蒙", "noteEn": "Resisted the Mongols" },
+    { "n": "夏末帝(李睍)", "nEn": "Last Emperor of Xia (Li Xian)", "t": "末代", "tEn": "Last ruler", "rg": "1226–1227", "rgEn": "1226–1227", "ry": 1, "rm": 13, "note": "亡于蒙古", "noteEn": "Fell to the Mongols" }
   ],
   "talents": {
     "其他": [

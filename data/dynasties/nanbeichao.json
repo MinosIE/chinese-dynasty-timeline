@@ -12,16 +12,16 @@
   "summary": "民族融合关键期，为隋唐盛世积蓄多元养分。",
   "summaryEn": "A key era of ethnic fusion, storing diverse nourishment for the Sui–Tang heyday.",
   "emperors": [
-    { "n": "宋武帝(刘裕)", "nEn": "Liu Yu, Emperor Wu of Song", "t": "南朝宋", "tEn": "Liu Song (South)", "rg": "420–422", "rgEn": "420–422", "ry": 2, "gh": "永初", "ghEn": "Yongchu", "sh": "武", "shEn": "Wu", "note": "寒门代晋", "noteEn": "A commoner replaced Jin" },
+    { "n": "宋武帝(刘裕)", "nEn": "Liu Yu, Emperor Wu of Song", "t": "南朝宋", "tEn": "Liu Song (South)", "rg": "420–422", "rgEn": "420–422", "ry": 2, "rm": 23, "gh": "永初", "ghEn": "Yongchu", "sh": "武", "shEn": "Wu", "note": "寒门代晋", "noteEn": "A commoner replaced Jin" },
     { "n": "宋文帝(刘义隆)", "nEn": "Liu Yilong, Emperor Wen of Song", "t": "南朝宋", "tEn": "Liu Song (South)", "rg": "424–453", "rgEn": "424–453", "ry": 30, "gh": "元嘉", "ghEn": "Yuanjia", "sh": "文", "shEn": "Wen", "note": "元嘉之治", "noteEn": "The Yuanjia era of good rule" },
-    { "n": "齐高帝(萧道成)", "nEn": "Xiao Daocheng, Emperor Gao of Qi", "t": "南朝齐", "tEn": "Southern Qi (South)", "rg": "479–482", "rgEn": "479–482", "ry": 3, "sh": "高", "shEn": "Gao", "note": "建齐", "noteEn": "Founded Qi" },
+    { "n": "齐高帝(萧道成)", "nEn": "Xiao Daocheng, Emperor Gao of Qi", "t": "南朝齐", "tEn": "Southern Qi (South)", "rg": "479–482", "rgEn": "479–482", "ry": 3, "rm": 35, "sh": "高", "shEn": "Gao", "note": "建齐", "noteEn": "Founded Qi" },
     { "n": "梁武帝(萧衍)", "nEn": "Xiao Yan, Emperor Wu of Liang", "t": "南朝梁", "tEn": "Liang (South)", "rg": "502–549", "rgEn": "502–549", "ry": 47, "gh": "天监", "ghEn": "Tianjian", "sh": "武", "shEn": "Wu", "note": "崇佛佞佛，侯景乱", "noteEn": "Obsessed with Buddhism; the Hou Jing revolt" },
     { "n": "陈后主(陈叔宝)", "nEn": "Chen Shubao, Last Lord of Chen", "t": "南朝陈末", "tEn": "Late Chen (South)", "rg": "582–589", "rgEn": "582–589", "ry": 7, "sh": "炀", "shEn": "Yang", "note": "陈亡于隋", "noteEn": "Chen fell to Sui" },
     { "n": "北魏道武帝(拓跋珪)", "nEn": "Tuoba Gui, Emperor Daowu of Northern Wei", "t": "北朝", "tEn": "Northern Wei (North)", "rg": "386–409", "rgEn": "386–409", "ry": 23, "sh": "道武", "shEn": "Daowu", "note": "建北魏", "noteEn": "Founded Northern Wei" },
     { "n": "北魏太武帝(拓跋焘)", "nEn": "Tuoba Tao, Emperor Taiwu of Northern Wei", "t": "北朝", "tEn": "Northern Wei (North)", "rg": "424–452", "rgEn": "424–452", "ry": 28, "sh": "太武", "shEn": "Taiwu", "note": "统一北方", "noteEn": "Unified the north" },
     { "n": "北魏孝文帝(拓跋宏)", "nEn": "Tuoba Hong, Emperor Xiaowen of Northern Wei", "t": "北朝", "tEn": "Northern Wei (North)", "rg": "471–499", "rgEn": "471–499", "ry": 28, "gh": "太和", "ghEn": "Taihe", "sh": "孝文", "shEn": "Xiaowen", "note": "汉化改革", "noteEn": "Sinicization reforms" },
     { "n": "北周武帝(宇文邕)", "nEn": "Yuwen Yong, Emperor Wu of Northern Zhou", "t": "北朝", "tEn": "Northern Zhou (North)", "rg": "560–578", "rgEn": "560–578", "ry": 18, "sh": "武", "shEn": "Wu", "note": "灭北齐，集权", "noteEn": "Destroyed Northern Qi, centralized" },
-    { "n": "北周静帝(宇文阐)", "nEn": "Yuwen Yan, Emperor Jing of Northern Zhou", "t": "北周末", "tEn": "Late Northern Zhou (North)", "rg": "579–581", "rgEn": "579–581", "ry": 2, "note": "禅于隋", "noteEn": "Abdicated to Sui" }
+    { "n": "北周静帝(宇文阐)", "nEn": "Yuwen Yan, Emperor Jing of Northern Zhou", "t": "北周末", "tEn": "Late Northern Zhou (North)", "rg": "579–581", "rgEn": "579–581", "ry": 2, "rm": 24, "note": "禅于隋", "noteEn": "Abdicated to Sui" }
   ],
   "talents": {
     "思想·文人": [

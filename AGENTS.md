@@ -146,7 +146,8 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 - 源字段结构（以 `han.json` 为准）：
   - 详情顶层：`id,name,nameEn,years,yearsEn,era,capital,capitalEn,feature,featureEn,summary,summaryEn,emperors,talents,policies,policiesEn,aspects,aspectsEn`
   - 帝王：`n,nEn,t,tEn,rg,rgEn,ry,mt,mtEn,sh,shEn,note,noteEn`（`ry` 为整数年）
-  - 短在位精度（可选，仅在有明确史料时补）：`rd`（天数）/ `rm`（月数）；供「帝王之最 · 在位最短」按真实时长排序，展示一律带「约」
+  - 短在位精度（可选，仅在有明确史料时补）：`rd`（天数）/ `rm`（月数）；供「帝王之最 · 在位最短」与详情页显示真实时长，展示一律带「约」
+  - ⚠️ `ry` 是「纪年包含年数」口径（如汉高祖 前202–前195 跨度 7，`ry=8`），与 `rg` 跨度天然可能差 1（全站 58 处，**不是错误**）。补 `rd`/`rm` 必须按**真实起止月**独立计算，**不可用 `ry` 推算**
   - 人才：`talents[role][] = {n,nEn,note,noteEn}`，`role ∈ 文臣|武将|思想·文人|其他`
   - 制度：`policies[]` 与 `policiesEn[]` **等长并行**；三维：`aspects{政治,经济,文化}` 与 `aspectsEn` **同键等长**
   - 概览：`id,name,nameEn,years,yearsEn,era,capital,capitalEn,approx,start,end,duration,durationEn,feature,featureEn,summary,summaryEn,counts{emperors,talents,policies}`
@@ -308,7 +309,8 @@ F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F22 
 | `og-cover.png` | 约 730KB，未压缩 | 分享图加载偏慢 |
 | 仓库根 | 无 `.gitignore` | 易误提交临时文件（如本地截图） |
 | `scripts/validate-data.mjs` | 不阻断（三国/南北朝分组列出致误报） | 只能人工判读 |
-| `data/dynasties/*.json` | 多数帝王只有整数年 `ry`；目前仅 10 位短在位者补了 `rd`/`rm` | 「在位最长/最短」整体粒度仍是「年」；已加口径脚注说明 |
+| `data/dynasties/*.json` | 长在位帝王仍只有整数年 `ry`（年粒度误差 < 2%，故未补）；`ry ≤ 3` 的 37 位中已补 33 位 `rd`/`rm`，余 4 位（商外丙、周武王、周釐王、周悼王）无月份史料 | 「在位最长」仍是年粒度；「最短」已到月 / 日 |
+| `data/dynasties/*.json` | `ry`（纪年包含年数）与 `rg` 跨度有 58 处差 1，属口径差异而非错误；明英宗两次在位已改为 `1435–1449 / 1457–1464` | 若按 `rg` 跨度重算 `ry` 会连锁改变存续年数 / KPI，风险高 |
 
 ### 5.5 已知问题
 
@@ -324,3 +326,4 @@ F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F22 
 
 - 2026-09-18：首次生成。基于当日仓库快照（`main` @ `d5a205f`）梳理架构、数据模型、i18n 约定、派生流水线、CI 与真实踩坑清单。
 - 2026-09-18：帝王之最改为「月/日」精度口径（新增可选字段 `rd`/`rm`、`approx` 存疑标记、卡片口径脚注）；补充 §2.5 字段、§3.3/§3.4 联动与踩坑、§5.4 技术债。
+- 2026-09-18：按通行年表补齐 `ry ≤ 3` 的短在位者精度（37 位中 33 位）；详情页同步显示月 / 日；修正明英宗两次在位的 `rg`；新增 `ry` 口径警告（§2.5）。

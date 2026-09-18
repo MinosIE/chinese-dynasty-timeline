@@ -19,14 +19,14 @@
     { "n": "晋元帝(司马睿)", "nEn": "Sima Rui, Emperor Yuan of Jin", "t": "东晋", "tEn": "Eastern Jin", "rg": "317–322", "rgEn": "317–322", "ry": 6, "mt": "中宗", "mtEn": "Zhongzong", "gh": "建武", "ghEn": "Jianwu", "sh": "元", "shEn": "Yuan", "note": "衣冠南渡", "noteEn": "The gentry crossed south" },
     { "n": "晋明帝(司马绍)", "nEn": "Sima Shao, Emperor Ming of Jin", "t": "", "tEn": "", "rg": "322–325", "rgEn": "322–325", "ry": 4, "sh": "明", "shEn": "Ming", "note": "平王敦", "noteEn": "Crushed Wang Dun" },
     { "n": "晋成帝(司马衍)", "nEn": "Sima Yan, Emperor Cheng of Jin", "t": "", "tEn": "", "rg": "325–342", "rgEn": "325–342", "ry": 18, "sh": "成", "shEn": "Cheng", "note": "苏峻之乱", "noteEn": "The Su Jun revolt" },
-    { "n": "晋康帝(司马岳)", "nEn": "Sima Yue, Emperor Kang of Jin", "t": "", "tEn": "", "rg": "342–344", "rgEn": "342–344", "ry": 2, "sh": "康", "shEn": "Kang", "note": "在位两年即崩", "noteEn": "Died after two years" },
+    { "n": "晋康帝(司马岳)", "nEn": "Sima Yue, Emperor Kang of Jin", "t": "", "tEn": "", "rg": "342–344", "rgEn": "342–344", "ry": 2, "rm": 22, "sh": "康", "shEn": "Kang", "note": "在位两年即崩", "noteEn": "Died after two years" },
     { "n": "晋穆帝(司马聃)", "nEn": "Sima Dan, Emperor Mu of Jin", "t": "", "tEn": "", "rg": "344–361", "rgEn": "344–361", "ry": 18, "sh": "穆", "shEn": "Mu", "note": "桓温北征", "noteEn": "Huan Wen's northern campaigns" },
-    { "n": "晋哀帝(司马丕)", "nEn": "Sima Pi, Emperor Ai of Jin", "t": "", "tEn": "", "rg": "361–364", "rgEn": "361–364", "ry": 3, "sh": "哀", "shEn": "Ai", "note": "桓温专政", "noteEn": "Huan Wen monopolized power" },
+    { "n": "晋哀帝(司马丕)", "nEn": "Sima Pi, Emperor Ai of Jin", "t": "", "tEn": "", "rg": "361–364", "rgEn": "361–364", "ry": 3, "rm": 45, "sh": "哀", "shEn": "Ai", "note": "桓温专政", "noteEn": "Huan Wen monopolized power" },
     { "n": "晋废帝(司马奕)", "nEn": "Sima Yi, Emperor Fei of Jin", "t": "海西公", "tEn": "Duke of Haixi", "rg": "364–369", "rgEn": "364–369", "ry": 5, "sh": "废", "shEn": "Fei", "note": "被桓温废黜", "noteEn": "Deposed by Huan Wen" },
     { "n": "晋简文帝(司马昱)", "nEn": "Sima Yu, Emperor Jianwen of Jin", "t": "", "tEn": "", "rg": "371–372", "rgEn": "371–372", "ry": 1, "rm": 10, "sh": "简文", "shEn": "Jianwen", "note": "桓温拥立，在位不足一年", "noteEn": "Entrenched by Huan Wen; reigned under a year" },
     { "n": "晋孝武帝(司马曜)", "nEn": "Sima Yao, Emperor Xiaowu of Jin", "t": "", "tEn": "", "rg": "372–396", "rgEn": "372–396", "ry": 25, "sh": "孝武", "shEn": "Xiaowu", "note": "淝水之战", "noteEn": "The Battle of Fei River" },
     { "n": "晋安帝(司马德宗)", "nEn": "Sima Dezong, Emperor An of Jin", "t": "", "tEn": "", "rg": "396–418", "rgEn": "396–418", "ry": 23, "sh": "安", "shEn": "An", "note": "桓玄篡，刘裕兴", "noteEn": "Huan Xuan usurped; Liu Yu rose" },
-    { "n": "晋恭帝(司马德文)", "nEn": "Sima Dewen, Emperor Gong of Jin", "t": "末代", "tEn": "Last ruler", "rg": "418–420", "rgEn": "418–420", "ry": 3, "sh": "恭", "shEn": "Gong", "note": "禅于刘裕", "noteEn": "Abdicated to Liu Yu" }
+    { "n": "晋恭帝(司马德文)", "nEn": "Sima Dewen, Emperor Gong of Jin", "t": "末代", "tEn": "Last ruler", "rg": "418–420", "rgEn": "418–420", "ry": 3, "rm": 18, "sh": "恭", "shEn": "Gong", "note": "禅于刘裕", "noteEn": "Abdicated to Liu Yu" }
   ],
   "talents": {
     "文臣": [

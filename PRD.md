@@ -84,7 +84,8 @@ Hero（标题 + KPI：王朝数 / 年数 / 帝王与人才）
 - **概览字段**：`id,name,years,era,capital,approx,duration,feature,summary,counts{emperors,talents,policies}`。
 - **详情字段**：`id,name,years,era,capital,feature,summary,emperors[],talents{},policies[],aspects{政治,经济,文化}`。
 - **帝王字段**：`n(名号),t(代际),rg(在位),ry(年数),gh(年号),mt(庙号),sh(谥号),note(备注)`。
-- **短在位精度（可选）**：`rd`（在位天数）/ `rm`（在位月数），仅在有明确史料时补；用于「在位最短」按真实时长排序，展示一律带「约」。
+- **短在位精度（可选）**：`rd`（在位天数）/ `rm`（在位月数），按通行年表的真实起止月计算；目前 `ry ≤ 3` 的 37 位中已补 33 位（余 4 位为商 / 西周等无月份史料者）。用于「在位最短」与帝王详情，展示一律带「约」。
+- **口径说明**：`ry` 为纪年包含年数（与 `rg` 跨度可能差 1）；长在位者年粒度误差 < 2%，不补月 / 日。
 - **双语字段**：所有展示型文案附同名 `*En`（如 `nameEn / yearsEn / capitalEn / summaryEn / noteEn`）；`policiesEn`（并行数组）、`aspectsEn`（并行对象，键同中文）。英文缺失时自动回退中文。
 - 修改数据后按序重新生成派生文件：`node scripts/build-search.mjs` → `node scripts/build-search-en.mjs` → `node scripts/build-records.mjs` → `node scripts/build-geo.mjs`；并用 `node scripts/check-i18n.mjs` 校验双语完整性。
 
