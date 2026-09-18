@@ -54,25 +54,51 @@
     <div class="search-results" id="searchResults" hidden></div>
   </div>
 
-  <section class="spanchart">
-    <div class="inv-head"><h2>朝代存续一览</h2><p>长度按年代比例 · 点击色条可跳转</p></div>
-    <div class="span-wrap">
-      <div class="span-rows" id="spanRows"></div>
-      <div class="span-axis"><span class="span-name"></span><div class="span-ticks" id="spanTicks"></div></div>
+  <nav class="modnav" id="modNav">
+    <button class="mod active" data-go="m-home">概览</button>
+    <button class="mod" data-go="m-timeline">朝代时间轴</button>
+    <button class="mod" data-go="m-span">存续一览</button>
+    <button class="mod" data-go="m-inv">四大发明</button>
+    <button class="mod" data-go="m-events">大事记</button>
+  </nav>
+
+  <section class="module active" id="m-home">
+    <p class="home-lead">从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始</p>
+    <div class="home-grid">
+      <button class="entry" data-go="m-timeline"><span class="entry-ic">📜</span><span class="entry-t">朝代时间轴</span><span class="entry-d">18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化</span><span class="entry-go">进入 →</span></button>
+      <button class="entry" data-go="m-span"><span class="entry-ic">📊</span><span class="entry-t">存续一览</span><span class="entry-d">按年代比例对比各朝长短，一眼看三千年</span><span class="entry-go">进入 →</span></button>
+      <button class="entry" data-go="m-inv"><span class="entry-ic">🧭</span><span class="entry-t">四大发明</span><span class="entry-d">造纸、印刷、火药、指南针的朝代、人物与世界影响</span><span class="entry-go">进入 →</span></button>
+      <button class="entry" data-go="m-events"><span class="entry-ic">🗓️</span><span class="entry-t">历史大事记</span><span class="entry-d">32 个关键节点，串起王朝兴替</span><span class="entry-go">进入 →</span></button>
     </div>
   </section>
 
-  <nav class="tabs" id="tabs"></nav>
-  <main class="timeline" id="timeline"></main>
-
-  <section class="inventions">
-    <div class="inv-head"><h2>四大发明</h2><p>改变世界的中国创造 · 点击可跳转到对应朝代</p></div>
-    <div class="inv-grid" id="inventions"></div>
+  <section class="module" id="m-timeline">
+    <nav class="tabs" id="tabs"></nav>
+    <main class="timeline" id="timeline"></main>
   </section>
 
-  <section class="events">
-    <div class="inv-head"><h2>历史大事记</h2><p>关键节点 · 点击可跳转到对应朝代</p></div>
-    <div class="ev-list" id="evList"></div>
+  <section class="module" id="m-span">
+    <section class="spanchart">
+      <div class="inv-head"><h2>朝代存续一览</h2><p>长度按年代比例 · 点击色条可跳转</p></div>
+      <div class="span-wrap">
+        <div class="span-rows" id="spanRows"></div>
+        <div class="span-axis"><span class="span-name"></span><div class="span-ticks" id="spanTicks"></div></div>
+      </div>
+    </section>
+  </section>
+
+  <section class="module" id="m-inv">
+    <section class="inventions">
+      <div class="inv-head"><h2>四大发明</h2><p>改变世界的中国创造 · 点击可跳转到对应朝代</p></div>
+      <div class="inv-grid" id="inventions"></div>
+    </section>
+  </section>
+
+  <section class="module" id="m-events">
+    <section class="events">
+      <div class="inv-head"><h2>历史大事记</h2><p>关键节点 · 点击可跳转到对应朝代</p></div>
+      <div class="ev-list" id="evList"></div>
+    </section>
   </section>
 
   <p class="foot">
@@ -270,6 +296,7 @@ function renderInventions(list){
   document.querySelectorAll('.inv-link').forEach(b=>b.onclick=()=>jumpToDynasty(b.dataset.dynasty));
 }
 function jumpToDynasty(id){
+  switchModule('m-timeline');
   if(active!=="全部"){active="全部";[...tabsEl.children].forEach(c=>c.classList.toggle('active',c.textContent==="全部"));render();}
   const node=document.getElementById(id);
   if(!node)return;
@@ -324,6 +351,19 @@ function renderEvents(list){
   });
 }
 
+/* ---------- 模块切换 ---------- */
+function switchModule(id){
+  document.querySelectorAll('.module').forEach(m=>m.classList.toggle('active',m.id===id));
+  document.querySelectorAll('.mod').forEach(b=>b.classList.toggle('active',b.dataset.go===id));
+  const mod=document.getElementById(id);
+  if(mod)requestAnimationFrame(()=>mod.querySelectorAll('.reveal:not(.in)').forEach((el,i)=>setTimeout(()=>el.classList.add('in'),Math.min(i,8)*40)));
+}
+document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',()=>{
+  switchModule(el.dataset.go);
+  const t=document.getElementById(el.dataset.go);
+  if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+}));
+
 /* ---------- 搜索 ---------- */
 let searchIndex=null;
 const searchEl=document.getElementById('search');
@@ -362,6 +402,8 @@ document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidde
   injectJsonLd();
   try{const r=await fetch('data/inventions.json');if(r.ok)renderInventions(await r.json());}catch(e){}
   try{const r=await fetch('data/events.json');if(r.ok)renderEvents(await r.json());}catch(e){}
+  const h=decodeURIComponent(location.hash.slice(1));
+  if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
 })();
 </script>
 </body>
