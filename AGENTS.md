@@ -36,6 +36,7 @@
 ```
 index.html              # 唯一页面：DOM 结构 + 全部内联 JS（约 670 行，见 3.2）
 styles.css              # 全部样式：CSS 变量 + [data-theme="dark"] 覆盖（约 310 行）
+.nojekyll               # 空文件：跳过 GitHub Pages 的 Jekyll 处理（勿删）
 favicon.svg             # 站点图标
 og-cover.png            # 分享封面 1200×630（约 730KB，未压缩优化）
 assets/og-source.html   # 封面图 HTML 源文件（手工截图用，不参与构建）
