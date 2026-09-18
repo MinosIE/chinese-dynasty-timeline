@@ -60,6 +60,7 @@
     <button class="mod" data-go="m-span">存续一览</button>
     <button class="mod" data-go="m-inv">四大发明</button>
     <button class="mod" data-go="m-events">大事记</button>
+    <button class="mod" data-go="m-records">帝王之最</button>
   </nav>
 
   <section class="module active" id="m-home">
@@ -99,6 +100,11 @@
       <div class="inv-head"><h2>历史大事记</h2><p>关键节点 · 点击可跳转到对应朝代</p></div>
       <div class="ev-groups" id="evList"></div>
     </section>
+  </section>
+
+  <section class="module" id="m-records">
+    <div class="inv-head"><h2>帝王之最</h2><p>基于各朝代帝王世系统计 · 点击可跳转到对应朝代</p></div>
+    <div class="rec-grid" id="recGrid"></div>
   </section>
 
   <p class="foot">
@@ -373,6 +379,20 @@ document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',(
   if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
 }));
 
+/* ---------- 帝王之最 ---------- */
+function renderRecords(r){
+  const card=(title,items,row)=>`<div class="rec-card"><h3 class="rec-title">${title}</h3><ol class="rec-list">${items.map(row).join('')}</ol></div>`;
+  const liLong=i=>`<li class="rec-item" data-dynasty="${i.id}"><span class="rec-rank">${i._r}</span><span class="rec-main"><span class="rec-name">${i.name}</span><span class="rec-meta">${i.dynasty} · ${i.rg||''}</span></span><span class="rec-val">${i.ry}年</span></li>`;
+  const liDyn=i=>`<li class="rec-item" data-dynasty="${i.id}"><span class="rec-rank">${i._r}</span><span class="rec-main"><span class="rec-name">${i.dynasty}</span><span class="rec-meta">共 ${i.count} 位帝王</span></span><span class="rec-val">${i.count}位</span></li>`;
+  r.longest.forEach((x,i)=>x._r=i+1);r.shortest.forEach((x,i)=>x._r=i+1);r.mostEmperors.forEach((x,i)=>x._r=i+1);
+  document.getElementById('recGrid').innerHTML=
+    card('在位最长',r.longest,liLong)+card('在位最短',r.shortest,liLong)+card('帝王数量最多',r.mostEmperors,liDyn);
+  document.querySelectorAll('#recGrid .rec-item').forEach(el=>{
+    const go=()=>jumpToDynasty(el.dataset.dynasty);
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+}
+
 /* ---------- 搜索 ---------- */
 let searchIndex=null;
 const searchEl=document.getElementById('search');
@@ -411,6 +431,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidde
   injectJsonLd();
   try{const r=await fetch('data/inventions.json');if(r.ok)renderInventions(await r.json());}catch(e){}
   try{const r=await fetch('data/events.json');if(r.ok)renderEvents(await r.json());}catch(e){}
+  try{const r=await fetch('data/records.json');if(r.ok)renderRecords(await r.json());}catch(e){}
   const h=decodeURIComponent(location.hash.slice(1));
   if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
 })();

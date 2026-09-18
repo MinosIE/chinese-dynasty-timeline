@@ -1,0 +1,122 @@
+{
+  "longest": [
+    {
+      "name": "桀(履癸)",
+      "ry": 76,
+      "rg": "约前1676–前1600",
+      "id": "xia",
+      "dynasty": "夏"
+    },
+    {
+      "name": "太戊",
+      "ry": 75,
+      "rg": "约前1487–前1412",
+      "id": "shang",
+      "dynasty": "商"
+    },
+    {
+      "name": "清圣祖(玄烨)",
+      "ry": 61,
+      "rg": "1661–1722",
+      "id": "qing",
+      "dynasty": "清"
+    },
+    {
+      "name": "清高宗(弘历)",
+      "ry": 61,
+      "rg": "1735–1796",
+      "id": "qing",
+      "dynasty": "清"
+    },
+    {
+      "name": "武丁",
+      "ry": 59,
+      "rg": "约前1176–前1117",
+      "id": "shang",
+      "dynasty": "商"
+    },
+    {
+      "name": "不降",
+      "ry": 59,
+      "rg": "约前1838–前1779",
+      "id": "xia",
+      "dynasty": "夏"
+    }
+  ],
+  "shortest": [
+    {
+      "name": "汉殇帝(刘隆)",
+      "ry": 1,
+      "rg": "105–106",
+      "id": "han",
+      "dynasty": "汉"
+    },
+    {
+      "name": "晋简文帝(司马昱)",
+      "ry": 1,
+      "rg": "371–372",
+      "id": "jin",
+      "dynasty": "晋"
+    },
+    {
+      "name": "明仁宗(朱高炽)",
+      "ry": 1,
+      "rg": "1424–1425",
+      "id": "ming",
+      "dynasty": "明"
+    },
+    {
+      "name": "明光宗(朱常洛)",
+      "ry": 1,
+      "rg": "1620",
+      "id": "ming",
+      "dynasty": "明"
+    },
+    {
+      "name": "子婴",
+      "ry": 1,
+      "rg": "前207",
+      "id": "qin",
+      "dynasty": "秦"
+    },
+    {
+      "name": "宋末帝(赵昺)",
+      "ry": 1,
+      "rg": "1278–1279",
+      "id": "song",
+      "dynasty": "宋"
+    }
+  ],
+  "mostEmperors": [
+    {
+      "dynasty": "周",
+      "id": "zhou",
+      "count": 36
+    },
+    {
+      "dynasty": "商",
+      "id": "shang",
+      "count": 26
+    },
+    {
+      "dynasty": "汉",
+      "id": "han",
+      "count": 25
+    },
+    {
+      "dynasty": "唐",
+      "id": "tang",
+      "count": 23
+    },
+    {
+      "dynasty": "宋",
+      "id": "song",
+      "count": 18
+    },
+    {
+      "dynasty": "夏",
+      "id": "xia",
+      "count": 17
+    }
+  ]
+}

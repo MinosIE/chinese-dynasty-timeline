@@ -49,6 +49,7 @@
 - **F14 存续可视化**：按年代比例的时间跨度条，点击色条跳转到对应朝代。
 - **F15 历史大事记**：关键历史事件时间线，点击跳转到对应朝代。
 - **F16 同时期政权**：补充辽、西夏、金，共 18 个朝代。
+- **F17 帝王之最**：基于帝王世系统计在位最长 / 最短、帝王数量最多的朝代，可跳转。
 - **F17 模块化布局**：概览首页 + 吸顶模块导航，分区切换，避免页面超长、突出重点。
 
 ### 4.2 规划中（Roadmap / v2+）
@@ -106,12 +107,14 @@ data/overview.json         # 全部王朝概览
 data/dynasties/*.json      # 18 个王朝详情
 data/inventions.json       # 四大发明
 data/events.json           # 历史大事记
+data/records.json          # 帝王之最
 data/search.json           # 搜索索引
 llms.txt                   # 给 LLM 的站点索引
 robots.txt                 # 爬虫规则
 sitemap.xml                # 站点地图
 scripts/build-geo.mjs      # 生成 GEO 文件
 scripts/build-search.mjs   # 生成搜索索引
+scripts/build-records.mjs  # 生成帝王之最
 scripts/update-overview.mjs# 补充年代跨度并插入新朝代
 scripts/validate-data.mjs  # 校验帝王年份排序
 assets/og-source.html      # 封面图源文件

@@ -1,0 +1,85 @@
+# 中华王朝 · 千年脉络
+
+一个科普中国历史朝代的静态网页：从夏到清的主要王朝，含概览、帝王世系、核心人才、关键制度，以及「政治 · 经济 · 文化」三维内容。支持明暗双主题、搜索、存续时长可视化、四大发明、历史大事记与「帝王之最」。
+
+零依赖、纯静态，可直接部署到 GitHub Pages 等任意静态托管。
+
+## 在线访问
+
+https://MinosIE.github.io/chinese-dynasty-timeline/
+
+## 功能
+
+- **朝代时间轴**：18 个王朝（含辽、西夏、金），按大时代（上古/先秦/秦汉…）筛选，点击卡片展开详情（首次展开才加载该朝 JSON）。
+- **帝王分级**：「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）深红描金卡片；代表性名君金色卡片；悬停标签可看获称理由。
+- **三维内容**：每个朝代详情含「政治 / 经济 / 文化」要点。
+- **存续一览**：按年代比例的时间跨度条，直观对比各朝长短。
+- **四大发明**：造纸、印刷、火药、指南针的朝代、人物与世界影响，可跳转对应朝代。
+- **历史大事记**：关键事件时间线，可跳转对应朝代。
+- **帝王之最**：在位最长 / 最短、帝王数量最多的朝代。
+- **搜索**：按朝代 / 帝王 / 人物 / 制度 / 发明检索并跳转。
+- **明暗主题**：右上角切换，记忆偏好，首访跟随系统。
+- **GEO / SEO**：JSON-LD、llms.txt、robots.txt、sitemap.xml、Open Graph 分享图。
+
+## 目录结构
+
+```
+index.html               结构与逻辑（含 SEO/GEO meta）
+styles.css               样式（CSS 变量 + 明暗主题）
+favicon.svg              站点图标
+og-cover.png             分享封面图（1200×630）
+data/overview.json       全部王朝概览
+data/dynasties/*.json    18 个王朝详情
+data/inventions.json     四大发明
+data/events.json         历史大事记
+data/records.json        帝王之最
+data/search.json         搜索索引
+llms.txt                 给 LLM 的站点索引
+robots.txt               爬虫规则
+sitemap.xml              站点地图
+scripts/build-geo.mjs     生成 GEO 文件（llms.txt / sitemap.xml）
+scripts/build-search.mjs  生成搜索索引
+scripts/build-records.mjs 生成帝王之最
+scripts/validate-data.mjs 校验帝王年份排序
+assets/og-source.html      封面图源文件
+```
+
+## 本地预览
+
+```bash
+python3 -m http.server 8765
+# 打开 http://localhost:8765/
+```
+
+## 修改数据后
+
+数据变更后，重新生成派生文件：
+
+```bash
+node scripts/build-search.mjs    # 改了王朝/帝王/人才/制度/发明后
+node scripts/build-records.mjs   # 改了帝王世系后
+node scripts/build-geo.mjs       # 改了概览/新增朝代后
+```
+
+每个王朝详情在 `data/dynasties/<id>.json`，字段：
+
+```json
+{
+  "id": "han",
+  "name": "汉",
+  "years": "前202–220",
+  "era": "秦汉",
+  "capital": "长安 / 洛阳",
+  "feature": "…",
+  "summary": "…",
+  "emperors": [{ "n": "汉高祖(刘邦)", "rg": "前202–前195", "ry": 7, "note": "…" }],
+  "talents": { "文臣": ["萧何"], "武将": ["韩信"] },
+  "policies": ["休养生息", "独尊儒术"],
+  "aspects": { "政治": ["…"], "经济": ["…"], "文化": ["…"] }
+}
+```
+
+## 部署（GitHub Pages）
+
+1. 仓库 `Settings → Pages → Source: Deploy from a branch → main / (root) → Save`
+2. 等待 1–2 分钟即可在 `https://<user>.github.io/chinese-dynasty-timeline/` 访问。
