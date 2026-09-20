@@ -3,108 +3,144 @@
     "id": "xia",
     "capitalCoord": [113.0, 34.4],
     "territory": "主要活动于豫西、晋南的中原腹地，中心在颍水、伊洛流域；四至难确考，约西起豫西、东至鲁西、北抵冀南、南达江淮。",
-    "territoryEn": "Centered on the Central Plains (western Henan, southern Shanxi) around the Ying and Luo river basins; exact bounds uncertain — roughly from western Henan east to western Shandong, north to southern Hebei, south to the Jiang–Huai region."
+    "territoryEn": "Centered on the Central Plains (western Henan, southern Shanxi) around the Ying and Luo river basins; exact bounds uncertain — roughly from western Henan east to western Shandong, north to southern Hebei, south to the Jiang–Huai region.",
+    "area": "约 100 万 km²（存疑）",
+    "areaEn": "~1.0M km² (uncertain)"
   },
   {
     "id": "shang",
     "capitalCoord": [114.4, 36.1],
     "territory": "以河南北部、河北南部为中心，后期迁殷（今安阳）；势力范围西起陕西、东至海滨、北抵燕山、南达江汉。",
-    "territoryEn": "Centered in northern Henan and southern Hebei, later moving to Yin (Anyang); influence stretched west to Shaanxi, east to the coast, north to the Yan Mountains, south to the Jianghan plain."
+    "territoryEn": "Centered in northern Henan and southern Hebei, later moving to Yin (Anyang); influence stretched west to Shaanxi, east to the coast, north to the Yan Mountains, south to the Jianghan plain.",
+    "area": "约 150 万 km²",
+    "areaEn": "~1.5M km²"
   },
   {
     "id": "zhou",
     "capitalCoord": [108.9, 34.3],
     "territory": "西周起于关中，都镐京，分封诸侯，势力西起甘陕、东至海滨、北逾燕赵、南及江汉；东周王室衰微，实际控制限于洛邑一带。",
-    "territoryEn": "The Western Zhou rose in the Guanzhong basin (Haojing), with fiefs across the realm — west to Gansu/Shaanxi, east to the coast, north beyond Yan–Zhao, south to the Jianghan; the Eastern Zhou court shrank to the Luoyi area."
+    "territoryEn": "The Western Zhou rose in the Guanzhong basin (Haojing), with fiefs across the realm — west to Gansu/Shaanxi, east to the coast, north beyond Yan–Zhao, south to the Jianghan; the Eastern Zhou court shrank to the Luoyi area.",
+    "area": "约 200 万 km²",
+    "areaEn": "~2.0M km²"
   },
   {
     "id": "qin",
     "capitalCoord": [108.7, 34.3],
     "territory": "结束分裂，首次大一统：东临大海、西抵陇西、北筑长城拒匈奴、南取岭南设郡。",
-    "territoryEn": "First unified empire: east to the sea, west to Longxi, north with the Great Wall against the Xiongnu, south annexing Lingnan into commanderies."
+    "territoryEn": "First unified empire: east to the sea, west to Longxi, north with the Great Wall against the Xiongnu, south annexing Lingnan into commanderies.",
+    "area": "约 340 万 km²",
+    "areaEn": "~3.4M km²"
   },
   {
     "id": "han",
     "capitalCoord": [108.9, 34.3],
     "territory": "极盛时东临大海、西逾葱岭、北抵阴山、南达南海；西域都护府统辖今新疆，势力至朝鲜半岛北部与越南北部。",
-    "territoryEn": "At its height: east to the sea, west beyond the Pamirs, north to the Yin Mountains, south to the South China Sea; the Western Regions Protectorate governed today's Xinjiang, with influence into northern Korea and northern Vietnam."
+    "territoryEn": "At its height: east to the sea, west beyond the Pamirs, north to the Yin Mountains, south to the South China Sea; the Western Regions Protectorate governed today's Xinjiang, with influence into northern Korea and northern Vietnam.",
+    "area": "约 609 万 km²（西汉极盛）",
+    "areaEn": "~6.09M km² (W. Han peak)"
   },
   {
     "id": "sanguo",
     "capitalCoord": [112.4, 34.6],
     "territory": "魏据中原（黄河流域）、蜀控巴蜀（益州）、吴领江东与江南；三国鼎立，疆界以秦岭—淮河为要。",
-    "territoryEn": "Wei held the Central Plains (Yellow River basin), Shu controlled Bashu (Yi province), Wu ruled Jiangdong and the south; the realms were split along the Qinling–Huai line."
+    "territoryEn": "Wei held the Central Plains (Yellow River basin), Shu controlled Bashu (Yi province), Wu ruled Jiangdong and the south; the realms were split along the Qinling–Huai line.",
+    "area": "约 400 万 km²（三国合计，存疑）",
+    "areaEn": "~4.0M km² (total, uncertain)"
   },
   {
     "id": "jin",
     "capitalCoord": [112.4, 34.6],
     "territory": "西晋短期统一，疆域约承汉旧境；东晋偏安江南，北面为十六国割据，实际控制限江淮以南。",
-    "territoryEn": "The Western Jin briefly reunified roughly the Han realm; the Eastern Jin retreated south of the Yangtze, with the north fragmented among the Sixteen Kingdoms."
+    "territoryEn": "The Western Jin briefly reunified roughly the Han realm; the Eastern Jin retreated south of the Yangtze, with the north fragmented among the Sixteen Kingdoms.",
+    "area": "约 543 万 km²（西晋）",
+    "areaEn": "~5.43M km² (W. Jin)"
   },
   {
     "id": "nanbeichao",
     "capitalCoord": [118.8, 32.0],
     "territory": "南朝（宋齐梁陈）守江南，北朝（北魏等）据中原与塞北；疆界动荡，淮河—秦岭为界。",
-    "territoryEn": "The Southern Dynasties (Liu Song, Southern Qi, Liang, Chen) held the south; Northern Dynasties (Northern Wei, etc.) controlled the Central Plains and steppe; the Huai–Qinling line divided them."
+    "territoryEn": "The Southern Dynasties (Liu Song, Southern Qi, Liang, Chen) held the south; Northern Dynasties (Northern Wei, etc.) controlled the Central Plains and steppe; the Huai–Qinling line divided them.",
+    "area": "约 400 万 km²（南北合计，存疑）",
+    "areaEn": "~4.0M km² (total, uncertain)"
   },
   {
     "id": "sui",
     "capitalCoord": [108.9, 34.3],
     "territory": "重归一统，疆域近汉极盛：东至海、西抵青海、北御突厥、南括岭南。",
-    "territoryEn": "Reunified the realm near Han's maximal extent: east to the sea, west to Qinghai, north against the Türks, south including Lingnan."
+    "territoryEn": "Reunified the realm near Han's maximal extent: east to the sea, west to Qinghai, north against the Türks, south including Lingnan.",
+    "area": "约 460 万 km²",
+    "areaEn": "~4.6M km²"
   },
   {
     "id": "tang",
     "capitalCoord": [108.9, 34.3],
     "territory": "极盛时东临大海、西达咸海、北包贝加尔、南至越南；羁縻府州辽阔，为历代版图巅峰之一。",
-    "territoryEn": "At its height: east to the sea, west to the Aral region, north to Lake Baikal, south to Vietnam; vast tributary commanderies marked one of history's largest Chinese realms."
+    "territoryEn": "At its height: east to the sea, west to the Aral region, north to Lake Baikal, south to Vietnam; vast tributary commanderies marked one of history's largest Chinese realms.",
+    "area": "约 1237 万 km²（极盛）",
+    "areaEn": "~12.37M km² (peak)"
   },
   {
     "id": "wudai",
     "capitalCoord": [114.3, 34.8],
     "territory": "中原五代递嬗，周边十国分立；疆域碎片化，中原核心在黄河中下游，南方诸国各据一方。",
-    "territoryEn": "The Five Dynasties succeeded in the Central Plains while the Ten Kingdoms split the periphery; the realm fragmented, with the core along the middle–lower Yellow River and southern states holding their own."
+    "territoryEn": "The Five Dynasties succeeded in the Central Plains while the Ten Kingdoms split the periphery; the realm fragmented, with the core along the middle–lower Yellow River and southern states holding their own.",
+    "area": "约 300 万 km²（五代中原，存疑）",
+    "areaEn": "~3.0M km² (uncertain)"
   },
   {
     "id": "song",
     "capitalCoord": [114.3, 34.8],
     "territory": "北宋统一中原与江南，北以幽云—秦岭为界（失燕云）；南宋退守淮河—大散关以南，偏安江南。",
-    "territoryEn": "The Northern Song unified the Central Plains and Jiangnan, bordered north by the Yan–Yun line (lost the Sixteen Prefectures); the Southern Song withdrew south of the Huai and Dasan Pass."
+    "territoryEn": "The Northern Song unified the Central Plains and Jiangnan, bordered north by the Yan–Yun line (lost the Sixteen Prefectures); the Southern Song withdrew south of the Huai and Dasan Pass.",
+    "area": "约 280 万 km²（北宋峰值）",
+    "areaEn": "~2.8M km² (N. Song peak)"
   },
   {
     "id": "liao",
     "capitalCoord": [119.4, 43.9],
     "territory": "契丹所建，据燕云以北的北方草原与东北：西起阿尔泰山、东临海、北至外兴安岭、南抵幽燕。",
-    "territoryEn": "Founded by the Khitan across the northern steppe and northeast: west to the Altai, east to the sea, north to the Outer Khingan, south to the Yan–Yun region."
+    "territoryEn": "Founded by the Khitan across the northern steppe and northeast: west to the Altai, east to the sea, north to the Outer Khingan, south to the Yan–Yun region.",
+    "area": "约 489 万 km²",
+    "areaEn": "~4.89M km²"
   },
   {
     "id": "xixia",
     "capitalCoord": [106.2, 38.5],
     "territory": "党项所建，据河西走廊与宁夏、陕北、陇右：东界黄河、西至玉门、南抵祁连、北达大漠。",
-    "territoryEn": "Founded by the Tangut over the Hexi Corridor, Ningxia, northern Shaanxi and Longyou: east to the Yellow River, west to Yumen, south to the Qilian, north to the desert."
+    "territoryEn": "Founded by the Tangut over the Hexi Corridor, Ningxia, northern Shaanxi and Longyou: east to the Yellow River, west to Yumen, south to the Qilian, north to the desert.",
+    "area": "约 77 万 km²",
+    "areaEn": "~0.77M km²"
   },
   {
     "id": "jinchao",
     "capitalCoord": [116.4, 39.9],
     "territory": "女真所建，灭辽与北宋，据淮河以北的中国北方：东临海、西邻西夏、北至外兴安岭、南抵秦岭—淮河。",
-    "territoryEn": "Founded by the Jurchen after conquering Liao and the Northern Song, holding north China south of the Huai: east to the sea, west bordering Xixia, north to the Outer Khingan, south to the Qinling–Huai line."
+    "territoryEn": "Founded by the Jurchen after conquering Liao and the Northern Song, holding north China south of the Huai: east to the sea, west bordering Xixia, north to the Outer Khingan, south to the Qinling–Huai line.",
+    "area": "约 360 万 km²",
+    "areaEn": "~3.6M km²"
   },
   {
     "id": "yuan",
     "capitalCoord": [116.4, 39.9],
     "territory": "蒙古帝国继承者，疆域空前：东至海、西抵中亚、北含西伯利亚、南达南海与吐蕃、大理。",
-    "territoryEn": "Heir to the Mongol Empire with an unprecedented extent: east to the sea, west into Central Asia, north across Siberia, south to the South China Sea, Tibet and Dali."
+    "territoryEn": "Heir to the Mongol Empire with an unprecedented extent: east to the sea, west into Central Asia, north across Siberia, south to the South China Sea, Tibet and Dali.",
+    "area": "约 1372 万 km²",
+    "areaEn": "~13.72M km²"
   },
   {
     "id": "ming",
     "capitalCoord": [116.4, 39.9],
     "territory": "汉族重建大一统：初期都南京，后迁北京；疆域东至海、西抵西域、北修长城、南抚安南（后弃），东北设奴儿干都司。",
-    "territoryEn": "A Han-led reunification: first capital Nanjing, later moved to Beijing; east to the sea, west toward the Western Regions, the Great Wall in the north, with the Nurgan commandery in the northeast."
+    "territoryEn": "A Han-led reunification: first capital Nanjing, later moved to Beijing; east to the sea, west toward the Western Regions, the Great Wall in the north, with the Nurgan commandery in the northeast.",
+    "area": "约 997 万 km²（极盛）",
+    "areaEn": "~9.97M km² (peak)"
   },
   {
     "id": "qing",
     "capitalCoord": [116.4, 39.9],
     "territory": "疆域奠近代中国版图：东至海、西达帕米尔、北逾外兴安岭、南括南海；收台湾、定漠北、辖西藏与新疆，幅员为历代之最。",
-    "territoryEn": "Set the modern Chinese map: east to the sea, west to the Pamirs, north beyond the Outer Khingan, south to the South China Sea; with Taiwan, Mongolia, Tibet and Xinjiang integrated — the largest realm of all dynasties."
+    "territoryEn": "Set the modern Chinese map: east to the sea, west to the Pamirs, north beyond the Outer Khingan, south to the South China Sea; with Taiwan, Mongolia, Tibet and Xinjiang integrated — the largest realm of all dynasties.",
+    "area": "约 1316 万 km²（极盛）",
+    "areaEn": "~13.16M km² (peak)"
   }
 ]
