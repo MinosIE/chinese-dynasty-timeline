@@ -102,7 +102,9 @@
   .module{display:none;scroll-margin-top:72px}
   .module.active{display:flex;flex-direction:column;gap:24px}
   .home-lead{text-align:center;color:var(--text-mute);font-size:14px}
-  .home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .home-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  @media(max-width:900px){.home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:560px){.home-grid{grid-template-columns:1fr}}
   .entry{display:flex;flex-direction:column;gap:6px;text-align:left;background:var(--surface);border:1px solid var(--border);
     border-radius:var(--r3);box-shadow:var(--s-card);padding:20px;cursor:pointer;font-family:inherit;transition:.2s}
   .entry:hover{box-shadow:var(--s-lift);transform:translateY(-2px);border-color:var(--brand)}
