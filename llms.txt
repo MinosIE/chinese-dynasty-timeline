@@ -1,10 +1,13 @@
 # 中华王朝 · 千年脉络
 
-> 一个科普中国历史朝代的静态网页，覆盖从夏到清的主要王朝，含每个王朝的概览、帝王世系、核心人才与关键制度。
+> 一个科普中国历史朝代的静态网页，覆盖从夏到清的主要王朝，含王朝概览、帝王世系、核心人才、制度演变、著名战役、历史人物、文化成就、对外交流、史料考古、世界对比等专题。
 
 ## 数据入口
 - [王朝总览](https://MinosIE.github.io/chinese-dynasty-timeline/data/overview.json)：全部王朝概览（名称、年代、都城、特征、总结、计数）
 - [王朝详情目录](https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/)：每个王朝的完整详情 JSON（帝王世系、人才、政策）
+- [制度演变](https://MinosIE.github.io/chinese-dynasty-timeline/data/systems.json)｜[改革变法](https://MinosIE.github.io/chinese-dynasty-timeline/data/reforms.json)｜[著名战役](https://MinosIE.github.io/chinese-dynasty-timeline/data/battles.json)｜[统一与分裂](https://MinosIE.github.io/chinese-dynasty-timeline/data/unity.json)
+- [历史人物](https://MinosIE.github.io/chinese-dynasty-timeline/data/people.json)｜[文化成就](https://MinosIE.github.io/chinese-dynasty-timeline/data/culture.json)｜[成语典故](https://MinosIE.github.io/chinese-dynasty-timeline/data/idioms.json)｜[名句名篇](https://MinosIE.github.io/chinese-dynasty-timeline/data/quotes.json)
+- [都城变迁](https://MinosIE.github.io/chinese-dynasty-timeline/data/capitals.json)｜[货币演变](https://MinosIE.github.io/chinese-dynasty-timeline/data/currency.json)｜[对外交流](https://MinosIE.github.io/chinese-dynasty-timeline/data/exchange.json)｜[史料考古](https://MinosIE.github.io/chinese-dynasty-timeline/data/archaeo.json)｜[世界对比](https://MinosIE.github.io/chinese-dynasty-timeline/data/world.json)
 - [全量文本](https://MinosIE.github.io/chinese-dynasty-timeline/llms-full.txt)：整站结构化数据的纯文本全文（便于 AI 搜索引擎整站引用）
 - [英文索引](https://MinosIE.github.io/chinese-dynasty-timeline/llms-en.txt)：English version of this index
 

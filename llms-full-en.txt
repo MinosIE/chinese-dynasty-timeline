@@ -1,6 +1,6 @@
 # Chinese Dynasties · A Timeline of Three Millennia
 
-> A static, zero-dependency educational site on Chinese imperial history from the Xia to the Qing dynasty (18 dynasties). Full plain-text dump of all structured data for LLM ingestion.
+> A static, zero-dependency educational site on Chinese imperial history, from the Xia to the Qing dynasty (21 dynasties & transitional periods). Full plain-text dump of all structured data for LLM ingestion.
 
 Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
@@ -750,7 +750,443 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - Economy：Tax merged into land, melting-loss to treasury; the Kangxi–Qianlong heyday；Later closed-door policy; forced into the world system
 - Culture：The Complete Library in Four Branches and evidential scholarship；Peking opera took form; Western learning spread east (Self-Strengthening, Reform)
 
-## 历史大事记
+## Institutions Through the Ages
+
+### Selection of Officials
+- Pre-Qin：Hereditary office（Office held by aristocratic bloodline）
+- Han：Recommendation (chaju)（Local recommendation of the filial & incorrupt）
+- Wei–Jin：Nine-rank system（Ranked by pedigree; gentry monopoly）
+- Sui–Tang：Imperial examinations（Exam-based; commoners could serve）
+- Ming–Qing：Eight-legged essays（Rigid, formulaic testing）
+
+### Central Government
+- Qin：Three Lords & Nine Ministers（Chancellor, Grand Commandant, Censor-in-chief）
+- Sui–Tang：Three Departments & Six Ministries（Drafting, review and execution split）
+- Song：Two Offices & Three Commissions（Chancellor's power split to strengthen the throne）
+- Ming：Abolish chancellor, create the Cabinet（Unprecedented imperial power; cabinet as advisers）
+- Qing：Grand Council（Autocracy at its zenith）
+
+### Taxation & Land
+- Pre-Qin：Well-field system（State land, collective farming）
+- Early Tang：Equal-field & zu-yong-diao（Land by head; grain and labor tax）
+- Late Tang：Two-tax system（Taxed by wealth, in two installments）
+- Ming：Single-whip reform（Combined taxes paid in silver）
+- Qing：Apportioning head-tax to land（Head-tax merged into land-tax）
+
+### Military System
+- Tang：Fubing (militia) system（Soldier-farmers under garrison commands）
+- Late Tang：Mercenaries & military governors（Regional commands grew autonomous）
+- Song：Imperial guard, rotating posts（Centralized; officers rotated）
+- Ming：Guard-and-battalion (weisuo)（Hereditary military households, self-supporting）
+- Qing：Eight Banners & Green Standards（Banner forces core; Han Green Standards auxiliary）
+
+### Evolution of Law
+- Warring States & Qin：Canon of Law; Qin statutes（Law as doctrine; harsh penalties）
+- Tang：Tang Code with Commentary（Rites and law fused; model for East Asia）
+- Song：Song Criminal Statutes（Built on Tang law, with edicts）
+- Ming：Great Ming Code（Reorganized by the Six Ministries）
+- Qing：Great Qing Code（Inherited Ming law; statutes with precedents）
+
+## Reforms & Reformers
+- 前422：Li Kui's Reforms（sponsor Li Kui）— measures：Maximize land yield, price-stabilizing grain policy, abolish hereditary office；outcome：Wei became the first power to rise
+- 前386：Wu Qi's Reforms（sponsor Wu Qi）— measures：Clear law, strip noble privilege, strengthen the army；outcome：Chu grew strong, yet Wu Qi was slain
+- 前356：Shang Yang's Reforms（sponsor Shang Yang）— measures：Abolish well-fields, merit titles, stress farming, commanderies；outcome：Qin grew rich and strong, laying the base for unification
+- 前307：Barbarian Dress & Mounted Archery（sponsor King Wuling of Zhao）— measures：Adopt nomadic dress, train mounted archers；outcome：Zhao became a military power
+- 9：Wang Mang's Reforms（sponsor Wang Mang）— measures：Land nationalization, coinage changes, state monopolies；outcome：Failed as unrealistic; the realm fell into chaos
+- 494：Emperor Xiaowen's Reforms（sponsor Tuoba Hong (Emperor Xiaowen)）— measures：Move capital to Luoyang, adopt Han dress, surnames and intermarriage；outcome：Drove great ethnic fusion
+- 1043：Qingli Reforms（sponsor Fan Zhongyan）— measures：Reform the bureaucracy, strict promotions, curb favoritism；outcome：Blocked and abandoned
+- 1069：Wang Anshi's Reforms（sponsor Wang Anshi）— measures：Green-sprouts loans, hired labor, land survey tax, militia；outcome：Deeply contested and finally repealed
+- 1572：Zhang Juzheng's Reforms（sponsor Zhang Juzheng）— measures：Performance review, single-whip tax, land survey；outcome：Filled the treasury; he was posthumously purged
+- 1861：Self-Strengthening Movement（sponsor Zeng Guofan, Li Hongzhang, Zhang Zhidong）— measures：Arsenals, modern industry and schools to seek strength and wealth；outcome：Ended in defeat in the Sino-Japanese War
+- 1898：Hundred Days' Reform（sponsor Kang Youwei, Liang Qichao）— measures：New schools, abolish eight-legged essays, industry, modern army；outcome：Failed after 103 days — the Hundred Days' Reform
+
+## Famous Battles
+- 前1046：Battle of Muye（unification，Zhou）— commanders King Wu of Zhou, Jiang Ziya；One battle ended Shang; Zhou rose.
+- 前506：Battle of Boju（outnumbered win，Zhou）— commanders Sun Wu, Wu Zixu；30,000 Wu troops routed 200,000 of Chu and took Ying.
+- 前389：Battle of Yinjin（outnumbered win，Warring States）— commanders Wu Qi；50,000 Wei troops routed 500,000 of Qin.
+- 前341：Battle of Maling（outnumbered win，Warring States）— commanders Sun Bin；Besieged Wei to save Zhao; reduced campfires to lure and break Wei.
+- 前293：Battle of Yique（outnumbered win，Warring States）— commanders Bai Qi；100,000 Qin routed 240,000 of Han–Wei.
+- 前279：Battle of Jimo（outnumbered win，Warring States）— commanders Tian Dan；The fire-oxen ruse smashed Yan and restored Qi.
+- 前260：Battle of Changping（unification，Warring States）— commanders Bai Qi；Qin crushed Zhao, hastening unification.
+- 前209：Daze Village Uprising（peasant revolt，Qin）— commanders Chen Sheng, Wu Guang；China's first great peasant uprising.
+- 前207：Battle of Julu（outnumbered win，Chu–Han Contention）— commanders Xiang Yu；Burning the boats, Chu broke Qin's main force.
+- 前204：Battle of Jingxing（outnumbered win，Chu–Han Contention）— commanders Han Xin；The “back-to-the-river” stand broke 200,000 of Zhao.
+- 前119：Battle of Mobei（frontier/foreign，Han）— commanders Wei Qing, Huo Qubing；Han armies struck deep into the Gobi, crushing the Xiongnu.
+- 23：Battle of Kunyang（outnumbered win，Han）— commanders Liu Xiu；Liu Xiu's ~10,000 routed Wang Mang's 400,000.
+- 200：Battle of Guandu（outnumbered win，Three Kingdoms）— commanders Cao Cao；Cao Cao beat Yuan Shao outnumbered, unifying the north.
+- 208：Battle of Red Cliffs（outnumbered win，Three Kingdoms）— commanders Zhou Yu, Zhuge Liang；The Sun–Liu fire attack broke Cao Cao and fixed the tripartite split.
+- 215：Battle of Xiaoyao Ford（outnumbered win，Three Kingdoms）— commanders Zhang Liao；Zhang Liao's 800 routed Sun Quan's 100,000.
+- 383：Battle of Fei River（outnumbered win，Jin）— commanders Xie Xuan, Xie An；Eastern Jin's 80,000 routed Former Qin's million.
+- 630：Conquest of the Eastern Türks（frontier/foreign，Tang）— commanders Li Jing；A surprise strike at Dingxiang destroyed the Eastern Türks.
+- 757：Battle of Suiyang（outnumbered win，Tang）— commanders Zhang Xun；Held an isolated city with few, blocking the rebels.
+- 875：Huang Chao Rebellion（peasant revolt，Tang）— commanders Huang Chao；Ranged across China and sacked Chang'an.
+- 1115：Battle of Hubudagang（outnumbered win，Jin）— commanders Wanyan Aguda；20,000 Jin routed 700,000 of Liao.
+- 1140：Battle of Yancheng（outnumbered win，Song）— commanders Yue Fei；Yue Fei's army beat the Jin cavalry outnumbered.
+- 1161：Battle of Caishi（outnumbered win，Song）— commanders Yu Yunwen；A civil official led 18,000 to rout 400,000 of Jin.
+- 1259：Battle of Diaoyucheng（outnumbered win，Song）— commanders Wang Jian；Held 36 years against the Mongols; Möngke died here.
+- 1363：Battle of Lake Poyang（unification，Ming）— commanders Zhu Yuanzhang；Outnumbered, Zhu destroyed Chen Youliang, founding the Ming.
+- 1626：Battle of Ningyuan（outnumbered win，Ming）— commanders Yuan Chonghuan；With walls and cannon, wounded Nurhaci.
+- 1661：Koxinga's Recovery of Taiwan（frontier/foreign，Ming）— commanders Zheng Chenggong (Koxinga)；Expelled the Dutch and recovered Taiwan.
+- 1619：Battle of Sarhū（frontier/foreign，Qing）— commanders Nurhaci；Later Jin defeated the Ming's four-pronged advance outnumbered.
+- 1851：Taiping Rebellion（peasant revolt，Qing）— commanders Hong Xiuquan；A vast peasant war that shook the Qing court.
+
+## Unity & Division
+- Spring & Autumn · Warring States（前770–前221，divided）：A weakened royal house and contending states, ending in Qin's unification.
+- Qin–Han Unification（前221–220，unified）：The first unified empire, setting the map and institutions for two millennia.
+- Three Kingdoms to North–South Dynasties（220–589，divided）：Shifting regimes and great ethnic fusion, a long north–south standoff.
+- Sui–Tang Unification（589–907，unified）：Reunification, openness and prosperity, with nations paying tribute.
+- Five Dynasties to Liao-Song-Jin（907–1279，divided）：Successive Central Plains regimes with multiple states coexisting.
+- Yuan–Ming–Qing Unification（1279–1912，unified）：Unprecedented territory; a consolidated multi-ethnic state.
+
+## Historical Figures
+
+### Xia
+- Houyi（Leader of the Eastern Yi; usurped Xia）
+- Hanzhuo（Killed Houyi and seized power）
+
+### Shang
+- Yi Yin（Founding chancellor; exiled Tai Jia）［Statesman］
+- Fu Yue（Wise chancellor of Wu Ding）［Statesman］
+- Fu Hao（A woman general who led many campaigns）［Woman］
+- Bigan（A loyal minister; disemboweled）
+
+### Zhou
+- Duke of Zhou（Established rites and music; founded the Zhou system）［Statesman］
+- Guan Zhong（Prime minister of Qi; “revere the king, repel the barbarians”）［Statesman］
+- Baili Xi（Worthy minister of Duke Mu of Qin）［Statesman］
+- Jiang Ziya (the Grand Duke)（Progenitor of the military art; aided King Wu）［General］
+- Wu Zixu（Battle of Boju; five battles broke into Chu and took Ying）［General］
+- Confucius（Founder of Confucianism）［Thinker］
+- Laozi（Founder of Daoism）［Thinker］
+- Sun Wu（Sage of war; The Art of War）
+
+### Warring States
+- Mencius（Second sage of Confucianism; argued for innate goodness and benevolent rule）［Thinker］
+- Zhuangzi（Daoist representative; ease and the equality of things）［Thinker］
+- Mozi（Mohism; universal love and anti-aggression）［Thinker］
+- Han Fei（Synthesizer of Legalism; central authority）［Thinker］
+- Xunzi（Between Confucian and Legalist; theory of evil nature）［Thinker］
+- Zou Yan（Yin–Yang school; cycle of the five virtues）［Thinker］
+- Gongsun Long（Logicians; “a white horse is not a horse”）［Thinker］
+- Shang Yang（Reformed Qin; rewarded farming and war）［Statesman/Reformer］
+- Li Kui（Reformed Wei; farmed the land fully）［Statesman/Reformer］
+- Wu Qi（Reformed Chu; strengthened the military）［Statesman/Reformer］
+- Bai Qi（Qin general; Battle of Changping, the “Butcher” of the age）［General］
+- Lian Po（Zhao general; held the line against Qin）［General］
+- Li Mu（Zhao general; beat the Xiongnu and resisted Qin）［General］
+- Sun Bin（Military strategist; “besiege Wei to rescue Zhao”）［General］
+- Tian Dan（Battle of Jimo; the fire-oxen ruse restored Qi）［General］
+- Qu Yuan（Father of Chu ci; the Li Sao）［Literatus］
+- Li Bing（Dujiangyan; blessed Shu with irrigation）［Scientist］
+
+### Qin
+- Li Si（Chancellor; commanderies-counties system and unified writing）［Statesman］
+- Zhao Gao（Usurped power; “pointing at a deer and calling it a horse”）［Statesman］
+- Wang Jian（Famed general who destroyed Chu）［General］
+- Meng Tian（Struck the Xiongnu in the north, built the Great Wall）［General］
+
+### Chu–Han Contention
+- Liu Bang（Founder of Han; a commoner who rose）
+- Xiang Yu（Hegemon-King of Western Chu; mighty）
+- Han Xin（“God of War”; “the more the better”）
+- Zhang Liang（Master strategist; planned within the tent）
+- Xiao He（Chancellor; secured the state and people）
+- Chen Ping（Won Liu's cause with stratagems）
+- Peng Yue（Progenitor of guerrilla war; King of Liang）
+- Ying Bu（King of Jiujiang; fierce general）
+
+### Han
+- Xiao He（Chancellor at the dawn of Han）［Statesman］
+- Zhang Liang（Strategist）［Statesman］
+- Dong Zhongshu（Made Confucianism sole orthodoxy）［Statesman/Thinker］
+- Huoguang（Regent minister）［Statesman］
+- Han Xin（The god of war）［General］
+- Wei Qing（Struck the Xiongnu）［General］
+- Huo Qubing（Sealed the Langjuxu summit）［General］
+- Ban Chao（Cast aside the pen for the sword; opened the Western Regions）［General］
+- Sima Qian（Records of the Grand Historian）［Literatus］
+- Cai Lun（Improved papermaking）［Scientist］
+- Zhang Heng（Seismograph and armillary sphere）［Scientist］
+- Hua Tuo（Famed physician; the mafeisan anesthetic）［Physician］
+
+### Xin Dynasty
+- Wang Mang（Usurped Han to found Xin; antiquarian reforms）［Reformer］
+- Liu Xin（Old-text Confucianism; mathematics）
+
+### Three Kingdoms
+- Cao Cao（The martial Duke of Wei, a towering talent）［Statesman］
+- Zhuge Liang（Chancellor of Shu; devoted unto death）［Statesman］
+- Sima Yi（Powerful minister of Wei）［Statesman］
+- Lu Xun（Great general of Wu）［Statesman］
+- Guan Yu（The Martial Saint）［General］
+- Zhang Fei（A fierce general）［General］
+- Zhao Yun（Zhao Zilong of Changshan）［General］
+- Zhou Yu（Commander of Eastern Wu; broke Cao at Red Cliffs）［General］
+- Zhang Liao（Battle of Xiaoyao Ford; 800 routed 100,000）［General］
+
+### Jin
+- Wang Dao（Chief minister of Eastern Jin）［Statesman］
+- Xie An（Directed the Battle of Fei River）［Statesman］
+- Xie Xuan（Front-line commander at Fei River; 80,000 routed a million）［General］
+- Wang Xizhi（Sage of calligraphy）［Artist］
+- Tao Yuanming（Recluse poet）［Literatus］
+- Ji Kang（One of the Seven Sages of the Bamboo Grove）［Literatus］
+- Gu Kaizhi（Sage of painting; capturing the spirit）［Artist］
+
+### Northern & Southern Dynasties
+- Zu Chongzhi（Computed pi precisely）［Scientist］
+- Jia Sixie（Qimin Yaoshu (Essential Techniques for the Welfare of the People)）［Scientist］
+- Li Daoyuan（Commentary on the Water Classic）［Scientist］
+- Hua Mulan（Legend; took her father's place in the army）［Woman］
+- Tuoba Hong (Emperor Xiaowen)（Sinicization reforms; moved the capital to Luoyang）
+
+### Sui
+- Gao Jiong（Founding worthy chancellor）［Statesman］
+- Yang Su（Famed general who pacified Chen）［General］
+- Yuwen Kai（Built the Eastern Capital）［Scientist］
+- Li Chun（Zhaozhou Bridge, the oldest surviving stone arch bridge）［Scientist］
+
+### Tang
+- Wei Zheng（Remonstrating minister）［Statesman］
+- Fang Xuanling（Fang the planner）［Statesman］
+- Du Ruhui（Du the decider）［Statesman］
+- Di Renjie（Famed judge and chancellor）［Statesman］
+- Zhangsun Wuji（First on the Lingyan Pavilion）［Statesman］
+- Guo Ziyi（Quelled the An–Shi Rebellion）［General］
+- Li Guangbi（Defended Taiyuan; beat a larger foe）［General］
+- Zhang Xun（Defended Suiyang with few against many）［General］
+- Li Bai（The Immortal Poet）［Literatus］
+- Du Fu（The Sage of Poetry）［Literatus］
+- Xuanzang（Journeyed west for scriptures）［Explorer］
+- Bai Juyi（Prolific poet; the Song of Everlasting Sorrow）［Literatus］
+- Han Yu（Leader of the Classical Prose Movement）［Literatus］
+- Yan Zhenqing（Master of regular script calligraphy）［Artist］
+- Sun Simiao（The King of Medicine; the Qianjin Fang）［Physician］
+
+### Five Dynasties & Ten Kingdoms
+- Feng Dao（Served many dynasties; an unshakeable politician）［Statesman］
+- Li Yu（Last lord of Southern Tang; the emperor of ci）［Literatus］
+
+### Liao
+- Han Yanhui（Aided Taizu in setting institutions）［Statesman］
+- Shulü Ping（Empress of Taizu; regent）［Woman］
+- Empress Dowager Xiao (Chengtian)（Wife of Jingzong; the Chanyuan treaty）［Woman］
+
+### Song
+- Zhao Pu（Architect of relinquishing military power over wine）［Statesman］
+- Kou Zhun（Argued for war at Chanyuan）［Statesman］
+- Fan Zhongyan（The Qingli reforms）［Statesman］
+- Wang Anshi（The Xining reform）［Statesman/Reformer］
+- Sima Guang（Comprehensive Mirror in Aid of Governance）［Statesman］
+- Bao Zheng（Paragon of the incorruptible judge）［Statesman］
+- Yue Fei（Battle of Yancheng; beat the Jin with fewer）［General］
+- Han Shizhong（Huangtiandang; 8,000 trapped 100,000）［General］
+- Wu Jie（Heshangyuan; beat the Jin outnumbered）［General］
+- Yu Yunwen（Battle of Caishi; a civil official led the rout of the Jin）［General］
+- Wang Jian（Diaoyucheng; repelled the Mongols outnumbered）［General］
+- Su Shi（Literary giant）［Literatus］
+- Shen Kuo（Dream Pool Essays）［Scientist］
+- Li Qingzhao（Mistress of the gentle ci style）［Woman/Literatus］
+- Wen Tianxiang（Upright, unyielding spirit）［Literatus］
+- Zhu Xi（Synthesizer of Neo-Confucianism）［Thinker］
+- Ouyang Xiu（Leader of the literary world）［Literatus］
+- Xin Qiji（Master of the bold ci style）［Literatus］
+- Bi Sheng（Invented movable-type printing）［Scientist］
+
+### Western Xia
+- Yeli Renrong（Created the Tangut script）
+- Empress Dowager Moang（Ruled from behind the curtain）［Woman］
+
+### Jin
+- Wanyan Zongbi (Wuzhu)（Famed general against Song）［General］
+- Wanyan Xiyin（Created the Jurchen script）
+- Yuan Haowen（Literary master of the late Jin）［Literatus］
+
+### Yuan
+- Yelü Chucai（A famed minister of statecraft）［Statesman］
+- Zhao Mengfu（Master of calligraphy and painting）［Statesman/Artist］
+- Guo Shoujing（Astronomy and hydraulics）［Scientist］
+- Marco Polo（Visiting traveler）［Explorer］
+- Guan Hanqing（Master of Yuan drama）［Literatus］
+- Wang Shifu（Romance of the Western Chamber）［Literatus］
+- Huang Daopo（Improved cotton spinning and weaving）［Woman/Scientist］
+
+### Ming
+- Liu Bowen（Founding strategist）［Statesman］
+- Yu Qian（Defended Beijing）［Statesman］
+- Zhang Juzheng（Reforming senior grand secretary）［Statesman/Reformer］
+- Hai Rui（An incorruptible official）［Statesman］
+- Qi Jiguang（Fought the Japanese pirates）［General］
+- Yuan Chonghuan（Battle of Ningyuan; wounded Nurhaci with cannon）［General］
+- Zheng Chenggong (Koxinga)（Recovered Taiwan）［General］
+- Wang Shouren (Wang Yangming)（Synthesis of the School of Mind）［Thinker］
+- Xu Xiake（Geographer）［Explorer］
+- Song Yingxing（Tiangong Kaiwu (Exploitation of the Works of Nature)）［Scientist］
+- Li Shizhen（Compendium of Materia Medica）［Physician］
+- Xu Guangqi（Complete Treatise on Agriculture; versed in Western learning）［Scientist］
+- Zheng He（Seven voyages to the Western Seas）［Explorer］
+
+### Qing
+- Dorgon（Prince regent）［Statesman］
+- Zeng Guofan（Put down the Taiping Heavenly Kingdom）［Statesman］
+- Li Hongzhang（Self-Strengthening Movement）［Statesman］
+- Zuo Zongtang（Recovered Xinjiang）［Statesman］
+- Zhang Zhidong（A giant of the Self-Strengthening Movement）［Statesman］
+- Ji Yun（Chief editor of the Siku Quanshu）［Statesman］
+- Lin Zexu（Banned opium, resisted Britain）
+- Kang Youwei（Reform leader）［Reformer］
+- Liang Qichao（Reform thinker）［Reformer］
+- Tan Sitong（One of the Six Gentlemen of the 1898 Reform）［Reformer］
+- Cao Xueqin（Dream of the Red Chamber）［Literatus］
+
+## Cultural Achievements
+
+### Evolution of Literary Genres
+- Pre-Qin：Classic of Poetry（Anonymous; collected songs · 305 poems (feng, ya, song)）
+- Warring States：Chu ci（Qu Yuan · Li Sao, Nine Songs）
+- Han：Han fu (rhapsody)（Sima Xiangru · Zixu Fu, Shanglin Fu）
+- Tang：Tang poetry（Li Bai, Du Fu · 50,000+ poems (Complete Tang Poems)）
+- Song：Song ci（Su Shi, Li Qingzhao, Xin Qiji · Bold and gentle schools）
+- Yuan：Yuan drama & sanqu（Guan Hanqing, Wang Shifu · Snow in Midsummer, Romance of the Western Chamber）
+- Ming–Qing：Ming–Qing novels（Luo Guanzhong, Cao Xueqin · The Four Great Classical Novels）
+
+### Literature
+- Qu Yuan（Father of Chu ci; the Li Sao）；Li Bai（The Immortal Poet）；Du Fu（Sage of Poetry; poet-historian）；Su Shi（Master of bold ci and prose）；Li Qingzhao（Mistress of the gentle ci）；Guan Hanqing（Master of Yuan drama; Snow in Midsummer）；Cao Xueqin（Dream of the Red Chamber）
+
+### Calligraphy
+- Wang Xizhi（Sage of calligraphy; the Lantingji Xu）；Yan Zhenqing（Master of the grand regular script）；Zhao Mengfu（Adept in regular and running scripts）
+
+### Painting
+- Gu Kaizhi（Sage of painting; capturing the spirit）
+
+### Historiography
+- Sima Qian（Records of the Grand Historian）；Sima Guang（Comprehensive Mirror in Aid of Governance）
+
+### Science & Engineering
+- Dujiangyan（Li Bing's irrigation works that blessed Shu）；The Great Wall（Linked earlier walls to guard the north）；The Grand Canal（Linked north and south by water）；Zhaozhou Bridge（Li Chun's design; oldest stone arch bridge）；Movable-Type Printing（Invented by Bi Sheng）；Compendium of Materia Medica（Li Shizhen's monumental pharmacopoeia）；Tiangong Kaiwu（Song Yingxing's technological encyclopedia）；The Forbidden City（The imperial palace of Ming and Qing）
+
+## Dynastic Capitals
+- Xia：Yangcheng (legendary) — A legendary capital, said to have moved often.
+- Shang：Bo → Yin (Anyang) — Settled at Yin after Pangeng, hence “Yin–Shang.”
+- Zhou：Haojing → Luoyi — King Ping moved east to Luoyi, ending Western Zhou.
+- Warring States：Capitals of the seven states — Linzi, Handan, Daliang, Ying, Xianyang and more coexisted.
+- Qin：Xianyang — Capital of the first unified empire.
+- Chu–Han Contention：Pengcheng / Yueyang·Chang'an — Chu at Pengcheng; Han held the Guanzhong.
+- Han：Chang'an → Luoyang — Guangwu moved east to Luoyang: Western to Eastern Han.
+- Xin Dynasty：Chang'an (renamed) — Wang Mang renamed Chang'an as Chang'an “Everlasting Peace.”
+- Three Kingdoms：Luoyang / Chengdu / Jianye — Capitals of Wei, Shu and Wu respectively.
+- Jin：Luoyang → Jiankang — After the fall of the north, Eastern Jin ruled from Jiankang.
+- Northern & Southern Dynasties：Jiankang / Pingcheng → Luoyang — Emperor Xiaowen moved the Northern Wei capital to Luoyang.
+- Sui：Daxing (Chang'an) — Built Daxing, plus an eastern capital at Luoyang.
+- Tang：Chang'an (eastern capital Luoyang) — A two-capital system; Chang'an was a world metropolis.
+- Five Dynasties & Ten Kingdoms：Bianliang / Luoyang — The Five Dynasties changed capitals repeatedly.
+- Liao：Shangjing (Linhuang) — Khitan capital, later adding central and southern capitals.
+- Song：Bianjing → Lin'an — Moved south to Lin'an after the Jingkang catastrophe.
+- Western Xia：Xingqing (Yinchuan) — Capital of the Tangut Western Xia.
+- Jin：Huining → Zhongdu (Beijing) — Prince Hailing moved the capital to Yanjing.
+- Yuan：Dadu (Beijing) — Kublai made Dadu — today's Beijing — his capital.
+- Ming：Nanjing → Beijing — Yongle moved the capital to Beijing, keeping Nanjing as co-capital.
+- Qing：Shengjing → Beijing — Settled in Beijing after entering the pass.
+
+## Evolution of Currency
+- Pre-Qin：Knife, spade & ant-nose coins（Each state minted its own coinage）
+- Qin：Banliang coin（Unified into round coins with a square hole）
+- Han：Wuzhu coin（In circulation for over 700 years）
+- Tang：Kaiyuan Tongbao（The beginning of the “tongbao” coinage system）
+- Song：Jiaozi paper money（The world's earliest paper money）
+- Yuan：Zhongtong banknotes（Paper money dominant; copper cash banned）
+- Ming：Silver monetization（Taxes paid in silver under the single-whip reform）
+- Qing：Silver and copper in parallel（Silver ingots and copper cash circulated together）
+
+## Foreign Exchange
+- 前138：Zhang Qian's Mission to the Western Regions（Zhang Qian，Western Han → the Western Regions (overland Silk Road)）— Brought out silk, lacquer and iron-casting; brought in grapes, alfalfa, walnuts and fine horses.
+- 73：Ban Chao in the Western Regions（Ban Chao，Eastern Han → the Western Regions）— Cast aside the pen for the sword, reopened the Silk Road and sent Gan Ying toward Rome.
+- 67：Buddhism Comes East（Emperor Ming of Han, Kasyapa Matanga，India → China）— Scriptures arrived on white horses, bringing Buddhism, sutras and Buddhist art.
+- 629：Xuanzang's Journey West（Xuanzang，Tang → India）— Returned with 600+ scriptures and wrote the Great Tang Records on the Western Regions.
+- 743：Jianzhen Sails East（Jianzhen，Tang → Japan）— After six attempts, brought Buddhism, architecture, medicine and calligraphy to Japan.
+- 630：Japanese Embassies to Tang（Japanese envoys，Japan → Tang）— Carried back law codes, writing, architecture and institutions that shaped Japan.
+- 960：The Maritime Silk Road（Guangzhou, Quanzhou, Mingzhou，China ↔ Southeast Asia & the Indian Ocean）— Exported porcelain, tea and silk; imported spices, gems and glass.
+- 1275：Marco Polo's Travels（Marco Polo，Europe → Yuan）— His travelogue fired Europe's imagination of the East.
+- 1405：Zheng He's Voyages（Zheng He，Ming → Southeast Asia, the Indian Ocean & Africa）— Seven voyages: porcelain, silk and tribute trade out; spices, treasures and giraffes in.
+- 1582：Matteo Ricci in China（Matteo Ricci，Europe → Ming）— Brought Western learning, astronomy, geometry and world maps, opening East–West exchange.
+- 700：The Tea-Horse Road（Caravans，Central Plains ↔ Tibet & the Southwest）— Tea for horses — linking Han, Tibetan and southwestern peoples.
+
+## History & Archaeology
+- Erlitou Site（c. 1750–1500 BC，Yanshi, Henan）：Palace foundations, bronze workshops, a turquoise dragon。Widely seen as the Xia capital, China's earliest dynastic city.
+- Yinxu & Oracle Bones（c. 1300–1046 BC，Anyang, Henan）：150,000+ oracle bones, Fu Hao's tomb, palaces and temples。Oracle bones confirmed the Shang king-list — the start of documented history.
+- Sanxingdui Site（c. 1200–1000 BC，Guanghan, Sichuan）：Bronze sacred trees, masks, a gold staff。A Shu civilization alongside the Central Plains, testimony to a plural unity.
+- Houmuwu Ding（c. 1300 BC，Anyang, Henan）：An 800-kg+ bronze rectangular cauldron。The pinnacle of Shang bronze casting.
+- Bells of Marquis Yi of Zeng（433 BC，Suizhou, Hubei）：65 bronze chime bells。Two tones per bell — proof of pre-Qin ritual music and tuning.
+- Terracotta Army（3rd c. BC，Xi'an, Shaanxi）：A terracotta army and bronze weapons。A portrait of Qin military might and craft.
+- Shuihudi Qin Bamboo Slips（217 BC，Yunmeng, Hubei）：Bamboo slips of Qin statutes。Concrete evidence of Qin law and local administration.
+- Mawangdui Han Tombs（2nd c. BC，Changsha, Hunan）：Silk manuscripts, maps, the body of Lady Dai。A treasury of Western Han science, medicine and thought.
+- Tomb of the Marquis of Haihun（59 BC，Nanchang, Jiangxi）：10+ tons of coins, bamboo slips, gold。The most complete Western Han marquis tomb to date.
+- Mogao Caves, Dunhuang（4th–14th c.，Dunhuang, Gansu）：Murals, painted sculpture, the Library Cave texts。A millennium-spanning trove of Silk Road and Buddhist art.
+- Liangzhu Ancient City（c. 3300–2300 BC，Yuhang, Zhejiang）：Hydraulic works, jade cong and bi。Evidence of an early state 5,000 years ago (prehistoric).
+
+## Classic Idioms
+- Sleeping on brushwood and tasting gall：Records of the Grand Historian — King Goujian of Yue endured hardship to avenge himself and destroy Wu.
+- Amaze the world with a single cry：Records of the Grand Historian — King Zhuang of Chu, silent for three years, then rose to hegemony.
+- Retreat ninety li：Zuo Commentary — Duke Wen of Jin repaid a debt by retreating ninety li before battle.
+- Besiege Wei to rescue Zhao：Records of the Grand Historian — Sun Bin struck the enemy's weak point to lift the siege of Zhao.
+- Discuss war on paper：Records of the Grand Historian — Zhao Kuo's bookish tactics led to disaster at Changping.
+- Return the jade intact to Zhao：Records of the Grand Historian — Lin Xiangru returned the jade to Zhao, mission accomplished.
+- Bare one's back for punishment：Records of the Grand Historian — Lian Po apologized to Lin Xiangru, sealing the general–minister bond.
+- The map unrolled, the dagger revealed：Intrigues of the Warring States — Jing Ke's plot was exposed when the map unrolled to reveal a dagger.
+- Mao Sui recommends himself：Records of the Grand Historian — The retainer Mao Sui volunteered for a mission to Chu.
+- Call a deer a horse：Records of the Grand Historian — Zhao Gao tested the court by calling a deer a horse.
+- Burn the books, bury the scholars：Records of the Grand Historian — Qin Shi Huang suppressed dissent by burning books and burying scholars.
+- Break the cauldrons, sink the boats：Records of the Grand Historian — Xiang Yu cut off retreat to crush Qin at Julu.
+- Chu songs on every side：Records of the Grand Historian — Surrounded at Gaixia, Xiang Yu's army broke on hearing Chu songs all around.
+- Fight with one's back to the river：Records of the Grand Historian — Han Xin arrayed his troops with their backs to the river, winning by daring.
+- Agree on a three-article law：Records of the Grand Historian — Liu Bang won hearts by simplifying law to three articles.
+- Bore a hole in the wall for light：Miscellaneous Records of the Western Capital — Kuang Heng studied by the light he let in through a chink in the wall.
+- Three visits to the thatched cottage：Records of the Three Kingdoms — Liu Bei thrice sought out Zhuge Liang to serve him.
+- Quench thirst by thinking of plums：A New Account of Tales of the World — Cao Cao raised morale by invoking a plum grove ahead.
+- So happy as to forget home：Records of the Three Kingdoms — The fallen ruler Liu Shan forgot Shu in his new comfort.
+- Every bush and tree looks like an enemy：Book of Jin — At Fei River, Fu Jian saw soldiers in every bush.
+- Return from the Eastern Mountain：Book of Jin — Xie An returned from reclusion to become a famed statesman.
+- Please step into the cauldron：Comprehensive Mirror in Aid of Governance — A cruel interrogator was undone by his own method.
+- Draped in the yellow robe：History of Song — Zhao Kuangyin was made emperor at Chenqiao.
+- Serve the country with utter loyalty：History of Song — Yue Fei bore the vow “repay the country with loyalty” on his back.
+
+## Famous Quotes
+- “Among any three people, one can be my teacher.” — Confucius The Analects
+- “Learning without thought is blind; thought without learning is perilous.” — Confucius The Analects
+- “Do not impose on others what you would not want yourself.” — Confucius The Analects
+- “A journey of a thousand li begins under one's feet.” — Laozi Tao Te Ching
+- “As heaven moves with vigor, the noble strive unceasingly.” — I Ching I Ching
+- “The road ahead is long; I shall search high and low.” — Qu Yuan Li Sao
+- “One thrives in adversity and perishes in ease.” — Mencius Mencius
+- “A great wind rises, the clouds are swept along.” — Liu Bang Song of the Great Wind
+- “How can the swallow know the ambition of the swan!” — Sima Qian Records of the Grand Historian
+- “To probe the relation of heaven and man, and grasp the changes of past and present.” — Sima Qian Letter to Ren An
+- “An old steed in the stable still aspires to gallop a thousand li.” — Cao Cao The Turtle Though Long-Lived
+- “Bend to the task until one's dying day.” — Zhuge Liang Later Memorial on Dispatching the Army
+- “Picking chrysanthemums by the eastern fence, I gaze at the southern hills.” — Tao Yuanming Drinking Wine
+- “I shall reach the summit and see all other peaks as small.” — Du Fu Gazing at Mount Tai
+- “A time will come to ride the wind and break the waves, hoisting a cloud-sail across the sea.” — Li Bai Hard Is the Road
+- “Be first in worrying about the world's troubles and last in enjoying its pleasures.” — Fan Zhongyan Record of Yueyang Tower
+- “May we all be blessed with longevity; though far apart, we share the same moon.” — Su Shi Prelude to Water Melody
+- “Since ancient times, who has not died? Let my loyal heart shine in the annals.” — Wen Tianxiang Crossing the Lonely Ocean
+- “When the armies retake the Central Plains, do not forget to tell your father at the family rites.” — Lu You To My Sons
+- “Though crushed to dust I do not fear, so long as purity remains in the world.” — Yu Qian Ode to Lime
+- “Every common man shares responsibility for the rise and fall of the realm.” — Gu Yanwu Record of Daily Knowledge
+- “If it benefits the nation, I would face life or death — how could I shirk it for fortune or fear?” — Lin Zexu On the Way to Exile
+
+## China & the World
+- Xia & Shang（c. 21st–11th c. BC） ↔ Ancient Egypt & Mesopotamia：Early writing and states arose on the Nile and in Mesopotamia.
+- Zhou (Spring & Autumn, Warring States)（c. 8th–3rd c. BC） ↔ Ancient Greece & the Persian Empire：Confucius, the Buddha and Socrates near-contemporaries — an Axial Age.
+- Qin（221–207 BC） ↔ The Roman Republic：Two great powers rose at the two ends of Eurasia.
+- Han（202 BC–AD 220） ↔ The Roman Empire：Han and Rome stood together, linked indirectly via the Silk Road.
+- Three Kingdoms to North–South Dynasties（220–589） ↔ Divided Rome & Byzantium：Eastern division and migrations coincided with Rome's decline.
+- Sui & Tang（581–907） ↔ Arab Caliphates & Byzantium：Islam rose; Chang'an and Baghdad were world capitals.
+- Song（960–1279） ↔ Medieval Europe & the Seljuks：The Four Inventions passed west via the Arabs, changing the world.
+- Yuan（1271–1368） ↔ The Mongol World Empire & Late Medieval Europe：The Mongols linked Eurasia; Marco Polo came east.
+- Ming（1368–1644） ↔ The Renaissance & the Age of Discovery：Zheng He's voyages roughly coincided with Europe's Age of Discovery — in opposite directions.
+- Qing（1636–1912） ↔ The Industrial Revolution & Modern Powers：The West industrialized; China declined and entered the world system.
+
+## Key Events
 - 前2070 年：Founding of the Xia（Xia）— Qi, son of Yu, established hereditary rule — the start of “family rule” (approx.).
 - 前1600 年：Tang of Shang overthrows Xia（Shang）— Tang founds Shang; oracle bone script is China's earliest mature writing.
 - 前1046 年：Battle of Muye · Rise of Zhou（Zhou）— King Wu defeats Zhou, Shang falls and Zhou rises, enfeoffment begins.
@@ -784,15 +1220,15 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - 1840 年：Opium War（Qing）— The beginning of modern Chinese history.
 - 1912 年：Qing emperor abdicates（Qing）— Imperial rule ends; two millennia of dynasty history closes.
 
-## 四大发明
+## Four Great Inventions
 - 📜 Papermaking（Eastern Han，Cai Lun (improved, 105 AD)）：Using bark, hemp, rag and such to improve papermaking; cheap, accessible paper became a key vehicle for knowledge. 世界影响：Reached Arabia in the 8th c., then Europe, advancing world civilization.
 - 🖨️ Printing（Sui–Tang → Northern Song，Woodblock (Sui–Tang) · Bi Sheng invented movable type (Northern Song)）：Woodblock printing began in Sui–Tang; in the Northern Song Bi Sheng made clay movable type, hugely boosting book replication. 世界影响：Accelerated knowledge diffusion, preluding European movable type.
 - 💥 Gunpowder（Tang → Song，Tang alchemists · Song military use）：First recorded in Tang alchemical texts; used in war by late Tang; widely used in Song weapons. 世界影响：Changed warfare; spread west to Europe via Mongols in the 13th c.
 - 🧭 Compass（Warring States → Northern Song，“Sinan” of Warring States · used for navigation in Northern Song）：The Warring States had the pointing tool “Sinan”; the Northern Song made an artificial magnetized compass for sea navigation. 世界影响：Supported ocean voyages and the Age of Discovery, reshaping world geography.
 
-## 帝王之最
+## Notable Rulers
 
-### 在位最长
+### Longest Reigns
 - Jie (Lügui)（Xia，c. 1676–1600 BC，约 76 年）
 - Tai Wu（Shang，c. 1487–1412 BC，约 75 年）
 - Qing Shengzu (Xuanye)（Qing，1661–1722，约 61 年）
@@ -800,7 +1236,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - King Nan（Zhou，314–256 BC，约 59 年）
 - Wu Ding（Shang，c. 1176–1117 BC，约 59 年）
 
-### 在位最短
+### Shortest Reigns
 - Ming Guangzong (Zhu Changluo)（Ming，29 日）
 - Ziying（Qin，46 日）
 - Tang Zhongzong (Li Xian)（Tang，2 月）
@@ -808,7 +1244,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - Tang Shunzong (Li Song)（Tang，6 月）
 - Ming Renzong (Zhu Gaochi)（Ming，8 月）
 
-### 帝王最多的朝代
+### Most Rulers by Dynasty
 - Zhou：36 位
 - Shang：26 位
 - Han：25 位

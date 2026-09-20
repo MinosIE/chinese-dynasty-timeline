@@ -6,6 +6,19 @@
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/llms-en.txt</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/llms-full.txt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/llms-full-en.txt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/systems.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/reforms.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/battles.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/unity.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/people.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/culture.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/idioms.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/quotes.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/capitals.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/currency.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/exchange.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/archaeo.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/world.json</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/xia.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/shang.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/zhou.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>

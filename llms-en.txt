@@ -1,10 +1,13 @@
 # Chinese Dynasties · A Millennial Saga
 
-> A lightweight, static educational site on the dynasties of China, from Xia to Qing, with each dynasty’s overview, imperial lineage, key talents and pivotal institutions.
+> A lightweight, static educational site on the dynasties of China, from Xia to Qing — with dynasty overviews, imperial lineages, key talents, institutions, famous battles, historical figures, cultural achievements, foreign exchange, archaeology and world comparisons.
 
 ## Data endpoints
 - [Dynasty overview](https://MinosIE.github.io/chinese-dynasty-timeline/data/overview.json): all dynasties (name / years / capital / feature / summary / counts). English text lives in the sibling `*En` fields.
 - [Dynasty details](https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/): per-dynasty JSON (emperors, talents, policies, aspects); English text in `*En` fields.
+- [Institutions](https://MinosIE.github.io/chinese-dynasty-timeline/data/systems.json) | [Reforms](https://MinosIE.github.io/chinese-dynasty-timeline/data/reforms.json) | [Battles](https://MinosIE.github.io/chinese-dynasty-timeline/data/battles.json) | [Unity & Division](https://MinosIE.github.io/chinese-dynasty-timeline/data/unity.json)
+- [Figures](https://MinosIE.github.io/chinese-dynasty-timeline/data/people.json) | [Culture](https://MinosIE.github.io/chinese-dynasty-timeline/data/culture.json) | [Idioms](https://MinosIE.github.io/chinese-dynasty-timeline/data/idioms.json) | [Quotes](https://MinosIE.github.io/chinese-dynasty-timeline/data/quotes.json)
+- [Capitals](https://MinosIE.github.io/chinese-dynasty-timeline/data/capitals.json) | [Currency](https://MinosIE.github.io/chinese-dynasty-timeline/data/currency.json) | [Exchange](https://MinosIE.github.io/chinese-dynasty-timeline/data/exchange.json) | [Archaeology](https://MinosIE.github.io/chinese-dynasty-timeline/data/archaeo.json) | [World](https://MinosIE.github.io/chinese-dynasty-timeline/data/world.json)
 - [Full text](https://MinosIE.github.io/chinese-dynasty-timeline/llms-full-en.txt): full plain-text dump of all structured data (for whole-site LLM citation).
 - [Chinese index](https://MinosIE.github.io/chinese-dynasty-timeline/llms.txt): 中文索引
 
