@@ -53,7 +53,7 @@
     <button class="lang-btn" id="langBtn" title="切换语言 / Switch language" aria-label="切换语言">🌐 <span id="langLabel">中文</span></button>
     <h1 data-i18n="heroTitle">中华王朝 · 千年脉络</h1>
     <p data-i18n="heroSub">从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。</p>
-    <p class="hero-issue"><span data-i18n="heroIssue">发现问题或有建议？欢迎通过 GitHub 提 Issue 或邮件反馈：</span><a class="hero-issue-link" href="https://github.com/MinosIE/chinese-dynasty-timeline/issues" target="_blank" rel="noopener noreferrer">GitHub Issues ↗</a><a class="hero-issue-link-alt" href="mailto:417913012@qq.com"><span data-i18n="heroMail">✉️ 邮件反馈</span></a></p>
+    <p class="hero-issue"><span data-i18n="heroIssue">发现问题或有建议？欢迎通过 GitHub 提 Issue 或邮件反馈：</span><a class="hero-issue-link" href="https://github.com/MinosIE/chinese-dynasty-timeline/issues" target="_blank" rel="noopener noreferrer">GitHub Issues ↗</a><a class="hero-issue-link-alt" href="mailto:417913012@qq.com?subject=%E3%80%90%E4%B8%AD%E5%8D%8E%E7%8E%8B%E6%9C%9D%C2%B7%E5%8D%83%E5%B9%B4%E8%84%89%E7%BB%9C%E3%80%91%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88"><span data-i18n="heroMail">✉️ 邮件反馈</span></a></p>
     <div class="kpis" id="kpis"></div>
   </section>
 
@@ -227,6 +227,8 @@ const I18N={
     heroSub:"从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。",
     heroIssue:"发现问题或有建议？欢迎通过 GitHub 提 Issue 或邮件反馈：",
     heroMail:"✉️ 邮件反馈",
+    heroMailSubject:"【中华王朝·千年脉络】问题反馈",
+    heroMailBody:"您好，我在浏览「中华王朝·千年脉络」时发现以下问题 / 建议：\n\n",
     nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最",sys:"制度演变",battle:"著名战役",people:"历史人物",world:"世界对比",reform:"改革变法",idiom:"成语典故",culture:"文化成就",capcity:"都城货币",exchange:"对外交流",archaeo:"史料考古",unity:"统一分裂",quote:"名句名篇"},
     homeLead:"从夏到清 · 21 个朝代与过渡时期的帝王、人才、制度与时代脉络 —— 选一个板块开始",
     entry:{timeline:{t:"朝代时间轴",d:"21 个朝代与过渡时期，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"},sys:{t:"制度演变",d:"选官、官制、赋税、军事、律法的跨朝脉络一览"},battle:{t:"著名战役",d:"以少胜多、统一兼并、农民起义、边疆对外"},people:{t:"历史人物",d:"按女性、思想家、文学家、科学家等主题筛选名人"},world:{t:"世界对比",d:"同时期的中国与世界主要文明横向对照"},reform:{t:"改革与变法",d:"商鞅、王安石、张居正、洋务、戊戌等，含主持者、措施与结局"},idiom:{t:"成语典故",d:"破釜沉舟、背水一战、卧薪尝胆等，关联出处朝代"},culture:{t:"文化成就",d:"文学体裁演变与代表作家；书法、绘画、史学、科技工程"},capcity:{t:"都城与货币",d:"各朝都城与迁都；货币从刀币到白银的演变"},exchange:{t:"对外交流",d:"丝绸之路与航海：张骞、玄奘、郑和、马可·波罗等"},archaeo:{t:"史料与考古",d:"二里头、殷墟甲骨、三星堆、兵马俑、敦煌等考古发现"},unity:{t:"统一与分裂",d:"四次大一统、三次大分裂的时间带"},quote:{t:"名句名篇",d:"各朝名句、出处与作者"}},
@@ -285,6 +287,8 @@ const I18N={
     heroSub:"From Xia to Qing, explore each dynasty's imperial lineage, key talents, and pivotal institutions — and grasp three millennia of power, order, and civilization.",
     heroIssue:"Found a bug or have a suggestion? Reach us via GitHub Issues or email:",
     heroMail:"✉️ Email us",
+    heroMailSubject:"[Chinese Dynasties] Feedback",
+    heroMailBody:"Hi, while browsing “Chinese Dynasties · A Millennial Saga” I found the following issue / suggestion:\n\n",
     nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers",sys:"Institutions",battle:"Famous Battles",people:"Figures",world:"China & the World",reform:"Reforms",idiom:"Idioms",culture:"Culture",capcity:"Capitals & Currency",exchange:"Exchange",archaeo:"Archaeology",unity:"Unity & Division",quote:"Quotes"},
     homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 21 dynasties & periods. Pick a section to begin.",
     entry:{timeline:{t:"Dynastic Timeline",d:"21 dynasties & periods with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"},sys:{t:"Institutions",d:"Selection, government, taxation, military and law across dynasties"},battle:{t:"Famous Battles",d:"Outnumbered wins, unification, peasant revolts, frontier wars"},people:{t:"Historical Figures",d:"Filter notables by women, thinkers, literati, scientists and more"},world:{t:"China & the World",d:"China alongside the world's major civilizations in the same era"},reform:{t:"Reforms & Reformers",d:"Shang Yang, Wang Anshi, Zhang Juzheng, the Self-Strengthening and 1898 reforms"},idiom:{t:"Classic Idioms",d:"Idioms from history — breaking the cauldrons, the last stand, tasting gall"},culture:{t:"Cultural Achievements",d:"Literary genres and writers; calligraphy, painting, historiography, engineering"},capcity:{t:"Capitals & Currency",d:"Dynastic capitals and relocations; money from knife-coins to silver"},exchange:{t:"Foreign Exchange",d:"Silk Road and voyages: Zhang Qian, Xuanzang, Zheng He, Marco Polo"},archaeo:{t:"History & Archaeology",d:"Erlitou, oracle bones, Sanxingdui, the Terracotta Army, Dunhuang"},unity:{t:"Unity & Division",d:"A timeline of four unifications and three great divisions"},quote:{t:"Famous Quotes",d:"Lines across the dynasties, with source and author"}},
@@ -971,6 +975,8 @@ function applyStaticLang(){
   const tt=document.getElementById('toTop');if(tt){tt.title=t('toTop');tt.setAttribute('aria-label',t('toTop'));}
   const fl=document.getElementById('foot');if(fl)fl.innerHTML=t('foot');
   const ll=document.getElementById('langLabel');if(ll)ll.textContent=t('langName');
+  const ml=document.querySelector('.hero-issue-link-alt');
+  if(ml)ml.href='mailto:417913012@qq.com?subject='+encodeURIComponent(t('heroMailSubject'))+'&body='+encodeURIComponent(t('heroMailBody'));
 }
 function rerenderTranslatable(){
   renderKpis();renderTabs();render();renderSpan();
