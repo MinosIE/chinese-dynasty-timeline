@@ -1,0 +1,10 @@
+[
+  { "k": "先秦", "kEn": "Pre-Qin", "n": "刀币·布币·蚁鼻钱", "nEn": "Knife, spade & ant-nose coins", "x": "各国货币形制不一", "xEn": "Each state minted its own coinage" },
+  { "k": "秦", "kEn": "Qin", "n": "半两钱", "nEn": "Banliang coin", "x": "统一为圆形方孔钱", "xEn": "Unified into round coins with a square hole" },
+  { "k": "汉", "kEn": "Han", "n": "五铢钱", "nEn": "Wuzhu coin", "x": "通行七百余年", "xEn": "In circulation for over 700 years" },
+  { "k": "唐", "kEn": "Tang", "n": "开元通宝", "nEn": "Kaiyuan Tongbao", "x": "「通宝」钱制之开端", "xEn": "The beginning of the “tongbao” coinage system" },
+  { "k": "宋", "kEn": "Song", "n": "交子", "nEn": "Jiaozi paper money", "x": "世界最早的纸币", "xEn": "The world's earliest paper money" },
+  { "k": "元", "kEn": "Yuan", "n": "中统钞", "nEn": "Zhongtong banknotes", "x": "以纸币为主，禁用铜钱", "xEn": "Paper money dominant; copper cash banned" },
+  { "k": "明", "kEn": "Ming", "n": "白银货币化", "nEn": "Silver monetization", "x": "一条鞭法折银征收", "xEn": "Taxes paid in silver under the single-whip reform" },
+  { "k": "清", "kEn": "Qing", "n": "银铜并行", "nEn": "Silver and copper in parallel", "x": "银两与制钱并行流通", "xEn": "Silver ingots and copper cash circulated together" }
+]

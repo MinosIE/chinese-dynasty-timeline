@@ -74,6 +74,10 @@
     <button class="mod" data-go="m-battle" data-i18n="nav.battle">著名战役</button>
     <button class="mod" data-go="m-people" data-i18n="nav.people">历史人物</button>
     <button class="mod" data-go="m-world" data-i18n="nav.world">世界对比</button>
+    <button class="mod" data-go="m-reform" data-i18n="nav.reform">改革变法</button>
+    <button class="mod" data-go="m-idiom" data-i18n="nav.idiom">成语典故</button>
+    <button class="mod" data-go="m-culture" data-i18n="nav.culture">文化成就</button>
+    <button class="mod" data-go="m-capcity" data-i18n="nav.capcity">都城货币</button>
   </nav>
 
   <section class="module active" id="m-home">
@@ -87,6 +91,10 @@
       <button class="entry" data-go="m-battle"><span class="entry-ic">⚔️</span><span class="entry-t" data-i18n="entry.battle.t">著名战役</span><span class="entry-d" data-i18n="entry.battle.d">以少胜多、统一兼并、农民起义、边疆对外</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-people"><span class="entry-ic">👤</span><span class="entry-t" data-i18n="entry.people.t">历史人物</span><span class="entry-d" data-i18n="entry.people.d">按女性、思想家、文学家、科学家等主题筛选名人</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-world"><span class="entry-ic">🌍</span><span class="entry-t" data-i18n="entry.world.t">世界对比</span><span class="entry-d" data-i18n="entry.world.d">同时期的中国与世界主要文明横向对照</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-reform"><span class="entry-ic">⚖️</span><span class="entry-t" data-i18n="entry.reform.t">改革与变法</span><span class="entry-d" data-i18n="entry.reform.d">商鞅、王安石、张居正、洋务、戊戌等，含主持者、措施与结局</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-idiom"><span class="entry-ic">🈶</span><span class="entry-t" data-i18n="entry.idiom.t">成语典故</span><span class="entry-d" data-i18n="entry.idiom.d">破釜沉舟、背水一战、卧薪尝胆等，关联出处朝代</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-culture"><span class="entry-ic">🎨</span><span class="entry-t" data-i18n="entry.culture.t">文化成就</span><span class="entry-d" data-i18n="entry.culture.d">文学体裁演变与代表作家；书法、绘画、史学、科技工程</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-capcity"><span class="entry-ic">🏙️</span><span class="entry-t" data-i18n="entry.capcity.t">都城与货币</span><span class="entry-d" data-i18n="entry.capcity.d">各朝都城与迁都；货币从刀币到白银的演变</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
     </div>
   </section>
 
@@ -147,6 +155,30 @@
     <div class="world-list" id="worldList"></div>
   </section>
 
+  <section class="module" id="m-reform">
+    <div class="inv-head"><h2 data-i18n="reformTitle">改革与变法</h2><p data-i18n="reformSub">历代关键改革 · 主持者、措施与结局 · 点击可跳转朝代</p></div>
+    <div class="rfm-list" id="rfmList"></div>
+  </section>
+
+  <section class="module" id="m-idiom">
+    <div class="inv-head"><h2 data-i18n="idiomTitle">成语典故</h2><p data-i18n="idiomSub">出自历史的成语 · 出处与释义 · 点击可跳转朝代</p></div>
+    <div class="idi-list" id="idiList"></div>
+  </section>
+
+  <section class="module" id="m-culture">
+    <div class="inv-head"><h2 data-i18n="cultureTitle">文化成就</h2><p data-i18n="cultureSub">文学体裁演变 · 文学 · 书法 · 绘画 · 史学 · 科技工程</p></div>
+    <div class="cul-genres" id="culGenres"></div>
+    <div class="cul-sections" id="culSections"></div>
+  </section>
+
+  <section class="module" id="m-capcity">
+    <div class="inv-head"><h2 data-i18n="capTitle">都城与货币</h2><p data-i18n="capSub">各朝都城与迁都 · 货币从刀币到白银的演变</p></div>
+    <h3 class="sub-h" data-i18n="capSubCap">都城变迁</h3>
+    <div class="cap-list" id="capList"></div>
+    <h3 class="sub-h" data-i18n="capSubCur">货币演变</h3>
+    <div class="sys-list" id="curList"></div>
+  </section>
+
   <p class="foot" id="foot"></p>
 </div>
 
@@ -164,9 +196,9 @@ const I18N={
     heroTitle:"中华王朝 · 千年脉络",
     heroSub:"从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。",
     heroIssue:"发现问题或有建议？欢迎到 GitHub 提 Issue：",
-    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最",sys:"制度演变",battle:"著名战役",people:"历史人物",world:"世界对比"},
+    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最",sys:"制度演变",battle:"著名战役",people:"历史人物",world:"世界对比",reform:"改革变法",idiom:"成语典故",culture:"文化成就",capcity:"都城货币"},
     homeLead:"从夏到清 · 21 个朝代与过渡时期的帝王、人才、制度与时代脉络 —— 选一个板块开始",
-    entry:{timeline:{t:"朝代时间轴",d:"21 个朝代与过渡时期，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"},sys:{t:"制度演变",d:"选官、官制、赋税、军事、律法的跨朝脉络一览"},battle:{t:"著名战役",d:"以少胜多、统一兼并、农民起义、边疆对外"},people:{t:"历史人物",d:"按女性、思想家、文学家、科学家等主题筛选名人"},world:{t:"世界对比",d:"同时期的中国与世界主要文明横向对照"}},
+    entry:{timeline:{t:"朝代时间轴",d:"21 个朝代与过渡时期，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"},sys:{t:"制度演变",d:"选官、官制、赋税、军事、律法的跨朝脉络一览"},battle:{t:"著名战役",d:"以少胜多、统一兼并、农民起义、边疆对外"},people:{t:"历史人物",d:"按女性、思想家、文学家、科学家等主题筛选名人"},world:{t:"世界对比",d:"同时期的中国与世界主要文明横向对照"},reform:{t:"改革与变法",d:"商鞅、王安石、张居正、洋务、戊戌等，含主持者、措施与结局"},idiom:{t:"成语典故",d:"破釜沉舟、背水一战、卧薪尝胆等，关联出处朝代"},culture:{t:"文化成就",d:"文学体裁演变与代表作家；书法、绘画、史学、科技工程"},capcity:{t:"都城与货币",d:"各朝都城与迁都；货币从刀币到白银的演变"}},
     enter:"进入 →",
     geoArea:"国土面积",secTerritory:"疆域",
     spanTitle:"朝代存续一览",spanSub:"长度按年代比例 · 点击任意行可跳转",
@@ -181,6 +213,12 @@ const I18N={
     pplAll:"全部",pplCount:"共 {n} 位",
     worldCnLabel:"中国",worldWorldLabel:"同时期世界",
     roleTag:{政治家:"政治家",军事家:"军事家",女性:"女性",思想家:"思想家",文学家:"文学家",科学家:"科学家",医学家:"医学家",艺术家:"艺术家",改革家:"改革家","航海·探索":"航海·探索"},
+    reformTitle:"改革与变法",reformSub:"历代关键改革 · 主持者、措施与结局 · 点击可跳转朝代",
+    idiomTitle:"成语典故",idiomSub:"出自历史的成语 · 出处与释义 · 点击可跳转朝代",
+    cultureTitle:"文化成就",cultureSub:"文学体裁演变 · 文学 · 书法 · 绘画 · 史学 · 科技工程",
+    capTitle:"都城与货币",capSub:"各朝都城与迁都 · 货币从刀币到白银的演变",capSubCap:"都城变迁",capSubCur:"货币演变",
+    reformWho:"主持",reformMeasures:"措施",reformResult:"结果",idiomSrc:"出处",idiomMean:"释义",
+    culGenreTitle:"文学体裁演变",curThreadTitle:"货币演变",
     searchPh:"搜索：朝代 / 帝王 / 人物 / 制度 / 发明，如「李世民」「科举」「火药」",
     kpiMain:"主要王朝",kpiYears:"年王朝（夏→清）",kpiYearsV:"约4000",kpiPeople:"帝王与人才",
     statEmperors:"帝王",statTalents:"人才",statPolicies:"制度",unitPerson:"位",unitItem:"项",
@@ -198,7 +236,7 @@ const I18N={
     recNoteLong:"「约」为传说或存疑纪年（如夏、商），与信史不完全可比。",
     recNoteShort:"「约」为按月 / 日估算；史料仅记年至者按 1 年计。",
     searchEmpty:"未找到「{q}」相关内容",
-    srType:{朝代:"朝代",帝王:"帝王",文臣:"文臣",武将:"武将","思想·文人":"思想·文人",其他:"其他",制度:"制度",发明:"发明",战役:"战役",事件:"事件",成就:"成就"},
+    srType:{朝代:"朝代",帝王:"帝王",文臣:"文臣",武将:"武将","思想·文人":"思想·文人",其他:"其他",制度:"制度",发明:"发明",战役:"战役",改革:"改革",成语:"成语",事件:"事件",成就:"成就"},
     overviewFail:"概览数据加载失败：请确认 data/overview.json 存在且通过 HTTP 访问（GitHub Pages 部署后正常）。",
     toTop:"返回顶部",langName:"中文",themeNight:"🌙 夜间",themeDay:"☀️ 日间",
     jsonName:"中华王朝时间轴",jsonDesc:"科普中国历史朝代（夏到清）的静态网页，含各王朝概览、帝王世系、核心人才与关键制度。",
@@ -210,9 +248,9 @@ const I18N={
     heroTitle:"Chinese Dynasties · A Millennial Saga",
     heroSub:"From Xia to Qing, explore each dynasty's imperial lineage, key talents, and pivotal institutions — and grasp three millennia of power, order, and civilization.",
     heroIssue:"Found a bug or have a suggestion? Please open an issue on GitHub:",
-    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers",sys:"Institutions",battle:"Famous Battles",people:"Figures",world:"China & the World"},
+    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers",sys:"Institutions",battle:"Famous Battles",people:"Figures",world:"China & the World",reform:"Reforms",idiom:"Idioms",culture:"Culture",capcity:"Capitals & Currency"},
     homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 21 dynasties & periods. Pick a section to begin.",
-    entry:{timeline:{t:"Dynastic Timeline",d:"21 dynasties & periods with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"},sys:{t:"Institutions",d:"Selection, government, taxation, military and law across dynasties"},battle:{t:"Famous Battles",d:"Outnumbered wins, unification, peasant revolts, frontier wars"},people:{t:"Historical Figures",d:"Filter notables by women, thinkers, literati, scientists and more"},world:{t:"China & the World",d:"China alongside the world's major civilizations in the same era"}},
+    entry:{timeline:{t:"Dynastic Timeline",d:"21 dynasties & periods with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"},sys:{t:"Institutions",d:"Selection, government, taxation, military and law across dynasties"},battle:{t:"Famous Battles",d:"Outnumbered wins, unification, peasant revolts, frontier wars"},people:{t:"Historical Figures",d:"Filter notables by women, thinkers, literati, scientists and more"},world:{t:"China & the World",d:"China alongside the world's major civilizations in the same era"},reform:{t:"Reforms & Reformers",d:"Shang Yang, Wang Anshi, Zhang Juzheng, the Self-Strengthening and 1898 reforms"},idiom:{t:"Classic Idioms",d:"Idioms from history — breaking the cauldrons, the last stand, tasting gall"},culture:{t:"Cultural Achievements",d:"Literary genres and writers; calligraphy, painting, historiography, engineering"},capcity:{t:"Capitals & Currency",d:"Dynastic capitals and relocations; money from knife-coins to silver"}},
     enter:"Enter →",
     geoArea:"Land Area",secTerritory:"Territory",
     spanTitle:"Dynastic Spans",spanSub:"Bars scaled by era · click any row to jump",
@@ -227,6 +265,12 @@ const I18N={
     pplAll:"All",pplCount:"{n} figures",
     worldCnLabel:"China",worldWorldLabel:"The wider world",
     roleTag:{政治家:"Statesmen",军事家:"Generals",女性:"Women",思想家:"Thinkers",文学家:"Literati",科学家:"Scientists",医学家:"Physicians",艺术家:"Artists",改革家:"Reformers","航海·探索":"Explorers"},
+    reformTitle:"Reforms & Reformers",reformSub:"Key reforms: sponsors, measures and outcomes · click to jump",
+    idiomTitle:"Classic Idioms",idiomSub:"Idioms from history: source and meaning · click to jump",
+    cultureTitle:"Cultural Achievements",cultureSub:"Literary genres · literature · calligraphy · painting · historiography · engineering",
+    capTitle:"Capitals & Currency",capSub:"Dynastic capitals and relocations · money from knife-coins to silver",capSubCap:"Capitals",capSubCur:"Currency",
+    reformWho:"Sponsor",reformMeasures:"Measures",reformResult:"Outcome",idiomSrc:"Source",idiomMean:"Meaning",
+    culGenreTitle:"Evolution of Literary Genres",curThreadTitle:"Evolution of Currency",
     searchPh:"Search: dynasty / ruler / figure / institution / invention, e.g. “Li Shimin”, “keju”, “gunpowder”",
     kpiMain:"Major Dynasties",kpiYears:"Yrs of Dynasties (Xia→Qing)",kpiYearsV:"~4000",kpiPeople:"Rulers & Talents",
     statEmperors:"Rulers",statTalents:"Talents",statPolicies:"Policies",unitPerson:"",unitItem:"",
@@ -244,7 +288,7 @@ const I18N={
     recNoteLong:"“~” marks legendary or uncertain chronologies (e.g. Xia, Shang), not strictly comparable with documented reigns.",
     recNoteShort:"“~” marks month/day estimates; where sources record only years, a reign counts as 1 year.",
     searchEmpty:"No results for “{q}”",
-    srType:{朝代:"Dynasty",帝王:"Ruler",文臣:"Civil Official",武将:"General","思想·文人":"Thinker/Literatus",其他:"Figure",制度:"Institution",发明:"Invention",战役:"Battle",事件:"Event",成就:"Achievement"},
+    srType:{朝代:"Dynasty",帝王:"Ruler",文臣:"Civil Official",武将:"General","思想·文人":"Thinker/Literatus",其他:"Figure",制度:"Institution",发明:"Invention",战役:"Battle",改革:"Reform",成语:"Idiom",事件:"Event",成就:"Achievement"},
     overviewFail:"Failed to load overview data: ensure data/overview.json exists and is served over HTTP (works after GitHub Pages deploy).",
     toTop:"Back to top",langName:"EN",themeNight:"🌙 Night",themeDay:"☀️ Day",
     jsonName:"Chinese Dynasties Timeline",jsonDesc:"A static page introducing Chinese dynasties (Xia to Qing) with overviews, imperial lineages, key talents, and pivotal institutions.",
@@ -716,6 +760,60 @@ function renderWorld(){
   });
 }
 
+/* ---------- 改革与变法 ---------- */
+let rfmData=null;
+function bindJump(sel){
+  document.querySelectorAll(sel).forEach(el=>{
+    const go=()=>jumpToDynasty(el.dataset.dynasty);
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+}
+function renderReforms(){
+  if(!rfmData)return;
+  document.getElementById('rfmList').innerHTML=rfmData.slice().sort((a,b)=>a.y-b.y).map(r=>{
+    const y=r.y<0?((lang==='zh'?'前':'BC ')+(-r.y)):r.y;
+    const dn=ovById[r.d]?L(ovById[r.d],'name'):'';
+    return `<div class="rfm" data-dynasty="${r.d}" role="button" tabindex="0"><div class="rfm-head"><span class="rfm-year">${y}</span><span class="rfm-dyn">${dn}</span></div><span class="rfm-name">${L(r,'n')}</span><span class="rfm-row"><b>${t('reformWho')}</b> ${L(r,'who')}</span><span class="rfm-row"><b>${t('reformMeasures')}</b> ${L(r,'measures')}</span><span class="rfm-row res"><b>${t('reformResult')}</b> ${L(r,'result')}</span></div>`;
+  }).join('');
+  bindJump('#rfmList .rfm');
+}
+
+/* ---------- 成语典故 ---------- */
+let idiData=null;
+function renderIdioms(){
+  if(!idiData)return;
+  document.getElementById('idiList').innerHTML=idiData.map(x=>{
+    const dn=ovById[x.d]?L(ovById[x.d],'name'):'';
+    return `<div class="idi" data-dynasty="${x.d}" role="button" tabindex="0"><div class="idi-top"><span class="idi-name">${L(x,'n')}</span><span class="idi-dyn">${dn}</span></div><span class="idi-src">${t('idiomSrc')} · ${L(x,'src')}</span><span class="idi-mean">${L(x,'mean')}</span></div>`;
+  }).join('');
+  bindJump('#idiList .idi');
+}
+
+/* ---------- 文化成就 ---------- */
+let culData=null;
+function renderCulture(){
+  if(!culData)return;
+  const g=culData.genres||[];
+  document.getElementById('culGenres').innerHTML=`<div class="sys-thread"><div class="sys-th"><span class="sys-ic">📜</span>${t('culGenreTitle')}</div><div class="sys-flow">${g.map((s,i)=>`<div class="sys-stage"><span class="sys-k">${L(s,'k')}</span><span class="sys-n">${L(s,'n')}</span><span class="sys-x">${L(s,'rep')} · ${L(s,'work')}</span></div>`+(i<g.length-1?'<span class="sys-arrow" aria-hidden="true">→</span>':'')).join('')}</div></div>`;
+  document.getElementById('culSections').innerHTML=(culData.sections||[]).map(sec=>`<div class="cul-card"><div class="cul-h"><span class="cul-ic">${sec.icon||''}</span>${L(sec,'title')}</div><div class="cul-chips">${sec.items.map(it=>`<span class="cul-chip" data-dynasty="${it.d}" role="button" tabindex="0"><b>${L(it,'n')}</b><span class="cul-note">${L(it,'note')}</span></span>`).join('')}</div></div>`).join('');
+  bindJump('#culSections .cul-chip');
+}
+
+/* ---------- 都城与货币 ---------- */
+let capData=null,curData=null;
+function renderCapCity(){
+  if(capData){
+    document.getElementById('capList').innerHTML=capData.map(c=>{
+      const dn=ovById[c.d]?L(ovById[c.d],'name'):'';
+      return `<div class="cap" data-dynasty="${c.d}" role="button" tabindex="0"><div class="cap-top"><span class="cap-dyn">${dn}</span><span class="cap-name">${L(c,'n')}</span></div><span class="cap-note">${L(c,'note')}</span></div>`;
+    }).join('');
+    bindJump('#capList .cap');
+  }
+  if(curData){
+    document.getElementById('curList').innerHTML=`<div class="sys-thread"><div class="sys-th"><span class="sys-ic">💰</span>${t('curThreadTitle')}</div><div class="sys-flow">${curData.map((s,i)=>`<div class="sys-stage"><span class="sys-k">${L(s,'k')}</span><span class="sys-n">${L(s,'n')}</span><span class="sys-x">${L(s,'x')}</span></div>`+(i<curData.length-1?'<span class="sys-arrow" aria-hidden="true">→</span>':'')).join('')}</div></div>`;
+  }
+}
+
 /* ---------- 搜索 ---------- */
 let searchIndex=null;
 const searchEl=document.getElementById('search');
@@ -792,6 +890,10 @@ function rerenderTranslatable(){
   if(btlData)renderBattles();
   if(pplData)renderPeople();
   if(worldData)renderWorld();
+  if(rfmData)renderReforms();
+  if(idiData)renderIdioms();
+  if(culData)renderCulture();
+  if(capData||curData)renderCapCity();
 }
 function setLang(next){
   lang=next;localStorage.setItem('lang',next);
@@ -824,6 +926,11 @@ function setLang(next){
   try{const r=await fetch('data/battles.json');if(r.ok){btlData=await r.json();renderBattles();}}catch(e){}
   try{const r=await fetch('data/people.json');if(r.ok){pplData=await r.json();renderPeople();}}catch(e){}
   try{const r=await fetch('data/world.json');if(r.ok){worldData=await r.json();renderWorld();}}catch(e){}
+  try{const r=await fetch('data/reforms.json');if(r.ok){rfmData=await r.json();renderReforms();}}catch(e){}
+  try{const r=await fetch('data/idioms.json');if(r.ok){idiData=await r.json();renderIdioms();}}catch(e){}
+  try{const r=await fetch('data/culture.json');if(r.ok){culData=await r.json();renderCulture();}}catch(e){}
+  try{const r=await fetch('data/capitals.json');if(r.ok){capData=await r.json();renderCapCity();}}catch(e){}
+  try{const r=await fetch('data/currency.json');if(r.ok){curData=await r.json();renderCapCity();}}catch(e){}
   const h=decodeURIComponent(location.hash.slice(1));
   if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
 })();

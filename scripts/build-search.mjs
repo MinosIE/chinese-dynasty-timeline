@@ -20,5 +20,11 @@ const nameById = Object.fromEntries(overview.map(o => [o.id, o.name]));
 const nameEnById = Object.fromEntries(overview.map(o => [o.id, o.nameEn || o.name]));
 for (const b of battles) idx.push({ d: b.d, dn: nameById[b.d] || b.d, dnEn: nameEnById[b.d] || b.d, t: '战役', n: b.n, x: `${b.gen} ${b.x}`, nEn: b.nEn, xEn: `${b.genEn} ${b.xEn}` });
 
+const reforms = JSON.parse(fs.readFileSync('data/reforms.json', 'utf8'));
+for (const r of reforms) idx.push({ d: r.d, dn: nameById[r.d] || r.d, dnEn: nameEnById[r.d] || r.d, t: '改革', n: r.n, x: `${r.who} ${r.measures} ${r.result}`, nEn: r.nEn, xEn: `${r.whoEn} ${r.measuresEn} ${r.resultEn}` });
+
+const idioms = JSON.parse(fs.readFileSync('data/idioms.json', 'utf8'));
+for (const x of idioms) idx.push({ d: x.d, dn: nameById[x.d] || x.d, dnEn: nameEnById[x.d] || x.d, t: '成语', n: x.n, x: `${x.src} ${x.mean}`, nEn: x.nEn, xEn: `${x.srcEn} ${x.meanEn}` });
+
 fs.writeFileSync('data/search.json', JSON.stringify(idx) + '\n');
 console.log(`搜索索引条目: ${idx.length}`);

@@ -1,0 +1,23 @@
+[
+  { "d": "xia", "n": "阳城（传说）", "nEn": "Yangcheng (legendary)", "note": "传说都城，屡有迁徙。", "noteEn": "A legendary capital, said to have moved often." },
+  { "d": "shang", "n": "亳 → 殷（安阳）", "nEn": "Bo → Yin (Anyang)", "note": "盘庚迁殷后稳定，故称「殷商」。", "noteEn": "Settled at Yin after Pangeng, hence “Yin–Shang.”" },
+  { "d": "zhou", "n": "镐京 → 洛邑", "nEn": "Haojing → Luoyi", "note": "平王东迁洛邑，西周转东周。", "noteEn": "King Ping moved east to Luoyi, ending Western Zhou." },
+  { "d": "zhanguo", "n": "七雄各都", "nEn": "Capitals of the seven states", "note": "临淄、邯郸、大梁、郢、咸阳等并立。", "noteEn": "Linzi, Handan, Daliang, Ying, Xianyang and more coexisted." },
+  { "d": "qin", "n": "咸阳", "nEn": "Xianyang", "note": "首个统一帝国的都城。", "noteEn": "Capital of the first unified empire." },
+  { "d": "chuhan", "n": "彭城 / 栎阳·长安", "nEn": "Pengcheng / Yueyang·Chang'an", "note": "楚都彭城，汉据关中。", "noteEn": "Chu at Pengcheng; Han held the Guanzhong." },
+  { "d": "han", "n": "长安 → 洛阳", "nEn": "Chang'an → Luoyang", "note": "光武东迁洛阳，西汉转东汉。", "noteEn": "Guangwu moved east to Luoyang: Western to Eastern Han." },
+  { "d": "xin", "n": "常安（长安）", "nEn": "Chang'an (renamed)", "note": "王莽改长安为常安。", "noteEn": "Wang Mang renamed Chang'an as Chang'an “Everlasting Peace.”" },
+  { "d": "sanguo", "n": "洛阳 / 成都 / 建业", "nEn": "Luoyang / Chengdu / Jianye", "note": "魏蜀吴三国各都。", "noteEn": "Capitals of Wei, Shu and Wu respectively." },
+  { "d": "jin", "n": "洛阳 → 建康", "nEn": "Luoyang → Jiankang", "note": "永嘉南渡，东晋都建康。", "noteEn": "After the fall of the north, Eastern Jin ruled from Jiankang." },
+  { "d": "nanbeichao", "n": "建康 / 平城 → 洛阳", "nEn": "Jiankang / Pingcheng → Luoyang", "note": "北魏孝文帝迁都洛阳。", "noteEn": "Emperor Xiaowen moved the Northern Wei capital to Luoyang." },
+  { "d": "sui", "n": "大兴（长安）", "nEn": "Daxing (Chang'an)", "note": "营建大兴城，又建东都洛阳。", "noteEn": "Built Daxing, plus an eastern capital at Luoyang." },
+  { "d": "tang", "n": "长安（东都洛阳）", "nEn": "Chang'an (eastern capital Luoyang)", "note": "两京制，长安为世界都会。", "noteEn": "A two-capital system; Chang'an was a world metropolis." },
+  { "d": "wudai", "n": "汴梁 / 洛阳", "nEn": "Bianliang / Luoyang", "note": "中原五代频繁更都。", "noteEn": "The Five Dynasties changed capitals repeatedly." },
+  { "d": "liao", "n": "上京临潢府", "nEn": "Shangjing (Linhuang)", "note": "契丹都城，后增中京、南京。", "noteEn": "Khitan capital, later adding central and southern capitals." },
+  { "d": "song", "n": "汴京 → 临安", "nEn": "Bianjing → Lin'an", "note": "靖康之变后南迁临安。", "noteEn": "Moved south to Lin'an after the Jingkang catastrophe." },
+  { "d": "xixia", "n": "兴庆府（银川）", "nEn": "Xingqing (Yinchuan)", "note": "党项西夏都城。", "noteEn": "Capital of the Tangut Western Xia." },
+  { "d": "jinchao", "n": "会宁 → 中都（北京）", "nEn": "Huining → Zhongdu (Beijing)", "note": "海陵王迁都燕京。", "noteEn": "Prince Hailing moved the capital to Yanjing." },
+  { "d": "yuan", "n": "大都（北京）", "nEn": "Dadu (Beijing)", "note": "忽必烈定都大都，今北京。", "noteEn": "Kublai made Dadu — today's Beijing — his capital." },
+  { "d": "ming", "n": "南京 → 北京", "nEn": "Nanjing → Beijing", "note": "永乐迁都北京，两京并设。", "noteEn": "Yongle moved the capital to Beijing, keeping Nanjing as co-capital." },
+  { "d": "qing", "n": "盛京 → 北京", "nEn": "Shengjing → Beijing", "note": "入关后定都北京。", "noteEn": "Settled in Beijing after entering the pass." }
+]

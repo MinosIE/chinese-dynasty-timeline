@@ -1,0 +1,59 @@
+{
+  "genres": [
+    { "k": "先秦", "kEn": "Pre-Qin", "n": "诗经", "nEn": "Classic of Poetry", "rep": "无名氏·采诗", "repEn": "Anonymous; collected songs", "work": "《诗经》305 篇", "workEn": "305 poems (feng, ya, song)" },
+    { "k": "战国", "kEn": "Warring States", "n": "楚辞", "nEn": "Chu ci", "rep": "屈原", "repEn": "Qu Yuan", "work": "《离骚》《九歌》", "workEn": "Li Sao, Nine Songs" },
+    { "k": "汉", "kEn": "Han", "n": "汉赋", "nEn": "Han fu (rhapsody)", "rep": "司马相如", "repEn": "Sima Xiangru", "work": "《子虚赋》《上林赋》", "workEn": "Zixu Fu, Shanglin Fu" },
+    { "k": "唐", "kEn": "Tang", "n": "唐诗", "nEn": "Tang poetry", "rep": "李白·杜甫", "repEn": "Li Bai, Du Fu", "work": "《全唐诗》5 万余首", "workEn": "50,000+ poems (Complete Tang Poems)" },
+    { "k": "宋", "kEn": "Song", "n": "宋词", "nEn": "Song ci", "rep": "苏轼·李清照·辛弃疾", "repEn": "Su Shi, Li Qingzhao, Xin Qiji", "work": "豪放 · 婉约两派", "workEn": "Bold and gentle schools" },
+    { "k": "元", "kEn": "Yuan", "n": "元曲", "nEn": "Yuan drama & sanqu", "rep": "关汉卿·王实甫", "repEn": "Guan Hanqing, Wang Shifu", "work": "《窦娥冤》《西厢记》", "workEn": "Snow in Midsummer, Romance of the Western Chamber" },
+    { "k": "明清", "kEn": "Ming–Qing", "n": "明清小说", "nEn": "Ming–Qing novels", "rep": "罗贯中·曹雪芹", "repEn": "Luo Guanzhong, Cao Xueqin", "work": "四大名著", "workEn": "The Four Great Classical Novels" }
+  ],
+  "sections": [
+    {
+      "title": "文学", "titleEn": "Literature", "icon": "✒️",
+      "items": [
+        { "n": "屈原", "nEn": "Qu Yuan", "note": "楚辞之祖，《离骚》", "noteEn": "Father of Chu ci; the Li Sao", "d": "zhanguo" },
+        { "n": "李白", "nEn": "Li Bai", "note": "诗仙", "noteEn": "The Immortal Poet", "d": "tang" },
+        { "n": "杜甫", "nEn": "Du Fu", "note": "诗圣，诗史", "noteEn": "Sage of Poetry; poet-historian", "d": "tang" },
+        { "n": "苏轼", "nEn": "Su Shi", "note": "豪放词宗、文豪", "noteEn": "Master of bold ci and prose", "d": "song" },
+        { "n": "李清照", "nEn": "Li Qingzhao", "note": "婉约词宗", "noteEn": "Mistress of the gentle ci", "d": "song" },
+        { "n": "关汉卿", "nEn": "Guan Hanqing", "note": "元曲大家，《窦娥冤》", "noteEn": "Master of Yuan drama; Snow in Midsummer", "d": "yuan" },
+        { "n": "曹雪芹", "nEn": "Cao Xueqin", "note": "《红楼梦》", "noteEn": "Dream of the Red Chamber", "d": "qing" }
+      ]
+    },
+    {
+      "title": "书法", "titleEn": "Calligraphy", "icon": "🖌️",
+      "items": [
+        { "n": "王羲之", "nEn": "Wang Xizhi", "note": "书圣，《兰亭序》", "noteEn": "Sage of calligraphy; the Lantingji Xu", "d": "jin" },
+        { "n": "颜真卿", "nEn": "Yan Zhenqing", "note": "楷书大家，雄浑", "noteEn": "Master of the grand regular script", "d": "tang" },
+        { "n": "赵孟頫", "nEn": "Zhao Mengfu", "note": "楷行皆精", "noteEn": "Adept in regular and running scripts", "d": "yuan" }
+      ]
+    },
+    {
+      "title": "绘画", "titleEn": "Painting", "icon": "🎨",
+      "items": [
+        { "n": "顾恺之", "nEn": "Gu Kaizhi", "note": "画圣，传神写照", "noteEn": "Sage of painting; capturing the spirit", "d": "jin" }
+      ]
+    },
+    {
+      "title": "史学", "titleEn": "Historiography", "icon": "📖",
+      "items": [
+        { "n": "司马迁", "nEn": "Sima Qian", "note": "《史记》纪传体通史", "noteEn": "Records of the Grand Historian", "d": "han" },
+        { "n": "司马光", "nEn": "Sima Guang", "note": "《资治通鉴》编年体", "noteEn": "Comprehensive Mirror in Aid of Governance", "d": "song" }
+      ]
+    },
+    {
+      "title": "科技 · 工程", "titleEn": "Science & Engineering", "icon": "🔬",
+      "items": [
+        { "n": "都江堰", "nEn": "Dujiangyan", "note": "李冰父子治水，泽被蜀中", "noteEn": "Li Bing's irrigation works that blessed Shu", "d": "zhanguo" },
+        { "n": "长城", "nEn": "The Great Wall", "note": "连接燕赵秦旧城，御北", "noteEn": "Linked earlier walls to guard the north", "d": "qin" },
+        { "n": "大运河", "nEn": "The Grand Canal", "note": "贯通南北水运", "noteEn": "Linked north and south by water", "d": "sui" },
+        { "n": "赵州桥", "nEn": "Zhaozhou Bridge", "note": "李春设计，现存最古石拱桥", "noteEn": "Li Chun's design; oldest stone arch bridge", "d": "sui" },
+        { "n": "活字印刷", "nEn": "Movable-Type Printing", "note": "毕昇发明", "noteEn": "Invented by Bi Sheng", "d": "song" },
+        { "n": "《本草纲目》", "nEn": "Compendium of Materia Medica", "note": "李时珍，药物学巨著", "noteEn": "Li Shizhen's monumental pharmacopoeia", "d": "ming" },
+        { "n": "《天工开物》", "nEn": "Tiangong Kaiwu", "note": "宋应星，工艺百科", "noteEn": "Song Yingxing's technological encyclopedia", "d": "ming" },
+        { "n": "紫禁城", "nEn": "The Forbidden City", "note": "明清皇宫", "noteEn": "The imperial palace of Ming and Qing", "d": "ming" }
+      ]
+    }
+  ]
+}
