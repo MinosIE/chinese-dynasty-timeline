@@ -14,7 +14,7 @@
 
 </div>
 
-![预览图 Preview](https://MinosIE.github.io/chinese-dynasty-timeline/og-cover.png)
+![预览图 Preview](https://MinosIE.github.io/chinese-dynasty-timeline/og-cover.jpg)
 
 > 一页建立「三千年王朝脉络」：概览、帝王世系、核心人才、关键制度，以及「政治 · 经济 · 文化」三维内容。支持明暗双主题、搜索、存续可视化、四大发明、历史大事记与「帝王之最」。零依赖、纯静态，可直接部署到 GitHub Pages 等任意静态托管。
 
@@ -58,7 +58,7 @@ https://MinosIE.github.io/chinese-dynasty-timeline/
 index.html               结构与逻辑（含 SEO/GEO meta）
 styles.css               样式（CSS 变量 + 明暗主题）
 favicon.svg              站点图标
-og-cover.png             分享封面图（1200×630）
+og-cover.jpg            分享封面图（1200×630，JPEG 压缩约 50KB）
 data/overview.json       全部王朝概览
 data/dynasties/*.json    18 个王朝详情
 data/inventions.json     四大发明

@@ -109,7 +109,7 @@ Hero（标题 + KPI：王朝数 / 年数 / 帝王与人才）
 index.html               # 结构与逻辑（含 SEO/GEO meta）
 styles.css               # 样式（明暗主题）
 favicon.svg              # 站点图标
-og-cover.png             # 分享封面图（1200×630）
+og-cover.jpg             # 分享封面图（1200×630，JPEG 压缩）
 data/overview.json         # 全部王朝概览
 data/dynasties/*.json      # 18 个王朝详情
 data/inventions.json       # 四大发明
@@ -168,5 +168,6 @@ assets/og-source.html      # 封面图源文件
 | v2.0 | 搜索 + 存续时长可视化 + 大事件标注 |
 | v2.1 | 四大发明 + 帝王之最 + 同时期政权（18 朝） |
 | v2.2 | 模块化布局（概览 + 分区切换） |
-| v1.8（当前） | 中英双语（含 `?lang=en`）+ 双语 GEO（llms-en/hreflang）+ 自检脚本与 CI |
+| v1.8 | 中英双语（含 `?lang=en`）+ 双语 GEO（llms-en/hreflang）+ 自检脚本与 CI |
+| v1.9（当前） | 可见度与体验优化：README/LICENSE、GEO 全文(llms-full)、sitemap 全文入口、移动端 KPI 与帝王之最单列、og-cover 压缩(733KB→约50KB)、.gitignore |
 | v3.0 | 分享卡片 + 繁体中文 + 疆域 / 关系图谱 + 社区共建 + 互动测验 |

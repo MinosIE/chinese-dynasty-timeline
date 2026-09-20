@@ -39,7 +39,7 @@ index.html              # 唯一页面：DOM 结构 + 全部内联 JS（约 670 
 styles.css              # 全部样式：CSS 变量 + [data-theme="dark"] 覆盖（约 310 行）
 .nojekyll               # 空文件：跳过 GitHub Pages 的 Jekyll 处理（勿删）
 favicon.svg             # 站点图标
-og-cover.png            # 分享封面 1200×630（约 730KB，未压缩优化）
+og-cover.jpg            # 分享封面 1200×630（JPEG 压缩，约 50KB）
 assets/og-source.html   # 封面图 HTML 源文件（手工截图用，不参与构建）
 data/
   overview.json         # ★源：18 朝概览 + start/end + counts（驱动 JS-LD / KPI / 存续图）
@@ -193,7 +193,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 | **运行 `scripts/update-overview.mjs`** | 它会用白名单 `norm()` 重建 `overview.json`，**丢弃 `nameEn/yearsEn/capitalEn/durationEn/featureEn/summaryEn`**（已验证）。若确需运行，先改造该脚本使其保留 `*En`。 |
 | 单独运行 `build-search.mjs` 后提交 | 它会**重置** `search.json` 丢掉英文；必须紧接着 `build-search-en.mjs`。 |
 | 手改 `data/search.json` / `data/records.json` / `llms*.txt` / `robots.txt` / `sitemap.xml` | ⚙派生文件，下次生成即被覆盖。 |
-| 手改 `og-cover.png` | 由 `assets/og-source.html` 截图产出；改图请改源文件后重新截图。 |
+| 手改 `og-cover.jpg` | 由 `assets/og-source.html` 截图产出；改图请改源文件后导出为 JPEG 以控制体积。 |
 | 在 `index.html` 里硬编码可见文案 / 数字 | 会绕过 i18n，导致英文模式出现中文（如历史 bug「约4000」，见 3.4）。 |
 | 引入 npm 依赖 / CDN / 构建工具 | 违背零依赖零构建约定，会破坏 Pages 直接部署。 |
 | 删除 `data/dynasties/<id>.json` 而不同步删 `overview.json` 条目 | `build-search.mjs` 会按 `overview` 逐个读详情文件，缺文件直接抛错。 |
@@ -291,7 +291,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 5.1 已完成
 
-18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 6 分区）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（467 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 中英双语（含 `?lang=en`）· 双语 GEO（llms / hreflang / og:locale:alternate）· JSON-LD · CI。
+18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 6 分区）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（467 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 中英双语（含 `?lang=en`）· 双语 GEO（llms / hreflang / og:locale:alternate）· JSON-LD · CI · 可见度与体验优化（README 优化 + MIT LICENSE · GEO 全文 llms-full · sitemap 全文入口 · 移动端 KPI 与帝王之最单列 · og-cover 压缩为 JPEG · .gitignore）。
 
 ### 5.2 开发中
 
@@ -308,8 +308,8 @@ F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F22 
 | `scripts/update-overview.mjs` | 与新数据模型不兼容：`norm()` 白名单会丢弃全部 `*En` | **高危陷阱**，运行即破坏 overview 英文 |
 | `scripts/fix-overview-counts.mjs` | 一次性修复脚本残留 | 冗余；可删除或并入 `validate-data.mjs` |
 | `index.html` | 单文件 670 行内联 JS，无模块化、无测试 | 大改动风险高，diff 噪声大 |
-| `og-cover.png` | 约 730KB，未压缩 | 分享图加载偏慢 |
-| 仓库根 | 无 `.gitignore` | 易误提交临时文件（如本地截图） |
+| `og-cover.png`→`og-cover.jpg` | 已由 PNG(730KB) 转 JPEG(约 50KB) | 分享图加载已优化（已解决） |
+| 仓库根 | 已新增 `.gitignore` | 已解决（忽略本地截图 / 临时文件） |
 | `scripts/validate-data.mjs` | 不阻断（三国/南北朝分组列出致误报） | 只能人工判读 |
 | `data/dynasties/*.json` | 长在位帝王仍只有整数年 `ry`（年粒度误差 < 2%，故未补）；`ry ≤ 3` 的 37 位中已补 33 位 `rd`/`rm`，余 4 位（商外丙、周武王、周釐王、周悼王）无月份史料 | 「在位最长」仍是年粒度；「最短」已到月 / 日 |
 | `data/dynasties/*.json` | `ry`（纪年包含年数）与 `rg` 跨度有 58 处差 1，属口径差异而非错误；明英宗两次在位已改为 `1435–1449 / 1457–1464` | 若按 `rg` 跨度重算 `ry` 会连锁改变存续年数 / KPI，风险高 |
