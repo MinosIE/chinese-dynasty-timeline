@@ -92,11 +92,11 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - Economy：Highly developed bronze casting (e.g., the Simuwu ding)；Agriculture and herding side by side; cowries appeared as primitive money
 - Culture：Oracle-bone script is China's earliest mature writing system；Bronze ritual vessels and ancestor worship at their height
 
-## Zhou（Western Zhou 1046–771 BC / Eastern Zhou 770–256 BC）
+## Zhou（Western Zhou 1046–771 BC / Eastern Zhou 770–475 BC (Spring & Autumn)）
 - 大时代：Pre-Qin
 - 都城：Haojing → Luoyi
-- 特征：Founded feudalism, kinship hierarchy and ritual music; the Eastern Zhou saw the Hundred Schools flourish. Major kings (posthumous names), ~790 yrs.
-- 总结：The bedrock of ritual-music civilization; the Hundred Schools directly shaped two millennia of cultural DNA.
+- 特征：Founded feudalism, kinship hierarchy and ritual music; after Ping Wang moved east the royal house declined — the Spring & Autumn hegemons vied, the Hundred Schools germinated. Major kings (posthumous names), ~571 yrs.
+- 总结：The bedrock of ritual-music civilization; the Spring & Autumn upheaval nurtured the Hundred Schools.
 
 ### 帝王
 - King Wu of Zhou (Ji Fa)（Founding）：1046–1043 BC，在位约 3 年，谥号 Wu。Defeated Zhou, destroyed Shang, enfeoffed the nobles
@@ -139,7 +139,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 ### 人才
 - Civil Officials：Duke of Zhou（Established rites and music; founded the Zhou system）；Guan Zhong（Prime minister of Qi; “revere the king, repel the barbarians”）；Baili Xi（Worthy minister of Duke Mu of Qin）
 - Generals：Jiang Ziya (the Grand Duke)（Progenitor of the military art; aided King Wu）
-- Thinkers & Men of Letters：Confucius（Founder of Confucianism）；Laozi（Founder of Daoism）；Sun Wu（Sage of war; The Art of War）；Mencius（Second sage of Confucianism）；Zhuangzi（Daoist representative）；Mozi（Mohism）；Han Fei（Synthesizer of Legalism）
+- Thinkers & Men of Letters：Confucius（Founder of Confucianism）；Laozi（Founder of Daoism）；Sun Wu（Sage of war; The Art of War）
 
 ### 制度
 - The enfeoffment system
@@ -147,18 +147,40 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - The ritual and music system
 - The well-field system
 - Spring and Autumn hegemony
-- Warring States reforms (Shang Yang)
 
 ### 三维（政治 · 经济 · 文化）
 - Politics：Enfeoffment, lineage and ritual-music formed a trinity；Eastern Zhou kingship waned; Spring–Autumn hegemony and Warring-States reforms
 - Economy：The well-field system prevailed; later iron tools and ox-plough spread；Handicrafts and commerce rose; cities grew
 - Culture：The Hundred Schools contended, shaping two millennia of thought；Canons such as the Poetry, Documents and Changes took shape；The Warring States already had the pointing tool “Sinan” (forerunner of the compass)
 
+## Warring States（475–221 BC）
+- 大时代：Pre-Qin
+- 都城：No single capital (seven contending states)
+- 特征：Seven powers vied — Qi, Chu, Yan, Han, Zhao, Wei, Qin; reforms and vertical/horizontal alliances; the Hundred Schools peaked, with Confucian, Daoist, Mohist and Legalist thought shining. Major thinkers, ~254 yrs.
+- 总结：An age of contention; institutions and thought erupted together, setting the stage for Qin–Han unification.
+
+### 人才
+- Thinkers & Men of Letters：Mencius（Second sage of Confucianism; argued for innate goodness and benevolent rule）；Zhuangzi（Daoist representative; ease and the equality of things）；Mozi（Mohism; universal love and anti-aggression）；Han Fei（Synthesizer of Legalism; central authority）；Xunzi（Between Confucian and Legalist; theory of evil nature）；Zou Yan（Yin–Yang school; cycle of the five virtues）；Gongsun Long（Logicians; “a white horse is not a horse”）
+- Civil Officials：Shang Yang（Reformed Qin; rewarded farming and war）；Li Kui（Reformed Wei; farmed the land fully）；Wu Qi（Reformed Chu; strengthened the military）
+- Generals：Sun Bin（Military strategist; “besiege Wei to rescue Zhao”）
+- Others：Qu Yuan（Father of Chu ci; the Li Sao）；Li Bing（Dujiangyan; blessed Shu with irrigation）
+
+### 制度
+- Reform to strengthen
+- Vertical–horizontal alliances
+- Merit-based nobility
+- Seeds of the commandery-county system
+
+### 三维（政治 · 经济 · 文化）
+- Politics：Seven powers vied; reform strengthened; merit titles replaced hereditary ones；Vertical and horizontal alliances — diplomacy decided rise and fall
+- Economy：Iron tools and ox-plough spread; the well-field fell; smallholder economy rose；Diverse coinage; commerce and cities flourished
+- Culture：The Hundred Schools contended: Confucian, Daoist, Mohist, Legalist, Yin–Yang, Logicians；Chu ci and the prose of the philosophers reached a literary peak
+
 ## Qin（221–207 BC）
 - 大时代：Qin–Han
 - 都城：Xianyang
 - 特征：China's first unified centralized empire; its institutions shaped two millennia.
-- 总结：Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years.
+- 总结：Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years; after Qin fell the Chu–Han contention ensued, then Han succeeded.
 
 ### 帝王
 - Qin Shi Huang (Ying Zheng)（First Emperor）：221–210 BC，在位约 11 年，谥号 First Emperor。Conquered the six states and claimed the imperial title
@@ -181,6 +203,19 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - Politics：Founded the imperial system, the Three Excellencies and Nine Ministers, and commanderies-counties；The centralized system was thereby established
 - Economy：Unified weights, measures, coinage and axle gauges；Built highways and the Lingqu Canal; emphasized agriculture, restrained commerce
 - Culture：Unified writing; standardized the script in small seal script；Burning books and burying scholars; thought and culture under tight control
+
+## Chu–Han Contention（206–202 BC）
+- 大时代：Qin–Han
+- 都城：Pengcheng (Chu) / Yueyang–Chang'an (Han)
+- 特征：After Qin fell, Xiang Yu and Liu Bang fought for the realm — the Feast at Hong Gate, the encirclement at Gaixia — settled in four years when Liu Bang founded Han. Major figures, 4 yrs.
+- 总结：Commoner Liu Bang defeated Xiang Yu, opening an era of officials from humble origins.
+
+### 人才
+- Others：Liu Bang（Founder of Han; a commoner who rose）；Xiang Yu（Hegemon-King of Western Chu; mighty）；Han Xin（“God of War”; “the more the better”）；Zhang Liang（Master strategist; planned within the tent）；Xiao He（Chancellor; secured the state and people）；Chen Ping（Won Liu's cause with stratagems）；Peng Yue（Progenitor of guerrilla war; King of Liang）；Ying Bu（King of Jiujiang; fierce general）
+
+### 制度
+- Three Articles of Law
+- Enfeoff the vassal kings
 
 ## Han（Western Han 202 BC–AD 8 / Eastern Han 25–220）
 - 大时代：Qin–Han
@@ -232,6 +267,24 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - Politics：After parallel princedoms, the Enfeoffment Reduction Edict reined in vassals and centralized power；The recommendation system selected officials; empress's kin and eunuchs took turns monopolizing power
 - Economy：Opened the Silk Road; state salt-iron monopoly, equal-transport and price-stabilization；Advances in agriculture, textiles and iron-smelting
 - Culture：Dismissed the Hundred Schools, upheld Confucianism alone；Records of the Grand Historian and Book of Han survived; Cai Lun improved papermaking; Buddhism arrived
+
+## Xin Dynasty（AD 9–23）
+- 大时代：Qin–Han
+- 都城：Chang'an (Everlasting Peace)
+- 特征：Wang Mang usurped Han to found Xin, imposing antiquarian reforms (land, coinage, offices); the strife soon boiled over, and Xin fell to the Lulin and Chimei, after which Liu Xiu restored Han. Major figures, 14 yrs.
+- 总结：A brief reforming interlude between two Hans; its institutional experiments influenced later ages.
+
+### 人才
+- Others：Wang Mang（Usurped Han to found Xin; antiquarian reforms）；Liu Xin（Old-text Confucianism; mathematics）
+
+### 制度
+- The Wang Tian land system
+- Coinage reform
+- Five Balances and Six Controls
+
+### 三维（政治 · 经济 · 文化）
+- Politics：The kinsman Wang Mang reigned as regent then usurped Han, reforming by antiquarian model；Scholar-officials ruled; ideals detached from reality
+- Economy：Wang Tian and private-bondage banned sale; coinage changed often, harassing life；Five Balances and Six Controls — state monopolies that deepened strife
 
 ## Three Kingdoms（220–280）
 - 大时代：Three Kingdoms & Divisions

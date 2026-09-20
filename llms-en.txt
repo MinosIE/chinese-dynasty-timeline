@@ -11,9 +11,12 @@
 ## Dynasty quick view
 - **Xia** (c. 2070–1600 BC, Pre-Qin, capital Yangcheng (legendary)): Historicity still debated, cross-checked with Erlitou archaeology; marks the dawn of early statehood in the Central Plains.
 - **Shang** (1600–1046 BC, Pre-Qin, capital Yin (present-day Anyang)): Oracle bones confirm the Shang royal genealogy — the earliest dynasty with contemporaneous written records in China.
-- **Zhou** (Western Zhou 1046–771 BC / Eastern Zhou 770–256 BC, Pre-Qin, capital Haojing → Luoyi): The bedrock of ritual-music civilization; the Hundred Schools directly shaped two millennia of cultural DNA.
-- **Qin** (221–207 BC, Qin–Han, capital Xianyang): Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years.
+- **Zhou** (Western Zhou 1046–771 BC / Eastern Zhou 770–475 BC (Spring & Autumn), Pre-Qin, capital Haojing → Luoyi): The bedrock of ritual-music civilization; the Spring & Autumn upheaval nurtured the Hundred Schools.
+- **Warring States** (475–221 BC, Pre-Qin, capital No single capital (seven contending states)): An age of contention; institutions and thought erupted together, setting the stage for Qin–Han unification.
+- **Qin** (221–207 BC, Qin–Han, capital Xianyang): Brief yet it established the imperial framework; the centralized paradigm endured for two thousand years; after Qin fell the Chu–Han contention ensued, then Han succeeded.
+- **Chu–Han Contention** (206–202 BC, Qin–Han, capital Pengcheng (Chu) / Yueyang–Chang'an (Han)): Commoner Liu Bang defeated Xiang Yu, opening an era of officials from humble origins.
 - **Han** (Western Han 202 BC–AD 8 / Eastern Han 25–220, Qin–Han, capital Chang'an → Luoyang): Forged the core Han identity and the centralized model; “Han” became the name of the people.
+- **Xin Dynasty** (AD 9–23, Qin–Han, capital Chang'an (Everlasting Peace)): A brief reforming interlude between two Hans; its institutional experiments influenced later ages.
 - **Three Kingdoms** (220–280, Three Kingdoms & Divisions, capital Wei · Shu · Wu): An age of rising heroes, immortalized by Romance of the Three Kingdoms.
 - **Jin** (Western Jin 265–316 / Eastern Jin 317–420, Three Kingdoms & Divisions, capital Luoyang → Jiankang): Unity quickly collapsed, opening a long north–south standoff.
 - **Northern & Southern Dynasties** (420–589, Three Kingdoms & Divisions, capital North–South standoff): A key era of ethnic fusion, storing diverse nourishment for the Sui–Tang heyday.

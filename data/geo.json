@@ -160,5 +160,26 @@
     "area": "约 1316 万 km²（极盛）",
     "areaEn": "~13.16M km² (peak)",
     "outline": [[[125,53],[122,48],[120,43],[122,40],[121,37],[121,32],[118,24],[108,21],[100,22],[97,25],[92,28],[82,28],[73,38],[78,45],[88,50],[98,53],[110,55],[122,55]],[[121.5,25.3],[122.0,25.0],[121.6,23.9],[121.1,22.7],[120.85,21.9],[120.3,22.6],[120.15,23.5],[120.2,24.6]],[[110.5,20.1],[111.0,19.5],[110.5,18.2],[109.5,18.2],[108.6,19.3],[109.0,20.0]]]
+  },
+  {
+    "id": "zhanguo",
+    "territory": "七雄并立：齐楚燕韩赵魏秦，东临海、西抵秦蜀、南至楚越、北达燕赵；变法与合纵连横交织。",
+    "territoryEn": "Seven powers vied — Qi, Chu, Yan, Han, Zhao, Wei, Qin: sea to the east, Qin–Shu to the west, Chu–Yue to the south, Yan–Zhao to the north; reforms and alliances intertwined.",
+    "outline": [[[122,40],[121,37],[122,33],[121,30],[120,28],[118,24],[113,22],[110,21],[108,23],[103,25],[100,28],[101,31],[98,34],[100,37],[103,40],[107,41],[112,41],[116,41],[120,42]]]
+  },
+  {
+    "id": "chuhan",
+    "territory": "楚汉相争主战场在关中与中原、楚地，北至燕赵、南抵江淮。",
+    "territoryEn": "The Chu–Han contest centered on the Guanzhong and Central Plains and the Chu lands, reaching Yan–Zhao in the north and the Jiang–Huai in the south.",
+    "outline": [[[122,37],[120,33],[118,30],[115,27],[112,25],[110,26],[108,29],[109,33],[112,37],[116,38],[120,38]]]
+  },
+  {
+    "id": "xin",
+    "capitalCoord": [108.9, 34.3],
+    "territory": "承西汉疆域：东临海、西逾西域、北抵阴山、南至南海。",
+    "territoryEn": "Inherited the Western Han realm: sea to the east, beyond the Western Regions to the west, the Yin Mountains to the north, the South China Sea to the south.",
+    "area": "约 580 万 km²（约）",
+    "areaEn": "~5.8M km² (~)",
+    "outline": [[[120,40],[122,37],[121,33],[120,30],[118,24],[110,21],[105,22],[100,23],[97,25],[94,28],[84,30],[80,36],[82,40],[88,42],[96,40],[104,41],[112,41],[118,41],[122,42]]]
   }
 ]

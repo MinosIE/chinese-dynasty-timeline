@@ -1,0 +1,78 @@
+{
+  "id": "zhanguo",
+  "name": "战国",
+  "nameEn": "Warring States",
+  "years": "前475–前221",
+  "yearsEn": "475–221 BC",
+  "era": "先秦",
+  "capital": "无共主（七雄并立）",
+  "capitalEn": "No single capital (seven contending states)",
+  "feature": "七雄并立：齐楚燕韩赵魏秦，变法图强、合纵连横；百家争鸣达于鼎盛，儒道墨法交辉。列主要诸子，合计约254年。",
+  "featureEn": "Seven powers vied — Qi, Chu, Yan, Han, Zhao, Wei, Qin; reforms and vertical/horizontal alliances; the Hundred Schools peaked, with Confucian, Daoist, Mohist and Legalist thought shining. Major thinkers, ~254 yrs.",
+  "summary": "大争之世，制度与思想双重井喷，为秦汉一统蓄势。",
+  "summaryEn": "An age of contention; institutions and thought erupted together, setting the stage for Qin–Han unification.",
+  "emperors": [],
+  "talents": {
+    "思想·文人": [
+      { "n": "孟子", "nEn": "Mencius", "note": "儒家亚圣，倡性善、仁政", "noteEn": "Second sage of Confucianism; argued for innate goodness and benevolent rule" },
+      { "n": "庄子", "nEn": "Zhuangzi", "note": "道家代表，逍遥齐物", "noteEn": "Daoist representative; ease and the equality of things" },
+      { "n": "墨子", "nEn": "Mozi", "note": "墨家，兼爱非攻", "noteEn": "Mohism; universal love and anti-aggression" },
+      { "n": "韩非", "nEn": "Han Fei", "note": "法家集大成，中央集权", "noteEn": "Synthesizer of Legalism; central authority" },
+      { "n": "荀子", "nEn": "Xunzi", "note": "儒法之间，性恶论", "noteEn": "Between Confucian and Legalist; theory of evil nature" },
+      { "n": "邹衍", "nEn": "Zou Yan", "note": "阴阳家，五德终始", "noteEn": "Yin–Yang school; cycle of the five virtues" },
+      { "n": "公孙龙", "nEn": "Gongsun Long", "note": "名家，白马非马", "noteEn": "Logicians; “a white horse is not a horse”" }
+    ],
+    "文臣": [
+      { "n": "商鞅", "nEn": "Shang Yang", "note": "秦变法，奖励耕战", "noteEn": "Reformed Qin; rewarded farming and war" },
+      { "n": "李悝", "nEn": "Li Kui", "note": "魏变法，尽地力", "noteEn": "Reformed Wei; farmed the land fully" },
+      { "n": "吴起", "nEn": "Wu Qi", "note": "楚变法，强兵", "noteEn": "Reformed Chu; strengthened the military" }
+    ],
+    "武将": [
+      { "n": "孙膑", "nEn": "Sun Bin", "note": "兵家，围魏救赵", "noteEn": "Military strategist; “besiege Wei to rescue Zhao”" }
+    ],
+    "其他": [
+      { "n": "屈原", "nEn": "Qu Yuan", "note": "楚辞之祖，《离骚》", "noteEn": "Father of Chu ci; the Li Sao" },
+      { "n": "李冰", "nEn": "Li Bing", "note": "都江堰，泽被蜀中", "noteEn": "Dujiangyan; blessed Shu with irrigation" }
+    ]
+  },
+  "policies": [
+    "变法图强",
+    "合纵连横",
+    "军功授爵",
+    "郡县制萌芽"
+  ],
+  "policiesEn": [
+    "Reform to strengthen",
+    "Vertical–horizontal alliances",
+    "Merit-based nobility",
+    "Seeds of the commandery-county system"
+  ],
+  "aspects": {
+    "政治": [
+      "七雄并立，变法图强，军功爵制取代世卿",
+      "合纵连横，外交博弈决定兴衰"
+    ],
+    "经济": [
+      "铁器牛耕普及，井田瓦解，小农经济兴起",
+      "货币多样，工商业城市繁荣"
+    ],
+    "文化": [
+      "百家争鸣：儒道墨法阴阳名家并起",
+      "楚辞、诸子散文成就文学高峰"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "Seven powers vied; reform strengthened; merit titles replaced hereditary ones",
+      "Vertical and horizontal alliances — diplomacy decided rise and fall"
+    ],
+    "经济": [
+      "Iron tools and ox-plough spread; the well-field fell; smallholder economy rose",
+      "Diverse coinage; commerce and cities flourished"
+    ],
+    "文化": [
+      "The Hundred Schools contended: Confucian, Daoist, Mohist, Legalist, Yin–Yang, Logicians",
+      "Chu ci and the prose of the philosophers reached a literary peak"
+    ]
+  }
+}

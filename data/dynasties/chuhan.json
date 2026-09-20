@@ -1,0 +1,35 @@
+{
+  "id": "chuhan",
+  "name": "楚汉相争",
+  "nameEn": "Chu–Han Contention",
+  "years": "前206–前202",
+  "yearsEn": "206–202 BC",
+  "era": "秦汉",
+  "capital": "彭城(楚) / 栎阳·长安(汉)",
+  "capitalEn": "Pengcheng (Chu) / Yueyang–Chang'an (Han)",
+  "feature": "秦亡后项羽刘邦争天下，鸿门宴、垓下之围，四年而定，刘邦建汉。列主要人物，合计4年。",
+  "featureEn": "After Qin fell, Xiang Yu and Liu Bang fought for the realm — the Feast at Hong Gate, the encirclement at Gaixia — settled in four years when Liu Bang founded Han. Major figures, 4 yrs.",
+  "summary": "平民刘邦胜项羽，开布衣将相之局。",
+  "summaryEn": "Commoner Liu Bang defeated Xiang Yu, opening an era of officials from humble origins.",
+  "emperors": [],
+  "talents": {
+    "其他": [
+      { "n": "刘邦", "nEn": "Liu Bang", "note": "汉高祖，布衣提剑", "noteEn": "Founder of Han; a commoner who rose" },
+      { "n": "项羽", "nEn": "Xiang Yu", "note": "西楚霸王，力能扛鼎", "noteEn": "Hegemon-King of Western Chu; mighty" },
+      { "n": "韩信", "nEn": "Han Xin", "note": "兵仙，多多益善", "noteEn": "“God of War”; “the more the better”" },
+      { "n": "张良", "nEn": "Zhang Liang", "note": "谋圣，运筹帷幄", "noteEn": "Master strategist; planned within the tent" },
+      { "n": "萧何", "nEn": "Xiao He", "note": "汉相，镇国家抚百姓", "noteEn": "Chancellor; secured the state and people" },
+      { "n": "陈平", "nEn": "Chen Ping", "note": "奇计安刘", "noteEn": "Won Liu's cause with stratagems" },
+      { "n": "彭越", "nEn": "Peng Yue", "note": "游击始祖，梁王", "noteEn": "Progenitor of guerrilla war; King of Liang" },
+      { "n": "英布", "nEn": "Ying Bu", "note": "九江王，骁将", "noteEn": "King of Jiujiang; fierce general" }
+    ]
+  },
+  "policies": [
+    "约法三章",
+    "分封诸侯"
+  ],
+  "policiesEn": [
+    "Three Articles of Law",
+    "Enfeoff the vassal kings"
+  ]
+}

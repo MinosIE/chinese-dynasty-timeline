@@ -9,8 +9,11 @@
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/xia.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/shang.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/zhou.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/zhanguo.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/qin.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/chuhan.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/han.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/xin.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/sanguo.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/jin.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://MinosIE.github.io/chinese-dynasty-timeline/data/dynasties/nanbeichao.json</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>

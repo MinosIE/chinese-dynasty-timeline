@@ -2,15 +2,15 @@
   "id": "zhou",
   "name": "周",
   "nameEn": "Zhou",
-  "years": "西周前1046–前771 / 东周前770–前221（含战国）",
-  "yearsEn": "Western Zhou 1046–771 BC / Eastern Zhou 770–221 BC (incl. Warring States)",
+  "years": "西周前1046–前771 / 东周前770–前475（春秋）",
+  "yearsEn": "Western Zhou 1046–771 BC / Eastern Zhou 770–475 BC (Spring & Autumn)",
   "era": "先秦",
   "capital": "镐京→洛邑",
   "capitalEn": "Haojing → Luoyi",
-  "feature": "分封宗法礼乐奠基；平王东迁后王室衰微，春秋争霸、战国七雄并立，百家争鸣思想爆炸。列主要王（谥号），合计约825年。",
-  "featureEn": "Founded feudalism, kinship hierarchy and ritual music; after Ping Wang moved east the royal house declined — the Spring & Autumn contending states, then the Warring States, with the Hundred Schools flourishing. Major kings (posthumous names), ~825 yrs.",
-  "summary": "礼乐文明奠基期，春秋战国百家争鸣直接塑造此后两千年文化基因。",
-  "summaryEn": "The bedrock of ritual-music civilization; the Spring–Autumn and Warring States Hundred Schools directly shaped two millennia of cultural DNA.",
+  "feature": "分封宗法礼乐奠基；平王东迁后王室衰微，春秋争霸、诸侯力政，百家萌芽。列主要王（谥号），合计约571年。",
+  "featureEn": "Founded feudalism, kinship hierarchy and ritual music; after Ping Wang moved east the royal house declined — the Spring & Autumn hegemons vied, the Hundred Schools germinated. Major kings (posthumous names), ~571 yrs.",
+  "summary": "礼乐文明奠基期，春秋变局孕育百家争鸣。",
+  "summaryEn": "The bedrock of ritual-music civilization; the Spring & Autumn upheaval nurtured the Hundred Schools.",
   "emperors": [
     { "n": "周武王(姬发)", "nEn": "King Wu of Zhou (Ji Fa)", "t": "开国", "tEn": "Founding", "rg": "前1046–前1043", "rgEn": "1046–1043 BC", "ry": 3, "sh": "武", "shEn": "Wu", "note": "伐纣灭商，大封诸侯", "noteEn": "Defeated Zhou, destroyed Shang, enfeoffed the nobles" },
     { "n": "周成王", "nEn": "King Cheng", "t": "", "tEn": "", "rg": "前1042–前1021", "rgEn": "1042–1021 BC", "ry": 22, "sh": "成", "shEn": "Cheng", "note": "周公辅政，成康之治", "noteEn": "The Duke of Zhou as regent; the Cheng–Kang era of good rule" },
@@ -61,11 +61,7 @@
     "思想·文人": [
       { "n": "孔子", "nEn": "Confucius", "note": "儒家创始人", "noteEn": "Founder of Confucianism" },
       { "n": "老子", "nEn": "Laozi", "note": "道家创始人", "noteEn": "Founder of Daoism" },
-      { "n": "孙武", "nEn": "Sun Wu", "note": "兵圣，《孙子兵法》", "noteEn": "Sage of war; The Art of War" },
-      { "n": "孟子", "nEn": "Mencius", "note": "儒家亚圣", "noteEn": "Second sage of Confucianism" },
-      { "n": "庄子", "nEn": "Zhuangzi", "note": "道家代表", "noteEn": "Daoist representative" },
-      { "n": "墨子", "nEn": "Mozi", "note": "墨家", "noteEn": "Mohism" },
-      { "n": "韩非", "nEn": "Han Fei", "note": "法家集大成", "noteEn": "Synthesizer of Legalism" }
+      { "n": "孙武", "nEn": "Sun Wu", "note": "兵圣，《孙子兵法》", "noteEn": "Sage of war; The Art of War" }
     ]
   },
   "policies": [
@@ -73,17 +69,15 @@
     "宗法制",
     "礼乐制度",
     "井田制",
-    "春秋争霸",
-    "战国变法(商鞅)"
-  ],
-  "policiesEn": [
+    "春秋争霸"
+    ],
+    "policiesEn": [
     "The enfeoffment system",
     "The lineage (clan) system",
     "The ritual and music system",
     "The well-field system",
-    "Spring and Autumn hegemony",
-    "Warring States reforms (Shang Yang)"
-  ],
+    "Spring and Autumn hegemony"
+    ],
   "aspects": {
     "政治": [
       "分封制、宗法制、礼乐制度三位一体",

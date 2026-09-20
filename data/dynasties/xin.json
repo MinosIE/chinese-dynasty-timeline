@@ -1,0 +1,51 @@
+{
+  "id": "xin",
+  "name": "新朝",
+  "nameEn": "Xin Dynasty",
+  "years": "9–23",
+  "yearsEn": "AD 9–23",
+  "era": "秦汉",
+  "capital": "常安(长安)",
+  "capitalEn": "Chang'an (Everlasting Peace)",
+  "feature": "王莽代汉建新，托古改制（王田、币制、官制），旋激化矛盾，亡于绿林赤眉，刘秀复汉。列主要人物，合计14年。",
+  "featureEn": "Wang Mang usurped Han to found Xin, imposing antiquarian reforms (land, coinage, offices); the strife soon boiled over, and Xin fell to the Lulin and Chimei, after which Liu Xiu restored Han. Major figures, 14 yrs.",
+  "summary": "承汉启汉的短暂改制，制度实验影响后世。",
+  "summaryEn": "A brief reforming interlude between two Hans; its institutional experiments influenced later ages.",
+  "emperors": [],
+  "talents": {
+    "其他": [
+      { "n": "王莽", "nEn": "Wang Mang", "note": "代汉建新，托古改制", "noteEn": "Usurped Han to found Xin; antiquarian reforms" },
+      { "n": "刘歆", "nEn": "Liu Xin", "note": "古文经学，算学", "noteEn": "Old-text Confucianism; mathematics" }
+    ]
+  },
+  "policies": [
+    "王田制",
+    "币制改革",
+    "五均六筦"
+  ],
+  "policiesEn": [
+    "The Wang Tian land system",
+    "Coinage reform",
+    "Five Balances and Six Controls"
+  ],
+  "aspects": {
+    "政治": [
+      "外戚王莽摄政代汉，托古改制",
+      "儒生治国，理想脱离现实"
+    ],
+    "经济": [
+      "王田私属，禁买卖；币制屡改，民生扰",
+      "五均六筦，官营敛财，矛盾激化"
+    ]
+  },
+  "aspectsEn": {
+    "政治": [
+      "The kinsman Wang Mang reigned as regent then usurped Han, reforming by antiquarian model",
+      "Scholar-officials ruled; ideals detached from reality"
+    ],
+    "经济": [
+      "Wang Tian and private-bondage banned sale; coinage changed often, harassing life",
+      "Five Balances and Six Controls — state monopolies that deepened strife"
+    ]
+  }
+}

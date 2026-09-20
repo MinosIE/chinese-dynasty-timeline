@@ -72,9 +72,9 @@
   </nav>
 
   <section class="module active" id="m-home">
-    <p class="home-lead" data-i18n="homeLead">从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始</p>
+    <p class="home-lead" data-i18n="homeLead">从夏到清 · 21 个朝代与过渡时期的帝王、人才、制度与时代脉络 —— 选一个板块开始</p>
     <div class="home-grid">
-      <button class="entry" data-go="m-timeline"><span class="entry-ic">📜</span><span class="entry-t" data-i18n="entry.timeline.t">朝代时间轴</span><span class="entry-d" data-i18n="entry.timeline.d">18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-timeline"><span class="entry-ic">📜</span><span class="entry-t" data-i18n="entry.timeline.t">朝代时间轴</span><span class="entry-d" data-i18n="entry.timeline.d">21 个朝代与过渡时期，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-span"><span class="entry-ic">📊</span><span class="entry-t" data-i18n="entry.span.t">存续一览</span><span class="entry-d" data-i18n="entry.span.d">按年代比例对比各朝长短，一眼看三千年</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-inv"><span class="entry-ic">🧭</span><span class="entry-t" data-i18n="entry.inv.t">四大发明</span><span class="entry-d" data-i18n="entry.inv.d">造纸、印刷、火药、指南针的朝代、人物与世界影响</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-events"><span class="entry-ic">🗓️</span><span class="entry-t" data-i18n="entry.events.t">历史大事记</span><span class="entry-d" data-i18n="entry.events.d">32 个关键节点，串起王朝兴替</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
@@ -132,8 +132,8 @@ const I18N={
     heroTitle:"中华王朝 · 千年脉络",
     heroSub:"从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。",
     nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最"},
-    homeLead:"从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始",
-    entry:{timeline:{t:"朝代时间轴",d:"18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"}},
+    homeLead:"从夏到清 · 21 个朝代与过渡时期的帝王、人才、制度与时代脉络 —— 选一个板块开始",
+    entry:{timeline:{t:"朝代时间轴",d:"21 个朝代与过渡时期，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"}},
     enter:"进入 →",
     geoArea:"国土面积",secTerritory:"疆域",
     spanTitle:"朝代存续一览",spanSub:"长度按年代比例 · 点击任意行可跳转",
@@ -169,8 +169,8 @@ const I18N={
     heroTitle:"Chinese Dynasties · A Millennial Saga",
     heroSub:"From Xia to Qing, explore each dynasty's imperial lineage, key talents, and pivotal institutions — and grasp three millennia of power, order, and civilization.",
     nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers"},
-    homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 18 dynasties. Pick a section to begin.",
-    entry:{timeline:{t:"Dynastic Timeline",d:"18 dynasties with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"}},
+    homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 21 dynasties & periods. Pick a section to begin.",
+    entry:{timeline:{t:"Dynastic Timeline",d:"21 dynasties & periods with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"}},
     enter:"Enter →",
     geoArea:"Land Area",secTerritory:"Territory",
     spanTitle:"Dynastic Spans",spanSub:"Bars scaled by era · click any row to jump",
@@ -341,7 +341,7 @@ function render(){
         <div class="feature">${L(o,'feature')}</div>
         ${geoData[o.id]?`<div class="geo-brief"><span class="gb-ic">🗺️</span><b class="gb-k">${t('secTerritory')}：</b><span class="gb-t">${G(geoData[o.id],'territory')}</span></div>`:''}
         <div class="stats">
-          <span class="stat">${t('statEmperors')} <b>${o.counts.emperors}</b>${t('unitPerson')}</span>
+          ${o.counts.emperors?`<span class="stat">${t('statEmperors')} <b>${o.counts.emperors}</b>${t('unitPerson')}</span>`:''}
           <span class="stat">${t('statTalents')} <b>${o.counts.talents}</b>${t('unitPerson')}</span>
           <span class="stat">${t('statPolicies')} <b>${o.counts.policies}</b>${t('unitItem')}</span>
           ${geoData[o.id]?`<span class="stat area">${t('geoArea')} <b>${G(geoData[o.id],'area')}</b></span>`:''}
@@ -399,8 +399,7 @@ function buildDetail(d){
     }).join('');
   }
   return `<div class="body">
-      <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--brand)">👑</span><span class="t">${t('secEmperors')}</span><span class="c">${d.emperors.length}${t('unitPerson')}</span></div>
-        <div class="emps">${emperors}</div></div>
+      ${d.emperors && d.emperors.length ? `<div class="sec"><div class="sec-h"><span class="ic" style="background:var(--brand)">👑</span><span class="t">${t('secEmperors')}</span><span class="c">${d.emperors.length}${t('unitPerson')}</span></div><div class="emps">${emperors}</div></div>` : ''}
       <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--info,#0EA5E9)">⚔️</span><span class="t">${t('secTalents')}</span></div>${talents}</div>
       <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--gold)">📜</span><span class="t">${t('secPolicies')}</span></div>
         <div class="pills">${pills}</div></div>
