@@ -253,7 +253,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 ### 人才
 - Civil Officials：Xiao He（Chancellor at the dawn of Han）；Zhang Liang（Strategist）；Dong Zhongshu（Made Confucianism sole orthodoxy）；Huoguang（Regent minister）
 - Generals：Han Xin（The god of war）；Wei Qing（Struck the Xiongnu）；Huo Qubing（Sealed the Langjuxu summit）；Ban Chao（Cast aside the pen for the sword; opened the Western Regions）
-- Thinkers & Men of Letters：Sima Qian（Records of the Grand Historian）；Cai Lun（Improved papermaking）
+- Thinkers & Men of Letters：Sima Qian（Records of the Grand Historian）；Cai Lun（Improved papermaking）；Zhang Heng（Seismograph and armillary sphere）；Hua Tuo（Famed physician; the mafeisan anesthetic）
 
 ### 制度
 - Parallel princedoms → the Enfeoffment Reduction Edict
@@ -339,7 +339,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Wang Dao（Chief minister of Eastern Jin）；Xie An（Directed the Battle of Fei River）
-- Thinkers & Men of Letters：Wang Xizhi（Sage of calligraphy）；Tao Yuanming（Recluse poet）；Ji Kang（One of the Seven Sages of the Bamboo Grove）
+- Thinkers & Men of Letters：Wang Xizhi（Sage of calligraphy）；Tao Yuanming（Recluse poet）；Ji Kang（One of the Seven Sages of the Bamboo Grove）；Gu Kaizhi（Sage of painting; capturing the spirit）
 
 ### 制度
 - The land-occupation system
@@ -372,7 +372,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Thinkers & Men of Letters：Zu Chongzhi（Computed pi precisely）；Jia Sixie（Qimin Yaoshu (Essential Techniques for the Welfare of the People)）；Li Daoyuan（Commentary on the Water Classic）
-- Others：Hua Mulan（Legend; took her father's place in the army）
+- Others：Hua Mulan（Legend; took her father's place in the army）；Tuoba Hong (Emperor Xiaowen)（Sinicization reforms; moved the capital to Luoyang）
 
 ### 制度
 - Emperor Xiaowen's reforms (dress, surname, capital)
@@ -397,7 +397,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 ### 人才
 - Civil Officials：Gao Jiong（Founding worthy chancellor）
 - Generals：Yang Su（Famed general who pacified Chen）
-- Others：Yuwen Kai（Built the Eastern Capital）
+- Others：Yuwen Kai（Built the Eastern Capital）；Li Chun（Zhaozhou Bridge, the oldest surviving stone arch bridge）
 
 ### 制度
 - Founded the exam system (subject examinations)
@@ -445,7 +445,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 ### 人才
 - Civil Officials：Wei Zheng（Remonstrating minister）；Fang Xuanling（Fang the planner）；Du Ruhui（Du the decider）；Di Renjie（Famed judge and chancellor）；Zhangsun Wuji（First on the Lingyan Pavilion）
 - Generals：Guo Ziyi（Quelled the An–Shi Rebellion）
-- Thinkers & Men of Letters：Li Bai（The Immortal Poet）；Du Fu（The Sage of Poetry）；Xuanzang（Journeyed west for scriptures）
+- Thinkers & Men of Letters：Li Bai（The Immortal Poet）；Du Fu（The Sage of Poetry）；Xuanzang（Journeyed west for scriptures）；Bai Juyi（Prolific poet; the Song of Everlasting Sorrow）；Han Yu（Leader of the Classical Prose Movement）；Yan Zhenqing（Master of regular script calligraphy）；Sun Simiao（The King of Medicine; the Qianjin Fang）
 
 ### 制度
 - Refined the exam system (jinshi branch)
@@ -552,9 +552,9 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 - Song Last Emperor (Zhao Bing)（Last ruler）：1278–1279，在位约 1 年。Perished with Song at Yaishan
 
 ### 人才
-- Civil Officials：Zhao Pu（Architect of relinquishing military power over wine）；Kou Zhun（Argued for war at Chanyuan）；Fan Zhongyan（The Qingli reforms）；Wang Anshi（The Xining reform）；Sima Guang（Comprehensive Mirror in Aid of Governance）
+- Civil Officials：Zhao Pu（Architect of relinquishing military power over wine）；Kou Zhun（Argued for war at Chanyuan）；Fan Zhongyan（The Qingli reforms）；Wang Anshi（The Xining reform）；Sima Guang（Comprehensive Mirror in Aid of Governance）；Bao Zheng（Paragon of the incorruptible judge）
 - Generals：Yue Fei（Loyal unto death）；Han Shizhong（Famed general against the Jin）
-- Thinkers & Men of Letters：Su Shi（Literary giant）；Shen Kuo（Dream Pool Essays）；Li Qingzhao（Mistress of the gentle ci style）；Wen Tianxiang（Upright, unyielding spirit）
+- Thinkers & Men of Letters：Su Shi（Literary giant）；Shen Kuo（Dream Pool Essays）；Li Qingzhao（Mistress of the gentle ci style）；Wen Tianxiang（Upright, unyielding spirit）；Zhu Xi（Synthesizer of Neo-Confucianism）；Ouyang Xiu（Leader of the literary world）；Xin Qiji（Master of the bold ci style）；Bi Sheng（Invented movable-type printing）
 
 ### 制度
 - Relinquished military power over wine
@@ -621,7 +621,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Generals：Wanyan Zongbi (Wuzhu)（Famed general against Song）
-- Others：Wanyan Xiyin（Created the Jurchen script）
+- Others：Wanyan Xiyin（Created the Jurchen script）；Yuan Haowen（Literary master of the late Jin）
 
 ### 制度
 - The meng'an–mouke system
@@ -652,7 +652,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Yelü Chucai（A famed minister of statecraft）；Zhao Mengfu（Master of calligraphy and painting）
-- Others：Guo Shoujing（Astronomy and hydraulics）；Marco Polo（Visiting traveler）；Guan Hanqing（Master of Yuan drama）
+- Others：Guo Shoujing（Astronomy and hydraulics）；Marco Polo（Visiting traveler）；Guan Hanqing（Master of Yuan drama）；Wang Shifu（Romance of the Western Chamber）；Huang Daopo（Improved cotton spinning and weaving）
 
 ### 制度
 - The provincial system (Zhongshu Sheng)
@@ -693,7 +693,8 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 ### 人才
 - Civil Officials：Liu Bowen（Founding strategist）；Yu Qian（Defended Beijing）；Zhang Juzheng（Reforming senior grand secretary）；Hai Rui（An incorruptible official）
 - Generals：Qi Jiguang（Fought the Japanese pirates）；Zheng Chenggong (Koxinga)（Recovered Taiwan）
-- Thinkers & Men of Letters：Wang Shouren (Wang Yangming)（Synthesis of the School of Mind）；Xu Xiake（Geographer）；Song Yingxing（Tiangong Kaiwu (Exploitation of the Works of Nature)）
+- Thinkers & Men of Letters：Wang Shouren (Wang Yangming)（Synthesis of the School of Mind）；Xu Xiake（Geographer）；Song Yingxing（Tiangong Kaiwu (Exploitation of the Works of Nature)）；Li Shizhen（Compendium of Materia Medica）；Xu Guangqi（Complete Treatise on Agriculture; versed in Western learning）
+- Others：Zheng He（Seven voyages to the Western Seas）
 
 ### 制度
 - Abolished the chancellor, set up the Grand Secretariat
@@ -730,7 +731,8 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Dorgon（Prince regent）；Zeng Guofan（Put down the Taiping Heavenly Kingdom）；Li Hongzhang（Self-Strengthening Movement）；Zuo Zongtang（Recovered Xinjiang）；Zhang Zhidong（A giant of the Self-Strengthening Movement）；Ji Yun（Chief editor of the Siku Quanshu）
-- Others：Lin Zexu（Banned opium, resisted Britain）；Kang Youwei（Reform leader）；Liang Qichao（Reform thinker）
+- Others：Lin Zexu（Banned opium, resisted Britain）；Kang Youwei（Reform leader）；Liang Qichao（Reform thinker）；Tan Sitong（One of the Six Gentlemen of the 1898 Reform）
+- Thinkers & Men of Letters：Cao Xueqin（Dream of the Red Chamber）
 
 ### 制度
 - Manchu–Han separation

@@ -377,7 +377,11 @@
     "思想·文人": [
       { "n": "李白", "nEn": "Li Bai", "note": "诗仙", "noteEn": "The Immortal Poet" },
       { "n": "杜甫", "nEn": "Du Fu", "note": "诗圣", "noteEn": "The Sage of Poetry" },
-      { "n": "玄奘", "nEn": "Xuanzang", "note": "西行取经", "noteEn": "Journeyed west for scriptures" }
+      { "n": "玄奘", "nEn": "Xuanzang", "note": "西行取经", "noteEn": "Journeyed west for scriptures" },
+      { "n": "白居易", "nEn": "Bai Juyi", "note": "诗魔，《长恨歌》", "noteEn": "Prolific poet; the Song of Everlasting Sorrow" },
+      { "n": "韩愈", "nEn": "Han Yu", "note": "古文运动领袖", "noteEn": "Leader of the Classical Prose Movement" },
+      { "n": "颜真卿", "nEn": "Yan Zhenqing", "note": "楷书大家", "noteEn": "Master of regular script calligraphy" },
+      { "n": "孙思邈", "nEn": "Sun Simiao", "note": "药王，《千金方》", "noteEn": "The King of Medicine; the Qianjin Fang" }
     ]
   },
   "policies": [

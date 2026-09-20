@@ -36,7 +36,11 @@
     "其他": [
       { "n": "林则徐", "nEn": "Lin Zexu", "note": "禁烟抗英", "noteEn": "Banned opium, resisted Britain" },
       { "n": "康有为", "nEn": "Kang Youwei", "note": "维新领袖", "noteEn": "Reform leader" },
-      { "n": "梁启超", "nEn": "Liang Qichao", "note": "维新思想家", "noteEn": "Reform thinker" }
+      { "n": "梁启超", "nEn": "Liang Qichao", "note": "维新思想家", "noteEn": "Reform thinker" },
+      { "n": "谭嗣同", "nEn": "Tan Sitong", "note": "戊戌六君子", "noteEn": "One of the Six Gentlemen of the 1898 Reform" }
+    ],
+    "思想·文人": [
+      { "n": "曹雪芹", "nEn": "Cao Xueqin", "note": "《红楼梦》", "noteEn": "Dream of the Red Chamber" }
     ]
   },
   "policies": [

@@ -281,7 +281,8 @@
       { "n": "寇准", "nEn": "Kou Zhun", "note": "澶渊主战", "noteEn": "Argued for war at Chanyuan" },
       { "n": "范仲淹", "nEn": "Fan Zhongyan", "note": "庆历新政", "noteEn": "The Qingli reforms" },
       { "n": "王安石", "nEn": "Wang Anshi", "note": "熙宁变法", "noteEn": "The Xining reform" },
-      { "n": "司马光", "nEn": "Sima Guang", "note": "《资治通鉴》", "noteEn": "Comprehensive Mirror in Aid of Governance" }
+      { "n": "司马光", "nEn": "Sima Guang", "note": "《资治通鉴》", "noteEn": "Comprehensive Mirror in Aid of Governance" },
+      { "n": "包拯", "nEn": "Bao Zheng", "note": "清官典范", "noteEn": "Paragon of the incorruptible judge" }
     ],
     "武将": [
       { "n": "岳飞", "nEn": "Yue Fei", "note": "精忠报国", "noteEn": "Loyal unto death" },
@@ -291,7 +292,11 @@
       { "n": "苏轼", "nEn": "Su Shi", "note": "文豪", "noteEn": "Literary giant" },
       { "n": "沈括", "nEn": "Shen Kuo", "note": "《梦溪笔谈》", "noteEn": "Dream Pool Essays" },
       { "n": "李清照", "nEn": "Li Qingzhao", "note": "婉约词宗", "noteEn": "Mistress of the gentle ci style" },
-      { "n": "文天祥", "nEn": "Wen Tianxiang", "note": "浩然正气", "noteEn": "Upright, unyielding spirit" }
+      { "n": "文天祥", "nEn": "Wen Tianxiang", "note": "浩然正气", "noteEn": "Upright, unyielding spirit" },
+      { "n": "朱熹", "nEn": "Zhu Xi", "note": "理学集大成", "noteEn": "Synthesizer of Neo-Confucianism" },
+      { "n": "欧阳修", "nEn": "Ouyang Xiu", "note": "文坛领袖", "noteEn": "Leader of the literary world" },
+      { "n": "辛弃疾", "nEn": "Xin Qiji", "note": "豪放词宗", "noteEn": "Master of the bold ci style" },
+      { "n": "毕昇", "nEn": "Bi Sheng", "note": "发明活字印刷", "noteEn": "Invented movable-type printing" }
     ]
   },
   "policies": [

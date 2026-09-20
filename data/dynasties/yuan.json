@@ -29,7 +29,9 @@
     "其他": [
       { "n": "郭守敬", "nEn": "Guo Shoujing", "note": "天文水利", "noteEn": "Astronomy and hydraulics" },
       { "n": "马可·波罗", "nEn": "Marco Polo", "note": "客卿游历", "noteEn": "Visiting traveler" },
-      { "n": "关汉卿", "nEn": "Guan Hanqing", "note": "元曲大家", "noteEn": "Master of Yuan drama" }
+      { "n": "关汉卿", "nEn": "Guan Hanqing", "note": "元曲大家", "noteEn": "Master of Yuan drama" },
+      { "n": "王实甫", "nEn": "Wang Shifu", "note": "《西厢记》", "noteEn": "Romance of the Western Chamber" },
+      { "n": "黄道婆", "nEn": "Huang Daopo", "note": "改进棉纺织", "noteEn": "Improved cotton spinning and weaving" }
     ]
   },
   "policies": [

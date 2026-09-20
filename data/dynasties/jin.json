@@ -36,7 +36,8 @@
     "思想·文人": [
       { "n": "王羲之", "nEn": "Wang Xizhi", "note": "书圣", "noteEn": "Sage of calligraphy" },
       { "n": "陶渊明", "nEn": "Tao Yuanming", "note": "隐逸诗人", "noteEn": "Recluse poet" },
-      { "n": "嵇康", "nEn": "Ji Kang", "note": "竹林七贤", "noteEn": "One of the Seven Sages of the Bamboo Grove" }
+      { "n": "嵇康", "nEn": "Ji Kang", "note": "竹林七贤", "noteEn": "One of the Seven Sages of the Bamboo Grove" },
+      { "n": "顾恺之", "nEn": "Gu Kaizhi", "note": "画圣，传神写照", "noteEn": "Sage of painting; capturing the spirit" }
     ]
   },
   "policies": [

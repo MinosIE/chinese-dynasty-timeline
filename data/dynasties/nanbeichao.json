@@ -30,7 +30,8 @@
       { "n": "郦道元", "nEn": "Li Daoyuan", "note": "《水经注》", "noteEn": "Commentary on the Water Classic" }
     ],
     "其他": [
-      { "n": "花木兰", "nEn": "Hua Mulan", "note": "传说，代父从军", "noteEn": "Legend; took her father's place in the army" }
+      { "n": "花木兰", "nEn": "Hua Mulan", "note": "传说，代父从军", "noteEn": "Legend; took her father's place in the army" },
+      { "n": "拓跋宏(孝文帝)", "nEn": "Tuoba Hong (Emperor Xiaowen)", "note": "汉化改革，迁都洛阳", "noteEn": "Sinicization reforms; moved the capital to Luoyang" }
     ]
   },
   "policies": [

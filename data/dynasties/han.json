@@ -368,7 +368,9 @@
     ],
     "思想·文人": [
       { "n": "司马迁", "nEn": "Sima Qian", "note": "《史记》", "noteEn": "Records of the Grand Historian" },
-      { "n": "蔡伦", "nEn": "Cai Lun", "note": "改进造纸术", "noteEn": "Improved papermaking" }
+      { "n": "蔡伦", "nEn": "Cai Lun", "note": "改进造纸术", "noteEn": "Improved papermaking" },
+      { "n": "张衡", "nEn": "Zhang Heng", "note": "地动仪·浑天仪", "noteEn": "Seismograph and armillary sphere" },
+      { "n": "华佗", "nEn": "Hua Tuo", "note": "外科神医，麻沸散", "noteEn": "Famed physician; the mafeisan anesthetic" }
     ]
   },
   "policies": [

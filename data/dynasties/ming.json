@@ -43,7 +43,12 @@
     "思想·文人": [
       { "n": "王守仁(阳明)", "nEn": "Wang Shouren (Wang Yangming)", "note": "心学集大成", "noteEn": "Synthesis of the School of Mind" },
       { "n": "徐霞客", "nEn": "Xu Xiake", "note": "地理学家", "noteEn": "Geographer" },
-      { "n": "宋应星", "nEn": "Song Yingxing", "note": "《天工开物》", "noteEn": "Tiangong Kaiwu (Exploitation of the Works of Nature)" }
+      { "n": "宋应星", "nEn": "Song Yingxing", "note": "《天工开物》", "noteEn": "Tiangong Kaiwu (Exploitation of the Works of Nature)" },
+      { "n": "李时珍", "nEn": "Li Shizhen", "note": "《本草纲目》", "noteEn": "Compendium of Materia Medica" },
+      { "n": "徐光启", "nEn": "Xu Guangqi", "note": "《农政全书》，通西学", "noteEn": "Complete Treatise on Agriculture; versed in Western learning" }
+    ],
+    "其他": [
+      { "n": "郑和", "nEn": "Zheng He", "note": "七下西洋", "noteEn": "Seven voyages to the Western Seas" }
     ]
   },
   "policies": [
