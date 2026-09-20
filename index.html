@@ -678,7 +678,7 @@ function renderBattles(){
   document.getElementById('btlList').innerHTML=list.map(b=>{
     const y=b.y<0?((lang==='zh'?'前':'BC ')+(-b.y)):b.y;
     const dn=ovById[b.d]?L(ovById[b.d],'name'):'';
-    return `<div class="btl" data-dynasty="${b.d}" role="button" tabindex="0"><span class="btl-year">${y}</span><div class="btl-main"><div class="btl-top"><span class="btl-name">${L(b,'n')}</span><span class="btl-tag t-${b.type}">${t('btlType.'+b.type)}</span></div><span class="btl-gen"><b>${t('btlGenLabel')}</b> ${L(b,'gen')}</span><span class="btl-x">${L(b,'x')}</span></div><span class="btl-dyn">${dn}</span></div>`;
+    return `<div class="btl" data-dynasty="${b.d}" role="button" tabindex="0"><div class="btl-head"><span class="btl-year">${y}</span><span class="btl-tag t-${b.type}">${t('btlType.'+b.type)}</span></div><span class="btl-name">${L(b,'n')}</span><span class="btl-gen"><b>${t('btlGenLabel')}</b> ${L(b,'gen')}</span><span class="btl-x">${L(b,'x')}</span><span class="btl-dyn">${dn}</span></div>`;
   }).join('');
   document.querySelectorAll('#btlList .btl').forEach(el=>{
     const go=()=>jumpToDynasty(el.dataset.dynasty);

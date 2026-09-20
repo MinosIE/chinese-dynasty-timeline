@@ -355,13 +355,12 @@
   @media(max-width:640px){.sys-flow{flex-direction:column;overflow:visible}.sys-stage{min-width:0}.sys-arrow{transform:rotate(90deg);align-self:flex-start;margin-left:14px}}
 
   /* 著名战役 */
-  .btl-list{display:flex;flex-direction:column;gap:10px}
-  .btl{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);box-shadow:var(--s-soft);padding:13px 16px;cursor:pointer;transition:.15s}
-  .btl:hover{box-shadow:var(--s-card);transform:translateX(2px);border-color:var(--brand)}
+  .btl-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;align-items:stretch}
+  .btl{display:flex;flex-direction:column;gap:7px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);box-shadow:var(--s-soft);padding:13px 15px;cursor:pointer;transition:.15s}
+  .btl:hover{box-shadow:var(--s-card);transform:translateY(-2px);border-color:var(--brand)}
   .btl:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-  .btl-year{font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;font-size:13px;background:var(--brand-50);border-radius:6px;padding:3px 6px;text-align:center;align-self:start}
-  .btl-main{display:flex;flex-direction:column;gap:4px;min-width:0}
-  .btl-top{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .btl-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .btl-year{font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;font-size:12.5px;background:var(--brand-50);border-radius:6px;padding:2px 8px}
   .btl-name{font-size:15px;font-weight:800;color:var(--text-strong)}
   .btl-tag{font-size:11px;font-weight:700;border-radius:999px;padding:2px 9px;line-height:1.5;color:#fff}
   .btl-tag.t-fewer{background:#EF4444}
@@ -370,9 +369,8 @@
   .btl-tag.t-frontier{background:#059669}
   .btl-gen{font-size:12.5px;color:var(--text-soft)}
   .btl-gen b{color:var(--text-mute);font-weight:600}
-  .btl-x{font-size:12.5px;color:var(--text-mute);line-height:1.6}
-  .btl-dyn{font-size:12px;font-weight:700;color:var(--text-soft);white-space:nowrap;background:var(--chip-bg);border:1px solid var(--border);border-radius:999px;padding:3px 10px;align-self:start}
-  @media(max-width:560px){.btl{grid-template-columns:52px 1fr}.btl-dyn{display:none}}
+  .btl-x{font-size:12.5px;color:var(--text-mute);line-height:1.6;flex:1}
+  .btl-dyn{align-self:flex-start;font-size:11.5px;font-weight:700;color:var(--text-soft);background:var(--chip-bg);border:1px solid var(--border);border-radius:999px;padding:2px 9px}
 
   /* 历史人物 */
   .ppl-count{text-align:center;color:var(--text-mute);font-size:12.5px}
@@ -388,8 +386,8 @@
   .ppl-tag{font-size:10.5px;font-weight:600;color:var(--text-mute);background:var(--chip-bg);border:1px solid var(--border);border-radius:999px;padding:1px 8px}
 
   /* 世界对比 */
-  .world-list{display:flex;flex-direction:column;gap:12px}
-  .world-row{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-soft);padding:14px 18px;cursor:pointer;transition:.15s}
+  .world-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:12px;align-items:stretch}
+  .world-row{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;align-content:start;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-soft);padding:14px 18px;cursor:pointer;transition:.15s}
   .world-row:hover{box-shadow:var(--s-card);border-color:var(--brand)}
   .world-row:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
   .world-side{display:flex;flex-direction:column;gap:3px;min-width:0}
