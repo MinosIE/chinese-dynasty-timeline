@@ -68,6 +68,8 @@
   .hero .hero-issue{color:rgba(255,255,255,.72);font-size:13.5px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center}
   .hero .hero-issue-link{color:#20160A;background:#FFD166;font-weight:700;text-decoration:none;padding:2px 10px;border-radius:999px;transition:background .2s,transform .2s}
   .hero .hero-issue-link:hover{background:#FFE08A;transform:translateY(-1px)}
+  .hero .hero-issue-link-alt{color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.55);font-weight:600;text-decoration:none;padding:2px 10px;border-radius:999px;transition:background .2s,transform .2s}
+  .hero .hero-issue-link-alt:hover{background:rgba(255,255,255,.28);transform:translateY(-1px)}
   .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
   @media(max-width:560px){.kpis{grid-template-columns:1fr}}
   .kpi{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.10);
