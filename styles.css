@@ -306,6 +306,35 @@
     .panel{transition:none}
     .spinner{animation:none}
   }
+  /* 疆域模块 */
+  .geo-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start}
+  .geo-map{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r3);padding:14px}
+  .geo-svg{width:100%;height:auto;display:block}
+  .geo-outline{fill:rgba(199,154,58,.10);stroke:var(--brand);stroke-width:1.5;stroke-linejoin:round}
+  .geo-pin{stroke:#fff;stroke-width:1.5;transition:r .15s,stroke-width .15s}
+  .geo-pin:hover{r:8}
+  .geo-pin.sel{stroke-width:2.5}
+  .geo-info{position:sticky;top:84px}
+  .geo-empty{color:var(--text-mute);padding:18px;background:var(--surface);border:1px dashed var(--border);border-radius:var(--r3)}
+  .geo-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-card);padding:18px}
+  .geo-card-h{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+  .geo-dot{width:12px;height:12px;border-radius:50%;flex:0 0 auto}
+  .geo-name{font-weight:800;font-size:20px;color:var(--text-strong)}
+  .geo-era{margin-left:auto;font-size:12px;color:var(--text-mute);background:var(--surface-2);padding:2px 8px;border-radius:999px}
+  .geo-row{display:flex;gap:10px;margin:6px 0;font-size:14px}
+  .geo-k{color:var(--text-mute);min-width:48px;flex:0 0 auto}
+  .geo-v{color:var(--text-strong);font-weight:600}
+  .geo-sec-h{margin-top:12px;font-weight:700;color:var(--brand)}
+  .geo-terr{font-size:14px;line-height:1.75;margin-top:4px;color:var(--text-soft)}
+  .geo-view{margin-top:14px;width:100%;border:1px solid var(--brand);background:var(--brand);color:#fff;border-radius:10px;padding:9px;font:inherit;font-weight:700;cursor:pointer;transition:.15s}
+  .geo-view:hover{opacity:.9}
+  .geo-legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px}
+  .geo-lg{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-mute)}
+  .geo-lg i{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .geo-hint{color:var(--text-mute);font-size:13px;margin-top:14px}
+  .territory{font-size:14px;line-height:1.75;color:var(--text-soft)}
+  @media(max-width:760px){.geo-wrap{grid-template-columns:1fr}.geo-info{position:static}}
+
   /* 返回顶部 */
   .to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
     background:var(--brand);color:#fff;border:none;cursor:pointer;z-index:60;

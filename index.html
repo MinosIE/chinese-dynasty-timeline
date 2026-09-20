@@ -69,6 +69,7 @@
     <button class="mod" data-go="m-inv" data-i18n="nav.inv">四大发明</button>
     <button class="mod" data-go="m-events" data-i18n="nav.events">大事记</button>
     <button class="mod" data-go="m-records" data-i18n="nav.records">帝王之最</button>
+    <button class="mod" data-go="m-geo" data-i18n="nav.geo">疆域</button>
   </nav>
 
   <section class="module active" id="m-home">
@@ -78,6 +79,7 @@
       <button class="entry" data-go="m-span"><span class="entry-ic">📊</span><span class="entry-t" data-i18n="entry.span.t">存续一览</span><span class="entry-d" data-i18n="entry.span.d">按年代比例对比各朝长短，一眼看三千年</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-inv"><span class="entry-ic">🧭</span><span class="entry-t" data-i18n="entry.inv.t">四大发明</span><span class="entry-d" data-i18n="entry.inv.d">造纸、印刷、火药、指南针的朝代、人物与世界影响</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-events"><span class="entry-ic">🗓️</span><span class="entry-t" data-i18n="entry.events.t">历史大事记</span><span class="entry-d" data-i18n="entry.events.d">32 个关键节点，串起王朝兴替</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-geo"><span class="entry-ic">🗺️</span><span class="entry-t" data-i18n="entry.geo.t">疆域 · 传承</span><span class="entry-d" data-i18n="entry.geo.d">都城落点 + 疆域四至，一眼看清历代版图伸缩</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
     </div>
   </section>
 
@@ -115,6 +117,17 @@
     <div class="rec-grid" id="recGrid"></div>
   </section>
 
+  <section class="module" id="m-geo">
+    <section class="geo">
+      <div class="inv-head"><h2 data-i18n="geoTitle">历代疆域 · 都城分布</h2><p data-i18n="geoSub">点击都城标点，查看该朝疆域四至与详情</p></div>
+      <div class="geo-wrap">
+        <div class="geo-map" id="geoMap"></div>
+        <aside class="geo-info" id="geoInfo"></aside>
+      </div>
+      <p class="geo-hint" data-i18n="geoHint"></p>
+    </section>
+  </section>
+
   <p class="foot" id="foot"></p>
 </div>
 
@@ -131,10 +144,11 @@ const I18N={
     docTitle:"中华王朝 · 千年脉络 | 中国历史朝代科普",docDesc:"从夏到清的中国历史朝代科普：每个王朝的概览、帝王世系、核心人才与关键制度一目了然，帮你建立三千年王朝脉络。",
     heroTitle:"中华王朝 · 千年脉络",
     heroSub:"从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。",
-    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最"},
+    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最",geo:"疆域"},
     homeLead:"从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始",
-    entry:{timeline:{t:"朝代时间轴",d:"18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"}},
+    entry:{timeline:{t:"朝代时间轴",d:"18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"},geo:{t:"疆域 · 传承",d:"都城落点 + 疆域四至，一眼看清历代版图伸缩"}},
     enter:"进入 →",
+    geoTitle:"历代疆域 · 都城分布",geoSub:"点击都城标点，查看该朝疆域四至与详情",geoCapital:"都城",geoYears:"年代",geoTerritory:"疆域四至",geoView:"查看该朝详情 →",geoHint:"提示：圆点颜色对应所属大时代；重叠点表示多朝共都。",geoEmpty:"选择地图上的都城标点，查看对应朝代的疆域四至。",secTerritory:"疆域",
     spanTitle:"朝代存续一览",spanSub:"长度按年代比例 · 点击任意行可跳转",
     invTitle:"四大发明",invSub:"改变世界的中国创造 · 点击可跳转到对应朝代",
     evTitle:"历史大事记",evSub:"关键节点 · 点击可跳转到对应朝代",
@@ -167,10 +181,11 @@ const I18N={
     docTitle:"Chinese Dynasties · A Millennial Saga",docDesc:"From Xia to Qing: explore each Chinese dynasty's overview, imperial lineage, key talents, and pivotal institutions at a glance — three millennia of power, order, and civilization.",
     heroTitle:"Chinese Dynasties · A Millennial Saga",
     heroSub:"From Xia to Qing, explore each dynasty's imperial lineage, key talents, and pivotal institutions — and grasp three millennia of power, order, and civilization.",
-    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers"},
+    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers",geo:"Territory"},
     homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 18 dynasties. Pick a section to begin.",
-    entry:{timeline:{t:"Dynastic Timeline",d:"18 dynasties with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"}},
+    entry:{timeline:{t:"Dynastic Timeline",d:"18 dynasties with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"},geo:{t:"Territory & Capitals",d:"Capital locations and the territorial extent of each dynasty"}},
     enter:"Enter →",
+    geoTitle:"Territory & Capital Map",geoSub:"Tap a capital marker to see that dynasty's extent and details",geoCapital:"Capital",geoYears:"Period",geoTerritory:"Territorial Extent",geoView:"View dynasty details →",geoHint:"Tip: dot color marks the era; overlapping dots mean shared capitals.",geoEmpty:"Select a capital marker on the map to see that dynasty's territorial extent.",secTerritory:"Territory",
     spanTitle:"Dynastic Spans",spanSub:"Bars scaled by era · click any row to jump",
     invTitle:"Four Great Inventions",invSub:"Chinese creations that changed the world · click to jump to the dynasty",
     evTitle:"Key Events",evSub:"Key milestones · click to jump to the dynasty",
@@ -291,6 +306,7 @@ const kpisEl=document.getElementById('kpis');
 const cache={};           // id -> detail object
 let overview=[];
 let active="全部";
+let geoData={},geoList=[],geoSel=null,geoReady=false,ovById={};
 
 /* ---------- 主题 ---------- */
 const themeBtn=document.getElementById('themeBtn');
@@ -400,6 +416,7 @@ function buildDetail(d){
       <div class="sec"><div class="sec-h"><span class="ic" style="background:var(--gold)">📜</span><span class="t">${t('secPolicies')}</span></div>
         <div class="pills">${pills}</div></div>
       ${aspects?`<div class="sec"><div class="sec-h"><span class="ic" style="background:#0EA5E9">🏛️</span><span class="t">${t('secAspects')}</span></div><div class="aspects">${aspects}</div></div>`:''}
+      ${geoData[d.id]?`<div class="sec"><div class="sec-h"><span class="ic" style="background:var(--info,#0EA5E9)">🗺️</span><span class="t">${t('secTerritory')}</span></div><div class="territory">${G(geoData[d.id],'territory')}</div></div>`:''}
       <div class="summary">${L(d,'summary')}</div>
     </div>`;
 }
@@ -619,6 +636,36 @@ searchEl.addEventListener('keydown',e=>{
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidden=true;});
 
+/* ---------- F22: 疆域 · 都城分布（SVG 示意地图，零依赖） ---------- */
+const GEO={lng0:73,lng1:135,lat0:18,lat1:53,x0:60,y0:60,w:880,h:680};
+function project(lng,lat){return [GEO.x0+(lng-GEO.lng0)/(GEO.lng1-GEO.lng0)*GEO.w, GEO.y0+(GEO.lat1-lat)/(GEO.lat1-GEO.lat0)*GEO.h];}
+const CN_BOUNDS=[[123,53],[125,48],[131,48],[134,46],[131,43],[128,42],[124,40],[122,39],[119,39],[122,37],[120,34],[121,32],[122,30],[120,27],[119,25],[117,23],[113,22],[110,21],[108,21.5],[106,22],[102,22],[99,22],[97,24],[98,27],[96,28],[91,28],[85,28],[81,30],[78,32],[75,36],[73,39],[80,45],[83,48],[87,49],[90,48],[96,43],[100,42],[105,42],[111,43],[115,45],[119,47],[121,50],[126,52]];
+function G(g,k){return (lang==='en'&&g&&g[k+'En']!=null)?g[k+'En']:g[k];}
+function geoLegend(){const eras=(typeof ERAS!=='undefined'?ERAS:Object.keys(ERA_COLORS)).slice(1);return `<div class="geo-legend">${eras.map(e=>`<span class="geo-lg"><i style="background:${ERA_COLORS[e]||'#697386'}"></i>${I18N[lang].era[e]||e}</span>`).join('')}</div>`;}
+function geoSelect(id){geoSel=id;renderGeo();}
+function renderGeo(){
+  const map=document.getElementById('geoMap'),info=document.getElementById('geoInfo');if(!map||!info)return;
+  if(!geoList.length){map.innerHTML='';info.innerHTML='';return;}
+  const svg=document.createElementNS(SVGNS,'svg');svg.setAttribute('viewBox','0 0 1000 800');svg.setAttribute('class','geo-svg');
+  const op=CN_BOUNDS.map((p,i)=>{const c=project(p[0],p[1]);return (i?'L':'M')+c[0].toFixed(1)+' '+c[1].toFixed(1);}).join(' ')+' Z';
+  const o=document.createElementNS(SVGNS,'path');o.setAttribute('d',op);o.setAttribute('class','geo-outline');svg.appendChild(o);
+  const pts=geoList.map(g=>{const c=project(g.capitalCoord[0],g.capitalCoord[1]);return {g,x:c[0],y:c[1]};});
+  const seen={};
+  pts.forEach(p=>{const k=Math.round(p.x)+','+Math.round(p.y);if(seen[k]){const n=seen[k]++;const a=n*2.4,r=8+n*3.5;p.x+=Math.cos(a)*r;p.y+=Math.sin(a)*r;}else seen[k]=1;});
+  pts.forEach(p=>{const ec=ERA_COLORS[ovById[p.g.id]?.era]||'#697386';const c=document.createElementNS(SVGNS,'circle');c.setAttribute('cx',p.x.toFixed(1));c.setAttribute('cy',p.y.toFixed(1));c.setAttribute('r',geoSel===p.g.id?9:6);c.setAttribute('class','geo-pin'+(geoSel===p.g.id?' sel':''));c.setAttribute('fill',ec);c.style.cursor='pointer';c.addEventListener('click',()=>geoSelect(p.g.id));const tt=document.createElementNS(SVGNS,'title');tt.textContent=L(ovById[p.g.id],'name');c.appendChild(tt);svg.appendChild(c);});
+  map.innerHTML='';map.appendChild(svg);
+  if(!geoSel){info.innerHTML=`<div class="geo-empty">${t('geoEmpty')}</div>`+geoLegend();return;}
+  const g=geoData[geoSel],ov=ovById[geoSel]||{};
+  info.innerHTML=`<div class="geo-card">
+      <div class="geo-card-h"><span class="geo-dot" style="background:${ERA_COLORS[ov.era]||'#697386'}"></span><span class="geo-name">${L(ov,'name')}</span><span class="geo-era">${I18N[lang].era[ov.era]||ov.era}</span></div>
+      <div class="geo-row"><span class="geo-k">${t('geoCapital')}</span><span class="geo-v">${L(ov,'capital')||'—'}</span></div>
+      <div class="geo-row"><span class="geo-k">${t('geoYears')}</span><span class="geo-v">${L(ov,'years')||'—'}</span></div>
+      <div class="geo-sec"><div class="geo-sec-h">${t('geoTerritory')}</div><div class="geo-terr">${G(g,'territory')}</div></div>
+      <button class="geo-view" type="button" data-id="${g.id}">${t('geoView')}</button>
+    </div>`+geoLegend();
+  const vb=info.querySelector('.geo-view');if(vb)vb.onclick=()=>jumpToDynasty(g.id);
+}
+
 /* ---------- 多语言切换 ---------- */
 let invData=null,evData=null,recData=null;
 function applyStaticLang(){
@@ -636,6 +683,7 @@ function rerenderTranslatable(){
   if(invData)renderInventions(invData);
   if(evData)renderEvents(evData);
   if(recData)renderRecords(recData);
+  if(geoReady)renderGeo();
 }
 function setLang(next){
   lang=next;localStorage.setItem('lang',next);
@@ -649,6 +697,7 @@ function setLang(next){
     const res=await fetch('data/overview.json');
     if(!res.ok) throw new Error(res.status);
     overview=await res.json();
+    overview.forEach(o=>ovById[o.id]=o);
   }catch(e){
     tl.innerHTML=`<div class="loading">${t('overviewFail')}</div>`;
     return;
@@ -662,6 +711,8 @@ function setLang(next){
   try{const r=await fetch('data/inventions.json');if(r.ok){invData=await r.json();renderInventions(invData);}}catch(e){}
   try{const r=await fetch('data/events.json');if(r.ok){evData=await r.json();renderEvents(evData);}}catch(e){}
   try{const r=await fetch('data/records.json');if(r.ok){recData=await r.json();renderRecords(recData);}}catch(e){}
+  try{const r=await fetch('data/geo.json');if(r.ok){const arr=await r.json();geoList=arr;arr.forEach(g=>geoData[g.id]=g);geoReady=true;}}catch(e){}
+  renderGeo();
   const h=decodeURIComponent(location.hash.slice(1));
   if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
 })();
