@@ -33,6 +33,9 @@
       { "n": "王导", "nEn": "Wang Dao", "note": "东晋宰辅", "noteEn": "Chief minister of Eastern Jin" },
       { "n": "谢安", "nEn": "Xie An", "note": "淝水之战总揽", "noteEn": "Directed the Battle of Fei River" }
     ],
+    "武将": [
+      { "n": "谢玄", "nEn": "Xie Xuan", "note": "淝水之战前线，八万破百万", "noteEn": "Front-line commander at Fei River; 80,000 routed a million" }
+    ],
     "思想·文人": [
       { "n": "王羲之", "nEn": "Wang Xizhi", "note": "书圣", "noteEn": "Sage of calligraphy" },
       { "n": "陶渊明", "nEn": "Tao Yuanming", "note": "隐逸诗人", "noteEn": "Recluse poet" },

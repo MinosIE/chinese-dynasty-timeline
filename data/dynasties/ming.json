@@ -38,6 +38,7 @@
     ],
     "武将": [
       { "n": "戚继光", "nEn": "Qi Jiguang", "note": "抗倭", "noteEn": "Fought the Japanese pirates" },
+      { "n": "袁崇焕", "nEn": "Yuan Chonghuan", "note": "宁远之战，炮伤努尔哈赤", "noteEn": "Battle of Ningyuan; wounded Nurhaci with cannon" },
       { "n": "郑成功", "nEn": "Zheng Chenggong (Koxinga)", "note": "收复台湾", "noteEn": "Recovered Taiwan" }
     ],
     "思想·文人": [

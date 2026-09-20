@@ -31,7 +31,8 @@
       { "n": "关羽", "nEn": "Guan Yu", "note": "武圣", "noteEn": "The Martial Saint" },
       { "n": "张飞", "nEn": "Zhang Fei", "note": "猛将", "noteEn": "A fierce general" },
       { "n": "赵云", "nEn": "Zhao Yun", "note": "常山赵子龙", "noteEn": "Zhao Zilong of Changshan" },
-      { "n": "周瑜", "nEn": "Zhou Yu", "note": "东吴都督", "noteEn": "Commander of Eastern Wu" }
+      { "n": "周瑜", "nEn": "Zhou Yu", "note": "东吴都督，赤壁破曹", "noteEn": "Commander of Eastern Wu; broke Cao at Red Cliffs" },
+      { "n": "张辽", "nEn": "Zhang Liao", "note": "逍遥津，八百破十万", "noteEn": "Battle of Xiaoyao Ford; 800 routed 100,000" }
     ]
   },
   "policies": [

@@ -372,7 +372,9 @@
       { "n": "长孙无忌", "nEn": "Zhangsun Wuji", "note": "凌烟阁首", "noteEn": "First on the Lingyan Pavilion" }
     ],
     "武将": [
-      { "n": "郭子仪", "nEn": "Guo Ziyi", "note": "平安史之乱", "noteEn": "Quelled the An–Shi Rebellion" }
+      { "n": "郭子仪", "nEn": "Guo Ziyi", "note": "平安史之乱", "noteEn": "Quelled the An–Shi Rebellion" },
+      { "n": "李光弼", "nEn": "Li Guangbi", "note": "太原保卫战，以少破敌", "noteEn": "Defended Taiyuan; beat a larger foe" },
+      { "n": "张巡", "nEn": "Zhang Xun", "note": "睢阳之战，以少守城", "noteEn": "Defended Suiyang with few against many" }
     ],
     "思想·文人": [
       { "n": "李白", "nEn": "Li Bai", "note": "诗仙", "noteEn": "The Immortal Poet" },

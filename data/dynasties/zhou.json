@@ -56,7 +56,8 @@
       { "n": "百里奚", "nEn": "Baili Xi", "note": "秦穆公贤臣", "noteEn": "Worthy minister of Duke Mu of Qin" }
     ],
     "武将": [
-      { "n": "姜子牙(太公)", "nEn": "Jiang Ziya (the Grand Duke)", "note": "兵家鼻祖，辅武王", "noteEn": "Progenitor of the military art; aided King Wu" }
+      { "n": "姜子牙(太公)", "nEn": "Jiang Ziya (the Grand Duke)", "note": "兵家鼻祖，辅武王", "noteEn": "Progenitor of the military art; aided King Wu" },
+      { "n": "伍子胥", "nEn": "Wu Zixu", "note": "柏举之战，五战破楚入郢", "noteEn": "Battle of Boju; five battles broke into Chu and took Ying" }
     ],
     "思想·文人": [
       { "n": "孔子", "nEn": "Confucius", "note": "儒家创始人", "noteEn": "Founder of Confucianism" },

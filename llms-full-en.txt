@@ -138,7 +138,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Duke of Zhou（Established rites and music; founded the Zhou system）；Guan Zhong（Prime minister of Qi; “revere the king, repel the barbarians”）；Baili Xi（Worthy minister of Duke Mu of Qin）
-- Generals：Jiang Ziya (the Grand Duke)（Progenitor of the military art; aided King Wu）
+- Generals：Jiang Ziya (the Grand Duke)（Progenitor of the military art; aided King Wu）；Wu Zixu（Battle of Boju; five battles broke into Chu and took Ying）
 - Thinkers & Men of Letters：Confucius（Founder of Confucianism）；Laozi（Founder of Daoism）；Sun Wu（Sage of war; The Art of War）
 
 ### 制度
@@ -162,7 +162,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 ### 人才
 - Thinkers & Men of Letters：Mencius（Second sage of Confucianism; argued for innate goodness and benevolent rule）；Zhuangzi（Daoist representative; ease and the equality of things）；Mozi（Mohism; universal love and anti-aggression）；Han Fei（Synthesizer of Legalism; central authority）；Xunzi（Between Confucian and Legalist; theory of evil nature）；Zou Yan（Yin–Yang school; cycle of the five virtues）；Gongsun Long（Logicians; “a white horse is not a horse”）
 - Civil Officials：Shang Yang（Reformed Qin; rewarded farming and war）；Li Kui（Reformed Wei; farmed the land fully）；Wu Qi（Reformed Chu; strengthened the military）
-- Generals：Bai Qi（Qin general; Battle of Changping, the “Butcher” of the age）；Lian Po（Zhao general; held the line against Qin）；Li Mu（Zhao general; beat the Xiongnu and resisted Qin）；Sun Bin（Military strategist; “besiege Wei to rescue Zhao”）
+- Generals：Bai Qi（Qin general; Battle of Changping, the “Butcher” of the age）；Lian Po（Zhao general; held the line against Qin）；Li Mu（Zhao general; beat the Xiongnu and resisted Qin）；Sun Bin（Military strategist; “besiege Wei to rescue Zhao”）；Tian Dan（Battle of Jimo; the fire-oxen ruse restored Qi）
 - Others：Qu Yuan（Father of Chu ci; the Li Sao）；Li Bing（Dujiangyan; blessed Shu with irrigation）
 
 ### 制度
@@ -303,7 +303,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Cao Cao（The martial Duke of Wei, a towering talent）；Zhuge Liang（Chancellor of Shu; devoted unto death）；Sima Yi（Powerful minister of Wei）；Lu Xun（Great general of Wu）
-- Generals：Guan Yu（The Martial Saint）；Zhang Fei（A fierce general）；Zhao Yun（Zhao Zilong of Changshan）；Zhou Yu（Commander of Eastern Wu）
+- Generals：Guan Yu（The Martial Saint）；Zhang Fei（A fierce general）；Zhao Yun（Zhao Zilong of Changshan）；Zhou Yu（Commander of Eastern Wu; broke Cao at Red Cliffs）；Zhang Liao（Battle of Xiaoyao Ford; 800 routed 100,000）
 
 ### 制度
 - The tuntian (military-agriculture) system
@@ -339,6 +339,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Wang Dao（Chief minister of Eastern Jin）；Xie An（Directed the Battle of Fei River）
+- Generals：Xie Xuan（Front-line commander at Fei River; 80,000 routed a million）
 - Thinkers & Men of Letters：Wang Xizhi（Sage of calligraphy）；Tao Yuanming（Recluse poet）；Ji Kang（One of the Seven Sages of the Bamboo Grove）；Gu Kaizhi（Sage of painting; capturing the spirit）
 
 ### 制度
@@ -444,7 +445,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Wei Zheng（Remonstrating minister）；Fang Xuanling（Fang the planner）；Du Ruhui（Du the decider）；Di Renjie（Famed judge and chancellor）；Zhangsun Wuji（First on the Lingyan Pavilion）
-- Generals：Guo Ziyi（Quelled the An–Shi Rebellion）
+- Generals：Guo Ziyi（Quelled the An–Shi Rebellion）；Li Guangbi（Defended Taiyuan; beat a larger foe）；Zhang Xun（Defended Suiyang with few against many）
 - Thinkers & Men of Letters：Li Bai（The Immortal Poet）；Du Fu（The Sage of Poetry）；Xuanzang（Journeyed west for scriptures）；Bai Juyi（Prolific poet; the Song of Everlasting Sorrow）；Han Yu（Leader of the Classical Prose Movement）；Yan Zhenqing（Master of regular script calligraphy）；Sun Simiao（The King of Medicine; the Qianjin Fang）
 
 ### 制度
@@ -553,7 +554,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Zhao Pu（Architect of relinquishing military power over wine）；Kou Zhun（Argued for war at Chanyuan）；Fan Zhongyan（The Qingli reforms）；Wang Anshi（The Xining reform）；Sima Guang（Comprehensive Mirror in Aid of Governance）；Bao Zheng（Paragon of the incorruptible judge）
-- Generals：Yue Fei（Loyal unto death）；Han Shizhong（Famed general against the Jin）
+- Generals：Yue Fei（Battle of Yancheng; beat the Jin with fewer）；Han Shizhong（Huangtiandang; 8,000 trapped 100,000）；Wu Jie（Heshangyuan; beat the Jin outnumbered）；Yu Yunwen（Battle of Caishi; a civil official led the rout of the Jin）；Wang Jian（Diaoyucheng; repelled the Mongols outnumbered）
 - Thinkers & Men of Letters：Su Shi（Literary giant）；Shen Kuo（Dream Pool Essays）；Li Qingzhao（Mistress of the gentle ci style）；Wen Tianxiang（Upright, unyielding spirit）；Zhu Xi（Synthesizer of Neo-Confucianism）；Ouyang Xiu（Leader of the literary world）；Xin Qiji（Master of the bold ci style）；Bi Sheng（Invented movable-type printing）
 
 ### 制度
@@ -692,7 +693,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 
 ### 人才
 - Civil Officials：Liu Bowen（Founding strategist）；Yu Qian（Defended Beijing）；Zhang Juzheng（Reforming senior grand secretary）；Hai Rui（An incorruptible official）
-- Generals：Qi Jiguang（Fought the Japanese pirates）；Zheng Chenggong (Koxinga)（Recovered Taiwan）
+- Generals：Qi Jiguang（Fought the Japanese pirates）；Yuan Chonghuan（Battle of Ningyuan; wounded Nurhaci with cannon）；Zheng Chenggong (Koxinga)（Recovered Taiwan）
 - Thinkers & Men of Letters：Wang Shouren (Wang Yangming)（Synthesis of the School of Mind）；Xu Xiake（Geographer）；Song Yingxing（Tiangong Kaiwu (Exploitation of the Works of Nature)）；Li Shizhen（Compendium of Materia Medica）；Xu Guangqi（Complete Treatise on Agriculture; versed in Western learning）
 - Others：Zheng He（Seven voyages to the Western Seas）
 

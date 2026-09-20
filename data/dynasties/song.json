@@ -285,8 +285,11 @@
       { "n": "包拯", "nEn": "Bao Zheng", "note": "清官典范", "noteEn": "Paragon of the incorruptible judge" }
     ],
     "武将": [
-      { "n": "岳飞", "nEn": "Yue Fei", "note": "精忠报国", "noteEn": "Loyal unto death" },
-      { "n": "韩世忠", "nEn": "Han Shizhong", "note": "抗金名将", "noteEn": "Famed general against the Jin" }
+      { "n": "岳飞", "nEn": "Yue Fei", "note": "郾城之战，以少破金", "noteEn": "Battle of Yancheng; beat the Jin with fewer" },
+      { "n": "韩世忠", "nEn": "Han Shizhong", "note": "黄天荡，八千困十万", "noteEn": "Huangtiandang; 8,000 trapped 100,000" },
+      { "n": "吴玠", "nEn": "Wu Jie", "note": "和尚原，以少破金", "noteEn": "Heshangyuan; beat the Jin outnumbered" },
+      { "n": "虞允文", "nEn": "Yu Yunwen", "note": "采石之战，文臣督战破金", "noteEn": "Battle of Caishi; a civil official led the rout of the Jin" },
+      { "n": "王坚", "nEn": "Wang Jian", "note": "钓鱼城，抗蒙以少胜多", "noteEn": "Diaoyucheng; repelled the Mongols outnumbered" }
     ],
     "思想·文人": [
       { "n": "苏轼", "nEn": "Su Shi", "note": "文豪", "noteEn": "Literary giant" },
