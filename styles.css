@@ -65,7 +65,8 @@
     border-radius:50%;background:radial-gradient(circle,rgba(212,53,28,.35),transparent 70%)}
   .hero h1{font-size:34px;font-weight:800;letter-spacing:1px;color:#fff}
   .hero p{color:rgba(255,255,255,.78);font-size:15px}
-  .kpis{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+  .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  @media(max-width:560px){.kpis{grid-template-columns:1fr}}
   .kpi{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.10);
     border:1px solid rgba(255,255,255,.16);border-radius:var(--r3);padding:16px 22px;min-width:160px}
   .kpi .badge{display:flex;align-items:center;justify-content:center;width:44px;height:44px;
