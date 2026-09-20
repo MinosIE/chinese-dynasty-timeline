@@ -28,6 +28,9 @@
       { "n": "吴起", "nEn": "Wu Qi", "note": "楚变法，强兵", "noteEn": "Reformed Chu; strengthened the military" }
     ],
     "武将": [
+      { "n": "白起", "nEn": "Bai Qi", "note": "秦将，长平之战，歼敌百万", "noteEn": "Qin general; Battle of Changping, the “Butcher” of the age" },
+      { "n": "廉颇", "nEn": "Lian Po", "note": "赵将，固守御秦", "noteEn": "Zhao general; held the line against Qin" },
+      { "n": "李牧", "nEn": "Li Mu", "note": "赵将，北破匈奴、抗秦", "noteEn": "Zhao general; beat the Xiongnu and resisted Qin" },
       { "n": "孙膑", "nEn": "Sun Bin", "note": "兵家，围魏救赵", "noteEn": "Military strategist; “besiege Wei to rescue Zhao”" }
     ],
     "其他": [

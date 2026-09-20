@@ -162,7 +162,7 @@ Source: https://MinosIE.github.io/chinese-dynasty-timeline/
 ### 人才
 - Thinkers & Men of Letters：Mencius（Second sage of Confucianism; argued for innate goodness and benevolent rule）；Zhuangzi（Daoist representative; ease and the equality of things）；Mozi（Mohism; universal love and anti-aggression）；Han Fei（Synthesizer of Legalism; central authority）；Xunzi（Between Confucian and Legalist; theory of evil nature）；Zou Yan（Yin–Yang school; cycle of the five virtues）；Gongsun Long（Logicians; “a white horse is not a horse”）
 - Civil Officials：Shang Yang（Reformed Qin; rewarded farming and war）；Li Kui（Reformed Wei; farmed the land fully）；Wu Qi（Reformed Chu; strengthened the military）
-- Generals：Sun Bin（Military strategist; “besiege Wei to rescue Zhao”）
+- Generals：Bai Qi（Qin general; Battle of Changping, the “Butcher” of the age）；Lian Po（Zhao general; held the line against Qin）；Li Mu（Zhao general; beat the Xiongnu and resisted Qin）；Sun Bin（Military strategist; “besiege Wei to rescue Zhao”）
 - Others：Qu Yuan（Father of Chu ci; the Li Sao）；Li Bing（Dujiangyan; blessed Shu with irrigation）
 
 ### 制度
