@@ -241,8 +241,6 @@
   .card:not(.collapsed) .panel{grid-template-rows:1fr}
   .panel-i{overflow:hidden;min-height:0}
   .body{display:flex;flex-direction:column;gap:18px;padding:4px 22px 22px}
-  .share-card-btn{margin-top:6px;align-self:flex-start;border:1px solid var(--brand);background:var(--brand-50);color:var(--brand);border-radius:10px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer;transition:.15s}
-  .share-card-btn:hover{background:var(--brand);color:#fff}
   .sec{display:flex;flex-direction:column;gap:10px}
   .sec-h{display:flex;align-items:center;gap:9px}
   .sec-h .ic{display:flex;align-items:center;justify-content:center;width:28px;height:28px;

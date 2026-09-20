@@ -143,7 +143,7 @@ const I18N={
     kpiMain:"主要王朝",kpiYears:"年王朝（夏→清）",kpiYearsV:"约4000",kpiPeople:"帝王与人才",
     statEmperors:"帝王",statTalents:"人才",statPolicies:"制度",unitPerson:"位",unitItem:"项",
     tabAll:"全部",
-    expand:"展开详情",collapse:"收起详情",shareCard:"下载分享卡片",shareCardText:"中华王朝 · 千年脉络｜从夏到清 18 朝一页看",
+    expand:"展开详情",collapse:"收起详情",
     loadingDetail:"正在加载 {id} 详情…",
     loadFail:"详情加载失败，请检查网络或 data/dynasties/{id}.json 是否存在。",
     secEmperors:"帝王世系",secTalents:"核心人才",secPolicies:"政策与制度",secAspects:"政治 · 经济 · 文化",
@@ -179,7 +179,7 @@ const I18N={
     kpiMain:"Major Dynasties",kpiYears:"Yrs of Dynasties (Xia→Qing)",kpiYearsV:"~4000",kpiPeople:"Rulers & Talents",
     statEmperors:"Rulers",statTalents:"Talents",statPolicies:"Policies",unitPerson:"",unitItem:"",
     tabAll:"All",
-    expand:"Expand",collapse:"Collapse",shareCard:"Download share card",shareCardText:"Chinese Dynasties · 3,000 Years｜18 dynasties from Xia to Qing at a glance",
+    expand:"Expand",collapse:"Collapse",
     loadingDetail:"Loading {id} details…",
     loadFail:"Failed to load details. Check your network or whether data/dynasties/{id}.json exists.",
     secEmperors:"Imperial Lineage",secTalents:"Key Talents",secPolicies:"Policies & Institutions",secAspects:"Politics · Economy · Culture",
@@ -401,49 +401,7 @@ function buildDetail(d){
         <div class="pills">${pills}</div></div>
       ${aspects?`<div class="sec"><div class="sec-h"><span class="ic" style="background:#0EA5E9">🏛️</span><span class="t">${t('secAspects')}</span></div><div class="aspects">${aspects}</div></div>`:''}
       <div class="summary">${L(d,'summary')}</div>
-      <button class="share-card-btn" type="button" data-id="${d.id}">📤 ${t('shareCard')}</button>
     </div>`;
-}
-
-/* ---------- F20: 单朝代分享卡片（Canvas 导出，零依赖、无 CDN） ---------- */
-function exportDynastyCard(d){
-  const W=1080,H=1350,F='-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif';
-  const cv=document.createElement('canvas');cv.width=W*2;cv.height=H*2;
-  const ctx=cv.getContext('2d');ctx.scale(2,2);ctx.textBaseline='alphabetic';ctx.textAlign='left';
-  const ec=ERA_COLORS[d.era]||'#697386',brand='#C79A3A',ink='#1e293b',sub='#475569',muted='#94a3b8';
-  const hexA=h=>{const n=parseInt(h.replace('#',''),16);return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},`;};
-  const roundRect=(x,y,w,h,r)=>{ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();};
-  const wrap=(text,mw)=>{const lines=[];let line='';for(const tk of text.split(/(\s+)/)){const test=line+tk;if(ctx.measureText(test).width>mw&&line.trim()!==''){lines.push(line.trimEnd());line=tk.trimStart();}else line=test;}if(line.trim()!=='')lines.push(line.trimEnd());return lines;};
-  ctx.fillStyle='#fff';ctx.fillRect(0,0,W,H);
-  ctx.fillStyle=ec;ctx.fillRect(0,0,W,300);
-  ctx.fillStyle='rgba(255,255,255,.85)';ctx.font='600 30px '+F;ctx.fillText(ERA_LABELS[d.era]||d.era,60,82);
-  ctx.fillStyle='#fff';ctx.font='800 96px '+F;ctx.fillText(L(d,'name'),60,195);
-  if(d.nameEn){ctx.fillStyle='rgba(255,255,255,.85)';ctx.font='500 32px '+F;ctx.fillText(d.nameEn,62,252);}
-  let y=372;
-  ctx.fillStyle=sub;ctx.font='600 34px '+F;ctx.fillText(`${L(d,'years')}　·　${L(d,'capital')}`,60,y);y+=56;
-  const fLines=wrap(L(d,'feature')||'',900).slice(0,3);const boxH=fLines.length*40+36;
-  ctx.fillStyle=hexA(ec)+'0.08)';roundRect(60,y,960,boxH,16);ctx.fill();
-  ctx.strokeStyle=hexA(ec)+'0.35)';ctx.lineWidth=2;roundRect(60,y,960,boxH,16);ctx.stroke();
-  ctx.fillStyle=ink;ctx.font='30px '+F;let ty=y+36;fLines.forEach(l=>{ctx.fillText(l,82,ty);ty+=40;});y+=boxH+48;
-  ctx.font='28px '+F;
-  const section=(zh,en,lines,ac)=>{if(y>H-130)return;ctx.fillStyle=ac||brand;ctx.font='700 30px '+F;ctx.fillText(zh,60,y);ctx.fillStyle=muted;ctx.font='500 22px '+F;ctx.textAlign='right';ctx.fillText(en,1020,y);ctx.textAlign='left';y+=10;ctx.strokeStyle='#e2e8f0';ctx.beginPath();ctx.moveTo(60,y);ctx.lineTo(1020,y);ctx.stroke();y+=28;ctx.fillStyle=ink;ctx.font='28px '+F;lines.forEach(l=>{if(y>H-120)return;ctx.fillText(l,72,y);y+=36;});y+=14;};
-  const empLines=d.emperors.slice(0,3).map(e=>`${L(e,'n')}（${L(e,'rg')}）`);
-  let tnames=[];for(const r in d.talents)d.talents[r].forEach(p=>tnames.push(L(p,'n')));tnames=tnames.slice(0,8);
-  const pol=(lang==='en'&&d.policiesEn?d.policiesEn:d.policies).slice(0,6).join('、');
-  let sLines=wrap(L(d,'summary'),900);if(sLines.length>3){sLines=sLines.slice(0,3);sLines[2]=sLines[2].slice(0,-1)+'…';}
-  section('帝王世系','IMPERIAL LINEAGE',empLines);
-  section('核心人才','KEY FIGURES',wrap(tnames.join('、'),900));
-  section('制度与政策','INSTITUTIONS',wrap(pol,900));
-  section('概述','SUMMARY',sLines);
-  ctx.fillStyle=ec;ctx.fillRect(0,H-90,W,90);
-  ctx.fillStyle='#fff';ctx.font='600 26px '+F;ctx.textAlign='center';ctx.fillText(SITE.replace(/^https?:\/\//,''),W/2,H-50);
-  ctx.font='400 20px '+F;ctx.fillStyle='rgba(255,255,255,.85)';ctx.fillText('中华王朝 · 千年脉络',W/2,H-22);ctx.textAlign='left';
-  cv.toBlob(async(blob)=>{
-    if(!blob)return;
-    const file=new File([blob],`${d.name}-card.png`,{type:'image/png'});
-    if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:L(d,'name'),text:t('shareCardText')});return;}catch(e){if(e.name==='AbortError')return;}}
-    const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`${d.name}-card.png`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-  },'image/png');
 }
 
 /* ---------- GEO: 注入 JSON-LD (ItemList) ---------- */
@@ -500,7 +458,6 @@ document.addEventListener('mouseout',e=>{if(e.target.closest('.hontag'))hideTip(
 document.addEventListener('focusin',e=>{const el=e.target.closest('.hontag');if(el)showTip(el);});
 document.addEventListener('focusout',e=>{if(e.target.closest('.hontag'))hideTip();});
 document.addEventListener('click',e=>{const el=e.target.closest('.hontag');if(el){showTip(el);return;}hideTip();});
-document.addEventListener('click',e=>{const b=e.target.closest('.share-card-btn');if(b){const d=cache[b.dataset.id];if(d)exportDynastyCard(d);}});
 
 /* ---------- 朝代存续可视化 ---------- */
 function renderSpan(){

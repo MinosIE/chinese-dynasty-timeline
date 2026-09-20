@@ -291,7 +291,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 5.1 已完成
 
-18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 6 分区）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（467 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 中英双语（含 `?lang=en`）· 双语 GEO（llms / hreflang / og:locale:alternate）· JSON-LD · CI · 可见度与体验优化（README 优化 + MIT LICENSE · GEO 全文 llms-full · sitemap 全文入口 · 移动端 KPI 与帝王之最单列 · og-cover 压缩为 JPEG · .gitignore · F20 单朝代分享卡片（Canvas 导出 PNG，零依赖））。
+18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 6 分区）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（467 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 中英双语（含 `?lang=en`）· 双语 GEO（llms / hreflang / og:locale:alternate）· JSON-LD · CI · 可见度与体验优化（README 优化 + MIT LICENSE · GEO 全文 llms-full · sitemap 全文入口 · 移动端 KPI 与帝王之最单列 · og-cover 压缩为 JPEG · .gitignore）。
 
 ### 5.2 开发中
 
@@ -299,7 +299,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 5.3 未完成计划（见 `PRD.md` §4.2）
 
-F21 繁体中文（zh-Hant）· F22 疆域缩略图 / 关系图谱 · F23 世界史横向对照 · F24 人物卡片。
+F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F22 疆域缩略图 / 关系图谱 · F23 世界史横向对照 · F24 人物卡片。
 
 ### 5.4 技术债务
 
