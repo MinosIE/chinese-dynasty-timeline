@@ -339,6 +339,7 @@ function render(){
           <span class="toggle"><span class="chev">▾</span>${t('expand')}</span>
         </div>
         <div class="feature">${L(o,'feature')}</div>
+        ${geoData[o.id]?`<div class="geo-brief"><span class="gb-ic">🗺️</span><b class="gb-k">${t('secTerritory')}：</b><span class="gb-t">${G(geoData[o.id],'territory')}</span></div>`:''}
         <div class="stats">
           <span class="stat">${t('statEmperors')} <b>${o.counts.emperors}</b>${t('unitPerson')}</span>
           <span class="stat">${t('statTalents')} <b>${o.counts.talents}</b>${t('unitPerson')}</span>
