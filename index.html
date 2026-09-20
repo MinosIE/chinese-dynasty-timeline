@@ -344,7 +344,7 @@ function render(){
           ${o.counts.emperors?`<span class="stat">${t('statEmperors')} <b>${o.counts.emperors}</b>${t('unitPerson')}</span>`:''}
           <span class="stat">${t('statTalents')} <b>${o.counts.talents}</b>${t('unitPerson')}</span>
           <span class="stat">${t('statPolicies')} <b>${o.counts.policies}</b>${t('unitItem')}</span>
-          ${geoData[o.id]?`<span class="stat area">${t('geoArea')} <b>${G(geoData[o.id],'area')}</b></span>`:''}
+          ${geoData[o.id]&&geoData[o.id].area?`<span class="stat area">${t('geoArea')} <b>${G(geoData[o.id],'area')}</b></span>`:''}
         </div>
         <div class="panel"><div class="panel-i"><div class="detail" data-id="${o.id}"></div></div></div>
       </article>`;
