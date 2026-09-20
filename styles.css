@@ -66,8 +66,8 @@
   .hero h1{font-size:34px;font-weight:800;letter-spacing:1px;color:#fff}
   .hero p{color:rgba(255,255,255,.78);font-size:15px}
   .hero .hero-issue{color:rgba(255,255,255,.72);font-size:13.5px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center}
-  .hero .hero-issue-link{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}
-  .hero .hero-issue-link:hover{color:#ffcf9a}
+  .hero .hero-issue-link{color:#20160A;background:#FFD166;font-weight:700;text-decoration:none;padding:2px 10px;border-radius:999px;transition:background .2s,transform .2s}
+  .hero .hero-issue-link:hover{background:#FFE08A;transform:translateY(-1px)}
   .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
   @media(max-width:560px){.kpis{grid-template-columns:1fr}}
   .kpi{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.10);
