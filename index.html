@@ -356,6 +356,7 @@ function render(){
           <span class="stat">${t('statEmperors')} <b>${o.counts.emperors}</b>${t('unitPerson')}</span>
           <span class="stat">${t('statTalents')} <b>${o.counts.talents}</b>${t('unitPerson')}</span>
           <span class="stat">${t('statPolicies')} <b>${o.counts.policies}</b>${t('unitItem')}</span>
+          ${geoData[o.id]?`<span class="stat area">${t('geoArea')} <b>${G(geoData[o.id],'area')}</b></span>`:''}
         </div>
         <div class="panel"><div class="panel-i"><div class="detail" data-id="${o.id}"></div></div></div>
       </article>`;
@@ -724,7 +725,7 @@ function setLang(next){
   try{const r=await fetch('data/inventions.json');if(r.ok){invData=await r.json();renderInventions(invData);}}catch(e){}
   try{const r=await fetch('data/events.json');if(r.ok){evData=await r.json();renderEvents(evData);}}catch(e){}
   try{const r=await fetch('data/records.json');if(r.ok){recData=await r.json();renderRecords(recData);}}catch(e){}
-  try{const r=await fetch('data/geo.json');if(r.ok){const arr=await r.json();geoList=arr;arr.forEach(g=>geoData[g.id]=g);geoReady=true;}}catch(e){}
+  try{const r=await fetch('data/geo.json');if(r.ok){const arr=await r.json();geoList=arr;arr.forEach(g=>geoData[g.id]=g);geoReady=true;render();}}catch(e){}
   renderGeo();
   const h=decodeURIComponent(location.hash.slice(1));
   if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
