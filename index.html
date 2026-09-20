@@ -627,22 +627,34 @@ document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidde
 
 /* ---------- 疆域数据（供朝代详情「疆域」与时间轴「国土面积」使用，零依赖） ---------- */
 function G(g,k){return (lang==='en'&&g&&g[k+'En']!=null)?g[k+'En']:g[k];}
+function smoothRing(ring){
+  const n=ring.length;
+  if(n<3) return '';
+  let d='M'+ring[0][0].toFixed(1)+' '+ring[0][1].toFixed(1);
+  for(let i=0;i<n;i++){
+    const p0=ring[(i-1+n)%n],p1=ring[i],p2=ring[(i+1)%n],p3=ring[(i+2)%n];
+    const c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6;
+    const c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;
+    d+='C'+c1x.toFixed(1)+' '+c1y.toFixed(1)+' '+c2x.toFixed(1)+' '+c2y.toFixed(1)+' '+p2[0].toFixed(1)+' '+p2[1].toFixed(1);
+  }
+  return d+'Z';
+}
 function terrThumb(g,ec){
   if(!g||!g.outline||!g.outline.length) return '';
   let minLng=Infinity,maxLng=-Infinity,minLat=Infinity,maxLat=-Infinity;
   g.outline.forEach(ring=>ring.forEach(([lng,lat])=>{if(lng<minLng)minLng=lng;if(lng>maxLng)maxLng=lng;if(lat<minLat)minLat=lat;if(lat>maxLat)maxLat=lat;}));
-  const W=100,H=60,pad=7;
+  const W=100,H=60,pad=9;
   const spanLng=Math.max(maxLng-minLng,0.001),spanLat=Math.max(maxLat-minLat,0.001);
   const scale=Math.min((W-pad*2)/spanLng,(H-pad*2)/spanLat);
   const offX=(W-spanLng*scale)/2,offY=(H-spanLat*scale)/2;
   const proj=(lng,lat)=>[offX+(lng-minLng)*scale,offY+(maxLat-lat)*scale];
-  const polys=g.outline.map(ring=>{
-    const pts=ring.map(([lng,lat])=>{const p=proj(lng,lat);return p[0].toFixed(1)+','+p[1].toFixed(1);}).join(' ');
-    return '<polygon class="terr-poly" points="'+pts+'"/>';
+  const paths=g.outline.map(ring=>{
+    const pr=ring.map(([lng,lat])=>proj(lng,lat));
+    return '<path class="terr-poly" d="'+smoothRing(pr)+'"/>';
   }).join('');
   let dot='';
   if(g.capitalCoord){const c=proj(g.capitalCoord[0],g.capitalCoord[1]);dot='<circle class="terr-cap" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="3.2"/>';}
-  return '<svg class="terr-thumb" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="--c:'+(ec||'#697386')+'"><g class="terr-fill">'+polys+'</g>'+dot+'</svg>';
+  return '<svg class="terr-thumb" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="--c:'+(ec||'#697386')+'"><g class="terr-fill" fill-rule="evenodd">'+paths+'</g>'+dot+'</svg>';
 }
 
 /* ---------- 多语言切换 ---------- */
