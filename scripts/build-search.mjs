@@ -15,5 +15,10 @@ for (const o of overview) {
 
 for (const v of inv) idx.push({ d: v.dynastyId, dn: v.dynastyLabel, t: '发明', n: v.name, x: `${v.era} ${v.person} ${v.desc}` });
 
+const battles = JSON.parse(fs.readFileSync('data/battles.json', 'utf8'));
+const nameById = Object.fromEntries(overview.map(o => [o.id, o.name]));
+const nameEnById = Object.fromEntries(overview.map(o => [o.id, o.nameEn || o.name]));
+for (const b of battles) idx.push({ d: b.d, dn: nameById[b.d] || b.d, dnEn: nameEnById[b.d] || b.d, t: '战役', n: b.n, x: `${b.gen} ${b.x}`, nEn: b.nEn, xEn: `${b.genEn} ${b.xEn}` });
+
 fs.writeFileSync('data/search.json', JSON.stringify(idx) + '\n');
 console.log(`搜索索引条目: ${idx.length}`);

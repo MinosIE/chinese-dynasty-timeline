@@ -1,0 +1,67 @@
+[
+  {
+    "id": "selection",
+    "icon": "🏛️",
+    "title": "选官制度",
+    "titleEn": "Selection of Officials",
+    "stages": [
+      { "k": "先秦", "kEn": "Pre-Qin", "n": "世卿世禄", "nEn": "Hereditary office", "x": "贵族按血缘世袭官职", "xEn": "Office held by aristocratic bloodline" },
+      { "k": "汉", "kEn": "Han", "n": "察举制", "nEn": "Recommendation (chaju)", "x": "地方举孝廉，另有征辟", "xEn": "Local recommendation of the filial & incorrupt" },
+      { "k": "魏晋南北朝", "kEn": "Wei–Jin", "n": "九品中正制", "nEn": "Nine-rank system", "x": "门第定品，士族垄断", "xEn": "Ranked by pedigree; gentry monopoly" },
+      { "k": "隋唐", "kEn": "Sui–Tang", "n": "科举制", "nEn": "Imperial examinations", "x": "分科考试，寒门可入仕", "xEn": "Exam-based; commoners could serve" },
+      { "k": "明清", "kEn": "Ming–Qing", "n": "八股取士", "nEn": "Eight-legged essays", "x": "格式僵化，内容固化", "xEn": "Rigid, formulaic testing" }
+    ]
+  },
+  {
+    "id": "central",
+    "icon": "⚖️",
+    "title": "中央官制",
+    "titleEn": "Central Government",
+    "stages": [
+      { "k": "秦", "kEn": "Qin", "n": "三公九卿", "nEn": "Three Lords & Nine Ministers", "x": "丞相、太尉、御史大夫", "xEn": "Chancellor, Grand Commandant, Censor-in-chief" },
+      { "k": "隋唐", "kEn": "Sui–Tang", "n": "三省六部", "nEn": "Three Departments & Six Ministries", "x": "中书议、门下审、尚书行", "xEn": "Drafting, review and execution split" },
+      { "k": "宋", "kEn": "Song", "n": "二府三司", "nEn": "Two Offices & Three Commissions", "x": "分化相权，皇帝集权", "xEn": "Chancellor's power split to strengthen the throne" },
+      { "k": "明", "kEn": "Ming", "n": "废丞相设内阁", "nEn": "Abolish chancellor, create the Cabinet", "x": "皇权空前，内阁辅政", "xEn": "Unprecedented imperial power; cabinet as advisers" },
+      { "k": "清", "kEn": "Qing", "n": "军机处", "nEn": "Grand Council", "x": "君主专制达于顶峰", "xEn": "Autocracy at its zenith" }
+    ]
+  },
+  {
+    "id": "tax",
+    "icon": "🌾",
+    "title": "赋税与土地",
+    "titleEn": "Taxation & Land",
+    "stages": [
+      { "k": "先秦", "kEn": "Pre-Qin", "n": "井田制", "nEn": "Well-field system", "x": "土地国有，集体耕作", "xEn": "State land, collective farming" },
+      { "k": "唐前期", "kEn": "Early Tang", "n": "均田·租庸调", "nEn": "Equal-field & zu-yong-diao", "x": "按丁授田、纳粟服役", "xEn": "Land by head; grain and labor tax" },
+      { "k": "唐后期", "kEn": "Late Tang", "n": "两税法", "nEn": "Two-tax system", "x": "按资产分夏秋两征", "xEn": "Taxed by wealth, in two installments" },
+      { "k": "明", "kEn": "Ming", "n": "一条鞭法", "nEn": "Single-whip reform", "x": "赋役折银，合并征收", "xEn": "Combined taxes paid in silver" },
+      { "k": "清", "kEn": "Qing", "n": "摊丁入亩", "nEn": "Apportioning head-tax to land", "x": "地丁合一，人身依附松弛", "xEn": "Head-tax merged into land-tax" }
+    ]
+  },
+  {
+    "id": "military",
+    "icon": "🛡️",
+    "title": "军事制度",
+    "titleEn": "Military System",
+    "stages": [
+      { "k": "唐", "kEn": "Tang", "n": "府兵制", "nEn": "Fubing (militia) system", "x": "兵农合一，折冲府统领", "xEn": "Soldier-farmers under garrison commands" },
+      { "k": "唐后期", "kEn": "Late Tang", "n": "募兵·节度使", "nEn": "Mercenaries & military governors", "x": "藩镇拥兵自重", "xEn": "Regional commands grew autonomous" },
+      { "k": "宋", "kEn": "Song", "n": "禁军·更戍", "nEn": "Imperial guard, rotating posts", "x": "强干弱枝，兵不识将", "xEn": "Centralized; officers rotated" },
+      { "k": "明", "kEn": "Ming", "n": "卫所制", "nEn": "Guard-and-battalion (weisuo)", "x": "军户世袭，屯田自给", "xEn": "Hereditary military households, self-supporting" },
+      { "k": "清", "kEn": "Qing", "n": "八旗·绿营", "nEn": "Eight Banners & Green Standards", "x": "旗兵为核心，绿营辅之", "xEn": "Banner forces core; Han Green Standards auxiliary" }
+    ]
+  },
+  {
+    "id": "law",
+    "icon": "📜",
+    "title": "法律沿革",
+    "titleEn": "Evolution of Law",
+    "stages": [
+      { "k": "战国·秦", "kEn": "Warring States & Qin", "n": "法经·秦律", "nEn": "Canon of Law; Qin statutes", "x": "以法为教，严刑峻法", "xEn": "Law as doctrine; harsh penalties" },
+      { "k": "唐", "kEn": "Tang", "n": "唐律疏议", "nEn": "Tang Code with Commentary", "x": "礼法合一，东亚典范", "xEn": "Rites and law fused; model for East Asia" },
+      { "k": "宋", "kEn": "Song", "n": "宋刑统", "nEn": "Song Criminal Statutes", "x": "因袭唐律，编敕断案", "xEn": "Built on Tang law, with edicts" },
+      { "k": "明", "kEn": "Ming", "n": "大明律", "nEn": "Great Ming Code", "x": "体例革新，六部分篇", "xEn": "Reorganized by the Six Ministries" },
+      { "k": "清", "kEn": "Qing", "n": "大清律例", "nEn": "Great Qing Code", "x": "因袭明律，例案并行", "xEn": "Inherited Ming law; statutes with precedents" }
+    ]
+  }
+]

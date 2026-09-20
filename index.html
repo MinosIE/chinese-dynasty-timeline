@@ -70,6 +70,10 @@
     <button class="mod" data-go="m-inv" data-i18n="nav.inv">四大发明</button>
     <button class="mod" data-go="m-events" data-i18n="nav.events">大事记</button>
     <button class="mod" data-go="m-records" data-i18n="nav.records">帝王之最</button>
+    <button class="mod" data-go="m-sys" data-i18n="nav.sys">制度演变</button>
+    <button class="mod" data-go="m-battle" data-i18n="nav.battle">著名战役</button>
+    <button class="mod" data-go="m-people" data-i18n="nav.people">历史人物</button>
+    <button class="mod" data-go="m-world" data-i18n="nav.world">世界对比</button>
   </nav>
 
   <section class="module active" id="m-home">
@@ -79,6 +83,10 @@
       <button class="entry" data-go="m-span"><span class="entry-ic">📊</span><span class="entry-t" data-i18n="entry.span.t">存续一览</span><span class="entry-d" data-i18n="entry.span.d">按年代比例对比各朝长短，一眼看三千年</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-inv"><span class="entry-ic">🧭</span><span class="entry-t" data-i18n="entry.inv.t">四大发明</span><span class="entry-d" data-i18n="entry.inv.d">造纸、印刷、火药、指南针的朝代、人物与世界影响</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-events"><span class="entry-ic">🗓️</span><span class="entry-t" data-i18n="entry.events.t">历史大事记</span><span class="entry-d" data-i18n="entry.events.d">32 个关键节点，串起王朝兴替</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-sys"><span class="entry-ic">🏛️</span><span class="entry-t" data-i18n="entry.sys.t">制度演变</span><span class="entry-d" data-i18n="entry.sys.d">选官、官制、赋税、军事、律法的跨朝脉络一览</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-battle"><span class="entry-ic">⚔️</span><span class="entry-t" data-i18n="entry.battle.t">著名战役</span><span class="entry-d" data-i18n="entry.battle.d">以少胜多、统一兼并、农民起义、边疆对外</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-people"><span class="entry-ic">👤</span><span class="entry-t" data-i18n="entry.people.t">历史人物</span><span class="entry-d" data-i18n="entry.people.d">按女性、思想家、文学家、科学家等主题筛选名人</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
+      <button class="entry" data-go="m-world"><span class="entry-ic">🌍</span><span class="entry-t" data-i18n="entry.world.t">世界对比</span><span class="entry-d" data-i18n="entry.world.d">同时期的中国与世界主要文明横向对照</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
     </div>
   </section>
 
@@ -116,6 +124,29 @@
     <div class="rec-grid" id="recGrid"></div>
   </section>
 
+  <section class="module" id="m-sys">
+    <div class="inv-head"><h2 data-i18n="sysTitle">制度演变</h2><p data-i18n="sysSub">选官 · 官制 · 赋税 · 军事 · 律法的跨朝脉络</p></div>
+    <div class="sys-list" id="sysList"></div>
+  </section>
+
+  <section class="module" id="m-battle">
+    <div class="inv-head"><h2 data-i18n="btlTitle">著名战役</h2><p data-i18n="btlSub">以少胜多 · 统一兼并 · 农民起义 · 边疆对外 · 点击可跳转朝代</p></div>
+    <nav class="tabs" id="btlTabs"></nav>
+    <div class="btl-list" id="btlList"></div>
+  </section>
+
+  <section class="module" id="m-people">
+    <div class="inv-head"><h2 data-i18n="pplTitle">历史人物</h2><p data-i18n="pplSub">按主题筛选三千年名人 · 点击可跳转朝代</p></div>
+    <nav class="tabs" id="pplTabs"></nav>
+    <p class="ppl-count" id="pplCount"></p>
+    <div class="ppl-grid" id="pplGrid"></div>
+  </section>
+
+  <section class="module" id="m-world">
+    <div class="inv-head"><h2 data-i18n="worldTitle">世界对比</h2><p data-i18n="worldSub">同时期的中国与世界主要文明 · 点击可跳转朝代</p></div>
+    <div class="world-list" id="worldList"></div>
+  </section>
+
   <p class="foot" id="foot"></p>
 </div>
 
@@ -133,15 +164,23 @@ const I18N={
     heroTitle:"中华王朝 · 千年脉络",
     heroSub:"从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。",
     heroIssue:"发现问题或有建议？欢迎到 GitHub 提 Issue：",
-    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最"},
+    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最",sys:"制度演变",battle:"著名战役",people:"历史人物",world:"世界对比"},
     homeLead:"从夏到清 · 21 个朝代与过渡时期的帝王、人才、制度与时代脉络 —— 选一个板块开始",
-    entry:{timeline:{t:"朝代时间轴",d:"21 个朝代与过渡时期，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"}},
+    entry:{timeline:{t:"朝代时间轴",d:"21 个朝代与过渡时期，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"},sys:{t:"制度演变",d:"选官、官制、赋税、军事、律法的跨朝脉络一览"},battle:{t:"著名战役",d:"以少胜多、统一兼并、农民起义、边疆对外"},people:{t:"历史人物",d:"按女性、思想家、文学家、科学家等主题筛选名人"},world:{t:"世界对比",d:"同时期的中国与世界主要文明横向对照"}},
     enter:"进入 →",
     geoArea:"国土面积",secTerritory:"疆域",
     spanTitle:"朝代存续一览",spanSub:"长度按年代比例 · 点击任意行可跳转",
     invTitle:"四大发明",invSub:"改变世界的中国创造 · 点击可跳转到对应朝代",
     evTitle:"历史大事记",evSub:"关键节点 · 点击可跳转到对应朝代",
     recTitle:"帝王之最",recSub:"基于各朝代帝王世系统计 · 点击可跳转到对应朝代",
+    sysTitle:"制度演变",sysSub:"选官 · 官制 · 赋税 · 军事 · 律法的跨朝脉络",
+    btlTitle:"著名战役",btlSub:"以少胜多 · 统一兼并 · 农民起义 · 边疆对外 · 点击可跳转朝代",
+    pplTitle:"历史人物",pplSub:"按主题筛选三千年名人 · 点击可跳转朝代",
+    worldTitle:"世界对比",worldSub:"同时期的中国与世界主要文明 · 点击可跳转朝代",
+    btlAll:"全部",btlType:{fewer:"以少胜多",unify:"统一兼并",revolt:"农民起义",frontier:"边疆·对外"},btlGenLabel:"主将",
+    pplAll:"全部",pplCount:"共 {n} 位",
+    worldCnLabel:"中国",worldWorldLabel:"同时期世界",
+    roleTag:{政治家:"政治家",军事家:"军事家",女性:"女性",思想家:"思想家",文学家:"文学家",科学家:"科学家",医学家:"医学家",艺术家:"艺术家",改革家:"改革家","航海·探索":"航海·探索"},
     searchPh:"搜索：朝代 / 帝王 / 人物 / 制度 / 发明，如「李世民」「科举」「火药」",
     kpiMain:"主要王朝",kpiYears:"年王朝（夏→清）",kpiYearsV:"约4000",kpiPeople:"帝王与人才",
     statEmperors:"帝王",statTalents:"人才",statPolicies:"制度",unitPerson:"位",unitItem:"项",
@@ -159,7 +198,7 @@ const I18N={
     recNoteLong:"「约」为传说或存疑纪年（如夏、商），与信史不完全可比。",
     recNoteShort:"「约」为按月 / 日估算；史料仅记年至者按 1 年计。",
     searchEmpty:"未找到「{q}」相关内容",
-    srType:{dynasty:"朝代",ruler:"帝王",figure:"人物",institution:"制度",invention:"发明",event:"事件",achievement:"成就"},
+    srType:{朝代:"朝代",帝王:"帝王",文臣:"文臣",武将:"武将","思想·文人":"思想·文人",其他:"其他",制度:"制度",发明:"发明",战役:"战役",事件:"事件",成就:"成就"},
     overviewFail:"概览数据加载失败：请确认 data/overview.json 存在且通过 HTTP 访问（GitHub Pages 部署后正常）。",
     toTop:"返回顶部",langName:"中文",themeNight:"🌙 夜间",themeDay:"☀️ 日间",
     jsonName:"中华王朝时间轴",jsonDesc:"科普中国历史朝代（夏到清）的静态网页，含各王朝概览、帝王世系、核心人才与关键制度。",
@@ -171,15 +210,23 @@ const I18N={
     heroTitle:"Chinese Dynasties · A Millennial Saga",
     heroSub:"From Xia to Qing, explore each dynasty's imperial lineage, key talents, and pivotal institutions — and grasp three millennia of power, order, and civilization.",
     heroIssue:"Found a bug or have a suggestion? Please open an issue on GitHub:",
-    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers"},
+    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers",sys:"Institutions",battle:"Famous Battles",people:"Figures",world:"China & the World"},
     homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 21 dynasties & periods. Pick a section to begin.",
-    entry:{timeline:{t:"Dynastic Timeline",d:"21 dynasties & periods with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"}},
+    entry:{timeline:{t:"Dynastic Timeline",d:"21 dynasties & periods with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"},sys:{t:"Institutions",d:"Selection, government, taxation, military and law across dynasties"},battle:{t:"Famous Battles",d:"Outnumbered wins, unification, peasant revolts, frontier wars"},people:{t:"Historical Figures",d:"Filter notables by women, thinkers, literati, scientists and more"},world:{t:"China & the World",d:"China alongside the world's major civilizations in the same era"}},
     enter:"Enter →",
     geoArea:"Land Area",secTerritory:"Territory",
     spanTitle:"Dynastic Spans",spanSub:"Bars scaled by era · click any row to jump",
     invTitle:"Four Great Inventions",invSub:"Chinese creations that changed the world · click to jump to the dynasty",
     evTitle:"Key Events",evSub:"Key milestones · click to jump to the dynasty",
     recTitle:"Top Rulers",recSub:"Based on each dynasty's imperial genealogy · click to jump",
+    sysTitle:"Institutions Through the Ages",sysSub:"Selection · government · taxation · military · law across dynasties",
+    btlTitle:"Famous Battles",btlSub:"Outnumbered wins · unification · peasant revolts · frontier wars · click to jump",
+    pplTitle:"Historical Figures",pplSub:"Filter three millennia of notables by theme · click to jump",
+    worldTitle:"China & the World",worldSub:"China alongside the world's major civilizations in the same era · click to jump",
+    btlAll:"All",btlType:{fewer:"Outnumbered Wins",unify:"Unification",revolt:"Peasant Revolts",frontier:"Frontier & Foreign"},btlGenLabel:"Commanders",
+    pplAll:"All",pplCount:"{n} figures",
+    worldCnLabel:"China",worldWorldLabel:"The wider world",
+    roleTag:{政治家:"Statesmen",军事家:"Generals",女性:"Women",思想家:"Thinkers",文学家:"Literati",科学家:"Scientists",医学家:"Physicians",艺术家:"Artists",改革家:"Reformers","航海·探索":"Explorers"},
     searchPh:"Search: dynasty / ruler / figure / institution / invention, e.g. “Li Shimin”, “keju”, “gunpowder”",
     kpiMain:"Major Dynasties",kpiYears:"Yrs of Dynasties (Xia→Qing)",kpiYearsV:"~4000",kpiPeople:"Rulers & Talents",
     statEmperors:"Rulers",statTalents:"Talents",statPolicies:"Policies",unitPerson:"",unitItem:"",
@@ -197,7 +244,7 @@ const I18N={
     recNoteLong:"“~” marks legendary or uncertain chronologies (e.g. Xia, Shang), not strictly comparable with documented reigns.",
     recNoteShort:"“~” marks month/day estimates; where sources record only years, a reign counts as 1 year.",
     searchEmpty:"No results for “{q}”",
-    srType:{dynasty:"Dynasty",ruler:"Ruler",figure:"Figure",institution:"Institution",invention:"Invention",event:"Event",achievement:"Achievement"},
+    srType:{朝代:"Dynasty",帝王:"Ruler",文臣:"Civil Official",武将:"General","思想·文人":"Thinker/Literatus",其他:"Figure",制度:"Institution",发明:"Invention",战役:"Battle",事件:"Event",成就:"Achievement"},
     overviewFail:"Failed to load overview data: ensure data/overview.json exists and is served over HTTP (works after GitHub Pages deploy).",
     toTop:"Back to top",langName:"EN",themeNight:"🌙 Night",themeDay:"☀️ Day",
     jsonName:"Chinese Dynasties Timeline",jsonDesc:"A static page introducing Chinese dynasties (Xia to Qing) with overviews, imperial lineages, key talents, and pivotal institutions.",
@@ -604,6 +651,71 @@ function renderRecords(r){
   });
 }
 
+/* ---------- 制度演变 ---------- */
+let sysData=null;
+function renderSystems(list){
+  if(!list)return;
+  document.getElementById('sysList').innerHTML=list.map(th=>{
+    const stages=th.stages.map((s,i)=>
+      `<div class="sys-stage"><span class="sys-k">${L(s,'k')}</span><span class="sys-n">${L(s,'n')}</span><span class="sys-x">${L(s,'x')}</span></div>`+
+      (i<th.stages.length-1?`<span class="sys-arrow" aria-hidden="true">→</span>`:'')
+    ).join('');
+    return `<div class="sys-thread"><div class="sys-th"><span class="sys-ic">${th.icon}</span>${L(th,'title')}</div><div class="sys-flow">${stages}</div></div>`;
+  }).join('');
+}
+
+/* ---------- 著名战役 ---------- */
+let btlData=null,btlType='all';
+const BTL_TYPES=['all','fewer','unify','revolt','frontier'];
+function renderBattles(){
+  if(!btlData)return;
+  document.getElementById('btlTabs').innerHTML=BTL_TYPES.map(k=>`<div class="tab${btlType===k?' active':''}" data-bt="${k}" role="button" tabindex="0">${k==='all'?t('btlAll'):t('btlType.'+k)}</div>`).join('');
+  document.querySelectorAll('#btlTabs .tab').forEach(el=>{
+    const go=()=>{btlType=el.dataset.bt;renderBattles();};
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+  const list=btlData.filter(b=>btlType==='all'||b.type===btlType).sort((a,b)=>a.y-b.y);
+  document.getElementById('btlList').innerHTML=list.map(b=>{
+    const y=b.y<0?((lang==='zh'?'前':'BC ')+(-b.y)):b.y;
+    const dn=ovById[b.d]?L(ovById[b.d],'name'):'';
+    return `<div class="btl" data-dynasty="${b.d}" role="button" tabindex="0"><span class="btl-year">${y}</span><div class="btl-main"><div class="btl-top"><span class="btl-name">${L(b,'n')}</span><span class="btl-tag t-${b.type}">${t('btlType.'+b.type)}</span></div><span class="btl-gen"><b>${t('btlGenLabel')}</b> ${L(b,'gen')}</span><span class="btl-x">${L(b,'x')}</span></div><span class="btl-dyn">${dn}</span></div>`;
+  }).join('');
+  document.querySelectorAll('#btlList .btl').forEach(el=>{
+    const go=()=>jumpToDynasty(el.dataset.dynasty);
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+}
+
+/* ---------- 历史人物 ---------- */
+let pplData=null,pplTag='all';
+const PPL_TAGS=['all','女性','思想家','文学家','科学家','医学家','艺术家','军事家','政治家','改革家','航海·探索'];
+function renderPeople(){
+  if(!pplData)return;
+  document.getElementById('pplTabs').innerHTML=PPL_TAGS.map(k=>`<div class="tab${pplTag===k?' active':''}" data-pt="${k}" role="button" tabindex="0">${k==='all'?t('pplAll'):(t('roleTag.'+k)||k)}</div>`).join('');
+  document.querySelectorAll('#pplTabs .tab').forEach(el=>{
+    const go=()=>{pplTag=el.dataset.pt;renderPeople();};
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+  const list=pplData.filter(p=>pplTag==='all'||p.tags.includes(pplTag));
+  const cnt=document.getElementById('pplCount');if(cnt)cnt.textContent=t('pplCount',{n:list.length});
+  document.getElementById('pplGrid').innerHTML=list.map(p=>`<div class="ppl" data-dynasty="${p.d}" role="button" tabindex="0"><div class="ppl-top"><span class="ppl-name">${L(p,'n')}</span><span class="ppl-dyn">${L(p,'dn')}</span></div><span class="ppl-note">${L(p,'note')}</span><div class="ppl-tags">${p.tags.map(tg=>`<span class="ppl-tag">${t('roleTag.'+tg)||tg}</span>`).join('')}</div></div>`).join('');
+  document.querySelectorAll('#pplGrid .ppl').forEach(el=>{
+    const go=()=>jumpToDynasty(el.dataset.dynasty);
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+}
+
+/* ---------- 世界对比 ---------- */
+let worldData=null;
+function renderWorld(){
+  if(!worldData)return;
+  document.getElementById('worldList').innerHTML=worldData.map(w=>`<div class="world-row" data-dynasty="${w.d}" role="button" tabindex="0"><div class="world-side cn"><span class="world-lbl">${t('worldCnLabel')}</span><span class="world-cn">${L(w,'cn')}</span><span class="world-period">${L(w,'period')}</span></div><span class="world-arrow" aria-hidden="true">⇆</span><div class="world-side"><span class="world-lbl">${t('worldWorldLabel')}</span><span class="world-world">${L(w,'world')}</span></div><span class="world-note">${L(w,'x')}</span></div>`).join('');
+  document.querySelectorAll('#worldList .world-row').forEach(el=>{
+    const go=()=>jumpToDynasty(el.dataset.dynasty);
+    el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+  });
+}
+
 /* ---------- 搜索 ---------- */
 let searchIndex=null;
 const searchEl=document.getElementById('search');
@@ -676,6 +788,10 @@ function rerenderTranslatable(){
   if(invData)renderInventions(invData);
   if(evData)renderEvents(evData);
   if(recData)renderRecords(recData);
+  if(sysData)renderSystems(sysData);
+  if(btlData)renderBattles();
+  if(pplData)renderPeople();
+  if(worldData)renderWorld();
 }
 function setLang(next){
   lang=next;localStorage.setItem('lang',next);
@@ -704,6 +820,10 @@ function setLang(next){
   try{const r=await fetch('data/events.json');if(r.ok){evData=await r.json();renderEvents(evData);}}catch(e){}
   try{const r=await fetch('data/records.json');if(r.ok){recData=await r.json();renderRecords(recData);}}catch(e){}
   try{const r=await fetch('data/geo.json');if(r.ok){const arr=await r.json();geoList=arr;arr.forEach(g=>geoData[g.id]=g);geoReady=true;render();}}catch(e){}
+  try{const r=await fetch('data/systems.json');if(r.ok){sysData=await r.json();renderSystems(sysData);}}catch(e){}
+  try{const r=await fetch('data/battles.json');if(r.ok){btlData=await r.json();renderBattles();}}catch(e){}
+  try{const r=await fetch('data/people.json');if(r.ok){pplData=await r.json();renderPeople();}}catch(e){}
+  try{const r=await fetch('data/world.json');if(r.ok){worldData=await r.json();renderWorld();}}catch(e){}
   const h=decodeURIComponent(location.hash.slice(1));
   if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
 })();
