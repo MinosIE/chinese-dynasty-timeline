@@ -1,0 +1,8 @@
+[
+  { "id": "chunqiu", "kind": "split", "n": "春秋战国", "nEn": "Spring & Autumn · Warring States", "from": -770, "to": -221, "d": "zhanguo", "note": "王室衰微、诸侯争霸，走向秦的统一。", "noteEn": "A weakened royal house and contending states, ending in Qin's unification." },
+  { "id": "qinhan", "kind": "unify", "n": "秦汉大一统", "nEn": "Qin–Han Unification", "from": -221, "to": 220, "d": "han", "note": "首个大一统帝国，奠定此后两千年的版图与制度。", "noteEn": "The first unified empire, setting the map and institutions for two millennia." },
+  { "id": "weijin", "kind": "split", "n": "三国两晋南北朝", "nEn": "Three Kingdoms to North–South Dynasties", "from": 220, "to": 589, "d": "nanbeichao", "note": "政权更迭、民族大融合，南北长期对峙。", "noteEn": "Shifting regimes and great ethnic fusion, a long north–south standoff." },
+  { "id": "suitang", "kind": "unify", "n": "隋唐大一统", "nEn": "Sui–Tang Unification", "from": 589, "to": 907, "d": "tang", "note": "重归一统，开放繁荣，万国来朝。", "noteEn": "Reunification, openness and prosperity, with nations paying tribute." },
+  { "id": "wudai", "kind": "split", "n": "五代十国 · 辽宋夏金", "nEn": "Five Dynasties to Liao-Song-Jin", "from": 907, "to": 1279, "d": "song", "note": "中原政权更迭，多政权并立。", "noteEn": "Successive Central Plains regimes with multiple states coexisting." },
+  { "id": "yuanmingqing", "kind": "unify", "n": "元明清大一统", "nEn": "Yuan–Ming–Qing Unification", "from": 1279, "to": 1912, "d": "qing", "note": "疆域空前，统一多民族国家巩固。", "noteEn": "Unprecedented territory; a consolidated multi-ethnic state." }
+]

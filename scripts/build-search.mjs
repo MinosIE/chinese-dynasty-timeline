@@ -26,5 +26,14 @@ for (const r of reforms) idx.push({ d: r.d, dn: nameById[r.d] || r.d, dnEn: name
 const idioms = JSON.parse(fs.readFileSync('data/idioms.json', 'utf8'));
 for (const x of idioms) idx.push({ d: x.d, dn: nameById[x.d] || x.d, dnEn: nameEnById[x.d] || x.d, t: '成语', n: x.n, x: `${x.src} ${x.mean}`, nEn: x.nEn, xEn: `${x.srcEn} ${x.meanEn}` });
 
+const exchange = JSON.parse(fs.readFileSync('data/exchange.json', 'utf8'));
+for (const x of exchange) idx.push({ d: x.d, dn: nameById[x.d] || x.d, dnEn: nameEnById[x.d] || x.d, t: '交流', n: x.n, x: `${x.who} ${x.dir} ${x.detail}`, nEn: x.nEn, xEn: `${x.whoEn} ${x.dirEn} ${x.detailEn}` });
+
+const archaeo = JSON.parse(fs.readFileSync('data/archaeo.json', 'utf8'));
+for (const x of archaeo) idx.push({ d: x.d, dn: nameById[x.d] || x.d, dnEn: nameEnById[x.d] || x.d, t: '考古', n: x.n, x: `${x.y} ${x.site} ${x.find}`, nEn: x.nEn, xEn: `${x.yEn} ${x.siteEn} ${x.findEn}` });
+
+const quotes = JSON.parse(fs.readFileSync('data/quotes.json', 'utf8'));
+for (const x of quotes) idx.push({ d: x.d, dn: nameById[x.d] || x.d, dnEn: nameEnById[x.d] || x.d, t: '名句', n: x.q, x: `${x.author} ${x.src}`, nEn: x.qEn, xEn: `${x.authorEn} ${x.srcEn}` });
+
 fs.writeFileSync('data/search.json', JSON.stringify(idx) + '\n');
 console.log(`搜索索引条目: ${idx.length}`);
