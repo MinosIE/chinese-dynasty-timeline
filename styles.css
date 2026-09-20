@@ -355,7 +355,7 @@
   @media(max-width:640px){.sys-flow{flex-direction:column;overflow:visible}.sys-stage{min-width:0}.sys-arrow{transform:rotate(90deg);align-self:flex-start;margin-left:14px}}
 
   /* 著名战役 */
-  .btl-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;align-items:stretch}
+  .btl-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));gap:12px;align-items:stretch}
   .btl{display:flex;flex-direction:column;gap:7px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);box-shadow:var(--s-soft);padding:13px 15px;cursor:pointer;transition:.15s}
   .btl:hover{box-shadow:var(--s-card);transform:translateY(-2px);border-color:var(--brand)}
   .btl:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
@@ -374,7 +374,7 @@
 
   /* 历史人物 */
   .ppl-count{text-align:center;color:var(--text-mute);font-size:12.5px}
-  .ppl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+  .ppl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr));gap:12px}
   .ppl{display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r2);box-shadow:var(--s-soft);padding:13px 15px;cursor:pointer;transition:.15s}
   .ppl:hover{box-shadow:var(--s-card);transform:translateY(-2px);border-color:var(--brand)}
   .ppl:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
@@ -386,7 +386,7 @@
   .ppl-tag{font-size:10.5px;font-weight:600;color:var(--text-mute);background:var(--chip-bg);border:1px solid var(--border);border-radius:999px;padding:1px 8px}
 
   /* 世界对比 */
-  .world-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:12px;align-items:stretch}
+  .world-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(400px,100%),1fr));gap:12px;align-items:stretch}
   .world-row{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;align-content:start;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:var(--r3);box-shadow:var(--s-soft);padding:14px 18px;cursor:pointer;transition:.15s}
   .world-row:hover{box-shadow:var(--s-card);border-color:var(--brand)}
   .world-row:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
