@@ -69,7 +69,6 @@
     <button class="mod" data-go="m-inv" data-i18n="nav.inv">四大发明</button>
     <button class="mod" data-go="m-events" data-i18n="nav.events">大事记</button>
     <button class="mod" data-go="m-records" data-i18n="nav.records">帝王之最</button>
-    <button class="mod" data-go="m-geo" data-i18n="nav.geo">疆域</button>
   </nav>
 
   <section class="module active" id="m-home">
@@ -79,7 +78,6 @@
       <button class="entry" data-go="m-span"><span class="entry-ic">📊</span><span class="entry-t" data-i18n="entry.span.t">存续一览</span><span class="entry-d" data-i18n="entry.span.d">按年代比例对比各朝长短，一眼看三千年</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-inv"><span class="entry-ic">🧭</span><span class="entry-t" data-i18n="entry.inv.t">四大发明</span><span class="entry-d" data-i18n="entry.inv.d">造纸、印刷、火药、指南针的朝代、人物与世界影响</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
       <button class="entry" data-go="m-events"><span class="entry-ic">🗓️</span><span class="entry-t" data-i18n="entry.events.t">历史大事记</span><span class="entry-d" data-i18n="entry.events.d">32 个关键节点，串起王朝兴替</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
-      <button class="entry" data-go="m-geo"><span class="entry-ic">🗺️</span><span class="entry-t" data-i18n="entry.geo.t">疆域 · 传承</span><span class="entry-d" data-i18n="entry.geo.d">都城落点 + 疆域四至，一眼看清历代版图伸缩</span><span class="entry-go" data-i18n="enter">进入 →</span></button>
     </div>
   </section>
 
@@ -117,17 +115,6 @@
     <div class="rec-grid" id="recGrid"></div>
   </section>
 
-  <section class="module" id="m-geo">
-    <section class="geo">
-      <div class="inv-head"><h2 data-i18n="geoTitle">历代疆域 · 都城分布</h2><p data-i18n="geoSub">点击都城标点，查看该朝疆域四至与详情</p></div>
-      <div class="geo-wrap">
-        <div class="geo-map" id="geoMap"></div>
-        <aside class="geo-info" id="geoInfo"></aside>
-      </div>
-      <p class="geo-hint" data-i18n="geoHint"></p>
-    </section>
-  </section>
-
   <p class="foot" id="foot"></p>
 </div>
 
@@ -144,11 +131,11 @@ const I18N={
     docTitle:"中华王朝 · 千年脉络 | 中国历史朝代科普",docDesc:"从夏到清的中国历史朝代科普：每个王朝的概览、帝王世系、核心人才与关键制度一目了然，帮你建立三千年王朝脉络。",
     heroTitle:"中华王朝 · 千年脉络",
     heroSub:"从夏到清，逐一展开每个朝代的帝王世系、核心人才与关键政策，帮你看懂三千年权力、制度与文明的流转。",
-    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最",geo:"疆域"},
+    nav:{home:"概览",timeline:"朝代时间轴",span:"存续一览",inv:"四大发明",events:"大事记",records:"帝王之最"},
     homeLead:"从夏到清 · 18 个王朝的帝王、人才、制度与时代脉络 —— 选一个板块开始",
-    entry:{timeline:{t:"朝代时间轴",d:"18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"},geo:{t:"疆域 · 传承",d:"都城落点 + 疆域四至，一眼看清历代版图伸缩"}},
+    entry:{timeline:{t:"朝代时间轴",d:"18 个王朝，展开帝王世系、核心人才、制度，以及政治 · 经济 · 文化"},span:{t:"存续一览",d:"按年代比例对比各朝长短，一眼看三千年"},inv:{t:"四大发明",d:"造纸、印刷、火药、指南针的朝代、人物与世界影响"},events:{t:"历史大事记",d:"32 个关键节点，串起王朝兴替"}},
     enter:"进入 →",
-    geoTitle:"历代疆域 · 都城分布",geoSub:"点击都城标点，查看该朝疆域四至与详情",geoCapital:"都城",geoYears:"年代",geoArea:"国土面积",geoTerritory:"疆域四至",geoView:"查看该朝详情 →",geoHint:"提示：圆点颜色对应所属大时代；重叠点表示多朝共都。",geoEmpty:"选择地图上的都城标点，查看对应朝代的疆域四至。",geoSCS:"南海诸岛",secTerritory:"疆域",
+    geoArea:"国土面积",secTerritory:"疆域",
     spanTitle:"朝代存续一览",spanSub:"长度按年代比例 · 点击任意行可跳转",
     invTitle:"四大发明",invSub:"改变世界的中国创造 · 点击可跳转到对应朝代",
     evTitle:"历史大事记",evSub:"关键节点 · 点击可跳转到对应朝代",
@@ -181,11 +168,11 @@ const I18N={
     docTitle:"Chinese Dynasties · A Millennial Saga",docDesc:"From Xia to Qing: explore each Chinese dynasty's overview, imperial lineage, key talents, and pivotal institutions at a glance — three millennia of power, order, and civilization.",
     heroTitle:"Chinese Dynasties · A Millennial Saga",
     heroSub:"From Xia to Qing, explore each dynasty's imperial lineage, key talents, and pivotal institutions — and grasp three millennia of power, order, and civilization.",
-    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers",geo:"Territory"},
+    nav:{home:"Overview",timeline:"Dynastic Timeline",span:"Duration at a Glance",inv:"Four Great Inventions",events:"Key Events",records:"Top Rulers"},
     homeLead:"From Xia to Qing — the rulers, talents, institutions, and eras of 18 dynasties. Pick a section to begin.",
-    entry:{timeline:{t:"Dynastic Timeline",d:"18 dynasties with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"},geo:{t:"Territory & Capitals",d:"Capital locations and the territorial extent of each dynasty"}},
+    entry:{timeline:{t:"Dynastic Timeline",d:"18 dynasties with imperial lines, key talents, institutions, and politics · economy · culture"},span:{t:"Duration at a Glance",d:"Compare dynastic spans to scale — see three millennia at a glance"},inv:{t:"Four Great Inventions",d:"The dynasties, figures, and global impact of paper, printing, gunpowder, the compass"},events:{t:"Key Events",d:"32 milestones tracing the rise and fall of dynasties"}},
     enter:"Enter →",
-    geoTitle:"Territory & Capital Map",geoSub:"Tap a capital marker to see that dynasty's extent and details",geoCapital:"Capital",geoYears:"Period",geoArea:"Land Area",geoTerritory:"Territorial Extent",geoView:"View dynasty details →",geoHint:"Tip: dot color marks the era; overlapping dots mean shared capitals.",geoEmpty:"Select a capital marker on the map to see that dynasty's territorial extent.",geoSCS:"South China Sea",secTerritory:"Territory",
+    geoArea:"Land Area",secTerritory:"Territory",
     spanTitle:"Dynastic Spans",spanSub:"Bars scaled by era · click any row to jump",
     invTitle:"Four Great Inventions",invSub:"Chinese creations that changed the world · click to jump to the dynasty",
     evTitle:"Key Events",evSub:"Key milestones · click to jump to the dynasty",
@@ -637,48 +624,8 @@ searchEl.addEventListener('keydown',e=>{
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidden=true;});
 
-/* ---------- F22: 疆域 · 都城分布（SVG 示意地图，零依赖） ---------- */
-const GEO={lng0:73,lng1:135,lat0:18,lat1:53,x0:60,y0:60,w:880,h:680};
-function project(lng,lat){return [GEO.x0+(lng-GEO.lng0)/(GEO.lng1-GEO.lng0)*GEO.w, GEO.y0+(GEO.lat1-lat)/(GEO.lat1-GEO.lat0)*GEO.h];}
-const CN_BOUNDS=[[80.26,42.35],[80.18,42.92],[80.87,43.18],[79.97,44.92],[81.95,45.32],[82.46,45.54],[83.18,47.33],[85.16,47],[85.72,47.45],[85.77,48.46],[86.6,48.55],[87.36,49.21],[87.75,49.3],[88.01,48.6],[88.85,48.07],[90.28,47.69],[90.97,46.89],[90.59,45.72],[90.95,45.29],[92.13,45.12],[93.48,44.98],[94.69,44.35],[95.31,44.24],[95.76,43.32],[96.35,42.73],[97.45,42.75],[99.52,42.52],[100.85,42.66],[101.83,42.51],[103.31,41.91],[104.52,41.91],[104.96,41.6],[106.13,42.13],[107.74,42.48],[109.24,42.52],[110.41,42.87],[111.13,43.41],[111.83,43.74],[111.67,44.07],[111.35,44.46],[111.87,45.1],[112.44,45.01],[113.46,44.81],[114.46,45.34],[115.99,45.73],[116.72,46.39],[117.42,46.67],[118.87,46.81],[119.66,46.69],[119.77,47.05],[118.87,47.75],[118.06,48.07],[117.3,47.7],[116.31,47.85],[115.74,47.73],[115.49,48.14],[116.19,49.13],[116.68,49.89],[117.88,49.51],[119.29,50.14],[119.28,50.58],[120.18,51.64],[120.74,51.96],[120.73,52.52],[120.18,52.75],[121,53.25],[122.25,53.43],[123.57,53.46],[125.07,53.16],[125.95,52.79],[126.56,51.78],[126.94,51.35],[127.29,50.74],[127.66,49.76],[129.4,49.44],[130.58,48.73],[130.99,47.79],[132.51,47.79],[133.37,48.18],[135.03,48.48],[134.5,47.58],[134.11,47.21],[133.77,46.12],[133.1,45.14],[131.88,45.32],[131.03,44.97],[131.29,44.11],[131.14,42.93],[130.63,42.9],[130.64,42.4],[129.99,42.99],[129.6,42.42],[128.05,41.99],[128.21,41.47],[127.34,41.5],[126.87,41.82],[126.18,41.11],[125.08,40.57],[124.27,39.93],[122.87,39.64],[122.13,39.17],[121.05,38.9],[121.59,39.36],[121.38,39.75],[122.17,40.42],[121.64,40.95],[120.77,40.59],[119.64,39.9],[119.02,39.25],[118.04,39.2],[117.53,38.74],[118.06,38.06],[118.88,37.9],[118.91,37.45],[119.7,37.16],[120.82,37.87],[121.71,37.48],[122.36,37.45],[122.52,36.93],[121.1,36.65],[120.64,36.11],[119.66,35.61],[119.15,34.91],[120.23,34.36],[120.62,33.38],[121.23,32.46],[121.91,31.69],[121.89,30.95],[121.26,30.68],[121.5,30.14],[122.09,29.83],[121.94,29.02],[121.68,28.23],[121.13,28.14],[120.4,27.05],[119.59,25.74],[118.66,24.55],[117.28,23.62],[115.89,22.78],[114.76,22.67],[114.15,22.22],[113.81,22.55],[113.24,22.05],[111.84,21.55],[110.79,21.4],[110.44,20.34],[109.89,20.28],[109.63,21.01],[109.86,21.4],[108.52,21.72],[108.05,21.55],[107.04,21.81],[106.57,22.22],[106.73,22.79],[105.81,22.98],[105.33,23.35],[104.48,22.82],[103.5,22.7],[102.71,22.71],[102.17,22.46],[101.65,22.32],[101.8,21.17],[101.27,21.2],[101.18,21.44],[101.15,21.85],[100.42,21.56],[99.98,21.74],[99.24,22.12],[99.53,22.95],[98.9,23.14],[98.66,24.06],[97.6,23.9],[97.72,25.08],[98.67,25.92],[98.71,26.74],[98.68,27.51],[98.25,27.75],[97.91,28.34],[97.33,28.26],[96.25,28.41],[96.59,28.83],[96.12,29.45],[95.4,29.03],[94.57,29.28],[93.41,28.64],[92.5,27.9],[91.7,27.77],[91.26,28.04],[90.73,28.06],[90.02,28.3],[89.48,28.04],[88.81,27.3],[88.73,28.09],[88.12,27.88],[86.95,27.97],[85.82,28.2],[85.01,28.64],[84.23,28.84],[83.9,29.32],[83.34,29.46],[82.33,30.12],[81.53,30.42],[81.11,30.18],[79.72,30.88],[78.74,31.52],[78.46,32.62],[79.18,32.48],[79.21,32.99],[78.81,33.51],[78.91,34.32],[77.84,35.49],[76.19,35.9],[75.9,36.67],[75.16,37.13],[74.98,37.42],[74.83,37.99],[74.86,38.38],[74.26,38.61],[73.93,38.51],[73.68,39.43],[73.96,39.66],[73.82,39.89],[74.78,40.37],[75.47,40.56],[76.53,40.43],[76.9,41.07],[78.19,41.19],[78.54,41.58],[80.12,42.12],[80.26,42.35]];
-const CN_ISLANDS=[[109.48,18.2],[108.66,18.51],[108.63,19.37],[109.12,19.82],[110.21,20.1],[110.79,20.08],[111.01,19.7],[110.57,19.26],[110.34,18.68],[109.48,18.2]];
-const CN_TAIWAN=[[121.01,22.62],[120.95,22.5],[120.9,22.38],[120.88,22.26],[120.88,22.14],[120.86,22.03],[120.84,21.93],[120.74,21.96],[120.69,22.03],[120.68,22.16],[120.61,22.31],[120.58,22.36],[120.48,22.44],[120.39,22.48],[120.32,22.55],[120.33,22.54],[120.27,22.63],[120.23,22.72],[120.15,22.97],[120.12,23.04],[120.08,23.09],[120.07,23.15],[120.09,23.21],[120.12,23.31],[120.14,23.4],[120.13,23.53],[120.13,23.65],[120.16,23.71],[120.63,24.48],[120.76,24.64],[120.84,24.72],[120.9,24.81],[120.96,24.93],[121.04,25.03],[121.1,25.07],[121.37,25.16],[121.45,25.25],[121.52,25.28],[121.59,25.28],[121.64,25.23],[121.69,25.18],[121.73,25.15],[121.85,25.1],[121.91,25.06],[121.93,24.97],[121.86,24.9],[121.82,24.82],[121.81,24.75],[121.83,24.64],[121.83,24.53],[121.74,24.29],[121.64,24.13],[121.61,24.05],[121.58,23.86],[121.53,23.67],[121.48,23.42],[121.4,23.17],[121.35,23.07],[121.3,22.97],[121.16,22.78],[121.01,22.62]];
+/* ---------- 疆域数据（供朝代详情「疆域」与时间轴「国土面积」使用，零依赖） ---------- */
 function G(g,k){return (lang==='en'&&g&&g[k+'En']!=null)?g[k+'En']:g[k];}
-function geoLegend(){const eras=(typeof ERAS!=='undefined'?ERAS:Object.keys(ERA_COLORS)).slice(1);return `<div class="geo-legend">${eras.map(e=>`<span class="geo-lg"><i style="background:${ERA_COLORS[e]||'#697386'}"></i>${I18N[lang].era[e]||e}</span>`).join('')}</div>`;}
-function geoSelect(id){geoSel=id;renderGeo();}
-function renderGeo(){
-  const map=document.getElementById('geoMap'),info=document.getElementById('geoInfo');if(!map||!info)return;
-  if(!geoList.length){map.innerHTML='';info.innerHTML='';return;}
-  const svg=document.createElementNS(SVGNS,'svg');svg.setAttribute('viewBox','0 0 1000 800');svg.setAttribute('class','geo-svg');
-  const ring=poly=>poly.map((p,i)=>{const c=project(p[0],p[1]);return (i?'L':'M')+c[0].toFixed(1)+' '+c[1].toFixed(1);}).join(' ')+' Z';
-  const op=ring(CN_BOUNDS)+' '+ring(CN_ISLANDS)+' '+ring(CN_TAIWAN);
-  const o=document.createElementNS(SVGNS,'path');o.setAttribute('d',op);o.setAttribute('class','geo-outline');svg.appendChild(o);
-  /* 南海诸岛 · 九段线插图（主图纬度范围装不下南海，按制图惯例用左下角插图框） */
-  const INSET={x:28,y:582,w:228,h:200};
-  const ip=(lng,lat)=>[INSET.x+(lng-102)/(126-102)*INSET.w, INSET.y+(24-lat)/(24-2)*INSET.h];
-  const fr=document.createElementNS(SVGNS,'rect');fr.setAttribute('x',INSET.x);fr.setAttribute('y',INSET.y);fr.setAttribute('width',INSET.w);fr.setAttribute('height',INSET.h);fr.setAttribute('class','geo-inset');svg.appendChild(fr);
-  const dashPts=[[122.5,25.5],[121,21.5],[119.8,18.5],[118.2,16],[115.5,13.5],[113,11],[111,9],[109,7.5],[107,6.5],[105,5],[103.5,4]];
-  const dp=dashPts.map((p,i)=>{const c=ip(p[0],p[1]);return (i?'L':'M')+c[0].toFixed(1)+' '+c[1].toFixed(1);}).join(' ');
-  const dash=document.createElementNS(SVGNS,'path');dash.setAttribute('d',dp);dash.setAttribute('class','geo-dash');svg.appendChild(dash);
-  [[112.8,16.8],[112.3,15.5],[111.5,16],[113.6,13.2],[114.4,10.3],[114,9.7]].forEach(p=>{const c=ip(p[0],p[1]);const d=document.createElementNS(SVGNS,'circle');d.setAttribute('cx',c[0].toFixed(1));d.setAttribute('cy',c[1].toFixed(1));d.setAttribute('r',1.7);d.setAttribute('class','geo-islet');svg.appendChild(d);});
-  const lb=document.createElementNS(SVGNS,'text');lb.setAttribute('x',INSET.x+8);lb.setAttribute('y',INSET.y+16);lb.setAttribute('class','geo-inset-label');lb.textContent=t('geoSCS');svg.appendChild(lb);
-  const pts=geoList.map(g=>{const c=project(g.capitalCoord[0],g.capitalCoord[1]);return {g,x:c[0],y:c[1]};});
-  const seen={};
-  pts.forEach(p=>{const k=Math.round(p.x)+','+Math.round(p.y);if(seen[k]){const n=seen[k]++;const a=n*2.4,r=8+n*3.5;p.x+=Math.cos(a)*r;p.y+=Math.sin(a)*r;}else seen[k]=1;});
-  pts.forEach(p=>{const ec=ERA_COLORS[ovById[p.g.id]?.era]||'#697386';const c=document.createElementNS(SVGNS,'circle');c.setAttribute('cx',p.x.toFixed(1));c.setAttribute('cy',p.y.toFixed(1));c.setAttribute('r',geoSel===p.g.id?9:6);c.setAttribute('class','geo-pin'+(geoSel===p.g.id?' sel':''));c.setAttribute('fill',ec);c.style.cursor='pointer';c.addEventListener('click',()=>geoSelect(p.g.id));const tt=document.createElementNS(SVGNS,'title');tt.textContent=L(ovById[p.g.id],'name');c.appendChild(tt);svg.appendChild(c);});
-  map.innerHTML='';map.appendChild(svg);
-  if(!geoSel){info.innerHTML=`<div class="geo-empty">${t('geoEmpty')}</div>`+geoLegend();return;}
-  const g=geoData[geoSel],ov=ovById[geoSel]||{};
-  info.innerHTML=`<div class="geo-card">
-      <div class="geo-card-h"><span class="geo-dot" style="background:${ERA_COLORS[ov.era]||'#697386'}"></span><span class="geo-name">${L(ov,'name')}</span><span class="geo-era">${I18N[lang].era[ov.era]||ov.era}</span></div>
-      <div class="geo-row"><span class="geo-k">${t('geoCapital')}</span><span class="geo-v">${L(ov,'capital')||'—'}</span></div>
-      <div class="geo-row"><span class="geo-k">${t('geoYears')}</span><span class="geo-v">${L(ov,'years')||'—'}</span></div>
-      <div class="geo-row"><span class="geo-k">${t('geoArea')}</span><span class="geo-v">${G(g,'area')||'—'}</span></div>
-      <div class="geo-sec"><div class="geo-sec-h">${t('geoTerritory')}</div><div class="geo-terr">${G(g,'territory')}</div></div>
-      <button class="geo-view" type="button" data-id="${g.id}">${t('geoView')}</button>
-    </div>`+geoLegend();
-  const vb=info.querySelector('.geo-view');if(vb)vb.onclick=()=>jumpToDynasty(g.id);
-}
 
 /* ---------- 多语言切换 ---------- */
 let invData=null,evData=null,recData=null;
@@ -697,7 +644,6 @@ function rerenderTranslatable(){
   if(invData)renderInventions(invData);
   if(evData)renderEvents(evData);
   if(recData)renderRecords(recData);
-  if(geoReady)renderGeo();
 }
 function setLang(next){
   lang=next;localStorage.setItem('lang',next);
@@ -726,7 +672,6 @@ function setLang(next){
   try{const r=await fetch('data/events.json');if(r.ok){evData=await r.json();renderEvents(evData);}}catch(e){}
   try{const r=await fetch('data/records.json');if(r.ok){recData=await r.json();renderRecords(recData);}}catch(e){}
   try{const r=await fetch('data/geo.json');if(r.ok){const arr=await r.json();geoList=arr;arr.forEach(g=>geoData[g.id]=g);geoReady=true;render();}}catch(e){}
-  renderGeo();
   const h=decodeURIComponent(location.hash.slice(1));
   if(h&&document.getElementById(h)){switchModule('m-timeline');const n=document.getElementById(h);n.querySelector('.chead').click();n.scrollIntoView({block:'start'});}
 })();

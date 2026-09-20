@@ -46,7 +46,7 @@ data/
   dynasties/*.json      # ★源：18 朝详情（帝王 / 人才 / 制度 / 三维）
   events.json           # ★源：大事记（32 条）
   inventions.json       # ★源：四大发明
-  geo.json              # ★源：疆域/都城坐标与疆域四至（F22，按 id 关联 overview）
+  geo.json              # ★源：各朝疆域四至与峰值国土面积（按 id 关联 overview，供朝代时间轴/详情展示；原独立疆域地图模块已移除）
   records.json          # ⚙派生：帝王之最（build-records.mjs 生成，勿手改）
   search.json           # ⚙派生：搜索索引 467 条（build-search*.mjs 生成，勿手改）
 scripts/                # Node ESM 构建期脚本（见 1.4 表）
@@ -292,7 +292,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 5.1 已完成
 
-18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 6 分区）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（467 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 中英双语（含 `?lang=en`）· 双语 GEO（llms / hreflang / og:locale:alternate）· JSON-LD · CI · 可见度与体验优化（README 优化 + MIT LICENSE · GEO 全文 llms-full · sitemap 全文入口 · 移动端 KPI 与帝王之最单列 · og-cover 压缩为 JPEG · .gitignore · F22 疆域缩略图 / 都城分布（SVG 示意地图，零依赖））。
+18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 5 个内容模块）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（467 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 中英双语（含 `?lang=en`）· 双语 GEO（llms / hreflang / og:locale:alternate）· JSON-LD · CI · 可见度与体验优化（README 优化 + MIT LICENSE · GEO 全文 llms-full · sitemap 全文入口 · 移动端 KPI 与帝王之最单列 · og-cover 压缩为 JPEG · .gitignore · 各朝疆域（四至 + 国土面积）整合进朝代时间轴与详情页（原独立疆域地图模块已移除））。
 
 ### 5.2 开发中
 
