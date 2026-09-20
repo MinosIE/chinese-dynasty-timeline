@@ -334,7 +334,7 @@ function render(){
       <article class="card collapsed">
         <span class="accent" style="background:${ec}"></span>
         <div class="chead" role="button" tabindex="0" aria-expanded="false">
-          <span class="name">${L(o,'name')}</span><span class="years">${L(o,'years')}</span>${LEGEND_DYNASTIES.has(o.id)?`<span class="legend-mark">👑 ${t('legendTag')}</span>`:''}
+          <span class="name">${L(o,'name')}</span><span class="years">${L(o,'years')}</span>${geoData[o.id]&&geoData[o.id].outline?terrThumb(geoData[o.id],ec):''}${LEGEND_DYNASTIES.has(o.id)?`<span class="legend-mark">👑 ${t('legendTag')}</span>`:''}
           <span class="meta">${L(o,'capital')} · ${L(o,'duration')}</span>
           <span class="toggle"><span class="chev">▾</span>${t('expand')}</span>
         </div>
@@ -627,6 +627,23 @@ document.addEventListener('click',e=>{if(!e.target.closest('.search'))srEl.hidde
 
 /* ---------- 疆域数据（供朝代详情「疆域」与时间轴「国土面积」使用，零依赖） ---------- */
 function G(g,k){return (lang==='en'&&g&&g[k+'En']!=null)?g[k+'En']:g[k];}
+function terrThumb(g,ec){
+  if(!g||!g.outline||!g.outline.length) return '';
+  let minLng=Infinity,maxLng=-Infinity,minLat=Infinity,maxLat=-Infinity;
+  g.outline.forEach(ring=>ring.forEach(([lng,lat])=>{if(lng<minLng)minLng=lng;if(lng>maxLng)maxLng=lng;if(lat<minLat)minLat=lat;if(lat>maxLat)maxLat=lat;}));
+  const W=100,H=60,pad=7;
+  const spanLng=Math.max(maxLng-minLng,0.001),spanLat=Math.max(maxLat-minLat,0.001);
+  const scale=Math.min((W-pad*2)/spanLng,(H-pad*2)/spanLat);
+  const offX=(W-spanLng*scale)/2,offY=(H-spanLat*scale)/2;
+  const proj=(lng,lat)=>[offX+(lng-minLng)*scale,offY+(maxLat-lat)*scale];
+  const polys=g.outline.map(ring=>{
+    const pts=ring.map(([lng,lat])=>{const p=proj(lng,lat);return p[0].toFixed(1)+','+p[1].toFixed(1);}).join(' ');
+    return '<polygon class="terr-poly" points="'+pts+'"/>';
+  }).join('');
+  let dot='';
+  if(g.capitalCoord){const c=proj(g.capitalCoord[0],g.capitalCoord[1]);dot='<circle class="terr-cap" cx="'+c[0].toFixed(1)+'" cy="'+c[1].toFixed(1)+'" r="3.2"/>';}
+  return '<svg class="terr-thumb" viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="--c:'+(ec||'#697386')+'"><g class="terr-fill">'+polys+'</g>'+dot+'</svg>';
+}
 
 /* ---------- 多语言切换 ---------- */
 let invData=null,evData=null,recData=null;

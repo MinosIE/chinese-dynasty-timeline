@@ -129,6 +129,9 @@
   .chead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:18px 22px;cursor:pointer}
   .chead .name{font-size:20px;font-weight:800;color:var(--text-strong)}
   .chead .years{color:var(--brand);font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+  .terr-thumb{flex:0 0 auto;width:64px;height:38px;border:1px solid var(--line);border-radius:8px;background:rgba(127,127,127,.08);padding:3px;box-sizing:border-box}
+  .terr-thumb .terr-poly{fill:var(--c);fill-opacity:.16;stroke:var(--c);stroke-width:1.5;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+  .terr-thumb .terr-cap{fill:var(--c);stroke:#fff;stroke-width:1.5;vector-effect:non-scaling-stroke}
   .legend-mark{display:inline-flex;align-items:center;gap:4px;background:linear-gradient(135deg,#E8C05A,#C79A3A);color:#3A1F1A;
     font-size:11px;font-weight:800;border-radius:999px;padding:2px 9px;line-height:1.5;white-space:nowrap}
   .emp .hontag{cursor:help}
