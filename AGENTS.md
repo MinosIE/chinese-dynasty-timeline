@@ -1,6 +1,6 @@
 # AGENTS.md
 
-> 面向 AI Agent 的项目开发指南。最后更新：2026-09-18 · 适用分支：`main`（GitHub Pages 部署分支）
+> 面向 AI Agent 的项目开发指南。最后更新：2026-09-21 · 适用分支：`main`（GitHub Pages 部署分支）
 > 维护约定：改动架构 / 数据字段 / i18n 约定 / 脚本流水线后，必须同步更新本文件对应小节。
 
 ## 0. 快速上手（30 秒版）
@@ -12,11 +12,13 @@
   ```bash
   node scripts/build-search.mjs     # 重建搜索索引（会重置英文）
   node scripts/build-search-en.mjs  # 补回英文（必须紧跟上一条）
+  node scripts/build-people.mjs     # 重建 data/people.json（历史人物索引，供「历史人物」模块与 GEO）
   node scripts/build-records.mjs    # 重建帝王之最（含英文）
-  node scripts/build-geo.mjs        # 重建 llms.txt / llms-en.txt / robots.txt / sitemap.xml
-  node scripts/build-llms-full.mjs  # 重建 llms-full.txt / llms-full-en.txt（整站全文，供 GEO）
+  node scripts/build-geo.mjs        # 重建 llms.txt / llms-en.txt / robots.txt / sitemap.xml（读 people.json，须在其后）
+  node scripts/build-llms-full.mjs  # 重建 llms-full.txt / llms-full-en.txt（整站全文，供 GEO；读 people/records，须在其后）
   node scripts/check-i18n.mjs       # 双语完整性校验（缺失即失败）
   ```
+  > 注：CI（`.github/workflows/ci.yml`）当前**未**跑 `build-people.mjs`；改动 `dynasties/*.json` 后请本地补跑，否则 `data/people.json` 会与源不一致。
 - **改代码前必读**：[§3 AI Agent 开发指导](#3-ai-agent-开发指导-最高优先级)（尤其 3.2 禁止项 与 3.3 联动表）。
 
 ---
@@ -25,18 +27,18 @@
 
 ### 1.1 项目目标与定位
 
-| 项 | 内容 |
-|---|---|
-| 定位 | 轻量、零依赖、纯静态的中国历史朝代科普站 |
-| 用户 | 中学生 / 家长老师 / 普通读者；以及 AI 搜索引擎（GEO） |
+| 项       | 内容                                                                      |
+| -------- | ------------------------------------------------------------------------- |
+| 定位     | 轻量、零依赖、纯静态的中国历史朝代科普站                                  |
+| 用户     | 中学生 / 家长老师 / 普通读者；以及 AI 搜索引擎（GEO）                     |
 | 核心价值 | 一页建立「三千年王朝脉络」；结构化 JSON + JSON-LD + llms.txt 利于机器引用 |
-| 非目标 | 不做学术考据、不做后端 / 账号 / 数据库、不引入构建工具 |
+| 非目标   | 不做学术考据、不做后端 / 账号 / 数据库、不引入构建工具                    |
 
 ### 1.2 整体架构（目录地图）
 
 ```
-index.html              # 唯一页面：DOM 结构 + 全部内联 JS（约 670 行，见 3.2）
-styles.css              # 全部样式：CSS 变量 + [data-theme="dark"] 覆盖（约 310 行）
+index.html              # 唯一页面：DOM 结构 + 全部内联 JS（约 2590 行，见 2.4 / 5.4）
+styles.css              # 全部样式：CSS 变量 + [data-theme="dark"] 覆盖（约 500 行）
 .nojekyll               # 空文件：跳过 GitHub Pages 的 Jekyll 处理（勿删）
 favicon.svg             # 站点图标
 og-cover.jpg            # 分享封面 1200×630（JPEG 压缩，约 50KB）
@@ -46,9 +48,22 @@ data/
   dynasties/*.json      # ★源：18 朝详情（帝王 / 人才 / 制度 / 三维）
   events.json           # ★源：大事记（32 条）
   inventions.json       # ★源：四大发明
-  geo.json              # ★源：各朝疆域四至与峰值国土面积（按 id 关联 overview，供朝代时间轴/详情展示；原独立疆域地图模块已移除）
+  geo.json              # ★源：各朝疆域四至与峰值国土面积（按 id 关联 overview，供朝代时间轴/详情展示）
+  systems.json          # ★源：制度演变（选官/官制/赋税/军事/律法，供「制度演变」模块）
+  battles.json          # ★源：著名战役（供「著名战役」模块与搜索）
+  world.json            # ★源：世界对比（同时期世界文明，供「世界对比」模块）
+  reforms.json          # ★源：改革与变法（供「改革与变法」模块与搜索）
+  idioms.json           # ★源：成语典故（供「成语典故」模块与搜索）
+  culture.json          # ★源：文化成就（文学/书法/绘画/史学/科技工程，供「文化成就」模块）
+  capitals.json         # ★源：都城与迁都（供「都城与货币」模块）
+  currency.json         # ★源：货币演变（供「都城与货币」模块）
+  exchange.json         # ★源：对外交流（丝路/航海，供「对外交流」模块与搜索）
+  archaeo.json          # ★源：史料与考古（供「史料与考古」模块与搜索）
+  unity.json            # ★源：统一与分裂（四次大一统/三次大分裂，供「统一与分裂」模块）
+  quotes.json           # ★源：名句名篇（供「名句名篇」模块与搜索）
+  people.json           # ⚙派生：历史人物索引 157 条（build-people.mjs 由 dynasties 汇总，勿手改）
   records.json          # ⚙派生：帝王之最（build-records.mjs 生成，勿手改）
-  search.json           # ⚙派生：搜索索引 467 条（build-search*.mjs 生成，勿手改）
+  search.json           # ⚙派生：搜索索引 639 条（build-search*.mjs 生成，勿手改）
 scripts/                # Node ESM 构建期脚本（见 1.4 表）
 .github/workflows/ci.yml# CI：重生成派生文件 + 校验一致性
 llms.txt / llms-en.txt  # ⚙派生：GEO 索引（build-geo.mjs 生成）
@@ -61,26 +76,50 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 1.3 技术栈与关键机制
 
-| 项 | 说明 |
-|---|---|
-| 语言 / 运行 | 浏览器原生 ES2020+；`fetch` + `IntersectionObserver` + `ResizeObserver` + SVG（无 polyfill） |
-| 样式 | CSS 自定义属性；主题靠 `document.documentElement[data-theme]` 切换，`--surface/--text/--brand` 等在 `:root` 与 `[data-theme="dark"]` 双份定义 |
-| 主题决定顺序 | `localStorage.theme` → `prefers-color-scheme`（head 内联脚本先跑，避免闪烁） |
-| 语言决定顺序 | URL `?lang=` → `localStorage.lang` → `navigator.language`（head 内联脚本；`?lang=en` 会写回 localStorage） |
-| 数据加载 | 首屏只取 `data/overview.json`；点开某朝代才 `fetch data/dynasties/<id>.json` 并缓存进 `cache[id]` |
-| 部署 | GitHub Pages，`main` 分支根目录，地址 `https://MinosIE.github.io/chinese-dynasty-timeline/` |
+| 项           | 说明                                                                                                                                          |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| 语言 / 运行  | 浏览器原生 ES2020+；`fetch` + `IntersectionObserver` + `ResizeObserver` + SVG（无 polyfill）                                                  |
+| 样式         | CSS 自定义属性；主题靠 `document.documentElement[data-theme]` 切换，`--surface/--text/--brand` 等在 `:root` 与 `[data-theme="dark"]` 双份定义 |
+| 主题决定顺序 | `localStorage.theme` → `prefers-color-scheme`（head 内联脚本先跑，避免闪烁）                                                                  |
+| 语言决定顺序 | URL `?lang=` → `localStorage.lang` → `navigator.language`（head 内联脚本；`?lang=en` 会写回 localStorage）                                    |
+| 数据加载     | 首屏只取 `data/overview.json`；点开某朝代才 `fetch data/dynasties/<id>.json` 并缓存进 `cache[id]`                                             |
+| 部署         | GitHub Pages，`main` 分支根目录，地址 `https://MinosIE.github.io/chinese-dynasty-timeline/`                                                   |
 
 ### 1.4 核心模块职责
 
-| 模块 | 路径 | 负责 | 不负责 |
-|---|---|---|---|
-| 页面与逻辑 | `index.html` | DOM 结构、I18N 词表、全部渲染与交互函数 | 具体数值内容（全在 `data/`） |
-| 样式 | `styles.css` | 布局、主题变量、组件样式 | 任何内容 / 文案 |
-| 概览数据 | `data/overview.json` | 朝代表、年代、`start/end`、`counts` | 帝王明细（在详情文件） |
-| 详情数据 | `data/dynasties/*.json` | 帝王世系 / 人才 / 制度 / 三维 | 页面结构 |
-| 派生生成 | `scripts/build-*.mjs` | 由源数据生成 `search/records/geo` 派生文件 | 修订源数据内容 |
-| 校验 | `scripts/check-i18n.mjs`、`scripts/validate-data.mjs` | 双语完整性 / 帝王年份时序 | 自动修复数据 |
-| CI | `.github/workflows/ci.yml` | 重生成 + 校验 + 派生文件一致性 | 部署（Pages 由仓库设置负责） |
+| 模块       | 路径                                                                                                           | 负责                                                        | 不负责                            |
+| ---------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | --------------------------------- |
+| 页面与逻辑 | `index.html`                                                                                                   | DOM 结构、I18N 词表、全部渲染与交互函数                     | 具体数值内容（全在 `data/`）      |
+| 样式       | `styles.css`                                                                                                   | 布局、主题变量、组件样式                                    | 任何内容 / 文案                   |
+| 概览数据   | `data/overview.json`                                                                                           | 朝代表、年代、`start/end`、`counts`                         | 帝王明细（在详情文件）            |
+| 详情数据   | `data/dynasties/*.json`                                                                                        | 帝王世系 / 人才 / 制度 / 三维                               | 页面结构                          |
+| 专题源数据 | `data/{systems,battles,world,reforms,idioms,culture,capitals,currency,exchange,archaeo,unity,quotes,...}.json` | 各专题模块内容（★手工维护，含 `*En`）                       | 派生索引（search/people/records） |
+| 派生生成   | `scripts/build-*.mjs`                                                                                          | 由源数据生成 `search/people/records/geo/llms-full` 派生文件 | 修订源数据内容                    |
+| 校验       | `scripts/check-i18n.mjs`、`scripts/validate-data.mjs`                                                          | 双语完整性 / 帝王年份时序                                   | 自动修复数据                      |
+| CI         | `.github/workflows/ci.yml`                                                                                     | 重生成 + 校验 + 派生文件一致性（暂未含 build-people）       | 部署（Pages 由仓库设置负责）      |
+
+内容模块一览（吸顶导航切换，共 17 个内容模块 + 1 个概览首页）：
+
+| 模块 id      | 名称                              | 主数据源                                     |
+| ------------ | --------------------------------- | -------------------------------------------- |
+| `m-home`     | 概览首页（入口卡片 + KPI）        | `overview.json`                              |
+| `m-timeline` | 朝代时间轴（含详情懒加载 / 疆域） | `overview.json` + `dynasties/*` + `geo.json` |
+| `m-span`     | 朝代存续一览                      | `overview.json`                              |
+| `m-inv`      | 四大发明                          | `inventions.json`                            |
+| `m-events`   | 历史大事记                        | `events.json`                                |
+| `m-records`  | 帝王之最                          | `records.json`（派生）                       |
+| `m-sys`      | 制度演变                          | `systems.json`                               |
+| `m-battle`   | 著名战役                          | `battles.json`                               |
+| `m-people`   | 历史人物                          | `people.json`（派生）                        |
+| `m-world`    | 世界对比                          | `world.json`                                 |
+| `m-reform`   | 改革与变法                        | `reforms.json`                               |
+| `m-idiom`    | 成语典故                          | `idioms.json`                                |
+| `m-culture`  | 文化成就                          | `culture.json`                               |
+| `m-capcity`  | 都城与货币                        | `capitals.json` + `currency.json`            |
+| `m-exchange` | 对外交流                          | `exchange.json`                              |
+| `m-archaeo`  | 史料与考古                        | `archaeo.json`                               |
+| `m-unity`    | 统一与分裂                        | `unity.json`                                 |
+| `m-quote`    | 名句名篇                          | `quotes.json`                                |
 
 ### 1.5 数据流 / 关键链路
 
@@ -125,14 +164,14 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 2.2 命名规范
 
-| 对象 | 约定 | 示例 |
-|---|---|---|
-| 数据字段（中文） | 全拼/缩写短名 | `n`(名号) `t`(代际) `rg`(在位) `ry`(年数) `gh/mt/sh`(年号/庙号/谥号) `note` |
-| 英文副本 | 原字段名 + `En` | `nEn` `rgEn` `noteEn` `policiesEn` `aspectsEn` |
-| 搜索索引字段 | `d/dn/t/n/x` + `nEn/xEn/dnEn` | 见 `scripts/build-search-en.mjs` |
-| DOM id | 语义化小驼峰 / 短横线 | `evList`、`searchResults`、`m-timeline` |
-| JS 函数 | 动词开头小驼峰 | `renderKpis` `buildDetail` `loadDetail` `drawEvTimeline` `switchModule` |
-| i18n key | 小驼峰，zh/en 词表键必须完全一致 | `kpiYearsV`、`entry.events.d` |
+| 对象             | 约定                             | 示例                                                                        |
+| ---------------- | -------------------------------- | --------------------------------------------------------------------------- |
+| 数据字段（中文） | 全拼/缩写短名                    | `n`(名号) `t`(代际) `rg`(在位) `ry`(年数) `gh/mt/sh`(年号/庙号/谥号) `note` |
+| 英文副本         | 原字段名 + `En`                  | `nEn` `rgEn` `noteEn` `policiesEn` `aspectsEn`                              |
+| 搜索索引字段     | `d/dn/t/n/x` + `nEn/xEn/dnEn`    | 见 `scripts/build-search-en.mjs`                                            |
+| DOM id           | 语义化小驼峰 / 短横线            | `evList`、`searchResults`、`m-timeline`                                     |
+| JS 函数          | 动词开头小驼峰                   | `renderKpis` `buildDetail` `loadDetail` `drawEvTimeline` `switchModule`     |
+| i18n key         | 小驼峰，zh/en 词表键必须完全一致 | `kpiYearsV`、`entry.events.d`                                               |
 
 ### 2.3 文件结构约定（`index.html`）
 
@@ -142,7 +181,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 - 出现第 2 处同类渲染逻辑 → 抽 `renderXxx(list)` 顶层函数。
 - 需要被 `rerenderTranslatable()` 复用的数据 → 用**模块级 `let`** 缓存（现有：`invData`/`evData`/`recData`/`searchIndex`/`cache`）。
-- 单文件 670 行已接近上限；**新增大型模块前先与用户确认是否拆分**（拆分需引入 `<script type="module">`，会改变现有零构建约定）。
+- 单文件已膨至约 2590 行，**拆分风险高**；新增大型模块前先与用户确认是否拆分（拆分需引入 `<script type="module">` 或多 `<script>` 拆分，会改变现有零构建约定）。
 
 ### 2.5 数据模型规范
 
@@ -189,52 +228,52 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 3.2 禁止随意修改（含原因）
 
-| 禁止项 | 原因 |
-|---|---|
-| **运行 `scripts/update-overview.mjs`** | 它会用白名单 `norm()` 重建 `overview.json`，**丢弃 `nameEn/yearsEn/capitalEn/durationEn/featureEn/summaryEn`**（已验证）。若确需运行，先改造该脚本使其保留 `*En`。 |
-| 单独运行 `build-search.mjs` 后提交 | 它会**重置** `search.json` 丢掉英文；必须紧接着 `build-search-en.mjs`。 |
-| 手改 `data/search.json` / `data/records.json` / `llms*.txt` / `robots.txt` / `sitemap.xml` | ⚙派生文件，下次生成即被覆盖。 |
-| 手改 `og-cover.jpg` | 由 `assets/og-source.html` 截图产出；改图请改源文件后导出为 JPEG 以控制体积。 |
-| 在 `index.html` 里硬编码可见文案 / 数字 | 会绕过 i18n，导致英文模式出现中文（如历史 bug「约4000」，见 3.4）。 |
-| 引入 npm 依赖 / CDN / 构建工具 | 违背零依赖零构建约定，会破坏 Pages 直接部署。 |
-| 删除 `data/dynasties/<id>.json` 而不同步删 `overview.json` 条目 | `build-search.mjs` 会按 `overview` 逐个读详情文件，缺文件直接抛错。 |
+| 禁止项                                                                                     | 原因                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **运行 `scripts/update-overview.mjs`**                                                     | 它会用白名单 `norm()` 重建 `overview.json`，**丢弃 `nameEn/yearsEn/capitalEn/durationEn/featureEn/summaryEn`**（已验证）。若确需运行，先改造该脚本使其保留 `*En`。 |
+| 单独运行 `build-search.mjs` 后提交                                                         | 它会**重置** `search.json` 丢掉英文；必须紧接着 `build-search-en.mjs`。                                                                                            |
+| 手改 `data/search.json` / `data/records.json` / `llms*.txt` / `robots.txt` / `sitemap.xml` | ⚙派生文件，下次生成即被覆盖。                                                                                                                                      |
+| 手改 `og-cover.jpg`                                                                        | 由 `assets/og-source.html` 截图产出；改图请改源文件后导出为 JPEG 以控制体积。                                                                                      |
+| 在 `index.html` 里硬编码可见文案 / 数字                                                    | 会绕过 i18n，导致英文模式出现中文（如历史 bug「约4000」，见 3.4）。                                                                                                |
+| 引入 npm 依赖 / CDN / 构建工具                                                             | 违背零依赖零构建约定，会破坏 Pages 直接部署。                                                                                                                      |
+| 删除 `data/dynasties/<id>.json` 而不同步删 `overview.json` 条目                            | `build-search.mjs` 会按 `overview` 逐个读详情文件，缺文件直接抛错。                                                                                                |
 
 ### 3.3 强依赖关系（改动联动表）
 
 **单点改动**
 
-| 改什么 | 只改这里 |
-|---|---|
-| 主题色 / 间距 / 圆角 | `styles.css` 的 `:root` 与 `[data-theme="dark"]`（两处一起） |
-| 界面文案 / 按钮 | `index.html` 的 `I18N.zh` 与 `I18N.en`（**两处一起**） |
-| 朝代表 / 年代 / counts | `data/overview.json` + `data/dynasties/<id>.json` |
+| 改什么                 | 只改这里                                                     |
+| ---------------------- | ------------------------------------------------------------ |
+| 主题色 / 间距 / 圆角   | `styles.css` 的 `:root` 与 `[data-theme="dark"]`（两处一起） |
+| 界面文案 / 按钮        | `index.html` 的 `I18N.zh` 与 `I18N.en`（**两处一起**）       |
+| 朝代表 / 年代 / counts | `data/overview.json` + `data/dynasties/<id>.json`            |
 
 **跨文件改动（漏一处即出错）**
 
-| 场景 | 必须同改 | 漏掉的后果 |
-|---|---|---|
-| **新增 / 删改一个朝代** | ① `data/dynasties/<id>.json`（含 `*En`）② `data/overview.json`（含 `*En`，且 `counts` 必须存在）③ 跑 build-search → build-search-en → build-records → build-geo ④ 若为并存政权，检查 `scripts/update-overview.mjs` 的 `SPAN/ORDER`（仅作参考，勿运行） | `overview` 缺条目→该朝不显示；缺 `counts`→`renderKpis()` 抛 `Cannot read properties of undefined (reading 'emperors')`（**真实发生过**） |
-| **改某帝王的 `n`（名号）** | ① 详情数据 ② `index.html` 的 `STAR` / `LEGEND`（按中文名匹配）③ 详情里的 `LEGEND_DYNASTIES` 不受影响 ④ 重跑 `build-records.mjs`（帝王之最）与 `build-search*.mjs` | 名君高亮失效、帝王之最英文名不同步 |
-| **给某帝王补短在位精度 `rd` / `rm`** | ① 详情数据 ② 重跑 `build-records.mjs` | 帝王之最「在位最短」仍按整数年并列，排名退化为数组顺序 |
-| **新增一个人才角色** | ① 数据 `talents[新role]` ② `index.html` 的 `ROLE_EN` 与 `ROLE_COLORS`（否则英文显示中文键 / 无色） | 英文模式角色名回落为中文；圆点无色 |
-| **新增一个 `aspects` 维度** | ① 数据 `aspects` + `aspectsEn` ② `index.html` 的 `ASPECT_EN`、`ASPECT_ORDER`、`ASPECT_COLORS` | 维度不渲染或被过滤掉 |
-| **新增 era（大时代）** | ① `index.html` 的 `ERAS`、`ERA_COLORS`、`I18N.zh.era`、`I18N.en.era`、`renderEvents` 的 `ORDER`（共 5 处）② 详情/概览数据的 `era` 值 | Tab 与大事记分组缺该时代 |
-| **改数据字段名 / 增加新展示字段** | ① 数据（中 + `En`）② `index.html` 取词处 `L(o,'k')` ③ `scripts/check-i18n.mjs` 的字段白名单 ④ 若进搜索：`scripts/build-search.mjs` + `build-search-en.mjs` 映射 | `check-i18n` 漏检或误报；英文缺失静默回落中文 |
-| **改 `data/overview.json`** | 必须重跑 `build-geo.mjs`（llms/sitemap 依赖它）与 `build-records.mjs`（`counts.emperors`） | CI 的 `git diff --exit-code` 失败 |
+| 场景                                 | 必须同改                                                                                                                                                                                                                                               | 漏掉的后果                                                                                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **新增 / 删改一个朝代**              | ① `data/dynasties/<id>.json`（含 `*En`）② `data/overview.json`（含 `*En`，且 `counts` 必须存在）③ 跑 build-search → build-search-en → build-records → build-geo ④ 若为并存政权，检查 `scripts/update-overview.mjs` 的 `SPAN/ORDER`（仅作参考，勿运行） | `overview` 缺条目→该朝不显示；缺 `counts`→`renderKpis()` 抛 `Cannot read properties of undefined (reading 'emperors')`（**真实发生过**） |
+| **改某帝王的 `n`（名号）**           | ① 详情数据 ② `index.html` 的 `STAR` / `LEGEND`（按中文名匹配）③ 详情里的 `LEGEND_DYNASTIES` 不受影响 ④ 重跑 `build-records.mjs`（帝王之最）与 `build-search*.mjs`                                                                                      | 名君高亮失效、帝王之最英文名不同步                                                                                                       |
+| **给某帝王补短在位精度 `rd` / `rm`** | ① 详情数据 ② 重跑 `build-records.mjs`                                                                                                                                                                                                                  | 帝王之最「在位最短」仍按整数年并列，排名退化为数组顺序                                                                                   |
+| **新增一个人才角色**                 | ① 数据 `talents[新role]` ② `index.html` 的 `ROLE_EN` 与 `ROLE_COLORS`（否则英文显示中文键 / 无色）                                                                                                                                                     | 英文模式角色名回落为中文；圆点无色                                                                                                       |
+| **新增一个 `aspects` 维度**          | ① 数据 `aspects` + `aspectsEn` ② `index.html` 的 `ASPECT_EN`、`ASPECT_ORDER`、`ASPECT_COLORS`                                                                                                                                                          | 维度不渲染或被过滤掉                                                                                                                     |
+| **新增 era（大时代）**               | ① `index.html` 的 `ERAS`、`ERA_COLORS`、`I18N.zh.era`、`I18N.en.era`、`renderEvents` 的 `ORDER`（共 5 处）② 详情/概览数据的 `era` 值                                                                                                                   | Tab 与大事记分组缺该时代                                                                                                                 |
+| **改数据字段名 / 增加新展示字段**    | ① 数据（中 + `En`）② `index.html` 取词处 `L(o,'k')` ③ `scripts/check-i18n.mjs` 的字段白名单 ④ 若进搜索：`scripts/build-search.mjs` + `build-search-en.mjs` 映射                                                                                        | `check-i18n` 漏检或误报；英文缺失静默回落中文                                                                                            |
+| **改 `data/overview.json`**          | 必须重跑 `build-geo.mjs`（llms/sitemap 依赖它）与 `build-records.mjs`（`counts.emperors`）                                                                                                                                                             | CI 的 `git diff --exit-code` 失败                                                                                                        |
 
 ### 3.4 常见错误模式（真实踩坑）
 
-| 现象 | 根因 | 正确做法 |
-|---|---|---|
-| 首屏报 `Cannot read properties of undefined (reading 'emperors')`（`renderKpis`） | `overview.json` 条目缺 `counts`（重写数据时被丢） | 保证每条 overview 有 `counts{emperors,talents,policies}`；可用 `scripts/fix-overview-counts.mjs` 从详情重建 |
-| 英文模式混入中文数字/文案 | 硬编码，未走 `t()`/`L()` | 数字与文案都进 `I18N`（如 `kpiYearsV`） |
-| 中文模式出现英文标签（"Civil Officials"/"Politics"） | 无条件使用 `ROLE_EN[role]` / `ASPECT_EN[k]` | 必须 `lang==='en' ? EN : 中文键` |
-| `records.json` 英文被清空 | 运行 `build-records.mjs` 而脚本未产出 `*En` | 脚本已支持产出 `nameEn/rgEn/dynastyEn`；改字段时同步维护 |
-| 帝王之最「在位最短」6 人全显示「1 年」 | `ry` 是整数年，12 位短在位者并列，取前 6 = 数组顺序 | 短在位者补 `rd`/`rm`，榜单按 `monthsOf()`（`rd/30` → `rm` → `ry×12`）排序 |
-| 帝王之最把传说纪年排在信史之前却无说明 | 夏商周多带「约」年，与信史混排 | 条目带 `approx`（`rg` 含「约」或 `note` 含「岁余/不足/存疑/待考/传说/争议」）→ 渲染「约」徽标 + 卡片脚注 |
-| 大事记连线穿过卡片文字 / 与年份标签重叠 | 走线未落在标签高度带或未走行间隙 | 连线节点取 `.ev-year` 中心；换行在「上行卡片底 + 下行卡片顶」之间走；年份标签 `z-index:2` 压线，箭头须从标签**右缘**起画（否则被标签遮住） |
-| 大事记连线顺序倒序 | 行方向交替时按 DOM 顺序取值 | 每行一律按 x 升序（时间正序）；行间连接只做「右→左」一次（见 `drawEvTimeline`） |
-| CI 失败在 `git diff --exit-code` | 改了源数据但没重跑派生脚本 | 按 0 节顺序重跑全部 `build-*.mjs` 后再提交 |
+| 现象                                                                              | 根因                                                | 正确做法                                                                                                                                   |
+| --------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 首屏报 `Cannot read properties of undefined (reading 'emperors')`（`renderKpis`） | `overview.json` 条目缺 `counts`（重写数据时被丢）   | 保证每条 overview 有 `counts{emperors,talents,policies}`；可用 `scripts/fix-overview-counts.mjs` 从详情重建                                |
+| 英文模式混入中文数字/文案                                                         | 硬编码，未走 `t()`/`L()`                            | 数字与文案都进 `I18N`（如 `kpiYearsV`）                                                                                                    |
+| 中文模式出现英文标签（"Civil Officials"/"Politics"）                              | 无条件使用 `ROLE_EN[role]` / `ASPECT_EN[k]`         | 必须 `lang==='en' ? EN : 中文键`                                                                                                           |
+| `records.json` 英文被清空                                                         | 运行 `build-records.mjs` 而脚本未产出 `*En`         | 脚本已支持产出 `nameEn/rgEn/dynastyEn`；改字段时同步维护                                                                                   |
+| 帝王之最「在位最短」6 人全显示「1 年」                                            | `ry` 是整数年，12 位短在位者并列，取前 6 = 数组顺序 | 短在位者补 `rd`/`rm`，榜单按 `monthsOf()`（`rd/30` → `rm` → `ry×12`）排序                                                                  |
+| 帝王之最把传说纪年排在信史之前却无说明                                            | 夏商周多带「约」年，与信史混排                      | 条目带 `approx`（`rg` 含「约」或 `note` 含「岁余/不足/存疑/待考/传说/争议」）→ 渲染「约」徽标 + 卡片脚注                                   |
+| 大事记连线穿过卡片文字 / 与年份标签重叠                                           | 走线未落在标签高度带或未走行间隙                    | 连线节点取 `.ev-year` 中心；换行在「上行卡片底 + 下行卡片顶」之间走；年份标签 `z-index:2` 压线，箭头须从标签**右缘**起画（否则被标签遮住） |
+| 大事记连线顺序倒序                                                                | 行方向交替时按 DOM 顺序取值                         | 每行一律按 x 升序（时间正序）；行间连接只做「右→左」一次（见 `drawEvTimeline`）                                                            |
+| CI 失败在 `git diff --exit-code`                                                  | 改了源数据但没重跑派生脚本                          | 按 0 节顺序重跑全部 `build-*.mjs` 后再提交                                                                                                 |
 
 ### 3.5 推荐开发流程
 
@@ -247,7 +286,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 3.6 Debug 排查顺序
 
-1. **控制台**：项目要求零 error/warn，任何报错优先看 `index.html` 行号与调用栈（渲染函数集中在 300–600 行）。
+1. **控制台**：项目要求零 error/warn，任何报错优先看 `index.html` 行号与调用栈（`<script>` 块从文档中部起，各 `renderXxx` / 交互函数贯穿其后）。
 2. **数据**：`fetch` 是否 404 / JSON 是否合法（`node -e "JSON.parse(require('fs').readFileSync('<f>','utf8'))"`）。
 3. **派生链路**：先跑 `check-i18n.mjs`，再跑对应 `build-*.mjs` 看是否覆盖了你手改的内容。
 4. **布局**：CSS 变量在 `:root` 与暗色两处是否都定义了；`styles.css` 分区注释定位。
@@ -260,7 +299,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 - [ ] 浏览器控制台**零** error / warn。
 - [ ] 中英双语各看一遍：措辞无残留、数字单位正确（`约4000` / `~4000`）。
 - [ ] 明暗主题切换正常，`localStorage` 记忆生效。
-- [ ] 6 个模块（概览 / 朝代时间轴 / 存续一览 / 四大发明 / 大事记 / 帝王之最）均可切换且渲染。
+- [ ] 18 个模块（概览首页 + 朝代时间轴 / 存续一览 / 四大发明 / 大事记 / 帝王之最 / 制度演变 / 著名战役 / 历史人物 / 世界对比 / 改革与变法 / 成语典故 / 文化成就 / 都城与货币 / 对外交流 / 史料与考古 / 统一与分裂 / 名句名篇）均可切换且渲染。
 - [ ] 点朝代卡可懒加载详情；`#<id>` 深链可直达并展开。
 - [ ] 关于 `validate-data.mjs`：三国（魏/蜀/吴）与南北朝（宋齐梁陈/北魏等）按政权分组列出，会报 3 处「乱序」，**属正常**，不要为此改数据。
 
@@ -268,14 +307,14 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ## 4. 文档索引
 
-| 文档 | 路径 | 用途 | 重要度 | 何时查看 |
-|---|---|---|---|---|
-| 本文件 | `AGENTS.md` | Agent 改本仓库的操作手册 | 🔴必读 | 每次改动前 |
-| 产品需求 | `PRD.md` | 功能清单（F1–F24）、数据规范、验收标准、路线图 | 🟡常用 | 改功能 / 定方案 / 查路线图 |
-| 使用说明 | `README.md` | 功能概览、目录结构、构建命令、字段示例 | 🟡常用 | 上手 / 对外说明 |
-| GEO 索引 | `llms.txt`、`llms-en.txt`、`llms-full.txt`、`llms-full-en.txt` | 给 LLM 的站点索引（⚙派生） | 🟢参考 | 调整 GEO 输出时（改 `build-geo.mjs` / `build-llms-full.mjs`） |
-| 站点地图 | `sitemap.xml`、`robots.txt` | 爬虫（⚙派生） | 🟢参考 | 同上 |
-| 封面源 | `assets/og-source.html` | 分享图源文件 | 🟢参考 | 重做分享图时 |
+| 文档     | 路径                                                           | 用途                                           | 重要度 | 何时查看                                                      |
+| -------- | -------------------------------------------------------------- | ---------------------------------------------- | ------ | ------------------------------------------------------------- |
+| 本文件   | `AGENTS.md`                                                    | Agent 改本仓库的操作手册                       | 🔴必读 | 每次改动前                                                    |
+| 产品需求 | `PRD.md`                                                       | 功能清单（F1–F24）、数据规范、验收标准、路线图 | 🟡常用 | 改功能 / 定方案 / 查路线图                                    |
+| 使用说明 | `README.md`                                                    | 功能概览、目录结构、构建命令、字段示例         | 🟡常用 | 上手 / 对外说明                                               |
+| GEO 索引 | `llms.txt`、`llms-en.txt`、`llms-full.txt`、`llms-full-en.txt` | 给 LLM 的站点索引（⚙派生）                     | 🟢参考 | 调整 GEO 输出时（改 `build-geo.mjs` / `build-llms-full.mjs`） |
+| 站点地图 | `sitemap.xml`、`robots.txt`                                    | 爬虫（⚙派生）                                  | 🟢参考 | 同上                                                          |
+| 封面源   | `assets/og-source.html`                                        | 分享图源文件                                   | 🟢参考 | 重做分享图时                                                  |
 
 **快捷路由**
 
@@ -292,7 +331,7 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 5.1 已完成
 
-18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 5 个内容模块）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（467 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 中英双语（含 `?lang=en`）· 双语 GEO（llms / hreflang / og:locale:alternate）· JSON-LD · CI · 可见度与体验优化（README 优化 + MIT LICENSE · GEO 全文 llms-full · sitemap 全文入口 · 移动端 KPI 与帝王之最单列 · og-cover 压缩为 JPEG · .gitignore · 各朝疆域（四至 + 国土面积）整合进朝代时间轴与详情页（原独立疆域地图模块已移除））。
+18 朝数据（含辽/西夏/金）· 模块化布局（概览首页 + 吸顶导航 + 17 个内容模块）· 按需加载详情 · 帝王分级高亮（👑千古一帝 / ★名君）· 明暗主题 · 搜索（639 条，含英文）· 存续一览 · 四大发明 · 历史大事记（横向蛇形时间线，年份为节点 + 末端箭头）· 帝王之最 · 专题模块（制度演变 / 著名战役 / 历史人物 / 世界对比 / 改革与变法 / 成语典故 / 文化成就 / 都城与货币 / 对外交流 / 史料与考古 / 统一与分裂 / 名句名篇）· 中英双语（含 `?lang=en`）· 双语 GEO（llms / llms-full / hreflang / og:locale:alternate）· JSON-LD · CI · 可见度与体验优化（README 优化 + MIT LICENSE · sitemap 全文入口 · 移动端 KPI 与帝王之最单列 · og-cover 压缩为 JPEG · .gitignore · 各朝疆域（四至 + 国土面积）整合进朝代时间轴与详情页）。
 
 ### 5.2 开发中
 
@@ -300,20 +339,21 @@ PRD.md / README.md      # 产品需求 / 使用说明（人类文档，勿与 AG
 
 ### 5.3 未完成计划（见 `PRD.md` §4.2）
 
-F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F23 世界史横向对照 · F24 人物卡片。
+F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）。（F22 疆域 / F23 世界对比 / F24 人物卡片均已上线）
 
 ### 5.4 技术债务
 
-| 位置 | 问题 | 影响 |
-|---|---|---|
-| `scripts/update-overview.mjs` | 与新数据模型不兼容：`norm()` 白名单会丢弃全部 `*En` | **高危陷阱**，运行即破坏 overview 英文 |
-| `scripts/fix-overview-counts.mjs` | 一次性修复脚本残留 | 冗余；可删除或并入 `validate-data.mjs` |
-| `index.html` | 单文件 670 行内联 JS，无模块化、无测试 | 大改动风险高，diff 噪声大 |
-| `og-cover.png`→`og-cover.jpg` | 已由 PNG(730KB) 转 JPEG(约 50KB) | 分享图加载已优化（已解决） |
-| 仓库根 | 已新增 `.gitignore` | 已解决（忽略本地截图 / 临时文件） |
-| `scripts/validate-data.mjs` | 不阻断（三国/南北朝分组列出致误报） | 只能人工判读 |
-| `data/dynasties/*.json` | 长在位帝王仍只有整数年 `ry`（年粒度误差 < 2%，故未补）；`ry ≤ 3` 的 37 位中已补 33 位 `rd`/`rm`，余 4 位（商外丙、周武王、周釐王、周悼王）无月份史料 | 「在位最长」仍是年粒度；「最短」已到月 / 日 |
-| `data/dynasties/*.json` | `ry`（纪年包含年数）与 `rg` 跨度有 58 处差 1，属口径差异而非错误；明英宗两次在位已改为 `1435–1449 / 1457–1464` | 若按 `rg` 跨度重算 `ry` 会连锁改变存续年数 / KPI，风险高 |
+| 位置                              | 问题                                                                                                                                                 | 影响                                                                           |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `scripts/update-overview.mjs`     | 与新数据模型不兼容：`norm()` 白名单会丢弃全部 `*En`                                                                                                  | **高危陷阱**，运行即破坏 overview 英文                                         |
+| `scripts/fix-overview-counts.mjs` | 一次性修复脚本残留                                                                                                                                   | 冗余；可删除或并入 `validate-data.mjs`                                         |
+| `index.html`                      | 单文件约 2590 行内联 JS，无模块化、无测试                                                                                                            | 大改动风险高，diff 噪声大                                                      |
+| `og-cover.png`→`og-cover.jpg`     | 已由 PNG(730KB) 转 JPEG(约 50KB)                                                                                                                     | 分享图加载已优化（已解决）                                                     |
+| 仓库根                            | 已新增 `.gitignore`                                                                                                                                  | 已解决（忽略本地截图 / 临时文件）                                              |
+| `scripts/validate-data.mjs`       | 不阻断（三国/南北朝分组列出致误报）                                                                                                                  | 只能人工判读                                                                   |
+| `data/dynasties/*.json`           | 长在位帝王仍只有整数年 `ry`（年粒度误差 < 2%，故未补）；`ry ≤ 3` 的 37 位中已补 33 位 `rd`/`rm`，余 4 位（商外丙、周武王、周釐王、周悼王）无月份史料 | 「在位最长」仍是年粒度；「最短」已到月 / 日                                    |
+| `data/dynasties/*.json`           | `ry`（纪年包含年数）与 `rg` 跨度有 58 处差 1，属口径差异而非错误；明英宗两次在位已改为 `1435–1449 / 1457–1464`                                       | 若按 `rg` 跨度重算 `ry` 会连锁改变存续年数 / KPI，风险高                       |
+| `.github/workflows/ci.yml`        | CI 重生成步骤未含 `build-people.mjs`（而 `build-geo`/`build-llms-full` 依赖 `people.json`）                                                          | 改动 `dynasties/*.json` 后若忘本地补跑，`people.json` 会与源不一致且 CI 不报错 |
 
 ### 5.5 已知问题
 
@@ -321,12 +361,13 @@ F20 单朝代分享卡片 / 海报导出 · F21 繁体中文（zh-Hant）· F23 
 
 ### 5.6 后续规划
 
-以 `PRD.md` §4.2（F20–F24）与 §12 为准。
+以 `PRD.md` §4.2（F20–F21）与 §12 为准。
 
 ---
 
 ## 6. 变更记录（本文件）
 
+- 2026-09-21：同步与当前代码一致。§0 流水线补充 `build-people.mjs`（并标注须早于 build-geo/build-llms-full）；§1.2 目录地图新增 12 个专题源数据文件与 `people.json`（派生），行数修正为 index.html 约 2590 / styles.css 约 500、search 修正为 639 条；§1.4 补充专题源数据行与 18 个模块清单；§2.4/§3.6/§3.7/§5.1/§5.3/§5.4/§5.6 同步模块数与行数、标注世界对比/人物卡片已上线、新增 CI 未跑 build-people 的债务。
 - 2026-09-18：首次生成。基于当日仓库快照（`main` @ `d5a205f`）梳理架构、数据模型、i18n 约定、派生流水线、CI 与真实踩坑清单。
 - 2026-09-18：帝王之最改为「月/日」精度口径（新增可选字段 `rd`/`rm`、`approx` 存疑标记、卡片口径脚注）；补充 §2.5 字段、§3.3/§3.4 联动与踩坑、§5.4 技术债。
 - 2026-09-18：按通行年表补齐 `ry ≤ 3` 的短在位者精度（37 位中 33 位）；详情页同步显示月 / 日；修正明英宗两次在位的 `rg`；新增 `ry` 口径警告（§2.5）。
