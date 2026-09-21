@@ -2,7 +2,7 @@
 
 <div align="center">
 
-一个零依赖、纯静态的中国历史朝代科普网页 · From Xia to Qing, 18 dynasties on one page.
+一个零依赖、纯静态的中国历史朝代科普网页 · From Xia to Qing, 21 dynasties on one page.
 
 [![GitHub Stars](https://img.shields.io/github/stars/MinosIE/chinese-dynasty-timeline?style=flat&logo=github)](https://github.com/MinosIE/chinese-dynasty-timeline)
 [![GitHub Forks](https://img.shields.io/github/forks/MinosIE/chinese-dynasty-timeline?style=flat&logo=github)](https://github.com/MinosIE/chinese-dynasty-timeline/fork)
@@ -32,7 +32,7 @@
 
 ## 功能 Features
 
-- **朝代时间轴**：18 个王朝（含辽、西夏、金），按大时代（上古/先秦/秦汉…）筛选，点击卡片展开详情（首次展开才加载该朝 JSON）。
+- **朝代时间轴**：21 个王朝（含辽、西夏、金等同时期政权），按大时代（上古/先秦/秦汉…）筛选，点击卡片展开详情（首次展开才加载该朝 JSON）。
 - **帝王分级**：「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）深红描金卡片；代表性名君金色卡片；悬停标签可看获称理由。
 - **三维内容**：每个朝代详情含「政治 / 经济 / 文化」要点。
 - **存续一览**：按年代比例的时间跨度条，直观对比各朝长短。
@@ -46,7 +46,7 @@
 
 ## 为什么做这个 Why
 
-历史课本里的朝代往往是一长串名字，难有「脉络感」。本项目把夏→清 18 朝压缩进一张网页：用时间轴建立时序、用三维内容建立理解、用搜索与跳转建立检索。零依赖、零构建，打开即看，也方便二次开发与教学使用。
+历史课本里的朝代往往是一长串名字，难有「脉络感」。本项目把夏→清 21 朝压缩进一张网页：用时间轴建立时序、用三维内容建立理解、用搜索与跳转建立检索。零依赖、零构建，打开即看，也方便二次开发与教学使用。
 
 ## 在线访问 Live
 
@@ -60,7 +60,7 @@ styles.css               样式（CSS 变量 + 明暗主题）
 favicon.svg              站点图标
 og-cover.jpg            分享封面图（1200×630，JPEG 压缩约 50KB）
 data/overview.json       全部王朝概览
-data/dynasties/*.json    18 个王朝详情
+data/dynasties/*.json    21 个王朝详情
 data/inventions.json     四大发明
 data/events.json         历史大事记
 data/records.json        帝王之最
@@ -132,7 +132,7 @@ node scripts/check-i18n.mjs       # 校验双语数据完整性（有缺失会�
 
 # Chinese Dynasties · A Timeline of Three Millennia
 
-A zero-dependency, static website that visualizes Chinese imperial history from the **Xia to the Qing dynasty** (18 dynasties, including Liao, Western Xia and Jin). Build the "three-millennia context" on a single page: overview, emperors, notable figures, key institutions, and a **Politics · Economy · Culture** tri-axis — with dark/light themes, full-text search, longevity comparison, the Four Great Inventions, a historical events timeline, and "Emperor Records".
+A zero-dependency, static website that visualizes Chinese imperial history from the **Xia to the Qing dynasty** (21 dynasties, including concurrent regimes such as Liao, Western Xia and Jin). Build the "three-millennia context" on a single page: overview, emperors, notable figures, key institutions, and a **Politics · Economy · Culture** tri-axis — with dark/light themes, full-text search, longevity comparison, the Four Great Inventions, a historical events timeline, and "Emperor Records".
 
 **Features**
 - Dynasty timeline with era filters and on-demand detail loading

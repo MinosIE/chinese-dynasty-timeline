@@ -22,7 +22,8 @@ const overview = read('data/overview.json');
 overview.forEach(o => need('overview.json', o, o.id, ['nameEn', 'yearsEn', 'capitalEn', 'durationEn', 'featureEn', 'summaryEn']));
 
 /* 各朝详情 */
-for (const f of fs.readdirSync(path.join(root, 'data/dynasties')).filter(x => x.endsWith('.json'))) {
+const dynastyFiles = fs.readdirSync(path.join(root, 'data/dynasties')).filter(x => x.endsWith('.json'));
+for (const f of dynastyFiles) {
   const p = `data/dynasties/${f}`;
   const d = read(p);
   need(p, d, d.id, ['nameEn', 'yearsEn', 'capitalEn', 'featureEn', 'summaryEn']);
@@ -58,4 +59,4 @@ if (missing.length) {
   missing.forEach(m => console.error('  - ' + m));
   process.exit(1);
 }
-console.log('✓ 双语数据完整：overview / 18 朝详情 / events / inventions / records 均无缺失');
+console.log(`✓ 双语数据完整：overview / ${dynastyFiles.length} 朝详情 / events / inventions / records 均无缺失`);
