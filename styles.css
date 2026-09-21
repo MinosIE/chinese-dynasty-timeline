@@ -314,7 +314,7 @@
   .spinner{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--brand);
     border-radius:50%;animation:spin .8s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .foot{text-align:center;color:var(--text-mute);font-size:12px;line-height:1.9}
+  .foot{text-align:center;color:var(--text-mute);font-size:12px;line-height:2;padding:14px 0 6px}
   .foot .legend{color:var(--gold);font-weight:700}
   @media(max-width:560px){.hero h1{font-size:26px}.chead .meta{margin-left:0;text-align:left;width:100%}}
   @media(prefers-reduced-motion:reduce){

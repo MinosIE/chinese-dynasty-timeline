@@ -12,3 +12,4 @@ screenshot*.jpg
 
 # 本地预览缓存
 .cache/
+.qoder/

@@ -532,7 +532,7 @@
         <div class="quo-list" id="quoList"></div>
       </section>
 
-      <p class="foot" id="foot"></p>
+      <footer class="foot" id="foot"></footer>
     </div>
 
     <noscript
@@ -805,7 +805,13 @@
             宋元: "宋元",
             明清: "明清",
           },
-          foot: '<span class="legend">👑 深红卡片</span> = 后世誉为「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）　·　<span class="legend">★ 金色卡片</span> = 该朝代代表性名君　·　点击卡片可展开/收起详情（首次展开才加载该朝数据）<br>数据为科普概览，细节以权威史料为准　·　可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说',
+          footTip: '<span class="legend">👑 深红卡片</span> = 后世誉为「千古一帝」（秦始皇、汉武帝、唐太宗、康熙）　·　<span class="legend">★ 金色卡片</span> = 该朝代代表性名君　·　点击卡片可展开/收起详情（首次展开才加载该朝数据）<br>数据为科普概览，细节以权威史料为准　·　可考王朝史约4000年；上溯良渚、龙山等史前文明约5000年，故有「上下五千年」之说',
+          footSister: '姊妹项目',
+          footData: '结构化数据',
+          footLlms: 'AI 全文索引',
+          footIssue: '问题反馈',
+          sisterName: '万物经济学 · Economics of Everything',
+          footCopy: '© 2026 中华王朝 · 千年脉络 · MIT License',
         },
         en: {
           docTitle: "Chinese Dynasties · A Millennial Saga",
@@ -1071,7 +1077,13 @@
             宋元: "Song–Yuan",
             明清: "Ming–Qing",
           },
-          foot: '<span class="legend">👑 Deep-red card</span> = hailed as an “Eternal Emperor” (Qin Shi Huang, Han Wudi, Tang Taizong, Kangxi)　·　<span class="legend">★ Gold card</span> = the dynasty’s representative renowned ruler　·　Click a card to expand/collapse details (data loads on first expand)<br>Content is for general education; defer to authoritative sources for details　·　Recorded dynasty history spans ~4000 years; tracing back to prehistoric Liangzhu/Longshan (~5000 years) gives the saying “five thousand years of civilization.”',
+          footTip: '<span class="legend">👑 Deep-red card</span> = hailed as an “Eternal Emperor” (Qin Shi Huang, Han Wudi, Tang Taizong, Kangxi)　·　<span class="legend">★ Gold card</span> = the dynasty’s representative renowned ruler　·　Click a card to expand/collapse details (data loads on first expand)<br>Content is for general education; defer to authoritative sources for details　·　Recorded dynasty history spans ~4000 years; tracing back to prehistoric Liangzhu/Longshan (~5000 years) gives the saying “five thousand years of civilization.”',
+          footSister: 'Sister project',
+          footData: 'Structured data',
+          footLlms: 'LLM full text',
+          footIssue: 'Found an issue',
+          sisterName: 'Economics of Everything',
+          footCopy: '© 2026 Chinese Dynasties · A Millennial Tapestry · MIT License',
         },
       };
       let lang = (function () {
@@ -2366,6 +2378,18 @@
         );
       }
 
+      /* ---------- 页脚 ---------- */
+      function renderFooterHtml() {
+        return (
+          '<p>' + t("footTip") + "</p>" +
+          '<p>' + t("footSister") + '：<a href="https://MinosIE.github.io/econ-everything/" target="_blank" rel="noopener noreferrer">' + t("sisterName") + "</a>" +
+          "　·　" + t("footData") + '：<a href="data/overview.json">overview.json</a> · <a href="data/geo.json">geo.json</a> · <a href="data/search.json">search.json</a>' +
+          "　·　" + t("footLlms") + '：<a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a>' +
+          "　·　" + t("footIssue") + '：<a href="https://github.com/MinosIE/chinese-dynasty-timeline/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a></p>' +
+          "<p>" + t("footCopy") + "</p>"
+        );
+      }
+
       /* ---------- 多语言切换 ---------- */
       let invData = null,
         evData = null,
@@ -2385,7 +2409,7 @@
           tt.setAttribute("aria-label", t("toTop"));
         }
         const fl = document.getElementById("foot");
-        if (fl) fl.innerHTML = t("foot");
+        if (fl) fl.innerHTML = renderFooterHtml();
         const ll = document.getElementById("langLabel");
         if (ll) ll.textContent = t("langName");
         const ml = document.querySelector(".hero-issue-link-alt");
