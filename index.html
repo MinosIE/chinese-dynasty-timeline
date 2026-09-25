@@ -1559,7 +1559,7 @@
         const card = node.querySelector(".card");
         if (card.classList.contains("collapsed"))
           node.querySelector(".chead").click();
-        node.scrollIntoView({ behavior: "smooth", block: "start" });
+        scrollToEl(node);
       }
 
       /* ---------- 称号 hover 说明 ---------- */
@@ -1834,11 +1834,19 @@
               ),
           );
       }
+      function navHeight() {
+        const n = document.getElementById("modNav");
+        return n ? n.getBoundingClientRect().height : 0;
+      }
+      function scrollToEl(el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - navHeight() - 8;
+        window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+      }
       document.querySelectorAll("[data-go]").forEach((el) =>
         el.addEventListener("click", () => {
           switchModule(el.dataset.go);
           const t = document.getElementById(el.dataset.go);
-          if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (t) scrollToEl(t);
         }),
       );
 
@@ -2591,7 +2599,7 @@
           switchModule("m-timeline");
           const n = document.getElementById(h);
           n.querySelector(".chead").click();
-          n.scrollIntoView({ block: "start" });
+          scrollToEl(n);
         }
       })();
 
